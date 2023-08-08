@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  --blue: #251990;
+  --black:#4A4453;
+  --gray: #AFA8BA;
+  --green: #007857;
+  --dark: #00432A;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--gray);
+  font-family: 'Lato', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul a {
+  text-decoration: none;
+  color: var(--gray);
+}
+
+nav {
+  background-color: var(--blue);
+  color: white;
+  width: 70px;
+}
+
+nav button {
+  all: unset;
+}
+
+.card {
+  max-width: 250px!important;
+}
