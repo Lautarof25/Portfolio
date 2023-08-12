@@ -37,3 +37,7 @@ nav button {
 .card {
   max-width: 250px!important;
 }
+
+#Technologies i {
+  font-size: 3rem;
+}
