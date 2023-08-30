@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 :root {
-  --firstColor: #f13f13;
+  --firstColor: #fac722;
 }
 *,*::before, *::after {
   -webkit-box-sizing: border-box;
@@ -9,7 +9,7 @@
 }
 body {
   background: rgb(255, 255, 255);
-background: linear-gradient(145deg, rgb(235, 235, 235) 0%, rgb(199, 199, 199) 100%);
+background: linear-gradient(145deg, rgb(235, 235, 235) 0%, rgb(168, 168, 168) 100%);
   font-family: 'Raleway', sans-serif;
   display: flex;
   flex-direction: column;
@@ -26,15 +26,8 @@ img {
 .img {
   max-width: 200px;
   order: -1;
-  border: 7px solid #fac722;
-}
-nav ul {
-  display: flex;
-  gap: 5px;
-  justify-content: center;
-}
-ul li {
-  list-style-type: none;
+  filter: drop-shadow(1px 1px 5px var(--firstColor));
+  -webkit-filter: drop-shadow(1px 1px 5px var(--firstColor));
 }
 .relative {
   position: relative;
@@ -43,8 +36,8 @@ ul li {
   position: absolute;
   top: 55px;
   left: 50%;
-  width: 25px;
-  height: 25px;
+  width: 70px;
+  height: 70px;
   background: red;
   transform: rotate(45deg);
   z-index: -1;
@@ -59,8 +52,9 @@ ul li {
   border-left: 55px solid transparent;
   border-right: 55px solid transparent;
   position: absolute;
-  left: 25%;
-  border-bottom: 55px solid purple;
+  left: 15%;
+  top: 50%;
+  border-bottom: 55px solid lightcoral;
   animation: rotate 2s infinite alternate;
   -webkit-animation: rotate 2s infinite alternate;
   z-index: -1;
@@ -72,7 +66,8 @@ ul li {
   background: orange;
   border-radius: 50%;
   position: absolute;
-  right: 25%;
+  right: 15%;
+  bottom: 15%;
   z-index: -1;
   animation: rotate 2s infinite;
   border-bottom: 1px solid;
@@ -90,18 +85,45 @@ ul li {
     transform: rotate(90deg);
   }
 }
+.title {
+  font-size: 1.5rem;
+}
 
 .d-flex {
   display: flex;
+}
+.d-none {
+  display: none;
+}
+
+.justify-center  {
   justify-content: center;
 }
+
 .flex-column {
   flex-direction: column;
 }
+.align-center {
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+.gap-3 {
+  gap: 3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
 footer {
   background: #fac722;
-  border-top-left-radius: 70% 20%;
-  border-top-right-radius: 70% 20%;
+  border-top-left-radius: 50% 50%;
   padding: 1rem;
   text-align: center;
 }
@@ -111,15 +133,27 @@ footer {
 
 .corner {
   position: absolute;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   right: -150px;
   top: -150px;
   animation: rotate 5s infinite alternate;
   -webkit-animation: rotate 5s infinite alternate;
 }
 
-footer a {
+.link-active {
+  text-decoration: underline;
+}
+
+a {
   text-decoration: none;
   color: black;
+}
+
+.dynamicTitle {
+  background: var(--firstColor);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: fit-content;
 }
