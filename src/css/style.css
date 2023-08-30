@@ -8,14 +8,18 @@
   box-sizing: border-box;
 }
 body {
-  background: rgb(242,242,242);
-background: linear-gradient(145deg, rgba(212,212,212,1) 0%, rgba(225,225,225,1) 100%);
+  background: rgb(255, 255, 255);
+background: linear-gradient(145deg, rgb(235, 235, 235) 0%, rgb(199, 199, 199) 100%);
   font-family: 'Raleway', sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
 }
+::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
 img {
   width: 100%;
 }
@@ -38,7 +42,7 @@ ul li {
 .square {
   position: absolute;
   top: 55px;
-  left: 15px;
+  left: 50%;
   width: 25px;
   height: 25px;
   background: red;
@@ -52,12 +56,14 @@ ul li {
   transform: rotate(45deg);
   width: 0;
   height: 0;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
   position: absolute;
-  border-bottom: 25px solid purple;
+  left: 25%;
+  border-bottom: 55px solid purple;
   animation: rotate 2s infinite alternate;
   -webkit-animation: rotate 2s infinite alternate;
+  z-index: -1;
 }
 
 .circle {
@@ -66,6 +72,7 @@ ul li {
   background: orange;
   border-radius: 50%;
   position: absolute;
+  right: 25%;
   z-index: -1;
   animation: rotate 2s infinite;
   border-bottom: 1px solid;
@@ -93,4 +100,26 @@ ul li {
 }
 footer {
   background: #fac722;
+  border-top-left-radius: 70% 20%;
+  border-top-right-radius: 70% 20%;
+  padding: 1rem;
+  text-align: center;
+}
+.relative {
+  position: relative;
+}
+
+.corner {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  right: -150px;
+  top: -150px;
+  animation: rotate 5s infinite alternate;
+  -webkit-animation: rotate 5s infinite alternate;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
 }
