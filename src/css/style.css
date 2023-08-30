@@ -1,43 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 :root {
-  --blue: #251990;
-  --black:#4A4453;
-  --gray: #AFA8BA;
-  --green: #007857;
-  --dark: #00432A;
+  --firstColor: #f13f13;
 }
-
+*,*::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
-  background-color: var(--black);
-  color: var(--gray);
-  font-family: 'Lato', sans-serif;
+  background: rgb(242,242,242);
+background: linear-gradient(145deg, rgba(212,212,212,1) 0%, rgba(225,225,225,1) 100%);
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
-
-ul {
+img {
+  width: 100%;
+}
+.img {
+  max-width: 200px;
+  order: -1;
+  border: 7px solid #fac722;
+}
+nav ul {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+ul li {
   list-style-type: none;
-  padding: 0;
+}
+.relative {
+  position: relative;
+}
+.square {
+  position: absolute;
+  top: 55px;
+  left: 15px;
+  width: 25px;
+  height: 25px;
+  background: red;
+  transform: rotate(45deg);
+  z-index: -1;
+  animation: rotate 1s infinite;
+  -webkit-animation: rotate 1s infinite;
 }
 
-ul a {
-  text-decoration: none;
-  color: var(--gray);
+.triangle {
+  transform: rotate(45deg);
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  position: absolute;
+  border-bottom: 25px solid purple;
+  animation: rotate 2s infinite alternate;
+  -webkit-animation: rotate 2s infinite alternate;
 }
 
-nav {
-  background-color: var(--blue);
-  color: white;
-  width: 70px;
+.circle {
+  width: 75px;
+  height: 75px;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  animation: rotate 2s infinite;
+  border-bottom: 1px solid;
+  -webkit-animation: rotate 2s infinite alternate;
+}
+.circle,.triangle, .square {
+  filter: blur(1px);
 }
 
-nav button {
-  all: unset;
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
 }
 
-.card {
-  max-width: 250px!important;
+.d-flex {
+  display: flex;
+  justify-content: center;
 }
-
-#Technologies i {
-  font-size: 3rem;
+.flex-column {
+  flex-direction: column;
+}
+footer {
+  background: #fac722;
 }
