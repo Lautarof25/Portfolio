@@ -5,6 +5,8 @@ links.forEach(link => {
     link.addEventListener("click",function(){
         removeLinkActive()
         link.classList.add("link-active")
+        console.log(link.id)
+        activeDiv(link.id)
     })
 })
 
@@ -14,3 +16,6 @@ function removeLinkActive(){
     })  
 }
 
+function activeDiv(id){
+    document.getElementById(id).classList.remove("d-none")
+}

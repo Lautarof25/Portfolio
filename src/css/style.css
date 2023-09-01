@@ -121,6 +121,10 @@ img {
   text-align: center;
 }
 
+.h-800px {
+  height: 800px;
+}
+
 footer {
   background: #fac722;
   border-top-left-radius: 50% 50%;
