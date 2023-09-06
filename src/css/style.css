@@ -153,11 +153,3 @@ a {
   text-decoration: none;
   color: black;
 }
-
-.dynamicTitle {
-  background: var(--firstColor);
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: fit-content;
-}
