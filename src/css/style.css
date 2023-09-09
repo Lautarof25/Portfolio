@@ -155,15 +155,32 @@ a {
 }
 
 .giant-icon {
-  font-size: 5rem; 
+  font-size: 3rem; 
+  font-size: clamp(1rem, 5rem, 3rem);
 }
-.card i {
+.projectCard i {
   color:  var(--firstColor);
   text-shadow: 0 0 3px black;
+}
+.projectCard a {
+  color:  var(--firstColor);
+  text-shadow: 1px 1px 2px black;
+}
+
+.justify{
+  text-align: justify;
 }
 
 p{
   margin: 0;
+}
+
+.max-25 {
+  max-width: 25rem;
+}
+
+.max-12 {
+  min-width: 7rem;
 }
 
 h3 {
