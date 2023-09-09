@@ -34,7 +34,6 @@ function activeDiv(id) {
 
 function changeColor(id) {
     let idRemoving = id.replace("Link", "")
-    console.log(idRemoving)
     switch (idRemoving) {
         case "info":
             document.documentElement.style.setProperty('--firstColor', '#fac722');
