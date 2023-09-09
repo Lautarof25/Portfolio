@@ -6,7 +6,6 @@ links.forEach(link => {
         removeLinkActive()
         removeAllDivs()
         link.classList.add("link-active")
-        changeColor(link.id)
         activeDiv(link.id)
     })
 })
@@ -30,19 +29,4 @@ function removeAllDivs() {
 function activeDiv(id) {
     let idRemoving = id.replace("Link", "")
     document.getElementById(idRemoving).classList.remove("d-none")
-}
-
-function changeColor(id) {
-    let idRemoving = id.replace("Link", "")
-    switch (idRemoving) {
-        case "info":
-            document.documentElement.style.setProperty('--firstColor', '#fac722');
-            break;
-        case "path":
-            document.documentElement.style.setProperty('--firstColor', '#fa8022');
-            break;
-        case "projects":
-            document.documentElement.style.setProperty('--firstColor', '#fa3822');
-            break;
-    }
 }
