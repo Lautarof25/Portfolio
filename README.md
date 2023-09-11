@@ -1,6 +1,8 @@
 # Portfolio
 
-Mi portfolio## Color Reference
+Mi portfolio
+
+# Color Reference
 
 | Colores             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
