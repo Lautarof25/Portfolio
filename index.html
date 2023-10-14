@@ -5,181 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./src/css/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/normalize.css">
   <link rel="stylesheet" href="./src/css/style.css">
 </head>
+<img src="https://pbs.twimg.com/card_img/1710363760701915136/TXuxx35z?format=jpg&name=small" alt="">
 
 <body>
-  <svg class="corner" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <path fill="#FAC722"
-      d="M37.1,-38.9C52.2,-31.6,71.2,-23.8,77.8,-10.2C84.3,3.3,78.3,22.5,66.8,35C55.3,47.4,38.3,53,21.3,59.9C4.2,66.7,-13,74.8,-24.5,69.6C-36,64.4,-42,46,-51.1,29.7C-60.2,13.4,-72.6,-0.8,-73.2,-15.6C-73.8,-30.4,-62.5,-45.7,-48.3,-53.2C-34.2,-60.7,-17.1,-60.3,-3,-56.7C11,-53.1,22.1,-46.3,37.1,-38.9Z"
-      transform="translate(100 100)" />
-  </svg>
-  <div class="square"></div>
-  <div class="triangle"></div>
-  <div class="circle"></div>
-  <header class="relative">
-
-    <nav class="d-flex justify-center gap-1">
-      <a id="infoLink" href="#" class="link-active">Info</a>
-      <a id="pathLink" href="#">Recorrido</a>
-      <a id="projectsLink" href="#">Proyectos</a>
-    </nav>
-  </header>
-  <main id="main" class="relative d-flex flex-column gap-3">
-
-
-    <section id="info" class="d-flex flex-column gap-3">
-      <div class="d-flex gap-1 justify-center wrap">
-        <div class="d-flex flex-column justify-center gap-1 text-center">
-          <p class="title">Mi nombre es <strong>Lautaro</strong></p>
-          <h2>Full-stack</h2>
-        </div>
-        <img class="img" src="./src/img/avatar.webp" alt="avatar">
-      </div>
-      <div class="d-flex flex-column align-center">
-        <p>Soy un entusiasta tecnológico 👨‍💻​</p>
-        <p> 🤝 ​Me gusta trabajar de manera colaborativa</p>
-        <p>Brindar soluciones creativas 🪄​</p>
-        <p> ⛑️​ Ayudar y aprender de los demás </p>
-      </div>
-    </section>
-
-    <section id="path" class="d-flex flex-column justify-center align-center overflow-auto d-none">
-      <p>Mi camino en programación:</p>
-      <div class="d-flex flex-column">
-        <div class="div1">
-          <div>2020</div>
-          <div>
-            <ul>
-              <li>
-              <strong>
-                Tecnicatura en programación
-              </strong> (UnaHur) - 1º Año</li>
-              <p>* Por temas económicos tuve que abandonar</p>
-            </ul>
-          </div>
-        </div>
-        <div class="div2">
-          <div>2021</div>
-          <div>
-            <ul>
-              <li><strong>Desarrollo web</strong> (Google Activate / FreeCodeCamp)</li>
-              <li><strong>Python</strong> básico (UnaHur)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="div3">
-          <div>2022</div>
-          <div>
-            <ul>
-              <li><strong>Pseint</strong> orientado en <strong>Java</strong> (EggLive)</li>
-              <li><strong>Introducción base de datos SQL</strong> (Tecno3F)</li>
-              <li><strong>Testing manual</strong> (Tecno3F)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="div4">
-          <div>2023</div>
-          <div>
-            <ul>
-              <li><strong>Java</strong> Full-Stack (Codo a Codo)</li>
-              <li><strong>JavaScript</strong> essential (Cisco)</li>
-              <li><strong>Tecnicatura en desarrollo de software - 1º Año</strong> (IFTS º29)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="div5"></div>
-      </div>
-    </section>
-
-    <section id="projects" class="d-none">
-      <div class="d-flex max-25 align-center container gap-1 border-bottom projectCard">
-        <div class="max-12 align-center d-flex flex-column ">
-          <i class="fa-solid fa-user-tie giant-icon"></i>
-          <div class="text-center">
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css3-alt"></i>
-            <i class="fa-brands fa-js"></i>
-          </div>
-        </div>
-        <div class="justify">
-          <h3>Curriculum</h3>
-          <p>Una plantilla dinámica de Curriculum</p>
-          <a href="https://github.com/Lautarof25/cv_online" target="_blank">Repo</a>
-        </div>
-      </div>
-
-      <div class="d-flex max-25 align-center container gap-1 border-bottom projectCard">
-        <div class="max-12 align-center d-flex flex-column ">
-          <i class="fa-solid  fa-wine-bottle giant-icon"></i>
-          <div class="text-center">
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-bootstrap"></i>
-            <i class="fa-brands fa-js"></i>
-          </div>
-        </div>
-        <div class="justify">
-          <h3>Vinoteca</h3>
-          <p>Una web app de vinos</p>
-          <a href="https://github.com/Lautarof25/Vinoteca" target="_blank">Repo</a>
-        </div>
-      </div>
-    
-      <div class="d-flex max-25 align-center container gap-1 border-bottom projectCard">
-        <div class="max-12 align-center d-flex flex-column ">
-          <i class="fa-solid fa-calculator giant-icon"></i>
-          <div class="text-center">
-            <i class="fa-brands fa-python"></i>  
-          </div>
-        </div>
-        <div class="justify">
-          <h3>Calculadora</h3>
-          <p>Una sencilla calculador hecha con python</p>
-          <a href="https://github.com/Lautarof25/practicas_python" target="_blank">Repo</a>
-        </div>
-      </div>
-    
-      <div class="d-flex max-25 align-center container gap-1 projectCard">
-        <div class="max-12 align-center d-flex flex-column ">
-          <i class="fa-solid fa-gamepad giant-icon"></i>
-          <div class="text-center">
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-bootstrap"></i>
-            <i class="fa-brands fa-js"></i>
-          </div>
-        </div>
-        <div class="justify">
-          <h3>Adivina el número</h3>
-          <p>Un juego sencillo para usar la lógica.
-          </p>
-          <a href="https://github.com/Lautarof25/guessTheNumber" target="_blank">Repo</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-  <footer>
-
-    <div class="rotate">
-      <a href="https://www.linkedin.com/in/lautadev/" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/Lautarof25/" target="_blank">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="https://twitter.com/lautadev" target="_blank">
-        <i class="fa-brands fa-twitter"></i>
-      </a>
+  <nav class="nav d-flex flex-column top-0 p-1">
+    <div class="nav__logo">
+      <p>LautaDev</p>
     </div>
+    <div class="nav__menu d-flex flex-column">
+      <a href="#">Inicio</a>
+      <a href="#">Sobre mi</a>
+      <a href="#">Servicios</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contacto</a>
+    </div>
+  </nav>
 
-  </footer>
-
-
+  <main>
+    <section class="section">
+      <h1 class="section__title">Hola, mi nombre es <span>Lautaro</span></h1>
+      <img src="./src/img/avatar.webp" alt="">
+      <h2 class="section_subtitle">Soy <span>desarrollador web</span></h2>
+      <p class="section__description">Soy un entusiasta tecnológico. Desarrollo aplicaciones web enfocándome en la creatividad</p>
+      <button class="section__button">Más sobre mi</button>
+    </section>
+  </main>
   <script src="./src/js/script.js"></script>
 
 </body>
