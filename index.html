@@ -6,17 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/css/normalize.css">
   <link rel="stylesheet" href="./src/css/style.css">
 </head>
-<img src="https://pbs.twimg.com/card_img/1710363760701915136/TXuxx35z?format=jpg&name=small" alt="">
+<!-- <img src="https://pbs.twimg.com/card_img/1710363760701915136/TXuxx35z?format=jpg&name=small" alt=""> -->
 
 <body>
-  <nav class="nav d-flex flex-column top-0 p-1">
-    <div class="nav__logo">
-      <p>LautaDev</p>
+  <nav class="nav d-flex zindex-1 flex-column fixed top-0 p-1">
+    <div class="nav__logo bg-dark-gray relative p-05 ">
+      <div class="bg-principal-color w-20px h-20px absolute top-0 left-0">
+        <div class="transparent top5px left5px"></div>
+      </div>
+      <div class="bg-principal-color w-20px h-20px absolute rigth-0 bottom-0">
+        <div class="transparent bottom5px rigth5px"></div>
+      </div>
+      <p class="relative">Lauta<span>Dev</span></p>
     </div>
     <div class="nav__menu d-flex flex-column">
       <a href="#">Inicio</a>
@@ -27,12 +33,21 @@
     </div>
   </nav>
 
-  <main>
+  <main class="pl-10">
     <section class="section">
       <h1 class="section__title">Hola, mi nombre es <span>Lautaro</span></h1>
-      <img src="./src/img/avatar.webp" alt="">
+      <div class="nav__logo mw-500 relative p-05 ">
+        <div class="bg-principal-color w-20px h-20px absolute top-0 left-0">
+          <div class="transparent top5px left5px"></div>
+        </div>
+        <div class="bg-principal-color w-20px h-20px absolute rigth-0 bottom-0">
+          <div class="transparent bottom5px rigth5px"></div>
+        </div>
+        <img class="grayscale w-100" src="./src/img/profile_picture_lautaro.webp" alt="profile_picture_lautaro">
+      </div>
       <h2 class="section_subtitle">Soy <span>desarrollador web</span></h2>
-      <p class="section__description">Soy un entusiasta tecnológico. Desarrollo aplicaciones web enfocándome en la creatividad</p>
+      <p class="section__description">Soy un entusiasta tecnológico. Desarrollo aplicaciones web enfocándome en la
+        creatividad</p>
       <button class="section__button">Más sobre mi</button>
     </section>
   </main>
