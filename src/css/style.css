@@ -8,6 +8,8 @@ body {
   background-color: var(--black);
   color: var(--white);
 
+  min-height: 100vh;
+
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr ;
   grid-template-areas: 
@@ -100,7 +102,7 @@ nav a {
 }
 
 .mw-500 {
-  max-width: 500px;
+  max-width: 300px;
 }
 
 .w-100 {
@@ -139,6 +141,19 @@ nav a {
   height: 50px;
 }
 
+.h-100 {
+  height: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0 0 5px var(--white));
+  -webkit-filter: drop-shadow(0 0 5px var(--white));
+}
+
 .rigth-0 {
   right: 0;
 }
@@ -161,6 +176,11 @@ nav a {
 
 .rigth5px {
   right: 5px;
+}
+
+.gradientTransparent {
+  background: rgb(0,0,0);
+background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
 }
 
 .grayscale { filter: grayscale(100%); }
