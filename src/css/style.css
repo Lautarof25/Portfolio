@@ -7,9 +7,36 @@ body {
   --principal-color: #ff5b02;
   background-color: var(--black);
   color: var(--white);
+
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr ;
+  grid-template-areas: 
+    "header empty"
+    "nav main"
+  ;
+}
+
+.header {
+  grid-area: header;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.main {
+  grid-area: main;
+}
+
+.main .section {
+  grid-template-columns: repeat(2,1fr);
 }
 
 /* helpers */
+
+.bg-black {
+  background-color: var(--black);
+}
 
 .bg-dark-gray {
   background-color: var(--darkGray);
@@ -22,10 +49,26 @@ body {
 nav a {
   color: var(--white);
   text-decoration: none;
+  padding: .5rem;
+  border-bottom: 1px solid rgb(94, 94, 94);
+  display: flex;
+  gap: .5rem;
 }
 
 .d-flex {
   display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.d-grid {
+  display: grid;
 }
 
 .flex-column {
@@ -44,6 +87,10 @@ nav a {
   top: 0;
 }
 
+.gap-1 {
+  gap: 2rem;
+}
+
 .left-0 {
   left: 0;
 }
@@ -58,6 +105,14 @@ nav a {
 
 .w-100 {
   width: 100%;
+}
+
+.border-radius-15 {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .text-center {
@@ -90,13 +145,6 @@ nav a {
 
 .bottom-0 {
   bottom: 0;
-}
-
-.transparent {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: var(--darkGray);
 }
 
 .top5px {
@@ -135,7 +183,6 @@ nav a {
 
 .nav {
   background-color: var(--darkGray);
-  min-height: 100vh;
 }
 
 span {
@@ -145,6 +192,7 @@ span {
 .section__description {
   color: var(--lighGray);
 }
+
 
 .section__button {
   all: unset;
