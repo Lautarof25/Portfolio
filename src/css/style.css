@@ -29,15 +29,29 @@ body {
   ;
 }
 
-span {
-  color: var(--principal-color);
-}
-
 @media (max-width: 768px) {
   body {
     grid-template-areas:
-    "header main"
-    "nav main"
-  ;
+      "header main"
+      "nav main"
+    ;
+  }
+}
+
+@media (max-width: 498px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "main"
+      "main"
+    ;
+  }
+  .d-none {
+    display: none;
+  }
+
+  .opacity-50 {
+    opacity: 0.2;
   }
 }

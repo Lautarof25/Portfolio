@@ -147,6 +147,10 @@
     -o-border-radius: 5px;
 }
 
+.principalColor {
+    color: var(--principal-color);
+}
+
 .text-center {
     text-align: center;
 }

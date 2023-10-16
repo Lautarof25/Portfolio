@@ -9,7 +9,6 @@
 .main .section__subtitle {
     font-size: 2rem;
     font-size: clamp(32px, 4vw, 48px);
-
 }
 
 .main .section__description {

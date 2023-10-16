@@ -1,3 +1,24 @@
 .header {
     grid-area: header;
 }
+
+@media (max-width: 498px) {
+    .header {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: -50px;
+        padding: 0 !important;
+        width: 100px;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+    }
+
+    .header:hover {
+        left: 0 !important;
+        opacity: 1;
+    }
+}
