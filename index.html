@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/css/normalize.css">
   <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./src/css/helpers.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,20 +20,20 @@
 
 <body class="d-grid">
 
-  <header class="header bg-dark-gray p-1">
+  <header class="header bg-dark-gray p-2">
     <div class="header__logo relative p-05 ">
       <div class="bg-principal-color w-20px h-20px absolute top-0 left-0 border-radius-15">
         <div class="absolute w-20px h-20px bg-dark-gray top5px left5px border-radius-15"></div>
       </div>
-      <div class="bg-principal-color w-20px h-20px absolute rigth-0 bottom-0 border-radius-15">
-        <div class="absolute w-20px h-20px bg-dark-gray bottom5px rigth5px border-radius-15"></div>
+      <div class="bg-principal-color w-20px h-20px absolute right-0 bottom-0 border-radius-15">
+        <div class="absolute w-20px h-20px bg-dark-gray bottom5px right5px border-radius-15"></div>
       </div>
       <p class="relative text-center">Lauta<span>Dev</span></p>
     </div>
   </header>
-  <nav class="nav d-flex zindex-1 flex-column  top-0 p-1">
-    <div class="nav__menu d-flex flex-column  gap-1">
-      <a href="#"><i class="fa-solid fa-house"></i> Inicio</a>
+  <nav class="nav d-flex zindex-1 flex-column  top-0 p-2">
+    <div class="nav__menu d-flex flex-column gap-1">
+      <a href="#" class="link-active"><i class="fa-solid fa-house"></i> Inicio</a>
       <a href="#"><i class="fa-solid fa-user"></i> Sobre mi</a>
       <a href="#"><i class="fa-solid fa-list"></i> Servicios</a>
       <a href="#"><i class="fa-solid fa-briefcase"></i> Portfolio</a>
@@ -41,25 +42,27 @@
   </nav>
 
   <main class="main p-1">
-    <section class="section d-grid">
-      <div>
+    <section class="section d-flex">
+      <div class="d-flex flex-column align-center justify-between">
         <h1 class="section__title">Hola, mi nombre es <span>Lautaro</span></h1>
-        <h2 class="section_subtitle">Soy <span>desarrollador web</span></h2>
-        <p class="section__description">Soy un entusiasta tecnológico. Desarrollo aplicaciones web enfocándome en la
-          creatividad</p>
+        <div>
+          <h2 class="section__subtitle">Soy <span>desarrollador web</span></h2>
+          <p class="section__description">Soy un entusiasta tecnológico. Desarrollo aplicaciones web enfocándome en la
+            creatividad</p>
+        </div>
         <button class="section__button">Más sobre mi</button>
       </div>
-      <div class="nav__logo mw-500 relative p-05">
-        <div class="bg-principal-color w-50px border-radius-15 h-50px absolute top-0 left-0">
-          <div class="absolute bg-black w-50px border-radius-15 h-50px  top5px left5px"></div>
+      <div class="mw-500 relative p-05">
+        <div class="bg-principal-color w-50px border-radius-15 h-50px absolute top-0 right-0">
+          <div class="absolute bg-black w-50px border-radius-15 h-50px top5px right5px"></div>
         </div>
-        <div class="bg-principal-color w-50px border-radius-15 h-50px absolute zindex-1 rigth-0 bottom-0">
-          <div class="absolute bg-black w-50px border-radius-15 h-50px zindex-1  bottom5px rigth5px"></div>
+        <div class="bg-principal-color w-50px border-radius-15 h-50px absolute zindex-1 left-0 bottom-0">
+          <div class="absolute bg-black w-50px border-radius-15 h-50px zindex-1  bottom5px left5px"></div>
         </div>
         <div class="drop-shadow">
-        <img class="grayscale w-100 h-100" src="./src/img/profile_picture_lautaro.webp" alt="profile_picture_lautaro">
-      </div>
-      <div class="gradientTransparent w-100 h-50px absolute bottom-0"></div>
+          <img class="grayscale w-100 h-100" src="./src/img/profile_picture_lautaro.webp" alt="profile_picture_lautaro">
+        </div>
+        <div class="gradientTransparent w-100 h-50px absolute bottom-0"></div>
       </div>
     </section>
   </main>
