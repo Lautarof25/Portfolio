@@ -29,78 +29,15 @@ body {
   ;
 }
 
-.header {
-  grid-area: header;
-}
-
-.nav {
-  grid-area: nav;
-}
-
-.main {
-  grid-area: main;
-}
-
-nav a {
-  color: var(--white);
-  text-decoration: none;
-  padding: .5rem;
-  display: flex;
-  gap: .5rem;
-}
-
-nav a:hover {
-  filter: brightness(0.8);
-  -webkit-filter: brightness(0.8);
-  border-bottom: 1px solid rgb(70, 70, 70);
-  margin-bottom: -1px;
-}
-
-.section__title {
-  font-size: 1.3rem;
-}
-
-.section__subtitle {
-  font-size: 2rem;
-}
-
-.link-active {
-  border-bottom: 1px solid rgb(94, 94, 94);
-  margin-bottom: -1px;
-}
-
-.nav {
-  background-color: var(--darkGray);
-}
-
 span {
   color: var(--principal-color);
 }
 
-.section__description {
-  color: var(--lighGray);
-}
-
-.section__button {
-  all: unset;
-  cursor: pointer;
-  background-color: var(--principal-color);
-  padding: .5rem;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-}
-
-.section__button:hover {
-  filter: brightness(.8);
-  -webkit-filter: brightness(.8);
-}
-
 @media (max-width: 768px) {
-  .main .section {
-    flex-wrap: wrap;
-    justify-content: center;
+  body {
+    grid-template-areas:
+    "header main"
+    "nav main"
+  ;
   }
 }
