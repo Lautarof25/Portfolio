@@ -31,29 +31,18 @@
     .nav {
         width: 100px;
         top: 83px !important;
-        left: -50px;
         position: fixed;
         min-height: 100vh;
         z-index: 20 !important;
         padding: 0 !important;
-        transition: all 1s;
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        -ms-transition: all 1s;
-        -o-transition: all 1s;
-
     }
 
     .nav a {
         justify-content: end;
     }
 
-    .nav:hover {
-        left: 0 !important;
-        opacity: 1;
-    }
-
-    .nav:hover a {
+    .show a {
         justify-content: center !important;
     }
+
 }
