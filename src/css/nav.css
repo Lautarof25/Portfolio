@@ -41,8 +41,15 @@
         justify-content: end;
     }
 
+    .nav .hidden-icon {
+        color: var(--darkGray);
+    }
+
+    .nav .d-none {
+        display: none;
+    }
+
     .show a {
         justify-content: center !important;
     }
-
 }

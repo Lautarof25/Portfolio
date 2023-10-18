@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="./src/css/main_about.css">
   <link rel="stylesheet" href="./src/css/helpers.css">
   <link rel="stylesheet" href="./src/css/scrollbar.css">
+  <link rel="stylesheet" href="./src/css/animation.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -39,21 +40,22 @@
     </div>
   </header>
   <nav class="nav hidden-menu d-flex zindex-1 flex-column  top-0 p-2 opacity-50 transition-all">
-    <div class="nav__menu d-flex flex-column gap-1">
-      <a href="#" class="link-active transition-color"><i class="fa-solid fa-house"></i><span
+    <div class="nav__menu d-flex flex-column gap-2">
+      <a href="#" id="home" class="link-active transition-color"><i class="fa-solid fa-house"></i><span
           class="d-none">Inicio</span></a>
-      <a href="#" class="transition-color"><i class="fa-solid fa-user hidden-icon"></i><span class="d-none"> Sobre
+      <a href="#" id="about" class="transition-color"><i class="fa-solid fa-user hidden-icon"></i><span class="d-none">
+          Sobre
           mi</span></a>
-      <a href="#" class="transition-color"><i class="fa-solid fa-list hidden-icon"></i><span
+      <a href="#" id="services" class="transition-color"><i class="fa-solid fa-list hidden-icon"></i><span
           class="d-none">Servicios</span></a>
-      <a href="#" class="transition-color"><i class="fa-solid fa-briefcase hidden-icon"></i> <span
+      <a href="#" id="portfolio" class="transition-color"><i class="fa-solid fa-briefcase hidden-icon"></i> <span
           class="d-none">Portfolio</span></a>
-      <a href="#" class="transition-color"><i class="fa-solid fa-comments hidden-icon"></i> <span
+      <a href="#" id="contact" class="transition-color"><i class="fa-solid fa-comments hidden-icon"></i> <span
           class="d-none">Contacto</span></a>
     </div>
   </nav>
 
-  <!-- <main class="main p-1 transition-all">
+  <main class="main p-1 transition-all">
     <section class="section home d-grid">
       <h1 class="section__title text-center">Hola, mi nombre es <span class="principalColor">Lautaro</span></h1>
       <div class="section__box mw-500 relative p-05 m-0-auto">
@@ -64,109 +66,37 @@
           <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
         </div>
         <div class="drop-shadow relative zindex-1">
-          <img class="grayscale w-100 h-100 " src="./src/img/profile_picture_lautaro.webp" alt="profile_picture_lautaro">
+          <img class="grayscale w-100 h-100 " src="./src/img/profile_picture_lautaro.webp"
+            alt="profile_picture_lautaro">
         </div>
         <div class="gradientTransparent w-100 h-50px zindex-5 absolute bottomOffset"></div>
       </div>
       <div class="section__text">
         <h2 class="section__subtitle">Soy <span class="principalColor">desarrollador web</span></h2>
-        <p class="section__description">Soy un entusiasta tecnológico. Me apasiona el desarrollo web, la programación y las computadoras</p>
+        <p class="section__description">Soy un entusiasta tecnológico. Me apasiona el desarrollo web, la programación y
+          las computadoras</p>
       </div>
-      <button class="section__button p-1 border-radius-5 m-0-auto">Más sobre mi</button>
+      <button class="section__button p-1 border-radius-5 m-0-auto">Sobre mi</button>
     </section>
-  </main> -->
 
-  <main class="main p-1 transition-all">
-    <section class="section about d-grid">
-      <div class="section__box mw-500 relative p-05 m-0-auto">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
-        </div>
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
-        </div>
-        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
-          <p class="section__description text-center">Soy técnico en mantenimiento y armado de PC del IAC.</p>
-          <div>
-            <i class="fa-solid fa-computer fa-2xl"></i>
-            <i class="fa-solid fa-screwdriver-wrench fa-2xl"></i>
-          </div>
-        </div>
-        
-      </div>
+    <section class="section about d-grid hidden">
 
-      <div class="section__box mw-500 relative p-05 m-0-auto">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
-        </div>
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
-        </div>
-        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
-          <p class="section__description text-center">Estudio programación desde mediados del 2020</p>
-          <div>
-            <i class="fa-solid fa-pencil fa-2xl"></i>
-            <i class="fa-solid fa-code fa-2xl"></i>
-          </div>
-        </div>
-        
-      </div>
-
-      <div class="section__box mw-500 relative p-05 m-0-auto">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
-        </div>
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
-        </div>
-        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
-          <p class="section__description text-center">Tengo conocimientos en HTML, CSS, JS y algunos frameworks (Bootstrap y Tailwind)</p>
-          <div>
-            <i class="fa-brands fa-html5 fa-2xl"></i>
-            <i class="fa-brands fa-css3 fa-2xl"></i>
-            <i class="fa-brands fa-js fa-2xl"></i>
-            <i class="fa-brands fa-bootstrap fa-2xl"></i>
-          </div>
-        </div>
-        
-      </div>
-
-      <div class="section__box mw-500 relative p-05 m-0-auto">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
-        </div>
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
-        </div>
-        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
-          <p class="section__description text-center">También conozco Python y Java, y estoy estudiando ReactJS, Spring, PHP, entre otros.</p>
-          <div>
-            <i class="fa-brands fa-python fa-2xl"></i>
-            <i class="fa-brands fa-java fa-2xl"></i>
-            <i class="fa-brands fa-react fa-2xl"></i>
-            <i class="fa-brands fa-php fa-2xl"></i>
-          </div>
-        </div>
-        
-      </div>
-
-      <div class="section__box mw-500 relative p-05 m-0-auto">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
-        </div>
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
-        </div>
-        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
-          <p class="section__description text-center">Me interesa también la parte de testing QA y bases de datos.</p>
-          <div>
-            <i class="fa-solid fa-bug fa-2xl"></i>
-            <i class="fa-solid fa-database fa-2xl"></i>
-          </div>
-        </div>
-        
-      </div>
       <button class="section__button p-1 border-radius-5 m-0-auto">Servicios</button>
+    </section>
+
+    <section class="section services d-grid hidden">
+
+      <button class="section__button p-1 border-radius-5 m-0-auto">Portfolio</button>
+    </section>
+
+    <section class="section portfolio d-grid hidden">
+
+      <button class="section__button p-1 border-radius-5 m-0-auto">Contacto</button>
+    </section>
+
+    <section class="section contact d-grid hidden">
+
+      <button class="section__button p-1 border-radius-5 m-0-auto">Inicio</button>
     </section>
   </main>
 

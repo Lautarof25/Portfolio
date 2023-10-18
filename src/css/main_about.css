@@ -11,5 +11,24 @@
     }
     .about .section__button {
         grid-area: five;
+        order: 1;
     } 
 }
+
+@media (max-width: 767px) { 
+    .main .about {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four"
+        "six"
+        "five"
+        ;
+    }
+    .about .section__button {
+        grid-area: five;
+        order: 1;
+    } 
+ }

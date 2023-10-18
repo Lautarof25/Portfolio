@@ -51,14 +51,6 @@ body {
     left: -50px;
   }
 
-  .hidden-icon {
-    color: var(--darkGray);
-  }
-  
-  .d-none {
-    display: none;
-  }
-
   .opacity-50 {
     opacity: 0.2;
   }

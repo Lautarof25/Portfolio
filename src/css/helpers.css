@@ -36,6 +36,10 @@
     flex-wrap: wrap;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Positions */
 .relative {
     position: relative;
@@ -91,7 +95,15 @@
 
 /* margins and paddings */
 
+.gap-05 {
+    gap: 0.5rem;
+}
+
 .gap-1 {
+    gap: 1rem;
+}
+
+.gap-2 {
     gap: 2rem;
 }
 

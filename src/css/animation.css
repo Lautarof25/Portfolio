@@ -1,0 +1,23 @@
+@keyframes blurEffect {
+    from {
+        filter: blur(4px);
+        -webkit-filter:blur(4px);
+        transform: skew(-0.06turn, 18deg);
+}
+
+    to {
+        filter: blur(0);
+        -webkit-filter: blur(0);
+        transform: skew(0);
+    }
+}
+
+section {
+    animation: blurEffect .5s ease-in-out;
+    -webkit-animation: blurEffect .5s ease-in-out;
+}
+::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
