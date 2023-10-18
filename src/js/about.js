@@ -20,6 +20,14 @@ const aboutInfo = {
       "description": "Me interesa también la parte de testing QA y bases de datos.",
       "icons": ["fa-solid fa-bug", "fa-solid fa-database"]
     },
+    {
+      "description": "Conocimientos sólidos en herramientas ofimáticas, diseño gráfico y web.",
+      "icons": ["fa-solid fa-file-excel", "fa-solid fa-palette", "fa-solid fa-globe"]
+    },
+    {
+      "description": "Trabajar de manera colaborativa, aprender continuamente y conocer distintos tipos de metodologías de trabajo",
+      "icons": ["fa-solid fa-users", "fa-solid fa-hand-holding-hand"]
+    },
   ]
 }
 

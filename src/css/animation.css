@@ -3,6 +3,10 @@
         filter: blur(4px);
         -webkit-filter:blur(4px);
         transform: skew(-0.06turn, 18deg);
+        -webkit-transform: skew(-0.06turn, 18deg);
+        -moz-transform: skew(-0.06turn, 18deg);
+        -ms-transform: skew(-0.06turn, 18deg);
+        -o-transform: skew(-0.06turn, 18deg);
 }
 
     to {
