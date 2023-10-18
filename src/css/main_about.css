@@ -1,0 +1,15 @@
+@media (min-width: 768px) {
+    .main .about {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        grid-template-areas: 
+        "one two"
+        "three four"
+        "five six "
+        ;
+        align-items: center;
+    }
+    .about .section__button {
+        grid-area: five;
+    } 
+}

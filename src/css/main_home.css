@@ -1,0 +1,37 @@
+.home .section__title {
+    font-size: 1.3rem;
+}
+
+.home .section__subtitle {
+    font-size: 2rem;
+    font-size: clamp(32px, 4vw, 48px);
+}
+
+.home .section__description {
+    color: var(--lighGray);
+}
+
+@media (min-width: 768px) {
+    .main .home {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas: 
+            "title img"
+            "description img"
+            "button img"
+        ;
+        align-items: center;
+    }
+    .home .section__title {
+        grid-area: title;
+    }
+    .home .section__box {
+        grid-area: img;
+    }
+    .home .section__text {
+        grid-area: description;
+    }
+    .home .section__button {
+        grid-area: button;
+    }
+}

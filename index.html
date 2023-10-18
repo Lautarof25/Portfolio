@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="./src/css/header.css">
   <link rel="stylesheet" href="./src/css/nav.css">
   <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="./src/css/main_home.css">
+  <link rel="stylesheet" href="./src/css/main_about.css">
   <link rel="stylesheet" href="./src/css/helpers.css">
   <link rel="stylesheet" href="./src/css/scrollbar.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -24,7 +26,7 @@
 
 <body class="d-grid">
 
-  <header class="header hidden-menu bg-dark-gray p-2 opacity-50 transition-all">
+  <header class="header hidden-menu bg-dark-gray p-2 opacity-50 transition-all unselect-text">
     <div class="header__logo relative p-05 ">
       <div class="bg-principal-color absolute w-20px h-20px top-0 left-0 border-radius-5">
         <div class="bg-dark-gray absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
@@ -32,23 +34,29 @@
       <div class="bg-principal-color absolute w-20px h-20px right-0 bottom-0 border-radius-5">
         <div class="bg-dark-gray absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
       </div>
-      <p class="relative text-center">L<span class="d-none">auta</span><span class="principalColor">D<span class="d-none">ev</span></span></p>
+      <p class="relative text-center">L<span class="d-none">auta</span><span class="principalColor">D<span
+            class="d-none">ev</span></span></p>
     </div>
   </header>
   <nav class="nav hidden-menu d-flex zindex-1 flex-column  top-0 p-2 opacity-50 transition-all">
     <div class="nav__menu d-flex flex-column gap-1">
-      <a href="#" class="link-active transition-color"><i class="fa-solid fa-house"></i><span class="d-none">Inicio</span></a>
-      <a href="#" class="transition-color"><i class="fa-solid fa-user hidden-icon"></i><span class="d-none"> Sobre mi</span></a>
-      <a href="#" class="transition-color"><i class="fa-solid fa-list hidden-icon"></i><span class="d-none">Servicios</span></a>
-      <a href="#" class="transition-color"><i class="fa-solid fa-briefcase hidden-icon"></i> <span class="d-none">Portfolio</span></a>
-      <a href="#" class="transition-color"><i class="fa-solid fa-comments hidden-icon"></i> <span class="d-none">Contacto</span></a>
+      <a href="#" class="link-active transition-color"><i class="fa-solid fa-house"></i><span
+          class="d-none">Inicio</span></a>
+      <a href="#" class="transition-color"><i class="fa-solid fa-user hidden-icon"></i><span class="d-none"> Sobre
+          mi</span></a>
+      <a href="#" class="transition-color"><i class="fa-solid fa-list hidden-icon"></i><span
+          class="d-none">Servicios</span></a>
+      <a href="#" class="transition-color"><i class="fa-solid fa-briefcase hidden-icon"></i> <span
+          class="d-none">Portfolio</span></a>
+      <a href="#" class="transition-color"><i class="fa-solid fa-comments hidden-icon"></i> <span
+          class="d-none">Contacto</span></a>
     </div>
   </nav>
 
-  <main class="main p-1 transition-all">
-    <section class="section d-grid">
+  <!-- <main class="main p-1 transition-all">
+    <section class="section home d-grid">
       <h1 class="section__title text-center">Hola, mi nombre es <span class="principalColor">Lautaro</span></h1>
-      <div class="section__img mw-500 relative p-05 m-0-auto">
+      <div class="section__box mw-500 relative p-05 m-0-auto">
         <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
           <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
         </div>
@@ -66,9 +74,105 @@
       </div>
       <button class="section__button p-1 border-radius-5 m-0-auto">Más sobre mi</button>
     </section>
+  </main> -->
+
+  <main class="main p-1 transition-all">
+    <section class="section about d-grid">
+      <div class="section__box mw-500 relative p-05 m-0-auto">
+        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
+        </div>
+        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
+        </div>
+        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
+          <p class="section__description text-center">Soy técnico en mantenimiento y armado de PC del IAC.</p>
+          <div>
+            <i class="fa-solid fa-computer fa-2xl"></i>
+            <i class="fa-solid fa-screwdriver-wrench fa-2xl"></i>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="section__box mw-500 relative p-05 m-0-auto">
+        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
+        </div>
+        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
+        </div>
+        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
+          <p class="section__description text-center">Estudio programación desde mediados del 2020</p>
+          <div>
+            <i class="fa-solid fa-pencil fa-2xl"></i>
+            <i class="fa-solid fa-code fa-2xl"></i>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="section__box mw-500 relative p-05 m-0-auto">
+        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
+        </div>
+        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
+        </div>
+        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
+          <p class="section__description text-center">Tengo conocimientos en HTML, CSS, JS y algunos frameworks (Bootstrap y Tailwind)</p>
+          <div>
+            <i class="fa-brands fa-html5 fa-2xl"></i>
+            <i class="fa-brands fa-css3 fa-2xl"></i>
+            <i class="fa-brands fa-js fa-2xl"></i>
+            <i class="fa-brands fa-bootstrap fa-2xl"></i>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="section__box mw-500 relative p-05 m-0-auto">
+        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
+        </div>
+        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
+        </div>
+        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
+          <p class="section__description text-center">También conozco Python y Java, y estoy estudiando ReactJS, Spring, PHP, entre otros.</p>
+          <div>
+            <i class="fa-brands fa-python fa-2xl"></i>
+            <i class="fa-brands fa-java fa-2xl"></i>
+            <i class="fa-brands fa-react fa-2xl"></i>
+            <i class="fa-brands fa-php fa-2xl"></i>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="section__box mw-500 relative p-05 m-0-auto">
+        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
+        </div>
+        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
+        </div>
+        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
+          <p class="section__description text-center">Me interesa también la parte de testing QA y bases de datos.</p>
+          <div>
+            <i class="fa-solid fa-bug fa-2xl"></i>
+            <i class="fa-solid fa-database fa-2xl"></i>
+          </div>
+        </div>
+        
+      </div>
+      <button class="section__button p-1 border-radius-5 m-0-auto">Servicios</button>
+    </section>
   </main>
+
   <script src="./src/js/menuHidden.js"></script>
   <script src="./src/js/linksSelector.js"></script>
+  <script src="./src/js/about.js"></script>
 
 </body>
 
