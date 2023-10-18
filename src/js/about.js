@@ -35,13 +35,13 @@ const about = document.querySelector('.about');
 
 const databaseAbout = aboutInfo.info
 
-function addCardInfo(){
+function addCardAboutInfo(){
   databaseAbout.forEach(item => {
-    createCardInfo(item.description, item.icons)
+    createCardAboutInfo(item.description, item.icons)
   })
 }
 
-function createCardInfo(description, icons){
+function createCardAboutInfo(description, icons){
   const div = document.createElement("div")
   div.setAttribute("class","section__box mw-500 relative p-05 m-0-auto")
 
@@ -58,7 +58,7 @@ function createCardInfo(description, icons){
   divLeft.appendChild(divLeftOffset)
 
   const divContainer = document.createElement("div")
-  divContainer.setAttribute("class", "relative zindex-1 d-flex flex-column p-1 align-center")
+  divContainer.setAttribute("class", "relative zindex-1 d-flex flex-column p-1 align-center gap-05")
   const p = document.createElement("p")
   p.setAttribute("class", "section__description text-center")
   const pText = document.createTextNode(`${description}`)
@@ -78,4 +78,4 @@ function createCardInfo(description, icons){
   about.appendChild(div)
 }
 
-addCardInfo()
+addCardAboutInfo()

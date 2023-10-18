@@ -1,6 +1,31 @@
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     .main .services {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        grid-template-areas: 
+        "one two"
+        "three four"
+        ;
         align-items: center;
     }
+    .services .section__button {
+        grid-area: four;
+        order: 1;
+    } 
+}
+
+@media (max-width: 767px) { 
+    .main .services {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four"
+        ;
+    }
+    .services .section__button {
+        grid-area: four;
+        order: 1;
+    } 
  }

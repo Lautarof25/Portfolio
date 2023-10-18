@@ -57,7 +57,7 @@
   </nav>
 
   <main class="main p-1 transition-all">
-    <section class="section home d-grid">
+    <section class="section home d-grid blurEffect skewEffect">
       <h1 class="section__title text-center">Hola, mi nombre es <span class="principalColor">Lautaro</span></h1>
       <div class="section__box mw-500 relative p-05 m-0-auto">
         <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
@@ -80,66 +80,12 @@
       <button class="section__button p-1 border-radius-5 m-0-auto">Sobre mi</button>
     </section>
 
-    <section class="section about d-grid hidden">
+    <section class="section about d-grid hidden skewEffect">
 
       <button class="section__button p-1 border-radius-5 m-0-auto">Servicios</button>
     </section>
 
-    <section class="section services d-grid hidden">
-
-      <div class="section__box mw-500 relative p-05 m-0-auto">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
-        </div>
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
-        </div>
-        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
-          <h2 class="text-center">Mantenimiento y armado de PC</h2>
-          <div class="section__icons d-flex gap-05">
-            <i class="fa-solid fa-computer fa-2xl"></i><i class="fa-solid fa-screwdriver-wrench fa-2xl"></i>
-          </div>
-          <p class="section__description text-center">Armado de pc y reciclado de hardware
-          </p>
-
-        </div>
-      </div>
-
-      <div class="section__box mw-500 relative p-05 m-0-auto">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
-        </div>
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
-        </div>
-        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
-          <h2 class="text-center">Clases de internet avanzado</h2>
-          <div class="section__icons d-flex gap-05">
-            <i class="fa-solid fa-chalkboard-user fa-2xl"></i><i class="fa-solid fa-book fa-2xl"></i>
-          </div>
-          <p class="section__description text-center">Imparto clases particulares a adultos mayores para contribuir con la alfabetización digital
-          </p>
-
-        </div>
-      </div>
-
-      <div class="section__box mw-500 relative p-05 m-0-auto">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
-        </div>
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
-        </div>
-        <div class="relative zindex-1 d-flex flex-column p-1 align-center">
-          <h2 class="text-center">Optimización tecnológica</h2>
-          <div class="section__icons d-flex gap-05">
-            <i class="fa-solid fa-rocket fa-2xl"></i><i class="fa-solid fa-hand-holding-dollar fa-2xl"></i>
-          </div>
-          <p class="section__description text-center">Automatización en procesos de trabajo para ahorrar tiempos de ejecución de tareas.
-          </p>
-
-        </div>
-      </div>
+    <section class="section services d-grid hidden blurEffect">
 
       <button class="section__button p-1 border-radius-5 m-0-auto">Portfolio</button>
     </section>
@@ -158,6 +104,7 @@
   <script src="./src/js/menuHidden.js"></script>
   <script src="./src/js/linksSelector.js"></script>
   <script src="./src/js/about.js"></script>
+  <script src="./src/js/services.js"></script>
 
 </body>
 
