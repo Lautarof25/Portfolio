@@ -28,6 +28,10 @@
     justify-content: space-around;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 .flex-column {
     flex-direction: column;
 }
@@ -87,6 +91,10 @@
 
 .zindex-5 {
     z-index: 5;
+}
+
+.zindex-10 {
+    z-index: 10;
 }
 
 .m-0-auto {

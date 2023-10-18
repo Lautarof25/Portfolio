@@ -1,0 +1,37 @@
+.footer {
+    grid-area: footer;
+}
+
+.footer a{
+    color: var(--white);
+}
+
+.footer a:hover{
+    filter: brightness(0.8);
+    -webkit-filter: brightness(0.8);
+}
+
+@media (max-width: 498px) {
+    .footer {
+        position: fixed;
+        z-index: 100;
+        bottom: 0;
+        padding: 14px 0 !important;
+        width: 100px;
+        margin: 0 !important;
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    .footer .d-none {
+        display: none;
+    }
+
+    .footer .hidden-icon {
+        color: var(--darkGray);
+    }
+
+    .show i {
+        justify-content: center !important;
+    }
+
+}
