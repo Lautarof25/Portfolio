@@ -217,7 +217,7 @@
     -o-transition: color 1s;
 }
 
-@media (max-width: 496px) {
+@media (max-width: 576px) {
     .blur {
         filter: blur(4px);
     }

@@ -8,7 +8,7 @@
     user-select: none;
 }
 
-@media (max-width: 498px) {
+@media (max-width: 576px) {
     .header {
         position: fixed;
         z-index: 10;

@@ -11,7 +11,7 @@
     -webkit-filter: brightness(0.8);
 }
 
-@media (max-width: 498px) {
+@media (max-width: 576px) {
     .footer {
         position: fixed;
         z-index: 100;
@@ -28,6 +28,7 @@
 
     .footer .hidden-icon {
         color: var(--darkGray);
+        background-color: var(--darkGray);
     }
 
     .show i {

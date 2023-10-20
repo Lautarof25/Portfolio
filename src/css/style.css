@@ -40,7 +40,7 @@ body {
   opacity: 1;
 }
 
-@media (min-width: 498px) {
+@media (min-width: 576px) {
   body {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;

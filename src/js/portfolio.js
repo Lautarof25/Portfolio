@@ -2,7 +2,7 @@ const portfolioInfo = {
   "info": [
     {
       "title": "CV Online",
-      "description": "Armado de pc y reciclado de hardware",
+      "description": "Cv online dinámico",
       "languages": ["fa-brands fa-square-js", "fa-brands fa-htlm5", "fa-brands fa-css3"],
       "thumbnail": "../src/img/cv_online.jpeg",
       "github": "https://github.com/Lautarof25/cv_online",
@@ -10,19 +10,19 @@ const portfolioInfo = {
     },
     {
       "title": "WineStore",
-      "description": "Armado de pc y reciclado de hardware",
-      "languages": ["fa-brands fa-square-js", "fa-brands fa-htlm5", "fa-brands fa-css3"],
-      "thumbnail": "./src/img/cv_online.jpg",
-      "github": "https://github.com/Lautarof25/cv_online",
-      "webpage": "https://lautarof25.github.io/cv_online/"
+      "description": "Una vineria con carrito de compras",
+      "languages": ["fa-brands fa-square-js", "fa-brands fa-htlm5", "fa-brands fa-bootstrap"],
+      "thumbnail": "./src/img/vinería.jpeg",
+      "github": "https://github.com/Lautarof25/Vinoteca",
+      "webpage": "https://lautarof25.github.io/Vinoteca/"
     },
     {
       "title": "Guess The Number",
-      "description": "Armado de pc y reciclado de hardware",
-      "languages": ["fa-brands fa-square-js", "fa-brands fa-htlm5", "fa-brands fa-css3"],
-      "thumbnail": "./src/img/cv_online.jpg",
-      "github": "https://github.com/Lautarof25/cv_online",
-      "webpage": "https://lautarof25.github.io/cv_online/"
+      "description": "Un juego para usar la lógica",
+      "languages": ["fa-brands fa-square-js", "fa-brands fa-htlm5", "fa-brands fa-bootstrap"],
+      "thumbnail": "./src/img/guess_the_number.jpeg",
+      "github": "https://github.com/Lautarof25/guessTheNumber",
+      "webpage": "https://lautarof25.github.io/guessTheNumber/"
     },
   ]
 }
@@ -33,35 +33,9 @@ const databasePortfolio = portfolioInfo.info
 
 function addCardPortfolioInfo() {
     databasePortfolio.forEach(item => {
-        createCardPortfolioInfo(item.title, item.description,item.languages,item.thumbnail, item.github, item.webpage,item.webpageUrl)
+        createCardPortfolioInfo(item.title, item.description,item.languages,item.thumbnail, item.github, item.webpage,item.webpage)
     })
 }
-
-{/* 
-<div class="section__box mw-500 relative p-05 m-0-auto">
-  <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
-    <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
-  </div>
-  <div class="bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5">
-    <div class="bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
-  </div>
-  <div class="bg-principal-color absolute w-50px h-50px left-0 bottom-0 border-radius-5">
-    <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
-  </div>
-  <div class="bg-principal-color absolute w-50px h-50px right-0 bottom-0 border-radius-5">
-    <div class="bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
-  </div>
-  <div class="relative">
-    <img style="max-width:380px" src="https://static-cse.canva.com/blob/1197699/1600w-wK95f3XNRaM.jpg" alt="">
-    <h2 class="text-center"><span class="principalColor">CV Online</span></h2>
-    <p class="section__description">Soy un entusiasta tecnológico. Me apasiona el desarrollo web, la programación y
-    las computadoras</p>
-  </div>
-  <div class="d-flex justify-center gap-05">
-    <a class="section__button zindex-5 p-1 relative border-radius-5" target="_blank">GitHub<a/>
-    <a class="section__button zindex-5 p-1 relative border-radius-5" target="_blank">WebPage</a>
-  </div>
-</div> */}
 
 function createCardPortfolioInfo(title, description,languages, thumbnail, github, webpage) {
   const div = document.createElement("div")
