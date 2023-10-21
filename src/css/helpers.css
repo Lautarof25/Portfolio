@@ -36,6 +36,10 @@
     place-items: center;
 }
 
+.align-end {
+    align-items: end;
+}
+
 .flex-column {
     flex-direction: column;
 }

@@ -55,6 +55,7 @@ function createCardServicesInfo(title, description, icons) {
     p.setAttribute("class", "section__description text-center")
     const pText = document.createTextNode(`${description}`)
     p.appendChild(pText)
+    
     const divIcons = document.createElement("div")
     divIcons.setAttribute("class", "section__icons d-flex gap-05")
 

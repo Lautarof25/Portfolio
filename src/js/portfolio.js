@@ -3,7 +3,7 @@ const portfolioInfo = {
     {
       "title": "CV Online",
       "description": "Cv online dinámico",
-      "languages": ["fa-brands fa-square-js", "fa-brands fa-htlm5", "fa-brands fa-css3"],
+      "languages": [ "fa-brands fa-html5","fa-brands fa-css3","fa-brands fa-square-js"],
       "thumbnail": "../src/img/cv_online.jpeg",
       "github": "https://github.com/Lautarof25/cv_online",
       "webpage": "https://lautarof25.github.io/cv_online/"
@@ -11,15 +11,15 @@ const portfolioInfo = {
     {
       "title": "WineStore",
       "description": "Una vineria con carrito de compras",
-      "languages": ["fa-brands fa-square-js", "fa-brands fa-htlm5", "fa-brands fa-bootstrap"],
-      "thumbnail": "./src/img/vinería.jpeg",
+      "languages": [ "fa-brands fa-html5","fa-brands fa-bootstrap ", "fa-brands fa-square-js"],
+      "thumbnail": "./src/img/winestore.jpeg",
       "github": "https://github.com/Lautarof25/Vinoteca",
       "webpage": "https://lautarof25.github.io/Vinoteca/"
     },
     {
       "title": "Guess The Number",
       "description": "Un juego para usar la lógica",
-      "languages": ["fa-brands fa-square-js", "fa-brands fa-htlm5", "fa-brands fa-bootstrap"],
+      "languages": [ "fa-brands fa-html5","fa-brands  fa-bootstrap", "fa-brands fa-square-js"],
       "thumbnail": "./src/img/guess_the_number.jpeg",
       "github": "https://github.com/Lautarof25/guessTheNumber",
       "webpage": "https://lautarof25.github.io/guessTheNumber/"
@@ -36,6 +36,8 @@ function addCardPortfolioInfo() {
         createCardPortfolioInfo(item.title, item.description,item.languages,item.thumbnail, item.github, item.webpage,item.webpage)
     })
 }
+
+{/* <div class=""></div> */}
 
 function createCardPortfolioInfo(title, description,languages, thumbnail, github, webpage) {
   const div = document.createElement("div")
@@ -71,16 +73,31 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
   h2.setAttribute("class", "text-center")
   const h2Text = document.createTextNode(`${title}`)
   h2.appendChild(h2Text)
+  const divImg = document.createElement("div")
+  divImg.setAttribute("class", "relative")
   const img = document.createElement("img")
   img.setAttribute("src",`${thumbnail}`)
   img.setAttribute("alt",`${title}`)
   img.setAttribute("class","w-100")
+  const divGradient = document.createElement("div")
+  divGradient.setAttribute("class","gradientTransparent d-flex justify-center align-end w-100 h-50px zindex-5 absolute bottom-0")
+  divImg.append(img,divGradient)
+  
 
   const p = document.createElement("p")
   p.setAttribute("class", "section__description text-center")
   const pText = document.createTextNode(`${description}`)
   p.appendChild(pText)
-  divContainerText.append(img,h2,p)
+  divContainerText.append(divImg,h2,p)
+
+  const divIcons = document.createElement("div")
+  divIcons.setAttribute("class", "section__icons d-flex justify-center  gap-05")
+
+  for (let i = 0; i < languages.length; i++) {
+      const icon = document.createElement("i")
+      icon.setAttribute("class", `${languages[i]} fa-2xl`)
+      divGradient.appendChild(icon)
+  }
 
   const divLinks = document.createElement("div")
   divLinks.setAttribute("class", "d-flex justify-center gap-05")
@@ -98,7 +115,7 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
   aWebPage.setAttribute("target", `_blank`)
   divLinks.append(aGitHub,aWebPage)
 
-  div.append(divRightTop,divRightBottom, divLeftTop,divLeftBottom, divContainerText,divLinks)
+  div.append(divRightTop,divRightBottom, divLeftTop,divLeftBottom, divContainerText,divIcons,divLinks)
   portfolio.appendChild(div)
 }
 
