@@ -32,6 +32,10 @@
     justify-content: center;
 }
 
+.place-center {
+    place-items: center;
+}
+
 .flex-column {
     flex-direction: column;
 }
@@ -133,7 +137,7 @@
 
 /* Measures */
 
-.mw-500 {
+.mw-400 {
     max-width: 400px;
 }
 

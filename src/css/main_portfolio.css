@@ -1,0 +1,23 @@
+
+@media (min-width: 576px) { 
+     .main .portfolio {
+        grid-template-areas: 
+            "1"
+        ;
+     }
+     
+ }
+
+ @media (min-width: 768px) { 
+    .main .portfolio {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+            "1 2"
+            "3 4"
+        ;
+     }
+     .portfolio .section__button {
+        grid-area: 4;
+     }
+  }
