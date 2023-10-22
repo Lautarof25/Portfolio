@@ -26,6 +26,10 @@ body {
   grid-template-areas:
     "main"
     "main";
+
+  cursor: url("../img/cursor-_1_.png") 4 12,
+  auto;
+
 }
 
 .hidden-menu{
@@ -62,6 +66,5 @@ body {
       "nav main"
       "footer main"
     ;
-
   }
 }

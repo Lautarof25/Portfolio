@@ -13,19 +13,3 @@
         order: 1;
     } 
 }
-
-@media (max-width: 767px) { 
-    .main .services {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "one"
-        "two"
-        "three"
-        "four"
-        ;
-    }
-    .services .section__button {
-        grid-area: four;
-        order: 1;
-    } 
- }

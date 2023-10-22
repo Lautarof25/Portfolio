@@ -80,7 +80,7 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
   img.setAttribute("alt",`${title}`)
   img.setAttribute("class","w-100")
   const divGradient = document.createElement("div")
-  divGradient.setAttribute("class","gradientTransparent d-flex justify-center align-end w-100 h-50px zindex-5 absolute bottom-0")
+  divGradient.setAttribute("class","gradientTransparent d-flex justify-center align-end w-100 h-50px zindex-5 absolute bottom-0 gap-05")
   divImg.append(img,divGradient)
   
 
