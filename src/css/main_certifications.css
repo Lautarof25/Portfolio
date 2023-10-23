@@ -1,11 +1,9 @@
 @media (min-width: 768px) {
-    .main .certifications {
-        grid-template-columns: repeat(3, 250px);
-
+    .main .certificates {
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     }
-    .certifications img {
+    .certificates img {
         object-position: 100%;
         height: 250px;
-        
     }
 }

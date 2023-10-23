@@ -37,8 +37,6 @@ function addCardPortfolioInfo() {
     })
 }
 
-{/* <div class=""></div> */}
-
 function createCardPortfolioInfo(title, description,languages, thumbnail, github, webpage) {
   const div = document.createElement("div")
   div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto")

@@ -27,9 +27,13 @@ body {
     "main"
     "main";
 
-  cursor: url("../img/cursor.png") 4 12,
+  cursor: url("../img/cursor.cur") 4 12,
   auto;
 
+}
+
+a, button {
+  cursor: url("../img/cursorPointer.cur") 4 12, pointer!important;
 }
 
 .hidden-menu{

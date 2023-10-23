@@ -49,13 +49,13 @@
       <a href="#" id="about" class="transition-color"><i class="fa-solid fa-user hidden-icon"></i><span class="d-none">
           Sobre
           mi</span></a>
-      <a href="#" id="services" class="transition-color"><i class="fa-solid fa-list hidden-icon"></i><span
-          class="d-none">Servicios</span></a>
-      <a href="#" id="certifications" class="transition-color">
-        <i class="fa-solid fa-certificate hidden-icon"></i>
-        <span class="d-none">Certificaciones</span></a>
       <a href="#" id="portfolio" class="transition-color"><i class="fa-solid fa-briefcase hidden-icon"></i> <span
           class="d-none">Portfolio</span></a>
+      <a href="#" id="certificates" class="transition-color">
+        <i class="fa-solid fa-certificate hidden-icon"></i>
+        <span class="d-none">Certificaciones</span></a>
+      <a href="#" id="services" class="transition-color"><i class="fa-solid fa-list hidden-icon"></i><span
+          class="d-none">Servicios</span></a>
       <a href="#" id="contact" class="transition-color"><i class="fa-solid fa-comments hidden-icon"></i> <span
           class="d-none">Contacto</span></a>
     </div>
@@ -88,11 +88,16 @@
 
     <section class="section about d-grid hidden skewEffect">
 
-      <button class="section__button p-1 border-radius-5 m-0-auto">Servicios</button>
+      <button class="section__button p-1 border-radius-5 m-0-auto">Portfolio</button>
     </section>
 
-    <section class="section certifications d-grid hidden skewEffect">
-      <div class="section__box relative p-05">
+    <section class="section services d-grid hidden blurEffect">
+
+      <button class="section__button p-1 border-radius-5 m-0-auto">Contacto</button>
+    </section>
+
+    <section class="section certificates d-grid hidden skewEffect gap-1 align-center">
+      <!-- <div class="section__box relative p-05">
         <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
           <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
         </div>
@@ -134,24 +139,45 @@
           <div class="bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
         </div>
 
+        <div class="relative zindex-1 d-flex flex-column justify-center align-center">
+          <h2>Google</h2>
+          <p>Introducción al desarrollo web II</p>
+          <a href="https://learndigital.withgoogle.com/link/1nur091p2ww" target="_blank">Link</a>
+          <img class="w-100" src="./src/img/google_activate.jpg" alt="google activate">
+        </div>
+      </div>
+
+      <div class="section__box relative p-05">
+        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
+        </div>
+
+        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
+        </div>
+
+        <div class="bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
+        </div>
+
+        <div class="bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
+        </div>
+
         <div class="relative zindex-1 d-flex flex-column align-center">
           <h2>Cisco</h2>
           <p>JavaScript Essentials 1</p>
-          <a href="https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l" target="_blank">Link</a>
+          <a href="https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l"
+            target="_blank">Link</a>
           <img class="w-100" src="./src/img/cisco.jpg" alt="cisco">
         </div>
-      </div>
-      <button class="section__button p-1 border-radius-5 m-0-auto">Certificaciones</button>
-    </section>
-
-    <section class="section services d-grid hidden blurEffect">
-
-      <button class="section__button p-1 border-radius-5 m-0-auto">Portfolio</button>
+      </div> -->
+      <button class="section__button p-1 border-radius-5 m-0-auto">Servicios</button>
     </section>
 
     <section class="section portfolio d-grid gap-1 hidden scaleEffect">
 
-      <button class="section__button p-1 border-radius-5 m-0-auto">Contacto</button>
+      <button class="section__button p-1 border-radius-5 m-0-auto">Certificaciones</button>
     </section>
 
     <section class="section d-grid contact hidden opacityEffect">
@@ -214,6 +240,7 @@
   <script src="./src/js/about.js"></script>
   <script src="./src/js/services.js"></script>
   <script src="./src/js/portfolio.js"></script>
+  <script src="./src/js/certificates.js"></script>
 
 </body>
 
