@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./src/css/main_home.css">
   <link rel="stylesheet" href="./src/css/main_about.css">
   <link rel="stylesheet" href="./src/css/main_services.css">
+  <link rel="stylesheet" href="./src/css/main_certifications.css">
   <link rel="stylesheet" href="./src/css/main_portfolio.css">
   <link rel="stylesheet" href="./src/css/footer.css">
   <link rel="stylesheet" href="./src/css/helpers.css">
@@ -50,6 +51,9 @@
           mi</span></a>
       <a href="#" id="services" class="transition-color"><i class="fa-solid fa-list hidden-icon"></i><span
           class="d-none">Servicios</span></a>
+      <a href="#" id="certifications" class="transition-color">
+        <i class="fa-solid fa-certificate hidden-icon"></i>
+        <span class="d-none">Certificaciones</span></a>
       <a href="#" id="portfolio" class="transition-color"><i class="fa-solid fa-briefcase hidden-icon"></i> <span
           class="d-none">Portfolio</span></a>
       <a href="#" id="contact" class="transition-color"><i class="fa-solid fa-comments hidden-icon"></i> <span
@@ -87,6 +91,59 @@
       <button class="section__button p-1 border-radius-5 m-0-auto">Servicios</button>
     </section>
 
+    <section class="section certifications d-grid hidden skewEffect">
+      <div class="section__box relative p-05">
+        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
+        </div>
+
+        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
+        </div>
+
+        <div class="bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
+        </div>
+
+        <div class="bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
+        </div>
+
+        <div class="relative zindex-1 d-flex flex-column justify-center align-center">
+          <h2>FreeCodeCamp</h2>
+          <p>Responsive web design</p>
+          <a href="https://freecodecamp.org/certification/lautarof/responsive-web-design" target="_blank">Link</a>
+          <img class="w-100" src="./src/img/freeCodeCamp.jpg" alt="freeCodeCamp">
+        </div>
+      </div>
+
+      <div class="section__box relative p-05">
+        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
+        </div>
+
+        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
+        </div>
+
+        <div class="bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
+        </div>
+
+        <div class="bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5">
+          <div class="bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
+        </div>
+
+        <div class="relative zindex-1 d-flex flex-column align-center">
+          <h2>Cisco</h2>
+          <p>JavaScript Essentials 1</p>
+          <a href="https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l" target="_blank">Link</a>
+          <img class="w-100" src="./src/img/cisco.jpg" alt="cisco">
+        </div>
+      </div>
+      <button class="section__button p-1 border-radius-5 m-0-auto">Certificaciones</button>
+    </section>
+
     <section class="section services d-grid hidden blurEffect">
 
       <button class="section__button p-1 border-radius-5 m-0-auto">Portfolio</button>
@@ -116,27 +173,31 @@
         </div>
 
         <div class=" relative zindex-1">
-          <form class="d-flex justify-center mw-400 flex-column m-0-auto gap-05" action="https://formspree.io/f/xqkvnkwp" method="POST">
+          <form class="d-flex justify-center mw-400 flex-column m-0-auto gap-05"
+            action="https://formspree.io/f/xqkvnkwp" method="POST">
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required>
-            
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-    
+
             <label for="message">Mensaje:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
-    
+
             <button class="section__button p-1 border-radius-5 m-0-auto" type="submit">Enviar</button>
-        </form>
+          </form>
         </div>
       </div>
-      
+
       <button class="section__button p-1 border-radius-5 m-0-auto">Inicio</button>
     </section>
   </main>
 
-  <footer class="footer d-flex flex-column justify-center bg-dark-gray hidden-menu p-2 opacity-50 transition-all gap-05">
-    <a href="./src/documents/English Web developer_ Fernández, Lautaro _ 2023 _ Online.pdf" download="cv fernandez lautaro" class="section__button p-1 border-radius-5 m-0-auto"><span class="d-none">Descargar</span> CV</a>
+  <footer
+    class="footer d-flex flex-column justify-center bg-dark-gray hidden-menu p-2 opacity-50 transition-all gap-05">
+    <a href="./src/documents/English Web developer_ Fernández, Lautaro _ 2023 _ Online.pdf"
+      download="cv fernandez lautaro" class="section__button p-1 border-radius-5 m-0-auto"><span
+        class="d-none">Descargar</span> CV</a>
     <div class="d-flex justify-center gap-05">
       <a href="https://github.com/Lautarof25" target="_blank">
         <i class="fa-brands fa-github"></i>
@@ -145,7 +206,7 @@
         <i class="fa-brands fa-linkedin"></i>
       </a>
     </div>
-    
+
   </footer>
 
   <script src="./src/js/menuHidden.js"></script>
