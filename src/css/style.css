@@ -22,8 +22,8 @@ body {
   max-width: 1400px;
 
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
   grid-template-areas:
+    "title"
     "main"
     "main";
 
@@ -40,8 +40,8 @@ a, button {
   left: -50px;
 }
 
-.opacity-50 {
-  opacity: 0.2;
+.opacity {
+  opacity: 0;
 }
 .show {
   left: 0 !important;
@@ -53,22 +53,12 @@ a, button {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
-      "header main"
+      "header title"
       "nav main"
       "footer main"
     ;
   }
-  .opacity-50 {
+  .opacity {
     opacity: 1;
-  }
-}
-
-@media (min-width: 768px) {
-  body {
-    grid-template-areas:
-      "header empty"
-      "nav main"
-      "footer main"
-    ;
   }
 }

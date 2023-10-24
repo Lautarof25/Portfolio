@@ -6,19 +6,20 @@ const footerIcons = document.querySelectorAll(".footer a")
 const main = document.querySelector("main");
 const faBars = document.querySelector(".fa-bars")
 const logo = document.querySelector("#logo")
+const toggleMenu = document.querySelector("#toggle-menu")
 
-function handleMouseOver() {
-  header.classList.add("show");
-  nav.classList.add("show");
-  footer.classList.add("show");
+function showMenuBar() {
+  header.classList.toggle("show");
+  nav.classList.toggle("show");
+  footer.classList.toggle("show");
   removeIcons(navIcons)
   removeIcons(footerIcons)
-  faBars.classList.add("d-none");
-  logo.classList.remove("d-none");
-  main.classList.add("blur");
+  faBars.classList.toggle("d-none");
+  logo.classList.toggle("d-none");
+  main.classList.toggle("blur");
 }
 
-function handleMouseOut() {
+function hideMenuBar() {
   header.classList.remove("show");
   nav.classList.remove("show");
   footer.classList.remove("show");
@@ -29,20 +30,25 @@ function handleMouseOut() {
   main.classList.remove("blur");
 }
 
-function hiddenIcons(element){
+function hiddenIcons(element) {
   element.forEach(icon => {
     icon.classList.add("hidden-icon");
   })
 }
-function removeIcons(element){
+function removeIcons(element) {
   element.forEach(icon => {
     icon.classList.remove("hidden-icon");
   })
 }
 
-header.addEventListener("mouseover", handleMouseOver);
-header.addEventListener("mouseout", handleMouseOut);
-nav.addEventListener("mouseover", handleMouseOver);
-nav.addEventListener("mouseout", handleMouseOut);
-footer.addEventListener("mouseover", handleMouseOver);
-footer.addEventListener("mouseout", handleMouseOut);
+toggleMenu.addEventListener("click", showMenuBar);
+links.forEach(link => {
+  link.addEventListener("click",hideMenuBar)
+})
+main.addEventListener("click",hideMenuBar);
+main.addEventListener("mouseover",hideMenuBar);
+titlePage.addEventListener("click",hideMenuBar);
+titlePage.addEventListener("mouseover",hideMenuBar);
+// toggleMenu.addEventListener("click", hideMenuBar);
+// nav.addEventListener("mouseout", );
+// footer.addEventListener("mouseout", hideMenuBar);

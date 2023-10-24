@@ -8,6 +8,12 @@
     user-select: none;
 }
 
+.toggle-menu {
+    all: unset;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
 @media (min-width: 576px) {
     .hidden {
         display: none !important;

@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="./src/css/helpers.css">
   <link rel="stylesheet" href="./src/css/scrollbar.css">
   <link rel="stylesheet" href="./src/css/animation.css">
+  <link rel="stylesheet" href="./src/css/sectionTitle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -44,11 +45,14 @@
           L<span class="d-none">auta</span><span class="principalColor">D<span class="d-none">ev</span>
           </span>
         </p>
-        <i class="fa-solid fa-bars hidden"></i>
+        <button id="toggle-menu" class="toggle-menu">
+          <i  class="fa-solid fa-bars hidden"></i>
+        </button>
       </div>
     </div>
   </header>
-  <nav class="nav hidden-menu d-flex zindex-1 flex-column top-0 p-2 opacity-50 transition-all">
+
+  <nav class="nav hidden-menu d-flex zindex-1 flex-column top-0 p-2 opacity transition-all">
     <div class="nav__menu d-flex flex-column gap-2">
       <a href="#" id="home" class="link-active transition-color"><i class="fa-solid fa-house"></i><span
           class="d-none">Inicio</span></a>
@@ -65,9 +69,15 @@
     </div>
   </nav>
 
+  <section class="titlePage d-flex align-center">
+    <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-up"></i></button>
+    <h2 class="text-center"></h2>
+    <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down"></i></button>
+  </section>
+
   <main class="main p-1 transition-all">
     <section class="section home d-grid blurEffect skewEffect">
-      <h1 class="section__title text-center">Hola, mi nombre es <span class="principalColor">Lautaro</span></h1>
+      <h1 class="section__title text-center align-self-end">Hola, mi nombre es <span class="principalColor">Lautaro</span></h1>
       <div class="section__box mw-400 relative p-05 m-0-auto">
         <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
           <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
@@ -87,43 +97,26 @@
           las computadoras</p>
       </div>
 
-      <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down"></i></button>
     </section>
 
     <section class="section about d-grid hidden skewEffect">
 
-      <div>
-        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-up"></i></button>
-        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down"></i></button>
-      </div>
-    </section>
-
-    <section class="section services d-grid hidden blurEffect">
-
-      <div>
-        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-up"></i></button>
-        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down"></i></button>
-      </div>
-    </section>
-
-    <section class="section certificates d-grid hidden skewEffect gap-1 align-center">
-
-      <div>
-        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-up"></i></button>
-        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down"></i></button>
-      </div>
     </section>
 
     <section class="section portfolio d-grid gap-1 hidden scaleEffect">
 
-      <div>
-        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-up"></i></button>
-        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down"></i></button>
-      </div>
+    </section>
+
+    <section class="section certificates d-grid hidden skewEffect gap-1 align-center">
+
+    </section>
+
+    <section class="section services d-grid hidden blurEffect">
+
     </section>
 
     <section class="section d-grid contact hidden opacityEffect">
-      <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-up"></i></button>
+
       <div class="section__box relative p-05">
         <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
           <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
@@ -162,7 +155,7 @@
   </main>
 
   <footer
-    class="footer d-flex flex-column justify-center bg-dark-gray hidden-menu p-2 opacity-50 transition-all gap-05">
+    class="footer d-flex flex-column justify-center bg-dark-gray hidden-menu p-2 opacity transition-all gap-05">
     <a href="./src/documents/English Web developer_ Fernández, Lautaro _ 2023 _ Online.pdf"
       download="cv fernandez lautaro" class="section__button p-1 border-radius-5 m-0-auto"><span
         class="d-none">Descargar</span> CV</a>
@@ -177,7 +170,6 @@
 
   </footer>
 
-  <script src="./src/js/menuHidden.js"></script>
   <script src="./src/js/linksSelector.js"></script>
   <script src="./src/js/about.js"></script>
   <script src="./src/js/services.js"></script>
@@ -185,6 +177,8 @@
   <script src="./src/js/certificates.js"></script>
   <script src="./src/js/form.js"></script>
   <script src="./src/js/buttonsArrow.js"></script>
+  <script src="./src/js/titlePage.js"></script>
+  <script src="./src/js/menuHidden.js"></script>
 
 </body>
 

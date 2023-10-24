@@ -40,6 +40,10 @@
     align-items: end;
 }
 
+.align-self-end {
+    align-self: flex-end;
+}
+
 .flex-column {
     flex-direction: column;
 }
@@ -133,6 +137,10 @@
 
 .pl-10 {
     padding-left: 10rem;
+}
+
+.m-0 {
+    margin: 0;
 }
 
 .p-05 {

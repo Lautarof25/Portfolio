@@ -60,8 +60,9 @@ function createCardCertificatesInfo(title, description, thumbnail, link) {
   divRightTop.appendChild(divRightTopOffset)
 
   const divContainerText = document.createElement("div")
-  divContainerText.setAttribute("class", "relative zindex-1 d-flex flex-column align-center")
+  divContainerText.setAttribute("class", "relative zindex-1 d-flex flex-column align-center gap-05")
   const h2 = document.createElement("h2")
+  h2.setAttribute("class", "m-0")
   const h2Text = document.createTextNode(`${title}`)
   h2.appendChild(h2Text)
   const p = document.createElement("p")

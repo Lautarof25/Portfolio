@@ -4,8 +4,8 @@ links.forEach(link => {
     linksArray.push(link.id);
 })
 
-function activeLinkSelector(element){
-    element.forEach(link => {
+function activeLinkSelector(links){
+    links.forEach(link => {
         link.addEventListener('click',function(){
             removeClassLink(links)
             link.classList.add('link-active');
