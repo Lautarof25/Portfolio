@@ -4,7 +4,7 @@ const portfolioInfo = {
       "title": "CV Online",
       "description": "Cv online dinámico",
       "languages": [ "fa-brands fa-html5","fa-brands fa-css3","fa-brands fa-square-js"],
-      "thumbnail": "../src/img/cv_online.jpeg",
+      "thumbnail": "./src/img/cv_online.jpeg",
       "github": "https://github.com/Lautarof25/cv_online",
       "webpage": "https://lautarof25.github.io/cv_online/"
     },

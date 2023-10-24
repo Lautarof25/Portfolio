@@ -3,19 +3,19 @@ const certificatesInfo = {
     {
       "title": "FreeCodeCamp",
       "description": "Responsive web design",
-      "thumbnail": "../src/img/freeCodeCamp.jpg",
+      "thumbnail": "./src/img/freeCodeCamp.jpg",
       "link": "https://freecodecamp.org/certification/lautarof/responsive-web-design",
     },
     {
       "title": "Google Activate",
       "description": "Introducción al desarrollo web II",
-      "thumbnail": "../src/img/google_activate.jpg",
+      "thumbnail": "./src/img/google_activate.jpg",
       "link": "https://learndigital.withgoogle.com/link/1nur091p2ww",
     },
     {
       "title": "Cisco",
       "description": "JavaScritp Essentially 1",
-      "thumbnail": "../src/img/cisco.jpg",
+      "thumbnail": "./src/img/cisco.jpg",
       "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
     },
   ]
