@@ -73,8 +73,12 @@ function createCardAboutInfo(description, icons){
     icon.setAttribute("class", `${icons[i]} fa-2xl`)
     divIcons.appendChild(icon)
   }
+
+  const button = document.createElement("button")
+  button.setAttribute("class", "section__button p-1 border-radius-5 m-0-auto")
+  const buttonText = document.createTextNode("")
   
-  div.append(divRight,divLeft,divContainer)
+  div.append(divRight,divLeft,divContainer,button)
   about.appendChild(div)
 }
 

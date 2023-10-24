@@ -30,7 +30,7 @@
 
 <body class="d-grid">
 
-  <header class="header hidden-menu bg-dark-gray p-2 opacity-50 transition-all unselect-text">
+  <header class="header hidden-menu bg-dark-gray p-2 transition-all unselect-text">
     <div class="header__logo relative p-05 ">
       <div class="bg-principal-color absolute w-20px h-20px top-0 left-0 border-radius-5">
         <div class="bg-dark-gray absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
@@ -38,25 +38,29 @@
       <div class="bg-principal-color absolute w-20px h-20px right-0 bottom-0 border-radius-5">
         <div class="bg-dark-gray absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
       </div>
-      <p class="relative text-center">L<span class="d-none">auta</span><span class="principalColor">D<span
-            class="d-none">ev</span></span></p>
+
+      <div class="relative text-center">
+        <p id="logo" class="d-none">
+          L<span class="d-none">auta</span><span class="principalColor">D<span class="d-none">ev</span>
+          </span>
+        </p>
+        <i class="fa-solid fa-bars hidden"></i>
+      </div>
     </div>
   </header>
   <nav class="nav hidden-menu d-flex zindex-1 flex-column top-0 p-2 opacity-50 transition-all">
     <div class="nav__menu d-flex flex-column gap-2">
       <a href="#" id="home" class="link-active transition-color"><i class="fa-solid fa-house"></i><span
           class="d-none">Inicio</span></a>
-      <a href="#" id="about" class="transition-color"><i class="fa-solid fa-user hidden-icon"></i><span class="d-none">
-          Sobre
-          mi</span></a>
-      <a href="#" id="portfolio" class="transition-color"><i class="fa-solid fa-briefcase hidden-icon"></i> <span
+      <a href="#" id="about" class="transition-color"><i class="fa-solid fa-user hidden-icon"></i><span
+          class="d-none">Sobre mi</span></a>
+      <a href="#" id="portfolio" class="transition-color"><i class="fa-solid fa-briefcase hidden-icon"></i><span
           class="d-none">Portfolio</span></a>
-      <a href="#" id="certificates" class="transition-color">
-        <i class="fa-solid fa-certificate hidden-icon"></i>
-        <span class="d-none">Certificaciones</span></a>
+      <a href="#" id="certificates" class="transition-color"><i class="fa-solid fa-certificate hidden-icon"></i><span
+          class="d-none">Certificaciones</span></a>
       <a href="#" id="services" class="transition-color"><i class="fa-solid fa-list hidden-icon"></i><span
           class="d-none">Servicios</span></a>
-      <a href="#" id="contact" class="transition-color"><i class="fa-solid fa-comments hidden-icon"></i> <span
+      <a href="#" id="contact" class="transition-color"><i class="fa-solid fa-comments hidden-icon"></i><span
           class="d-none">Contacto</span></a>
     </div>
   </nav>
@@ -83,104 +87,43 @@
           las computadoras</p>
       </div>
 
-      <button class="section__button p-1 border-radius-5 m-0-auto">Sobre mi</button>
+      <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down"></i></button>
     </section>
 
     <section class="section about d-grid hidden skewEffect">
 
-      <button class="section__button p-1 border-radius-5 m-0-auto">Portfolio</button>
+      <div>
+        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-up"></i></button>
+        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down"></i></button>
+      </div>
     </section>
 
     <section class="section services d-grid hidden blurEffect">
 
-      <button class="section__button p-1 border-radius-5 m-0-auto">Contacto</button>
+      <div>
+        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-up"></i></button>
+        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down"></i></button>
+      </div>
     </section>
 
     <section class="section certificates d-grid hidden skewEffect gap-1 align-center">
-      <!-- <div class="section__box relative p-05">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
-        </div>
 
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
-        </div>
-
-        <div class="bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
-        </div>
-
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
-        </div>
-
-        <div class="relative zindex-1 d-flex flex-column justify-center align-center">
-          <h2>FreeCodeCamp</h2>
-          <p>Responsive web design</p>
-          <a href="https://freecodecamp.org/certification/lautarof/responsive-web-design" target="_blank">Link</a>
-          <img class="w-100" src="./src/img/freeCodeCamp.jpg" alt="freeCodeCamp">
-        </div>
+      <div>
+        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-up"></i></button>
+        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down"></i></button>
       </div>
-
-      <div class="section__box relative p-05">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
-        </div>
-
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
-        </div>
-
-        <div class="bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
-        </div>
-
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
-        </div>
-
-        <div class="relative zindex-1 d-flex flex-column justify-center align-center">
-          <h2>Google</h2>
-          <p>Introducción al desarrollo web II</p>
-          <a href="https://learndigital.withgoogle.com/link/1nur091p2ww" target="_blank">Link</a>
-          <img class="w-100" src="./src/img/google_activate.jpg" alt="google activate">
-        </div>
-      </div>
-
-      <div class="section__box relative p-05">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
-        </div>
-
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
-        </div>
-
-        <div class="bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
-        </div>
-
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
-        </div>
-
-        <div class="relative zindex-1 d-flex flex-column align-center">
-          <h2>Cisco</h2>
-          <p>JavaScript Essentials 1</p>
-          <a href="https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l"
-            target="_blank">Link</a>
-          <img class="w-100" src="./src/img/cisco.jpg" alt="cisco">
-        </div>
-      </div> -->
-      <button class="section__button p-1 border-radius-5 m-0-auto">Servicios</button>
     </section>
 
     <section class="section portfolio d-grid gap-1 hidden scaleEffect">
 
-      <button class="section__button p-1 border-radius-5 m-0-auto">Certificaciones</button>
+      <div>
+        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-up"></i></button>
+        <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down"></i></button>
+      </div>
     </section>
 
     <section class="section d-grid contact hidden opacityEffect">
+      <button class="section__button p-1 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-up"></i></button>
       <div class="section__box relative p-05">
         <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
           <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
@@ -199,7 +142,7 @@
         </div>
 
         <div class=" relative zindex-1">
-          <form class="d-flex justify-center mw-400 flex-column m-0-auto gap-05"
+          <form id="form" class="d-flex justify-center mw-400 flex-column m-0-auto gap-05"
             action="https://formspree.io/f/xqkvnkwp" method="POST">
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required>
@@ -210,12 +153,11 @@
             <label for="message">Mensaje:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button class="section__button p-1 border-radius-5 m-0-auto" type="submit">Enviar</button>
+            <button id="submit" class="section__button p-1 border-radius-5 m-0-auto" type="submit">Enviar</button>
           </form>
         </div>
       </div>
 
-      <button class="section__button p-1 border-radius-5 m-0-auto">Inicio</button>
     </section>
   </main>
 
@@ -241,6 +183,8 @@
   <script src="./src/js/services.js"></script>
   <script src="./src/js/portfolio.js"></script>
   <script src="./src/js/certificates.js"></script>
+  <script src="./src/js/form.js"></script>
+  <script src="./src/js/buttonsArrow.js"></script>
 
 </body>
 

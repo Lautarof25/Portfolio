@@ -1,13 +1,13 @@
 # Portfolio
 
-Mi portfolio
+Portfolio
 
 # Color Reference
 
 | Colores             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Color Principal | ![#fac722](https://via.placeholder.com/10/fac722?text=+) #cd0043 |
-| Color secundario | ![#ebebeb](https://via.placeholder.com/10/ebebeb?text=+) #ffffff |
+| Color Principal | ![#fac722](https://via.placeholder.com/10/ff5b02?text=+) #ff5b02 |
+| Color secundario | ![#ebebeb](https://via.placeholder.com/10/151515?text=+) #151515 |
 
 ## 🛠 Skills
 

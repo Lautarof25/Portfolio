@@ -8,6 +8,12 @@
     user-select: none;
 }
 
+@media (min-width: 576px) {
+    .hidden {
+        display: none !important;
+    }
+}
+
 @media (max-width: 576px) {
     .header {
         position: fixed;
@@ -27,5 +33,4 @@
     .header .d-none {
         display: none;
     }
-
 }
