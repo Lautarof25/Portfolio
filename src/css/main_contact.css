@@ -1,0 +1,4 @@
+.contact :where(input, textarea) {
+    background-color: var(--white, white);
+    color: var(--black, black);
+}
