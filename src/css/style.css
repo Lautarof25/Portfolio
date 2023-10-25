@@ -28,37 +28,36 @@ body {
     "main";
 
   cursor: url("../img/cursor.cur") 4 12,
-  auto;
+    auto;
 
 }
 
-a, button {
-  cursor: url("../img/cursorPointer.cur") 4 12, pointer!important;
+a,
+button {
+  cursor: url("../img/cursorPointer.cur") 4 12, pointer !important;
 }
 
-.hidden-menu{
+.hidden-menu {
   left: -50px;
 }
 
 .opacity {
   opacity: 0;
 }
+
 .show {
   left: 0 !important;
   opacity: 1;
 }
 
 @media (min-width: 576px) {
-  body {
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-      "header title"
-      "nav main"
-      "footer main"
-    ;
-  }
   .opacity {
     opacity: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .main, .titlePage {
+    margin-left: 0 !important;
   }
 }

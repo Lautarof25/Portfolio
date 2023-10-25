@@ -1,5 +1,7 @@
 .nav {
     grid-area: nav;
+    top: 186px;
+    min-height: 583px;
 }
 
 .nav a {
