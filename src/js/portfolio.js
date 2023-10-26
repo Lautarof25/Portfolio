@@ -4,7 +4,7 @@ const portfolioInfo = {
       "title": "CV Online",
       "description": "Cv online dinámico",
       "languages": [ "fa-brands fa-html5","fa-brands fa-css3","fa-brands fa-square-js"],
-      "thumbnail": "./src/img/cv_online.jpeg",
+      "thumbnail": "./src/img/cv_online.webp",
       "github": "https://github.com/Lautarof25/cv_online",
       "webpage": "https://lautarof25.github.io/cv_online/"
     },
@@ -12,7 +12,7 @@ const portfolioInfo = {
       "title": "WineStore",
       "description": "Una vineria con carrito de compras",
       "languages": [ "fa-brands fa-html5","fa-brands fa-bootstrap ", "fa-brands fa-square-js"],
-      "thumbnail": "./src/img/winestore.jpeg",
+      "thumbnail": "./src/img/winestore.webp",
       "github": "https://github.com/Lautarof25/Vinoteca",
       "webpage": "https://lautarof25.github.io/Vinoteca/"
     },
@@ -20,7 +20,7 @@ const portfolioInfo = {
       "title": "Guess The Number",
       "description": "Un juego para usar la lógica",
       "languages": [ "fa-brands fa-html5","fa-brands  fa-bootstrap", "fa-brands fa-square-js"],
-      "thumbnail": "./src/img/guess_the_number.jpeg",
+      "thumbnail": "./src/img/guess_the_number.webp",
       "github": "https://github.com/Lautarof25/guessTheNumber",
       "webpage": "https://lautarof25.github.io/guessTheNumber/"
     },

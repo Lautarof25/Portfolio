@@ -11,13 +11,13 @@
 .toggle-menu {
     all: unset;
     cursor: pointer;
-    margin-left: 2rem;
 }
 
 @media (min-width: 576px) {
     .hidden {
         display: none !important;
     }
+
 }
 
 @media (max-width: 576px) {
@@ -39,4 +39,5 @@
     .header .d-none {
         display: none;
     }
+
 }

@@ -37,7 +37,7 @@ a, button {
 }
 
 .hidden-menu{
-  left: -50px;
+  left: 100%;
 }
 
 .opacity {
