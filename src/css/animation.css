@@ -71,3 +71,71 @@
     animation: opacityEffect .5s ease-in-out;
     -webkit-animation: opacityEffect .5s ease-in-out;
 }
+
+/* Background sparkle */
+
+.star {
+    position: absolute;
+    background: transparent;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    animation: sparkle 5s linear infinite;
+}
+
+/* Define keyframes for sparkle animation */
+@keyframes sparkle {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-500px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Use pseudo-elements to generate stars */
+.star::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Position the stars randomly across the universe */
+.star:nth-child(1) {
+    top: 10%;
+    left: 95%;
+}
+
+.star:nth-child(2) {
+    top: 50%;
+    left: 80%;
+}
+
+.star:nth-child(3) {
+    top: 30%;
+    left: 70%;
+}
+
+.star:nth-child(4) {
+    top: 90%;
+    left: 60%;
+}
+
+.star:nth-child(5) {
+    top: 50%;
+    left: 50%;
+}
+
+.star:nth-child(6) {
+    top: 60%;
+    left: 90%;
+}
+.star:nth-child(7) {
+    top: 50%;
+    left: 50%;
+}

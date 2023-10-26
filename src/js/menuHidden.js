@@ -46,9 +46,4 @@ links.forEach(link => {
   link.addEventListener("click",hideMenuBar)
 })
 main.addEventListener("click",hideMenuBar);
-main.addEventListener("mouseover",hideMenuBar);
 titlePage.addEventListener("click",hideMenuBar);
-titlePage.addEventListener("mouseover",hideMenuBar);
-// toggleMenu.addEventListener("click", hideMenuBar);
-// nav.addEventListener("mouseout", );
-// footer.addEventListener("mouseout", hideMenuBar);

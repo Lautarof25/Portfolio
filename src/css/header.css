@@ -13,9 +13,16 @@
     cursor: pointer;
 }
 
+.header:hover {
+    opacity: 1;
+}
+
 @media (min-width: 576px) {
     .hidden {
         display: none !important;
+    }
+    .opacity-50 {
+        opacity: 1!important;
     }
 
 }

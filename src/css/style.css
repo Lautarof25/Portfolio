@@ -55,7 +55,7 @@ a, button {
     grid-template-areas:
       "header title"
       "nav main"
-      "footer main"
+      "nav main"
     ;
   }
   .opacity {
