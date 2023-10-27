@@ -33,7 +33,7 @@ function addCardCertificatesInfo() {
 
 function createCardCertificatesInfo(title, description, thumbnail, link) {
   const div = document.createElement("div")
-  div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto")
+  div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto w-100")
 
   const divLeftTop = document.createElement("div")
   divLeftTop.setAttribute("class", "bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5")

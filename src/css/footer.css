@@ -1,6 +1,5 @@
 .footer {
     width: 100%;
-    z-index: 100;
 }
 
 .footer a {
@@ -11,9 +10,15 @@
     filter: brightness(.8);
     -webkit-filter: brightness(.8);
 }
+.footer .d-none {
+    display: none;
+}
 
 @media (min-width: 576px) { 
      .footer {
         width: fit-content!important;
+     }
+     .footer .d-none {
+        display: block;
      }
  }

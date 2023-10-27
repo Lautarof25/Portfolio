@@ -43,7 +43,7 @@ function addCardAboutInfo(){
 
 function createCardAboutInfo(description, icons){
   const div = document.createElement("div")
-  div.setAttribute("class","section__box mw-500 relative p-05 m-0-auto")
+  div.setAttribute("class","section__box mw-500 relative p-05 m-0-auto w-100")
 
   const divRight = document.createElement("div")
   divRight.setAttribute("class","bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5")
@@ -73,12 +73,8 @@ function createCardAboutInfo(description, icons){
     icon.setAttribute("class", `${icons[i]} fa-2xl`)
     divIcons.appendChild(icon)
   }
-
-  const button = document.createElement("button")
-  button.setAttribute("class", "section__button p-1 border-radius-5 m-0-auto")
-  const buttonText = document.createTextNode("")
   
-  div.append(divRight,divLeft,divContainer,button)
+  div.append(divRight,divLeft,divContainer)
   about.appendChild(div)
 }
 
