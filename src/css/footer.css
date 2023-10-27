@@ -17,6 +17,7 @@
 @media (min-width: 576px) { 
      .footer {
         width: fit-content!important;
+        margin-left: 2rem;
      }
      .footer .d-none {
         display: block;

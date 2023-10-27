@@ -25,7 +25,7 @@ const aboutInfo = {
       "icons": ["fa-solid fa-file-excel", "fa-solid fa-palette", "fa-solid fa-globe"]
     },
     {
-      "description": "Trabajar de manera colaborativa, aprender continuamente y conocer distintos tipos de metodologías de trabajo",
+      "description": "Trabajar colaborativamente, aprendizaje constante y conocer distintas metodologías de trabajo",
       "icons": ["fa-solid fa-users", "fa-solid fa-hand-holding-hand"]
     },
   ]

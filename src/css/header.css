@@ -24,19 +24,19 @@
     .opacity-50 {
         opacity: 1!important;
     }
-
+    .toggle-menu {
+        display: none;
+    }
+    .header {
+        position: relative!important;
+        font-size: medium!important;
+    }
 }
 
 @media (max-width: 576px) {
     .header {
-        position: fixed;
-        z-index: 10;
-        top: 0 !important;
         padding: 14px 0 !important;
         width: 100px;
-        margin: 0 !important;
-        font-size: 2rem;
-        font-weight: bolder;
     }
 
     .header p {

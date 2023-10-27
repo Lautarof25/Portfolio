@@ -1,15 +1,5 @@
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     .main .services {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        grid-template-areas: 
-        "one two"
-        "three four"
-        ;
-        align-items: center;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     }
-    .services .section__button {
-        grid-area: four;
-        order: 1;
-    } 
 }

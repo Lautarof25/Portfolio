@@ -203,6 +203,14 @@
     color: var(--principal-color);
 }
 
+.fs-2 {
+    font-size: 2rem;
+}
+
+.fw-bolder {
+    font-weight: bolder;
+}
+
 .text-center {
     text-align: center;
 }

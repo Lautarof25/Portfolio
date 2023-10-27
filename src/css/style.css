@@ -19,7 +19,7 @@ body {
   color: var(--white);
 
   min-height: 100vh;
-  max-width: 1400px;
+  max-width: 1440px;
 
   grid-template-columns: 1fr;
   grid-template-areas:
