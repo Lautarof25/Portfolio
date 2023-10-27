@@ -32,17 +32,19 @@ function createCardServicesInfo(title, description, icons) {
     const div = document.createElement("div")
     div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto")
 
-    const divRight = document.createElement("div")
-    divRight.setAttribute("class", "bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5")
-    const divRightOffset = document.createElement("div")
-    divRightOffset.setAttribute("class", "bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5")
-    divRight.appendChild(divRightOffset)
+    const createDivWithClass = (className) => {
+        const newDiv = document.createElement("div");
+        newDiv.className = className;
+        return newDiv;
+    };
 
-    const divLeft = document.createElement("div")
-    divLeft.setAttribute("class", "bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5")
-    const divLeftOffset = document.createElement("div")
-    divLeftOffset.setAttribute("class", "bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5")
-    divLeft.appendChild(divLeftOffset)
+    const divLeftTop = createDivWithClass("bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5");
+    const divLeftTopOffset = createDivWithClass("bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5");
+    divLeftTop.appendChild(divLeftTopOffset);
+
+    const divRightBottom = createDivWithClass("bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5");
+    const divRightBottomOffset = createDivWithClass("bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5");
+    divRightBottom.appendChild(divRightBottomOffset);
 
     const divContainer = document.createElement("div")
     divContainer.setAttribute("class", "relative zindex-1 d-flex flex-column p-1 align-center")
@@ -55,11 +57,11 @@ function createCardServicesInfo(title, description, icons) {
     p.setAttribute("class", "section__description text-center")
     const pText = document.createTextNode(`${description}`)
     p.appendChild(pText)
-    
+
     const divIcons = document.createElement("div")
     divIcons.setAttribute("class", "section__icons d-flex gap-05")
 
-    divContainer.append(h2,divIcons,p)
+    divContainer.append(h2, divIcons, p)
 
     for (let i = 0; i < icons.length; i++) {
         const icon = document.createElement("i")
@@ -67,7 +69,7 @@ function createCardServicesInfo(title, description, icons) {
         divIcons.appendChild(icon)
     }
 
-    div.append(divRight, divLeft, divContainer)
+    div.append(divLeftTop, divRightBottom, divContainer)
     services.appendChild(div)
 }
 

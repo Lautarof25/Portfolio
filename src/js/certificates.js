@@ -1,6 +1,12 @@
 const certificatesInfo = {
   "info": [
     {
+      "title": "Cisco",
+      "description": "JavaScritp Essentially 1",
+      "thumbnail": "./src/img/cisco.webp",
+      "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
+    },
+    {
       "title": "FreeCodeCamp",
       "description": "Responsive web design",
       "thumbnail": "./src/img/freeCodeCamp.webp",
@@ -11,12 +17,6 @@ const certificatesInfo = {
       "description": "Introducción al desarrollo web II",
       "thumbnail": "./src/img/google_activate.webp",
       "link": "https://learndigital.withgoogle.com/link/1nur091p2ww",
-    },
-    {
-      "title": "Cisco",
-      "description": "JavaScritp Essentially 1",
-      "thumbnail": "./src/img/cisco.webp",
-      "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
     },
   ]
 }
@@ -35,29 +35,39 @@ function createCardCertificatesInfo(title, description, thumbnail, link) {
   const div = document.createElement("div")
   div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto w-100")
 
-  const divLeftTop = document.createElement("div")
-  divLeftTop.setAttribute("class", "bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5")
-  const divLeftTopOffset = document.createElement("div")
-  divLeftTopOffset.setAttribute("class", "bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5")
-  divLeftTop.appendChild(divLeftTopOffset)
-
-  const divLeftBottom = document.createElement("div")
-  divLeftBottom.setAttribute("class", "bg-principal-color absolute w-50px h-50px bottom-0 left-0 border-radius-5")
-  const divLeftBottomOffset = document.createElement("div")
-  divLeftBottomOffset.setAttribute("class", "bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5")
-  divLeftBottom.appendChild(divLeftBottomOffset)
-
-  const divRightBottom = document.createElement("div")
-  divRightBottom.setAttribute("class", "bg-principal-color absolute w-50px h-50px right-0 bottom-0 border-radius-5")
-  const divRightBottomOffset = document.createElement("div")
-  divRightBottomOffset.setAttribute("class", "bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5")
-  divRightBottom.appendChild(divRightBottomOffset)
-
-  const divRightTop = document.createElement("div")
-  divRightTop.setAttribute("class", "bg-principal-color absolute w-50px h-50px right-0 top-0 border-radius-5")
-  const divRightTopOffset = document.createElement("div")
-  divRightTopOffset.setAttribute("class", "bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5")
-  divRightTop.appendChild(divRightTopOffset)
+  function createDivWithClasses(classes) {
+    const div = document.createElement("div");
+    div.setAttribute("class", classes);
+    return div;
+  }
+  
+  function createDivWithOffsetClasses(mainClasses, offsetClasses) {
+    const div = createDivWithClasses(mainClasses);
+    const offsetDiv = createDivWithClasses(offsetClasses);
+    div.appendChild(offsetDiv);
+    return div;
+  }
+  
+  const divLeftTop = createDivWithOffsetClasses(
+    "bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5",
+    "bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"
+  );
+  
+  const divLeftBottom = createDivWithOffsetClasses(
+    "bg-principal-color absolute w-50px h-50px bottom-0 left-0 border-radius-5",
+    "bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"
+  );
+  
+  const divRightBottom = createDivWithOffsetClasses(
+    "bg-principal-color absolute w-50px h-50px right-0 bottom-0 border-radius-5",
+    "bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"
+  );
+  
+  const divRightTop = createDivWithOffsetClasses(
+    "bg-principal-color absolute w-50px h-50px right-0 top-0 border-radius-5",
+    "bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"
+  );
+  
 
   const divContainerText = document.createElement("div")
   divContainerText.setAttribute("class", "relative zindex-1 d-flex flex-column align-center gap-05")
