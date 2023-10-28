@@ -3,7 +3,7 @@ const portfolioInfo = {
     {
       "title": "CV Online",
       "description": "Cv online dinámico",
-      "languages": [ "fa-html5","fa-css3","fa-square-js"],
+      "languages": [ "html5","css3","square-js"],
       "thumbnail": ["cv_online.webp","cv_online_dark.webp"],
       "github": "https://github.com/Lautarof25/cv_online",
       "webpage": "https://lautarof25.github.io/cv_online/"
@@ -11,7 +11,7 @@ const portfolioInfo = {
     {
       "title": "WineStore",
       "description": "Una vineria con carrito de compras",
-      "languages": [ "fa-html5","fa-bootstrap ", "fa-square-js"],
+      "languages": [ "html5","bootstrap ", "square-js"],
       "thumbnail": ["winestore.webp","winestore_sesion.webp","winestore_newsletter.webp"],
       "github": "https://github.com/Lautarof25/Vinoteca",
       "webpage": "https://lautarof25.github.io/Vinoteca/"
@@ -19,7 +19,7 @@ const portfolioInfo = {
     {
       "title": "Guess The Number",
       "description": "Un juego para usar la lógica",
-      "languages": [ "fa-html5"," fa-bootstrap", "fa-square-js"],
+      "languages": [ "html5"," bootstrap", "square-js"],
       "thumbnail": ["guess_the_number.webp","guess_the_number_2.webp","guess_the_number_3.webp"],
       "github": "https://github.com/Lautarof25/guessTheNumber",
       "webpage": "https://lautarof25.github.io/guessTheNumber/"
@@ -105,7 +105,7 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
 
   for (let i = 0; i < languages.length; i++) {
       const icon = document.createElement("i")
-      icon.setAttribute("class", `fa-brands ${languages[i]} fa-2xl`)
+      icon.setAttribute("class", `fa-brands fa-${languages[i]} fa-2xl`)
       divGradient.appendChild(icon)
   }
 
