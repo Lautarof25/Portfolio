@@ -73,12 +73,12 @@
     -webkit-animation: opacityEffect .5s ease-in-out;
 }
 
-.buttonBreathe {
-    animation: buttonBreathe 1s alternate infinite;
-    -webkit-animation: buttonBreathe 1s alternate infinite;
+.breatheEffect {
+    animation: breatheEffect 1s alternate infinite;
+    -webkit-animation: breatheEffect 1s alternate infinite;
 }
 
-@keyframes buttonBreathe {
+@keyframes breatheEffect {
     0% {
         transform: scale(0.8);
         -webkit-transform: scale(0.8);

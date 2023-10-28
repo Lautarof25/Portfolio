@@ -10,6 +10,9 @@ addEventListener('click',function(){
         nav.classList.add('blur-effect')
         footer.classList.add('blur-effect')
         main.classList.add('blur-effect')
+        titlePage.classList.add('blur-effect')
+        buttonDown.classList.add('blur-effect')
+        buttonUp.classList.add('blur-effect')
         shareButtons.classList.remove("hidden")
     }
 })
@@ -20,4 +23,7 @@ closeButton.addEventListener('click',function(){
     nav.classList.remove('blur-effect')
     footer.classList.remove('blur-effect')
     main.classList.remove('blur-effect')
+    titlePage.classList.remove('blur-effect')
+    buttonDown.classList.remove('blur-effect')
+    buttonUp.classList.remove('blur-effect')
 });
