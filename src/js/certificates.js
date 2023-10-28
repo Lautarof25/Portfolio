@@ -4,18 +4,21 @@ const certificatesInfo = {
       "title": "Cisco",
       "description": "JavaScritp Essentially 1",
       "thumbnail": "./src/img/cisco.webp",
+      "hours": 40,
       "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
     },
     {
       "title": "FreeCodeCamp",
       "description": "Responsive web design",
       "thumbnail": "./src/img/freeCodeCamp.webp",
+      "hours": 300,
       "link": "https://freecodecamp.org/certification/lautarof/responsive-web-design",
     },
     {
       "title": "Google Activate",
       "description": "Introducción al desarrollo web II",
       "thumbnail": "./src/img/google_activate.webp",
+      "hours": 40,
       "link": "https://learndigital.withgoogle.com/link/1nur091p2ww",
     },
   ]
@@ -27,11 +30,11 @@ const databaseCertificates = certificatesInfo.info
 
 function addCardCertificatesInfo() {
   databaseCertificates.forEach(item => {
-    createCardCertificatesInfo(item.title, item.description, item.thumbnail, item.link)
+    createCardCertificatesInfo(item.title, item.description, item.thumbnail,item.hours, item.link)
   })
 }
 
-function createCardCertificatesInfo(title, description, thumbnail, link) {
+function createCardCertificatesInfo(title, description, thumbnail,hours, link) {
   const div = document.createElement("div")
   div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto w-100")
 
@@ -78,6 +81,10 @@ function createCardCertificatesInfo(title, description, thumbnail, link) {
   const p = document.createElement("p")
   const pText = document.createTextNode(`${description}`)
   p.appendChild(pText)
+  const pHours = document.createElement("p")
+  const phoursText = document.createTextNode(`Horas: ${hours}`)
+  pHours.appendChild(phoursText)
+  pHours.setAttribute("class", "m-0")
   const aLink = document.createElement("a")
   const aLinkText = document.createTextNode("Link")
   aLink.appendChild(aLinkText)
@@ -92,7 +99,7 @@ function createCardCertificatesInfo(title, description, thumbnail, link) {
   img.setAttribute("alt", `${title}`)
   img.setAttribute("class", "w-100")
   aLinkImg.appendChild(img)
-  divContainerText.append(h2, p, aLink, aLinkImg)
+  divContainerText.append(h2, p,pHours, aLink, aLinkImg)
 
   div.append(divRightTop, divRightBottom, divLeftTop, divLeftBottom, divContainerText)
   certificates.appendChild(div)

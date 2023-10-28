@@ -1,5 +1,7 @@
 .header {
     grid-area: header;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .unselect-text {
