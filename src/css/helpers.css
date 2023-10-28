@@ -10,6 +10,10 @@
     background-color: var(--principal-color);
 }
 
+.bg-white {
+    background-color: var(--white);
+}
+
 /* Layouts */
 
 .d-flex {
@@ -75,6 +79,16 @@
    -o-transform: translate(0,-50%);
 }
 
+.centerAbsolute {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+
 .fixed {
     position: fixed;
 }
@@ -121,6 +135,10 @@
 
 .zindex-10 {
     z-index: 10;
+}
+
+.zindex-100 {
+    z-index: 100;
 }
 
 .m-0-auto {
@@ -236,6 +254,11 @@
 .drop-shadow {
     filter: drop-shadow(0 0 5px var(--white));
     -webkit-filter: drop-shadow(0 0 5px var(--white));
+}
+
+.blur-effect {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
 }
 
 .gradientTransparent {

@@ -22,6 +22,7 @@ body {
   max-width: 1440px;
 
   grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
     "title"
     "main"
@@ -51,7 +52,6 @@ a, button {
 @media (min-width: 576px) {
   body {
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
     grid-template-areas:
       "header title"
       "nav main"
