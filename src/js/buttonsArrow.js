@@ -1,19 +1,17 @@
 const buttonDown = document.querySelector('.fa-chevron-down');
 const buttonUp = document.querySelector('.fa-chevron-up');
 
-function changeCurrentPage() {
-    buttonDown.addEventListener('click', () => navigatePage(1));
-    buttonUp.addEventListener('click', () => navigatePage(-1));
+buttonDown.addEventListener('click', () => navigatePage(1));
+buttonUp.addEventListener('click', () => navigatePage(-1));
 
-    function navigatePage(direction) {
-        hidePages();
-        const index = direction === 1 ? nextPage() : prevPage();
-        const currentId = linksArray[index];
-        showPage(currentId);
-        removeAllClassesLinkActive();
-        document.getElementById(currentId).classList.add('link-active');
-        changeTitle();
-    }
+function navigatePage(direction) {
+    hidePages();
+    const index = direction === 1 ? nextPage() : prevPage();
+    const currentId = linksArray[index];
+    showPage(currentId);
+    removeAllClassesLinkActive();
+    document.getElementById(currentId).classList.add('link-active');
+    changeTitle();
 }
 
 function nextPage() {
@@ -28,8 +26,6 @@ function currentIndexPage() {
     return linksArray.indexOf(currentIdPage())
 }
 
-function currentIdPage(){
+function currentIdPage() {
     return document.querySelector(".link-active").id
 }
-
-changeCurrentPage()
