@@ -3,21 +3,21 @@ const certificatesInfo = {
     {
       "title": "Cisco",
       "description": "JavaScritp Essentially 1",
-      "thumbnail": "./src/img/cisco.webp",
+      "thumbnail": "cisco.webp",
       "hours": 40,
       "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
     },
     {
       "title": "FreeCodeCamp",
       "description": "Responsive web design",
-      "thumbnail": "./src/img/freeCodeCamp.webp",
+      "thumbnail": "freeCodeCamp.webp",
       "hours": 300,
       "link": "https://freecodecamp.org/certification/lautarof/responsive-web-design",
     },
     {
       "title": "Google Activate",
       "description": "Introducción al desarrollo web II",
-      "thumbnail": "./src/img/google_activate.webp",
+      "thumbnail": "google_activate.webp",
       "hours": 40,
       "link": "https://learndigital.withgoogle.com/link/1nur091p2ww",
     },
@@ -95,7 +95,7 @@ function createCardCertificatesInfo(title, description, thumbnail,hours, link) {
   aLinkImg.setAttribute("href", `${link}`)
   aLinkImg.setAttribute("target", "_blanket")
   const img = document.createElement("img")
-  img.setAttribute("src", `${thumbnail}`)
+  img.setAttribute("src", `./src/img/certificates/${thumbnail}`)
   img.setAttribute("alt", `${title}`)
   img.setAttribute("class", "w-100")
   aLinkImg.appendChild(img)

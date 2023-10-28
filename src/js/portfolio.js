@@ -3,24 +3,24 @@ const portfolioInfo = {
     {
       "title": "CV Online",
       "description": "Cv online dinámico",
-      "languages": [ "fa-brands fa-html5","fa-brands fa-css3","fa-brands fa-square-js"],
-      "thumbnail": "./src/img/cv_online.webp",
+      "languages": [ "fa-html5","fa-css3","fa-square-js"],
+      "thumbnail": ["cv_online.webp","cv_online_dark.webp"],
       "github": "https://github.com/Lautarof25/cv_online",
       "webpage": "https://lautarof25.github.io/cv_online/"
     },
     {
       "title": "WineStore",
       "description": "Una vineria con carrito de compras",
-      "languages": [ "fa-brands fa-html5","fa-brands fa-bootstrap ", "fa-brands fa-square-js"],
-      "thumbnail": "./src/img/winestore.webp",
+      "languages": [ "fa-html5","fa-bootstrap ", "fa-square-js"],
+      "thumbnail": ["winestore.webp","winestore_sesion.webp","winestore_newsletter.webp"],
       "github": "https://github.com/Lautarof25/Vinoteca",
       "webpage": "https://lautarof25.github.io/Vinoteca/"
     },
     {
       "title": "Guess The Number",
       "description": "Un juego para usar la lógica",
-      "languages": [ "fa-brands fa-html5","fa-brands  fa-bootstrap", "fa-brands fa-square-js"],
-      "thumbnail": "./src/img/guess_the_number.webp",
+      "languages": [ "fa-html5"," fa-bootstrap", "fa-square-js"],
+      "thumbnail": ["guess_the_number.webp","guess_the_number_2.webp","guess_the_number_3.webp"],
       "github": "https://github.com/Lautarof25/guessTheNumber",
       "webpage": "https://lautarof25.github.io/guessTheNumber/"
     },
@@ -86,7 +86,7 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
   divImg.setAttribute("target","_blank")
   divImg.setAttribute("class", "relative")
   const img = document.createElement("img")
-  img.setAttribute("src",`${thumbnail}`)
+  img.setAttribute("src",`./src/img/portfolio/${thumbnail[0]}`)
   img.setAttribute("alt",`${title}`)
   img.setAttribute("class","w-100 border-radius-5")
   const divGradient = document.createElement("div")
@@ -105,7 +105,7 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
 
   for (let i = 0; i < languages.length; i++) {
       const icon = document.createElement("i")
-      icon.setAttribute("class", `${languages[i]} fa-2xl`)
+      icon.setAttribute("class", `fa-brands ${languages[i]} fa-2xl`)
       divGradient.appendChild(icon)
   }
 
