@@ -3,26 +3,26 @@
 
 <head>
   <meta charset="UTF-8">
-<!-- Primary Meta Tags -->
-<title>Portfolio Web | Fernández Lautaro</title>
-<meta name="title" content="Portfolio Web | Fernández Lautaro" />
-<meta name="description" content="¡Visita este portafolio creado por Lautaro!" />
+  <!-- Primary Meta Tags -->
+  <title>Portfolio Web | Fernández Lautaro</title>
+  <meta name="title" content="Portfolio Web | Fernández Lautaro" />
+  <meta name="description" content="¡Visita este portafolio creado por Lautaro!" />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lautarof25.github.io/Portfolio/" />
-<meta property="og:title" content="Portfolio Web | Fernández Lautaro" />
-<meta property="og:description" content="¡Visita este portafolio creado por Lautaro!" />
-<meta property="og:image" content="https://lautarof25.github.io/Portfolio/og_image.jpg" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lautarof25.github.io/Portfolio/" />
+  <meta property="og:title" content="Portfolio Web | Fernández Lautaro" />
+  <meta property="og:description" content="¡Visita este portafolio creado por Lautaro!" />
+  <meta property="og:image" content="https://lautarof25.github.io/Portfolio/og_image.jpg" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://lautarof25.github.io/Portfolio/" />
-<meta property="twitter:title" content="Portfolio Web | Fernández Lautaro" />
-<meta property="twitter:description" content="¡Visita este portafolio creado por Lautaro!" />
-<meta property="twitter:image" content="https://lautarof25.github.io/Portfolio/og_image.jpg" />
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://lautarof25.github.io/Portfolio/" />
+  <meta property="twitter:title" content="Portfolio Web | Fernández Lautaro" />
+  <meta property="twitter:description" content="¡Visita este portafolio creado por Lautaro!" />
+  <meta property="twitter:image" content="https://lautarof25.github.io/Portfolio/og_image.jpg" />
 
-<!-- Meta Tags Generated with https://metatags.io -->
+  <!-- Meta Tags Generated with https://metatags.io -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -48,9 +48,6 @@
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="./src/img/iconweb.ico" type="image/x-icon">
-  <script type="text/javascript"
-    src="https://platform-api.sharethis.com/js/sharethis.js#property=653d253bfa1dd500198fc76e&product=inline-share-buttons&source=platform"
-    async="async"></script>
 </head>
 
 <body class="d-grid">
@@ -210,21 +207,27 @@
     class="demoMode absolute topCenterAbsolute zindex-10 p-1 border-radius-5 bg-dark-gray  breatheEffect hidden drop-shadow">
     Modo Demo
   </div>
+
   <div
-    class="shareButtons popUp absolute centerAbsolute bg-dark-gray p-05 border-radius-5 drop-shadow zindex-100 hidden opacityEffect">
+    class="share-buttons popUp absolute centerAbsolute bg-dark-gray p-05 border-radius-5 drop-shadow zindex-100 hidden opacityEffect">
     <button class="closeButton absolute top-0 right-0 p-05 bg-principal-color">X</button>
     <p class="text-center p-1">¿Te gustó mi página? Podés compartirla 😊</p>
-    <div class="d-flex flex-wrap justify-center gap-05">
-      <a href="https://twitter.com/share?url=https://lautarof25.github.io/Portfolio/&text=¡Me gustó esta página!&via=lautadev"
-        class="share-btn twitter" target="_blank">Twitter</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://lautarof25.github.io/Portfolio/"
-        class="share-btn facebook" target="_blank">Facebook</a>
-      <a href="https://www.linkedin.com/shareArticle?url=https://lautarof25.github.io/Portfolio/&title=Portfolio de lautadev"
-        class="share-btn linkedin" target="_blank">LinkedIn</a>
-      <a href="mailto:?subject=Me gustó esta página&body=Miren esta página web: https://lautarof25.github.io/Portfolio/"
-        class="share-btn email" target="_blank">Email</a>
-    </div>
+    <div class="d-flex justify-center">
+    <button class="share-button facebook">
+      <i class="fab fa-facebook-f"></i>
+    </button>
+    <button class="share-button twitter">
+      <i class="fab fa-twitter"></i>
+    </button>
+    <button class="share-button linkedin">
+      <i class="fab fa-linkedin-in"></i>
+    </button>
+    <button class="share-button whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </button>
   </div>
+  </div>
+
   <div class="colorPicker bg-dark-gray fixed bottomCenterAbsolute border-radius-5 w-fit-content zindex-100 p-2">
     <div class="d-flex flex-wrap gap-05">
       <input type="radio" name="colors" value="darkorange">
@@ -234,7 +237,6 @@
       <input type="radio" name="colors" value="deeppink">
     </div>
   </div>
-  <div class="sharethis-inline-share-buttons hidden"></div>
   <script src="./src/js/linksSelector.js"></script>
   <script src="./src/js/about.js"></script>
   <script src="./src/js/services.js"></script>

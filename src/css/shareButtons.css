@@ -1,5 +1,5 @@
 /** Social Button CSS **/
-.share-btn {
+.share-button {
     display: inline-block;
     color: #ffffff;
     border: none;
@@ -11,30 +11,33 @@
     text-decoration: none;
 }
 
-.share-btn:focus,
-.share-btn:hover {
+.share-button:focus,
+.share-button:hover {
     text-decoration: none;
     opacity: 0.8;
 }
 
-.share-btn:active {
+.share-button:active {
     color: #e2e2e2;
 }
 
-.share-btn.twitter {
+.share-button.twitter {
     background: #55acee;
 }
 
-.share-btn.facebook {
+.share-button.facebook {
     background: #3B5998;
 }
 
-.share-btn.linkedin {
+.share-button.linkedin {
     background: #4875B4;
 }
 
-.share-btn.email {
+.share-button.email {
     background: #444444;
+}
+.share-button.whatsapp {
+    background: #57c800;
 }
 .closeButton {
     color: var(--white);
