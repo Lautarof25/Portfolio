@@ -17,6 +17,10 @@ const aboutInfo = {
       "icons": ["fa-brands fa-python", "fa-brands fa-java","fa-brands fa-react","fa-brands fa-php"]
     },
     {
+      "description": "Usando herramientas de planificación e inteligencia artificial para potenciar el trabajo y proyectos",
+      "icons": [ "fa-solid fa-square-pen","fa-solid fa-brain","fa-solid fa-comment-dots"]
+    },
+    {
       "description": "Me interesa también la parte de testing QA y bases de datos.",
       "icons": ["fa-solid fa-bug", "fa-solid fa-database"]
     },

@@ -6,6 +6,3 @@ radios.forEach(radio => {
     body.style.setProperty("--principal-color", radio.value)
   })
 })
-
-
-

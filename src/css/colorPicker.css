@@ -1,9 +1,8 @@
-.colorPicker::before {
-    content: "Pick one: ";
-    color: white;
-    position: absolute;
-    top: 0;
-    font-family: arial;
+.colorPicker {
+    opacity: .3;
+}
+.colorPicker:hover {
+    opacity: 1;
 }
 
 input[type='radio']:after{
@@ -16,8 +15,12 @@ input[type='radio']:after{
     content: '';
     display: inline-block;
     visibility: visible;
-    border: 3px solid white;
+    border: 3px solid gray;
     cursor: pointer;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 input[value='darkorange']:after {
@@ -32,14 +35,14 @@ input[value='purple']:after {
     background-color: purple;
 }
 
-input[value='mediumturquoise']:after {
-    background-color: mediumturquoise;
+input[value='cadetblue']:after {
+    background-color: cadetblue;
 }
 
-input[value='mediumorchid']:after {
-    background-color: mediumorchid;
+input[value='deeppink']:after {
+    background-color: deeppink;
 }
 
 input[type='radio']:checked:after {
-    border: 3px solid red;
+    border: 3px solid white;
 }
