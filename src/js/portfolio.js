@@ -19,7 +19,7 @@ const portfolioInfo = {
     {
       "title": "Guess The Number",
       "description": "Un juego para usar la lógica",
-      "languages": [ "html5"," bootstrap", "square-js"],
+      "languages": [ "html5","bootstrap", "square-js"],
       "thumbnail": ["guess_the_number.webp","guess_the_number_2.webp","guess_the_number_3.webp"],
       "github": "https://github.com/Lautarof25/guessTheNumber",
       "webpage": "https://lautarof25.github.io/guessTheNumber/"

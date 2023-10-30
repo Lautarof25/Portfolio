@@ -15,11 +15,32 @@ const certificatesInfo = {
       "link": "https://freecodecamp.org/certification/lautarof/responsive-web-design",
     },
     {
+      "title": "Academia QA",
+      "description": "Testing de software Básico",
+      "thumbnail": "academia_qa_testing.webp",
+      "hours": 20,
+      "link": "https://academiaqa.com/Certificado/9ea932d7a7265fedc49ddb5ae172cdf7/?swcfpc=1",
+    },
+    {
       "title": "Google Activate",
       "description": "Introducción al desarrollo web II",
       "thumbnail": "google_activate.webp",
       "hours": 40,
       "link": "https://learndigital.withgoogle.com/link/1nur091p2ww",
+    },
+    {
+      "title": "Ratatype",
+      "description": "Test Typing Speed",
+      "thumbnail": "ratatype.webp",
+      "hours": 0.01,
+      "link": "https://www.ratatype.com/certificates/en/es/9/3/2/5476932.webp?1698681240",
+    },
+    {
+      "title": "EF Set",
+      "description": "English Test",
+      "thumbnail": "ef_test_english.jpg",
+      "hours": 1,
+      "link": "https://www.efset.org/cert/KDPqio",
     },
   ]
 }
@@ -30,11 +51,11 @@ const databaseCertificates = certificatesInfo.info
 
 function addCardCertificatesInfo() {
   databaseCertificates.forEach(item => {
-    createCardCertificatesInfo(item.title, item.description, item.thumbnail,item.hours, item.link)
+    createCardCertificatesInfo(item.title, item.description, item.thumbnail, item.hours, item.link)
   })
 }
 
-function createCardCertificatesInfo(title, description, thumbnail,hours, link) {
+function createCardCertificatesInfo(title, description, thumbnail, hours, link) {
   const div = document.createElement("div")
   div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto w-100")
 
@@ -43,34 +64,34 @@ function createCardCertificatesInfo(title, description, thumbnail,hours, link) {
     div.setAttribute("class", classes);
     return div;
   }
-  
+
   function createDivWithOffsetClasses(mainClasses, offsetClasses) {
     const div = createDivWithClasses(mainClasses);
     const offsetDiv = createDivWithClasses(offsetClasses);
     div.appendChild(offsetDiv);
     return div;
   }
-  
+
   const divLeftTop = createDivWithOffsetClasses(
     "bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5",
     "bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"
   );
-  
+
   const divLeftBottom = createDivWithOffsetClasses(
     "bg-principal-color absolute w-50px h-50px bottom-0 left-0 border-radius-5",
     "bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"
   );
-  
+
   const divRightBottom = createDivWithOffsetClasses(
     "bg-principal-color absolute w-50px h-50px right-0 bottom-0 border-radius-5",
     "bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"
   );
-  
+
   const divRightTop = createDivWithOffsetClasses(
     "bg-principal-color absolute w-50px h-50px right-0 top-0 border-radius-5",
     "bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"
   );
-  
+
 
   const divContainerText = document.createElement("div")
   divContainerText.setAttribute("class", "relative zindex-1 d-flex flex-column align-center gap-05")
@@ -99,7 +120,7 @@ function createCardCertificatesInfo(title, description, thumbnail,hours, link) {
   img.setAttribute("alt", `${title}`)
   img.setAttribute("class", "w-100")
   aLinkImg.appendChild(img)
-  divContainerText.append(h2, p,pHours, aLink, aLinkImg)
+  divContainerText.append(h2, p, pHours, aLink, aLinkImg)
 
   div.append(divRightTop, divRightBottom, divLeftTop, divLeftBottom, divContainerText)
   certificates.appendChild(div)
