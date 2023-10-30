@@ -5,6 +5,12 @@
     opacity: 1;
 }
 
+@media (min-width: 576px) { 
+     .colorPicker {
+        margin-left: 130px;
+     }
+ }
+
 input[type='radio']:after{
     width: 20px;
     height: 20px;

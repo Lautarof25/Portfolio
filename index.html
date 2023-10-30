@@ -44,13 +44,14 @@
   <link rel="stylesheet" href="./src/css/sectionTitle.css">
   <link rel="stylesheet" href="./src/css/shareButtons.css">
   <link rel="stylesheet" href="./src/css/colorPicker.css">
+  <link rel="stylesheet" href="./src/css/demoMode.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="./src/img/iconweb.ico" type="image/x-icon">
 </head>
 
-<body class="d-grid">
+<body class="d-grid relative">
   <div class="star"></div>
   <div class="star"></div>
   <div class="star"></div>
@@ -58,6 +59,10 @@
   <div class="star"></div>
   <div class="star"></div>
   <div class="star"></div>
+  <div
+    class="demoMode absolute topCenterAbsolute zindex-10 p-1 border-radius-5 bg-dark-gray  breatheEffect hidden drop-shadow">
+    Modo Demo
+  </div>
 
   <header
     class="header fixed zindex-10 fs-2 fw-bolder top-0 m-0 bg-dark-gray p-2 transition-all unselect-text ml-1 opacity-50">
@@ -104,7 +109,7 @@
     <button class="section__button p-0 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down p-1"></i></button>
   </section>
 
-  <main class="main p-1 transition-all">
+  <main class="main p-1 transition-all relative">
     <noscript>
       <img src="./og_image.jpg" alt="linkedin-thumbnail">
     </noscript>
@@ -185,6 +190,15 @@
       </div>
 
     </section>
+    <div class="colorPicker bg-dark-gray fixed bottomCenterAbsolute border-radius-5 w-fit-content zindex-100 p-2">
+      <div class="d-flex flex-wrap gap-05">
+        <input type="radio" name="colors" value="darkorange">
+        <input type="radio" name="colors" value="slateblue">
+        <input type="radio" name="colors" value="purple">
+        <input type="radio" name="colors" value="cadetblue">
+        <input type="radio" name="colors" value="deeppink">
+      </div>
+    </div>
   </main>
 
   <footer
@@ -204,39 +218,25 @@
   </footer>
 
   <div
-    class="demoMode absolute topCenterAbsolute zindex-10 p-1 border-radius-5 bg-dark-gray  breatheEffect hidden drop-shadow">
-    Modo Demo
-  </div>
-
-  <div
     class="share-buttons popUp absolute centerAbsolute bg-dark-gray p-05 border-radius-5 drop-shadow zindex-100 hidden opacityEffect">
     <button class="closeButton absolute top-0 right-0 p-05 bg-principal-color">X</button>
     <p class="text-center p-1">¿Te gustó mi página? Podés compartirla 😊</p>
     <div class="d-flex justify-center">
-    <button class="share-button facebook">
-      <i class="fab fa-facebook-f"></i>
-    </button>
-    <button class="share-button twitter">
-      <i class="fab fa-twitter"></i>
-    </button>
-    <button class="share-button linkedin">
-      <i class="fab fa-linkedin-in"></i>
-    </button>
-    <button class="share-button whatsapp">
-      <i class="fab fa-whatsapp"></i>
-    </button>
-  </div>
-  </div>
-
-  <div class="colorPicker bg-dark-gray fixed bottomCenterAbsolute border-radius-5 w-fit-content zindex-100 p-2">
-    <div class="d-flex flex-wrap gap-05">
-      <input type="radio" name="colors" value="darkorange">
-      <input type="radio" name="colors" value="slateblue">
-      <input type="radio" name="colors" value="purple">
-      <input type="radio" name="colors" value="cadetblue">
-      <input type="radio" name="colors" value="deeppink">
+      <button class="share-button facebook">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+      <button class="share-button twitter">
+        <i class="fab fa-twitter"></i>
+      </button>
+      <button class="share-button linkedin">
+        <i class="fab fa-linkedin-in"></i>
+      </button>
+      <button class="share-button whatsapp">
+        <i class="fab fa-whatsapp"></i>
+      </button>
     </div>
   </div>
+
   <script src="./src/js/linksSelector.js"></script>
   <script src="./src/js/about.js"></script>
   <script src="./src/js/services.js"></script>

@@ -1,0 +1,9 @@
+.demoMode {
+    margin-left: -60px;
+}
+
+@media (min-width: 576px) { 
+     .demoMode {
+        margin-left: 55px;
+     }
+}
