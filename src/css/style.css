@@ -1,3 +1,11 @@
+:root {
+  --black: #151515;
+  --darkGray: #222222;
+  --lighGray: #b1b1b1;
+  --white: #f1f1f1;
+  --principal-color: #ff5b02;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -10,11 +18,6 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  --black: #151515;
-  --darkGray: #222222;
-  --lighGray: #b1b1b1;
-  --white: #f1f1f1;
-  --principal-color: #ff5b02;
   background-color: var(--black);
   color: var(--white);
 
@@ -22,7 +25,7 @@ body {
   max-width: 1440px;
 
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 200px 1fr;
   grid-template-areas:
     "title"
     "main"

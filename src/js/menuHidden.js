@@ -17,6 +17,9 @@ function showMenuBar() {
   faBars.classList.toggle("d-none");
   logo.classList.toggle("d-none");
   main.classList.toggle("blur");
+  titlePage.classList.toggle("blur");
+  buttonDown.classList.toggle("blur");
+  buttonUp.classList.toggle("blur");
 }
 
 function hideMenuBar() {
@@ -28,6 +31,9 @@ function hideMenuBar() {
   hiddenIcons(navIcons)
   hiddenIcons(footerIcons)
   main.classList.remove("blur");
+  titlePage.classList.remove("blur");
+  buttonDown.classList.remove("blur");
+  buttonUp.classList.remove("blur");
 }
 
 function hiddenIcons(element) {

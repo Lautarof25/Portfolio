@@ -9,6 +9,14 @@ const portfolioInfo = {
       "webpage": "https://lautarof25.github.io/cv_online/"
     },
     {
+      "title": "Calculadora Python",
+      "description": "Una simple calculadora creada con Python",
+      "languages": [ "python"],
+      "thumbnail": ["calculadora_python.jpg"],
+      "github": "https://github.com/Lautarof25/practicas_python",
+      "webpage": "https://onlinegdb.com/qZjq7lwwj"
+    },
+    {
       "title": "WineStore",
       "description": "Una vineria con carrito de compras",
       "languages": [ "html5","bootstrap ", "square-js"],
@@ -88,7 +96,7 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
   const img = document.createElement("img")
   img.setAttribute("src",`./src/img/portfolio/${thumbnail[0]}`)
   img.setAttribute("alt",`${title}`)
-  img.setAttribute("class","w-100 border-radius-5")
+  img.setAttribute("class","w-100 h-250 border-radius-5")
   const divGradient = document.createElement("div")
   divGradient.setAttribute("class","gradientTransparent d-flex justify-center align-end w-100 h-50px zindex-5 absolute bottom-0 gap-05")
   divImg.append(img,divGradient)

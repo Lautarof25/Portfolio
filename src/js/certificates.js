@@ -2,7 +2,7 @@ const certificatesInfo = {
   "info": [
     {
       "title": "Cisco",
-      "description": "JavaScritp Essentially 1",
+      "description": "JavaScript Essentially 1",
       "thumbnail": "cisco.webp",
       "hours": 40,
       "year": 2023,
@@ -99,8 +99,8 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   );
 
 
-  const divContainerText = document.createElement("div")
-  divContainerText.setAttribute("class", "relative zindex-1 d-flex flex-column align-center gap-05")
+  const divContainer = document.createElement("div")
+  divContainer.setAttribute("class", "relative zindex-1 d-flex flex-column align-center gap-05")
   const h2 = document.createElement("h2")
   h2.setAttribute("class", "m-0")
   const h2Text = document.createTextNode(`${title}`)
@@ -108,6 +108,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   const p = document.createElement("p")
   const pText = document.createTextNode(`${description}`)
   p.appendChild(pText)
+  p.setAttribute("class", "mt-0")
   const pHours = document.createElement("p")
   const pHoursText = document.createTextNode(`Horas: ${hours}`)
   pHours.appendChild(pHoursText)
@@ -116,23 +117,27 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   const pYearText = document.createTextNode(`Año: ${year}`)
   pYear.appendChild(pYearText)
   pYear.setAttribute("class", "m-0")
+
+  const divLinks = document.createElement("div")
+  divLinks.setAttribute("class", "d-flex flex-column")
   const aLink = document.createElement("a")
   const aLinkText = document.createTextNode("Link")
   aLink.appendChild(aLinkText)
   aLink.setAttribute("href", `${link}`)
   aLink.setAttribute("target", "_blanket")
-  aLink.setAttribute("class", "section__button p-1 border-radius-5 m-0-auto")
+  aLink.setAttribute("class", "section__button p-1 w-100 plr-0 text-center border-radius-top-5")
   const aLinkImg = document.createElement("a")
   aLinkImg.setAttribute("href", `${link}`)
   aLinkImg.setAttribute("target", "_blanket")
   const img = document.createElement("img")
   img.setAttribute("src", `./src/img/certificates/${thumbnail}`)
   img.setAttribute("alt", `${title}`)
-  img.setAttribute("class", "w-100")
+  img.setAttribute("class", "w-250px")
   aLinkImg.appendChild(img)
-  divContainerText.append(h2, p, pHours, pYear, aLink, aLinkImg)
+  divLinks.append(aLink,aLinkImg)
+  divContainer.append(h2, p, pHours, pYear, divLinks)
 
-  div.append(divRightTop, divRightBottom, divLeftTop, divLeftBottom, divContainerText)
+  div.append(divRightTop, divRightBottom, divLeftTop, divLeftBottom, divContainer)
   certificates.appendChild(div)
 }
 
