@@ -8,4 +8,7 @@
     .titlePage {
         margin-top: 0!important;
     }
+    .titlePage h2 {
+        width: 220px;
+    }
 }
