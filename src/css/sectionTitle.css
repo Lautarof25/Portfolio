@@ -1,18 +1,39 @@
 .titlePage {
     grid-area: title;
     font-size: clamp(14px, 3vw, 24px);
-    margin-top: 4.2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "title buttonUp"
+        "title buttonDown"
+    ;
 }
 
 .titlePage h2 {
-    width: 150px;
+    grid-area: title;
+    text-align: right;
+}
+
+[aria-label="Next page"]{
+    align-self: flex-end;
+}
+[aria-label="Previous page"]{
+    align-self: flex-start;
 }
 
 @media (min-width: 576px) {
     .titlePage {
         margin-top: 0!important;
+        display: flex;
     }
     .titlePage h2 {
-        width: 220px;
+        text-align: center;
+    }
+    [aria-label="Next page"]{
+        align-self: auto;
+    }
+    [aria-label="Previous page"]{
+        align-self: auto;
     }
 }

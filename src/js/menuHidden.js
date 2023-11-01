@@ -6,6 +6,7 @@ const footerIcons = document.querySelectorAll(".footer a")
 const main = document.querySelector("main");
 const faBars = document.querySelector(".fa-bars")
 const logo = document.querySelector("#logo")
+const section = document.querySelector("section")
 const toggleMenu = document.querySelector("#toggle-menu")
 
 function showMenuBar() {
@@ -52,4 +53,4 @@ links.forEach(link => {
   link.addEventListener("click",hideMenuBar)
 })
 main.addEventListener("click",hideMenuBar);
-titlePage.addEventListener("click",hideMenuBar);
+section.addEventListener("click",hideMenuBar);
