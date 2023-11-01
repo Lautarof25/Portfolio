@@ -38,7 +38,7 @@ const certificatesInfo = {
       "thumbnail": "ratatype.webp",
       "hours": 0.01,
       "year": 2023,
-      "link": "https://www.ratatype.com/certificates/en/es/9/3/2/5476932.webp?1698681240",
+      "link": "https://www.ratatype.com/certificates/en/es/9/3/2/5476932.webp?1698844110",
     },
     {
       "title": "EF Set",

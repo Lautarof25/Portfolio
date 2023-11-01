@@ -14,12 +14,19 @@
     display: none;
 }
 
+.footer .leftOffset-100 {
+    left: -100%;
+}
+
 @media (min-width: 576px) { 
      .footer {
         width: fit-content!important;
-        margin-left: 2rem;
+        margin-left: 1.25rem;
      }
      .footer .d-none {
         display: block;
      }
+     .footer {
+        left: 0!important;
+    }
  }

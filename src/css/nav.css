@@ -32,8 +32,6 @@
         width: 100px;
         top: 83px !important;
         position: fixed;
-        min-height: 100vh;
-        z-index: 20 !important;
         padding: 0 !important;
     }
 
