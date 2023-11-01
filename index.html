@@ -27,7 +27,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" defer>
   <link rel="stylesheet" href="./src/css/normalize.css">
   <link rel="stylesheet" href="./src/css/style.css">
   <link rel="stylesheet" href="./src/css/header.css">
@@ -49,7 +49,7 @@
   <link rel="stylesheet" href="./src/css/demoMode.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" defer/>
   <link rel="shortcut icon" href="./src/img/iconweb.ico" type="image/x-icon">
   <link rel="preload" as="image" href="./src/img/home/profile_picture_lautaro.webp">
 </head>
@@ -82,7 +82,7 @@
           L<span class="d-none">auta</span><span class="principalColor">D<span class="d-none">ev</span>
           </span>
         </p>
-        <button id="toggle-menu" class="toggle-menu">
+        <button id="toggle-menu" class="toggle-menu" aria-label="toggle menu">
           <i class="fa-solid fa-bars hidden"></i>
         </button>
       </div>
@@ -194,13 +194,23 @@
 
     </section>
     <div class="colorPicker bg-dark-gray fixed bottomCenterAbsolute border-radius-5 w-fit-content zindex-100 p-2">
-      <label for="color">Elige un sabor</label>
+      <p class="m-0">Elige un sabor:</p>
       <div class="d-flex flex-wrap gap-05">
-        <input type="radio" name="colors" value="darkorange">
-        <input type="radio" name="colors" value="slateblue">
-        <input type="radio" name="colors" value="purple">
-        <input type="radio" name="colors" value="cadetblue">
-        <input type="radio" name="colors" value="deeppink">
+        <label for="darkorange" aria-label="darkorange color">
+          <input type="radio" name="colors" value="darkorange" id="darkorange">
+        </label>
+        <label for="slateblue" aria-label="slateblue color">
+          <input type="radio" name="colors" value="slateblue" id="slateblue">
+        </label>
+        <label for="purple" aria-label="purple color">
+          <input type="radio" name="colors" value="purple" id="purple">
+        </label>
+        <label for="cadetblue" aria-label="cadetblue color">
+          <input type="radio" name="colors" value="cadetblue" id="cadetblue">
+        </label>
+        <label for="deeppink" aria-label="deeppink color">
+          <input type="radio" name="colors" value="deeppink" id="deeppink">
+        </label>
       </div>
     </div>
   </main>
@@ -211,10 +221,10 @@
       download="cv fernandez lautaro" class="section__button p-1 border-radius-5 m-0-auto text-center"><span
         class="d-none">Descargar</span> CV</a>
     <div class="d-flex justify-center gap-05">
-      <a href="https://github.com/Lautarof25" target="_blank">
+      <a href="https://github.com/Lautarof25" target="_blank" aria-label="Github profile">
         <i class="fa-brands fa-github"></i>
       </a>
-      <a href="https://www.linkedin.com/in/lautadev/" target="_blank">
+      <a href="https://www.linkedin.com/in/lautadev/" target="_blank" aria-label="Linkeding profile">
         <i class="fa-brands fa-linkedin"></i>
       </a>
     </div>
@@ -241,19 +251,19 @@
     </div>
   </div>
 
-  <script src="./src/js/linksSelector.js"></script>
-  <script src="./src/js/about.js"></script>
-  <script src="./src/js/services.js"></script>
-  <script src="./src/js/portfolio.js"></script>
-  <script src="./src/js/certificates.js"></script>
-  <script src="./src/js/form.js"></script>
-  <script src="./src/js/titlePage.js"></script>
-  <script src="./src/js/buttonsArrow.js"></script>
-  <script src="./src/js/menuHidden.js"></script>
-  <script src="./src/js/showPage.js"></script>
-  <script src="./src/js/inactivityChangePage.js"></script>
-  <script src="./src/js/shareButtons.js"></script>
-  <script src="./src/js/colorPicker.js"></script>
+  <script src="./src/js/linksSelector.js" defer></script>
+  <script src="./src/js/about.js" defer></script>
+  <script src="./src/js/services.js" defer></script>
+  <script src="./src/js/portfolio.js" defer></script>
+  <script src="./src/js/certificates.js" defer></script>
+  <script src="./src/js/form.js" defer></script>
+  <script src="./src/js/titlePage.js" defer></script>
+  <script src="./src/js/buttonsArrow.js" defer></script>
+  <script src="./src/js/menuHidden.js" defer></script>
+  <script src="./src/js/showPage.js" defer></script>
+  <script src="./src/js/inactivityChangePage.js" defer></script>
+  <script src="./src/js/shareButtons.js" defer></script>
+  <script src="./src/js/colorPicker.js" defer></script>
 
 </body>
 
