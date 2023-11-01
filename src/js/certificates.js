@@ -43,7 +43,7 @@ const certificatesInfo = {
     {
       "title": "EF Set",
       "description": "English Test",
-      "thumbnail": "ef_test_english.jpg",
+      "thumbnail": "ef_test_english.webp",
       "hours": 1,
       "year": 2023,
       "link": "https://www.efset.org/cert/KDPqio",

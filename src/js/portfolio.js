@@ -12,7 +12,7 @@ const portfolioInfo = {
       "title": "Calculadora Python",
       "description": "Una simple calculadora creada con Python",
       "languages": [ "python"],
-      "thumbnail": ["calculadora_python.jpg"],
+      "thumbnail": ["calculadora_python.webp"],
       "github": "https://github.com/Lautarof25/practicas_python",
       "webpage": "https://onlinegdb.com/qZjq7lwwj"
     },
@@ -122,13 +122,13 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
   const aGitHub = document.createElement("a")
   const gitHubText = document.createTextNode("GitHub")
   aGitHub.appendChild(gitHubText)
-  aGitHub.setAttribute("class", "section__button zindex-5 p-1 relative border-radius-5")
+  aGitHub.setAttribute("class", "section__button zindex-5 p-1 relative border-radius-5 w-100 text-center")
   aGitHub.setAttribute("href", `${github}`)
   aGitHub.setAttribute("target", `_blank`)
   const aWebPage = document.createElement("a")
   const webPageText = document.createTextNode("WebPage")
   aWebPage.appendChild(webPageText)
-  aWebPage.setAttribute("class", "section__button zindex-5 p-1 relative border-radius-5")
+  aWebPage.setAttribute("class", "section__button zindex-5 p-1 relative border-radius-5 w-100 text-center")
   aWebPage.setAttribute("href",`${webpage}`)
   aWebPage.setAttribute("target", `_blank`)
   divLinks.append(aGitHub,aWebPage)

@@ -51,6 +51,7 @@
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="./src/img/iconweb.ico" type="image/x-icon">
+  <link rel="preload" as="image" href="./src/img/home/profile_picture_lautaro.webp">
 </head>
 
 <body class="d-grid relative">
@@ -88,27 +89,27 @@
     </div>
   </header>
 
-  <nav class="nav hidden-menu d-flex zindex-10 min-h-100 flex-column top-0 p-2 opacity transition-all">
+  <nav class="nav hidden-menu d-flex zindex-10 h-100 flex-column top-0 p-2 opacity transition-all">
     <div class="nav__menu d-flex flex-column gap-2">
-      <a href="#" id="home" class="link-active transition-color"><i class="fa-solid fa-house"></i><span
+      <a href="#" id="home" class="link-active transition-color" aria-label="home"><i class="fa-solid fa-house"></i><span
           class="d-none">Inicio</span></a>
-      <a href="#" id="about" class="transition-color"><i class="fa-solid fa-user hidden-icon"></i><span
+      <a href="#" id="about" class="transition-color" aria-label="about"><i class="fa-solid fa-user hidden-icon"></i><span
           class="d-none">Sobre mi</span></a>
-      <a href="#" id="portfolio" class="transition-color breatheEffect"><i
+      <a href="#" id="portfolio" class="transition-color breatheEffect" aria-label="portfolio"><i
           class="fa-solid fa-briefcase hidden-icon"></i><span class="d-none">Portfolio</span></a>
-      <a href="#" id="certificates" class="transition-color"><i class="fa-solid fa-certificate hidden-icon"></i><span
+      <a href="#" id="certificates" class="transition-color" aria-label="certificates"><i class="fa-solid fa-certificate hidden-icon"></i><span
           class="d-none">Certificaciones</span></a>
-      <a href="#" id="services" class="transition-color"><i class="fa-solid fa-list hidden-icon"></i><span
+      <a href="#" id="services" class="transition-color" aria-label="services"><i class="fa-solid fa-list hidden-icon"></i><span
           class="d-none">Servicios</span></a>
-      <a href="#" id="contact" class="transition-color"><i class="fa-solid fa-comments hidden-icon"></i><span
+      <a href="#" id="contact" class="transition-color" aria-label="contact"><i class="fa-solid fa-comments hidden-icon"></i><span
           class="d-none">Contacto</span></a>
     </div>
   </nav>
 
   <section class="titlePage d-flex align-center">
-    <button class="section__button p-0 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-up p-1"></i></button>
+    <button class="section__button p-0 border-radius-5 m-0-auto" aria-label="Next page"><i class="fa-solid fa-chevron-up p-1"></i></button>
     <h2 class="text-center"></h2>
-    <button class="section__button p-0 border-radius-5 m-0-auto"><i class="fa-solid fa-chevron-down p-1"></i></button>
+    <button class="section__button p-0 border-radius-5 m-0-auto" aria-label="Previous page"><i class="fa-solid fa-chevron-down p-1"></i></button>
   </section>
 
   <main class="main p-1 transition-all relative">
@@ -126,7 +127,7 @@
           <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
         </div>
         <div class="drop-shadow relative zindex-1">
-          <img class="grayscale w-100 h-100 " src="./src/img/home/profile_picture_lautaro_1_50.webp"
+          <img class="grayscale w-100 h-100 " src="./src/img/home/profile_picture_lautaro.webp"
             alt="profile_picture_lautaro">
         </div>
         <div class="gradientTransparent w-100 h-50px zindex-5 absolute bottomOffset"></div>
@@ -193,6 +194,7 @@
 
     </section>
     <div class="colorPicker bg-dark-gray fixed bottomCenterAbsolute border-radius-5 w-fit-content zindex-100 p-2">
+      <label for="color">Elige un sabor</label>
       <div class="d-flex flex-wrap gap-05">
         <input type="radio" name="colors" value="darkorange">
         <input type="radio" name="colors" value="slateblue">
