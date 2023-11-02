@@ -2,35 +2,35 @@ const aboutInfo = {
   "info": [
     {
       "description": "Soy técnico en mantenimiento y armado de PC certificado del IAC.",
-      "icons": ["fa-solid fa-computer", "fa-solid fa-screwdriver-wrench"]
+      "icons": [computerSolid, screwdriverWrenchSolid]
     },
     {
       "description": "Estudio programación desde mediados del 2020",
-      "icons": ["fa-solid fa-pencil", "fa-solid fa-code"]
+      "icons": [pencilSolid, codeSolid]
     },
     {
       "description": "Tengo conocimientos en HTML, CSS, JS y algunos frameworks (Bootstrap y Tailwind)",
-      "icons": ["fa-brands fa-html5", "fa-brands fa-css3","fa-brands fa-js","fa-brands fa-bootstrap"]
+      "icons": [html5, css3Alt,squareJs,bootstrap]
     },
     {
       "description": "También conozco Python y Java, y estoy estudiando ReactJS, Spring, PHP, entre otros.",
-      "icons": ["fa-brands fa-python", "fa-brands fa-java","fa-brands fa-react","fa-brands fa-php"]
+      "icons": [python, java,react,php]
     },
     {
       "description": "Usando herramientas de planificación e inteligencia artificial para potenciar el trabajo y proyectos",
-      "icons": [ "fa-solid fa-square-pen","fa-solid fa-brain","fa-solid fa-comment-dots"]
+      "icons": [ penToSquareSolid,brainSolid,commentDotsSolid]
     },
     {
       "description": "Me interesa también la parte de testing QA y bases de datos.",
-      "icons": ["fa-solid fa-bug", "fa-solid fa-database"]
+      "icons": [bugSolid, databaseSolid]
     },
     {
       "description": "Conocimientos sólidos en herramientas ofimáticas, diseño gráfico y web.",
-      "icons": ["fa-solid fa-file-excel", "fa-solid fa-palette", "fa-solid fa-globe"]
+      "icons": [fileExcelSolid, paletteSolid, globeSolid]
     },
     {
       "description": "Trabajar colaborativamente, aprendizaje constante y conocer distintas metodologías de trabajo",
-      "icons": ["fa-solid fa-users", "fa-solid fa-hand-holding-hand"]
+      "icons": [usersSolid, handHoldingHandSolid]
     },
   ]
 }
@@ -73,8 +73,8 @@ function createCardAboutInfo(description, icons) {
   divContainer.appendChild(divIcons);
 
   for (let i = 0; i < icons.length; i++) {
-    const icon = document.createElement("i");
-    icon.className = `${icons[i]} fa-2xl`;
+    const icon = document.createElement("img");
+    icon.setAttribute("src", `./src/img/icons/${icons[i]}`);
     divIcons.appendChild(icon);
   }
 

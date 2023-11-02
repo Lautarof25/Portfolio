@@ -2,38 +2,28 @@
     grid-area: title;
     font-size: clamp(14px, 3vw, 24px);
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: auto;
     grid-template-areas: 
-        "title buttonUp"
-        "title buttonDown"
+        "title title"
+        "buttonUp buttonDown"
     ;
 }
 
 .titlePage h2 {
     grid-area: title;
-    text-align: right;
-}
-
-[aria-label="Next page"]{
     align-self: flex-end;
-}
-[aria-label="Previous page"]{
-    align-self: flex-start;
 }
 
 @media (min-width: 576px) {
     .titlePage {
         margin-top: 0!important;
         display: flex;
+        justify-content: space-around;
     }
     .titlePage h2 {
         text-align: center;
-    }
-    [aria-label="Next page"]{
-        align-self: auto;
-    }
-    [aria-label="Previous page"]{
-        align-self: auto;
+        align-self: initial;
+        width: 50%;
     }
 }

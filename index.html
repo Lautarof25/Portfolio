@@ -25,9 +25,6 @@
   <!-- Meta Tags Generated with https://metatags.io -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" defer>
   <link rel="stylesheet" href="./src/css/normalize.css">
   <link rel="stylesheet" href="./src/css/style.css">
   <link rel="stylesheet" href="./src/css/header.css">
@@ -36,22 +33,18 @@
   <link rel="stylesheet" href="./src/css/main_home.css">
   <link rel="stylesheet" href="./src/css/main_about.css">
   <link rel="stylesheet" href="./src/css/main_services.css">
-  <link rel="stylesheet" href="./src/css/main_contact.css">
+  <link rel="stylesheet" href="./src/css/main_contact.css" defer>
   <link rel="stylesheet" href="./src/css/main_certifications.css">
   <link rel="stylesheet" href="./src/css/main_portfolio.css">
   <link rel="stylesheet" href="./src/css/footer.css">
   <link rel="stylesheet" href="./src/css/helpers.css">
   <link rel="stylesheet" href="./src/css/scrollbar.css">
   <link rel="stylesheet" href="./src/css/animation.css">
-  <link rel="stylesheet" href="./src/css/sectionTitle.css">
+  <link rel="stylesheet" href="./src/css/sectionTitle.css" defer>
   <link rel="stylesheet" href="./src/css/shareButtons.css">
   <link rel="stylesheet" href="./src/css/colorPicker.css">
   <link rel="stylesheet" href="./src/css/demoMode.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" defer/>
   <link rel="shortcut icon" href="./src/img/iconweb.ico" type="image/x-icon">
-  <link rel="preload" as="image" href="./src/img/home/profile_picture_lautaro.webp">
 </head>
 
 <body class="d-grid relative">
@@ -116,7 +109,7 @@
     <noscript>
       <img src="./og_image.jpg" alt="linkedin-thumbnail">
     </noscript>
-    <section class="section home d-grid blurEffect skewEffect">
+    <section class="section home d-grid skewEffect">
       <h1 class="section__title text-center align-self-end">Hola, mi nombre es <span
           class="principalColor">Lautaro</span></h1>
       <div class="section__box mw-400 relative p-05 m-0-auto">
@@ -127,8 +120,7 @@
           <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
         </div>
         <div class="drop-shadow relative zindex-1">
-          <img class="grayscale w-100 h-100 " src="https://ucarecdn.com/04da18ba-efa3-43d7-88c0-bcd1844f3126/-/preview/1000x400/-/format/auto/-/quality/smart_retina/"
-            alt="profile_picture_lautaro">
+            <img class="grayscale w-100 h-100 " src="https://ucarecdn.com/e1da82ca-af46-4b50-b2e7-5fd40f36dc23/-/preview/1000x400/-/format/auto/-/quality/smart_retina/" alt="profile_picture_lautaro">
         </div>
         <div class="gradientTransparent w-100 h-50px zindex-5 absolute bottomOffset"></div>
       </div>
@@ -251,6 +243,8 @@
     </div>
   </div>
 
+
+  <script src="./src/js/iconsRoute.js" defer></script>
   <script src="./src/js/linksSelector.js" defer></script>
   <script src="./src/js/about.js" defer></script>
   <script src="./src/js/services.js" defer></script>

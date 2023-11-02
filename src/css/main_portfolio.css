@@ -2,6 +2,11 @@
    color: var(--white);
 }
 
+.main .portfolio .icon-language {
+   width: 1.5rem;
+   filter: invert(1);
+}
+
 @media (min-width: 576px) {
    .main .portfolio {
       grid-template-areas:

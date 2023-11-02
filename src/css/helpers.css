@@ -28,7 +28,7 @@
     align-items: center;
 }
 
-.justify-between {
+.justify-around {
     justify-content: space-around;
 }
 
@@ -222,6 +222,14 @@
 
 .w-20px {
     width: 20px;
+}
+
+.maxw-15 {
+    max-width: 15%;
+}
+
+.w-75 {
+    width: 75%;
 }
 
 .h-20px {

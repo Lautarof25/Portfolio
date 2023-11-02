@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--black);
   color: var(--white);
 
@@ -25,7 +25,7 @@ body {
   max-width: 1440px;
 
   grid-template-columns: 1fr;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 170px 1fr;
   grid-template-areas:
     "title"
     "main"
@@ -55,6 +55,7 @@ a, button, input[type='radio']:after {
 @media (min-width: 576px) {
   body {
     grid-template-columns: auto 1fr;
+    grid-template-rows: 200px 1fr;
     grid-template-areas:
       "header title"
       "nav main"

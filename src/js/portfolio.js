@@ -3,7 +3,7 @@ const portfolioInfo = {
     {
       "title": "CV Online",
       "description": "Cv online dinámico",
-      "languages": [ "html5","css3","square-js"],
+      "languages": [ html5,css3Alt,squareJs],
       "thumbnail": ["cv_online.webp","cv_online_dark.webp"],
       "github": "https://github.com/Lautarof25/cv_online",
       "webpage": "https://lautarof25.github.io/cv_online/"
@@ -11,7 +11,7 @@ const portfolioInfo = {
     {
       "title": "Calculadora Python",
       "description": "Una simple calculadora creada con Python",
-      "languages": [ "python"],
+      "languages": [ python],
       "thumbnail": ["calculadora_python.webp"],
       "github": "https://github.com/Lautarof25/practicas_python",
       "webpage": "https://onlinegdb.com/qZjq7lwwj"
@@ -19,7 +19,7 @@ const portfolioInfo = {
     {
       "title": "WineStore",
       "description": "Una vineria con carrito de compras",
-      "languages": [ "html5","bootstrap ", "square-js"],
+      "languages": [ html5,bootstrap,squareJs],
       "thumbnail": ["winestore.webp","winestore_sesion.webp","winestore_newsletter.webp"],
       "github": "https://github.com/Lautarof25/Vinoteca",
       "webpage": "https://lautarof25.github.io/Vinoteca/"
@@ -27,7 +27,7 @@ const portfolioInfo = {
     {
       "title": "Guess The Number",
       "description": "Un juego para usar la lógica",
-      "languages": [ "html5","bootstrap", "square-js"],
+      "languages": [ html5,bootstrap,squareJs],
       "thumbnail": ["guess_the_number.webp","guess_the_number_2.webp","guess_the_number_3.webp"],
       "github": "https://github.com/Lautarof25/guessTheNumber",
       "webpage": "https://lautarof25.github.io/guessTheNumber/"
@@ -112,8 +112,9 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
   divIcons.setAttribute("class", "section__icons d-flex justify-center  gap-05")
 
   for (let i = 0; i < languages.length; i++) {
-      const icon = document.createElement("i")
-      icon.setAttribute("class", `fa-brands fa-${languages[i]} fa-2xl`)
+      const icon = document.createElement("img")
+      icon.setAttribute("src", `./src/img/icons/${languages[i]}`)
+      icon.setAttribute("class", `icon-language`)
       divGradient.appendChild(icon)
   }
 

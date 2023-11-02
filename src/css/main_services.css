@@ -1,3 +1,8 @@
+.main .services img {
+    width: 2.5rem;
+    filter: invert(1);
+}
+
 @media (min-width: 576px) {
     .main .services {
         grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
