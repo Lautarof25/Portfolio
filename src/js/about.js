@@ -34,7 +34,12 @@ const aboutInfo = {
     },
   ]
 }
-
+/*
+<i class="fa-solid fa-chevron-up"></i>
+<i class="fa-solid fa-chevron-right"></i>
+<i class="fa-solid fa-chevron-down"></i>
+<i class="fa-solid fa-chevron-left"></i>
+*/
 const about = document.querySelector('.about');
 
 const databaseAbout = aboutInfo.info
@@ -47,34 +52,30 @@ function addCardAboutInfo(){
 
 function createCardAboutInfo(description, icons) {
   const div = document.createElement("div");
-  div.className = "section__box mw-500 relative p-05 m-0-auto w-100";
+  div.className = "section__box mw-500 relative p-05 m-0-auto w-100 gap-1";
 
-  const createDivWithClass = (className) => {
-    const newDiv = document.createElement("div");
+  const createElementWithClass = (element,className) => {
+    const newDiv = document.createElement(element);
     newDiv.className = className;
     return newDiv;
   };
 
-  const divRight = createDivWithClass("bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5");
-  const divRightOffset = createDivWithClass("bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5");
-  divRight.appendChild(divRightOffset);
+  const divRight = createElementWithClass("i","fa-solid fa-chevron-right");
 
-  const divLeft = createDivWithClass("bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5");
-  const divLeftOffset = createDivWithClass("bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5");
-  divLeft.appendChild(divLeftOffset);
+  const divLeft = createElementWithClass("i","fa-solid fa-chevron-left");
 
-  const divContainer = createDivWithClass("relative zindex-1 d-flex flex-column p-1 align-center gap-05");
+  const divContainer = createElementWithClass("div","relative zindex-1 d-flex flex-column p-1 align-center gap-05");
   const p = document.createElement("p");
   p.className = "section__description text-center";
   p.textContent = description;
-  const divIcons = createDivWithClass("section__icons d-flex gap-05");
+  const divIcons = createElementWithClass("div","section__icons d-flex gap-05");
 
   divContainer.appendChild(p);
   divContainer.appendChild(divIcons);
 
-  for (let i = 0; i < icons.length; i++) {
+  for (let j = 0; j < icons.length; j++) {
     const icon = document.createElement("img");
-    icon.setAttribute("src", `./src/img/icons/${icons[i]}`);
+    icon.setAttribute("src", `./src/img/icons/${icons[j]}`);
     divIcons.appendChild(icon);
   }
 

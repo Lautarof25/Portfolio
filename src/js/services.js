@@ -32,19 +32,16 @@ function createCardServicesInfo(title, description, icons) {
     const div = document.createElement("div")
     div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto")
 
-    const createDivWithClass = (className) => {
-        const newDiv = document.createElement("div");
+    const createElementWithClass = (element,className) => {
+        const newDiv = document.createElement(element);
         newDiv.className = className;
         return newDiv;
-    };
-
-    const divLeftTop = createDivWithClass("bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5");
-    const divLeftTopOffset = createDivWithClass("bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5");
-    divLeftTop.appendChild(divLeftTopOffset);
-
-    const divRightBottom = createDivWithClass("bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5");
-    const divRightBottomOffset = createDivWithClass("bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5");
-    divRightBottom.appendChild(divRightBottomOffset);
+      };
+    
+    // const divRight = createElementWithClass("i","fa-solid fa-chevron-right");
+    // const divLeft = createElementWithClass("i","fa-solid fa-chevron-left");
+    const divBottom = createElementWithClass("i","fa-solid fa-chevron-down");
+    const divTop = createElementWithClass("i","fa-solid fa-chevron-up");
 
     const divContainer = document.createElement("div")
     divContainer.setAttribute("class", "relative zindex-1 d-flex flex-column p-1 align-center")
@@ -69,7 +66,7 @@ function createCardServicesInfo(title, description, icons) {
         divIcons.appendChild(icon)
     }
 
-    div.append(divLeftTop, divRightBottom, divContainer)
+    div.append(divBottom, divTop, divContainer)
     services.appendChild(div)
 }
 

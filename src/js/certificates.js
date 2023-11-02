@@ -65,38 +65,16 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   const div = document.createElement("div")
   div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto w-100")
 
-  function createDivWithClasses(classes) {
-    const div = document.createElement("div");
-    div.setAttribute("class", classes);
-    return div;
-  }
+  const createElementWithClass = (element,className) => {
+    const newDiv = document.createElement(element);
+    newDiv.className = className;
+    return newDiv;
+  };
 
-  function createDivWithOffsetClasses(mainClasses, offsetClasses) {
-    const div = createDivWithClasses(mainClasses);
-    const offsetDiv = createDivWithClasses(offsetClasses);
-    div.appendChild(offsetDiv);
-    return div;
-  }
-
-  const divLeftTop = createDivWithOffsetClasses(
-    "bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5",
-    "bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"
-  );
-
-  const divLeftBottom = createDivWithOffsetClasses(
-    "bg-principal-color absolute w-50px h-50px bottom-0 left-0 border-radius-5",
-    "bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"
-  );
-
-  const divRightBottom = createDivWithOffsetClasses(
-    "bg-principal-color absolute w-50px h-50px right-0 bottom-0 border-radius-5",
-    "bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"
-  );
-
-  const divRightTop = createDivWithOffsetClasses(
-    "bg-principal-color absolute w-50px h-50px right-0 top-0 border-radius-5",
-    "bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"
-  );
+  const divRight = createElementWithClass("i","fa-solid fa-chevron-right");
+  const divLeft = createElementWithClass("i","fa-solid fa-chevron-left");
+  const divBottom = createElementWithClass("i","fa-solid fa-chevron-down");
+  const divTop = createElementWithClass("i","fa-solid fa-chevron-up");
 
 
   const divContainer = document.createElement("div")
@@ -137,7 +115,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   divLinks.append(aLink,aLinkImg)
   divContainer.append(h2, p, pHours, pYear, divLinks)
 
-  div.append(divRightTop, divRightBottom, divLeftTop, divLeftBottom, divContainer)
+  div.append(divLeft, divRight, divBottom, divTop, divContainer)
   certificates.appendChild(div)
 }
 

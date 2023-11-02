@@ -1,0 +1,54 @@
+.main i {
+    font-weight: bolder;
+    position: absolute;
+    transform: rotate(45deg);
+    font-size: 5rem;
+    color: var(--principal-color)!important;
+}
+
+.header i {
+    padding: 1.5rem;
+    font-weight: bolder;
+    position: absolute;
+    transform: rotate(45deg);
+    font-size: 2rem;
+    color: var(--principal-color)!important;
+}
+
+.share-buttons i {
+    padding: 1.5rem;
+    font-weight: bolder;
+    position: absolute;
+    transform: rotate(45deg);
+    font-size: 2rem;
+    color: var(--principal-color)!important;
+}
+
+.share-buttons .fa-chevron-right {
+    right: -1.8rem;
+    bottom: -2.2rem;
+}
+.share-buttons .fa-chevron-left {
+    left: -1.8rem;
+    top: -2.2rem;
+}
+
+.fa-chevron-right {
+    right: -1rem;
+    bottom: -1.9rem;
+}
+
+.fa-chevron-left {
+    left: -1rem;
+    top: -1.9rem;
+}
+
+.fa-chevron-down {
+    bottom: -1.9rem;
+    left: -1.9rem;
+}
+
+.fa-chevron-up {
+    right: -1.9rem;
+    top: -1.9rem;
+}

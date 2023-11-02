@@ -25,9 +25,11 @@
   <!-- Meta Tags Generated with https://metatags.io -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="./src/css/normalize.css">
   <link rel="stylesheet" href="./src/css/style.css">
   <link rel="stylesheet" href="./src/css/header.css">
+  <link rel="stylesheet" href="./src/css/chevronCorner.css">
   <link rel="stylesheet" href="./src/css/nav.css">
   <link rel="stylesheet" href="./src/css/main.css">
   <link rel="stylesheet" href="./src/css/main_home.css">
@@ -45,6 +47,8 @@
   <link rel="stylesheet" href="./src/css/colorPicker.css">
   <link rel="stylesheet" href="./src/css/demoMode.css">
   <link rel="shortcut icon" href="./src/img/iconweb.ico" type="image/x-icon">
+  <!-- testing another approach chevron corners -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="d-grid relative">
@@ -63,12 +67,10 @@
   <header
     class="header fixed zindex-10 fs-2 fw-bolder top-0 m-0 bg-dark-gray p-2 transition-all unselect-text ml-1 opacity-50">
     <div class="header__logo relative p-05 ">
-      <div class="bg-principal-color absolute w-20px h-20px top-0 left-0 border-radius-5">
-        <div class="bg-dark-gray absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
-      </div>
-      <div class="bg-principal-color absolute w-20px h-20px right-0 bottom-0 border-radius-5">
-        <div class="bg-dark-gray absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
-      </div>
+      <i class="fa-solid fa-chevron-up"></i>
+        <!-- <i class="fa-solid fa-chevron-right"></i> -->
+        <i class="fa-solid fa-chevron-down"></i>
+        <!-- <i class="fa-solid fa-chevron-left"></i> -->
 
       <div class="relative text-center">
         <p id="logo" class="d-none">
@@ -84,25 +86,29 @@
 
   <nav class="nav hidden-menu d-flex zindex-10 h-100 flex-column top-0 p-2 opacity transition-all">
     <div class="nav__menu d-flex flex-column gap-2">
-      <a href="#" id="home" class="link-active transition-color" aria-label="home"><img src="./src/img/icons/house-solid.svg" alt="home"><i class="fa-solid fa-house"></i><span
+      <a href="#" id="home" class="link-active transition-color" aria-label="home"><img
+          src="./src/img/icons/house-solid.svg" alt="home"><span
           class="d-none">Inicio</span></a>
-      <a href="#" id="about" class="transition-color" aria-label="about"><img src="./src/img/icons/user-solid.svg" alt="about"><i class="fa-solid fa-user hidden-icon"></i><span
-          class="d-none">Sobre mi</span></a>
-      <a href="#" id="portfolio" class="transition-color breatheEffect" aria-label="portfolio"><img src="./src/img/icons/briefcase-solid.svg" alt="portfolio"><i
-          class="fa-solid fa-briefcase hidden-icon"></i><span class="d-none">Portfolio</span></a>
-      <a href="#" id="certificates" class="transition-color" aria-label="certificates"><img src="./src/img/icons/certificate-solid.svg" alt="certificates"><i class="fa-solid fa-certificate hidden-icon"></i><span
-          class="d-none">Certificaciones</span></a>
-      <a href="#" id="services" class="transition-color" aria-label="services"><img src="./src/img/icons/list-solid.svg" alt="services"><i class="fa-solid fa-list hidden-icon"></i><span
-          class="d-none">Servicios</span></a>
-      <a href="#" id="contact" class="transition-color" aria-label="contact"><img src="./src/img/icons/comments-solid.svg" alt="contact"><i class="fa-solid fa-comments hidden-icon"></i><span
+      <a href="#" id="about" class="transition-color" aria-label="about"><img src="./src/img/icons/user-solid.svg"
+          alt="about"><span class="d-none">Sobre mi</span></a>
+      <a href="#" id="portfolio" class="transition-color breatheEffect" aria-label="portfolio"><img
+          src="./src/img/icons/briefcase-solid.svg" alt="portfolio"><span class="d-none">Portfolio</span></a>
+      <a href="#" id="certificates" class="transition-color" aria-label="certificates"><img
+          src="./src/img/icons/certificate-solid.svg" alt="certificates"><span class="d-none">Certificaciones</span></a>
+      <a href="#" id="services" class="transition-color" aria-label="services"><img src="./src/img/icons/list-solid.svg"
+          alt="services"><span class="d-none">Servicios</span></a>
+      <a href="#" id="contact" class="transition-color" aria-label="contact"><img
+          src="./src/img/icons/comments-solid.svg" alt="contact"><span
           class="d-none">Contacto</span></a>
     </div>
   </nav>
 
   <section class="titlePage d-flex align-center gap-05">
-    <button class="section__button p-0 border-radius-5 m-0-auto" aria-label="Previous page"><img src="./src/img/icons/chevron-up-solid.svg" class="p-1" alt="Previous page"></button>
+    <button class="section__button p-0 border-radius-5 m-0-auto" aria-label="Previous page"><img
+        src="./src/img/icons/chevron-up-solid.svg" class="p-1" alt="Previous page"></button>
     <h2 class="text-center"></h2>
-    <button class="section__button p-0 border-radius-5 m-0-auto" aria-label="Next Page"><img src="./src/img/icons/chevron-down-solid.svg" class="p-1" alt="Next Page"></button>
+    <button class="section__button p-0 border-radius-5 m-0-auto" aria-label="Next Page"><img
+        src="./src/img/icons/chevron-down-solid.svg" class="p-1" alt="Next Page"></button>
   </section>
 
   <main class="main p-1 transition-all relative">
@@ -113,16 +119,16 @@
       <h1 class="section__title text-center align-self-end">Hola, mi nombre es <span
           class="principalColor">Lautaro</span></h1>
       <div class="section__box mw-400 relative p-05 m-0-auto">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
-        </div>
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
-        </div>
+        <i class="fa-solid fa-chevron-up"></i>
+        <!-- <i class="fa-solid fa-chevron-right"></i> -->
+        <i class="fa-solid fa-chevron-down"></i>
+        <!-- <i class="fa-solid fa-chevron-left"></i> -->
         <div class="drop-shadow relative zindex-1">
-            <img class="grayscale w-100 h-100 " src="https://ucarecdn.com/e1da82ca-af46-4b50-b2e7-5fd40f36dc23/-/preview/1000x400/-/format/auto/-/quality/smart_retina/" alt="profile_picture_lautaro">
+          <img class="grayscale w-100 h-100 "
+            src="https://ucarecdn.com/e1da82ca-af46-4b50-b2e7-5fd40f36dc23/-/preview/1000x400/-/format/auto/-/quality/smart_retina/"
+            alt="profile_picture_lautaro">
         </div>
-        <div class="gradientTransparent w-100 h-50px zindex-5 absolute bottomOffset"></div>
+        <div class="gradientTransparent w-100 h-50px zindex-5 absolute bottomOffset left-0"></div>
       </div>
       <div class="section__text">
         <h2 class="section__subtitle">Soy <span class="principalColor">desarrollador web</span></h2>
@@ -151,21 +157,10 @@
     <section class="section d-grid contact hidden opacityEffect">
 
       <div class="section__box relative p-05">
-        <div class="bg-principal-color absolute w-50px h-50px top-0 right-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset rightOffset border-radius-5"></div>
-        </div>
-
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 left-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset leftOffset border-radius-5"></div>
-        </div>
-
-        <div class="bg-principal-color absolute w-50px h-50px top-0 left-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 topOffset leftOffset border-radius-5"></div>
-        </div>
-
-        <div class="bg-principal-color absolute w-50px h-50px zindex-1 right-0 bottom-0 border-radius-5">
-          <div class="bg-black absolute w-100 h-100 bottomOffset rightOffset border-radius-5"></div>
-        </div>
+        <i class="fa-solid fa-chevron-up"></i>
+        <i class="fa-solid fa-chevron-right"></i>
+        <i class="fa-solid fa-chevron-down"></i>
+        <i class="fa-solid fa-chevron-left"></i>
 
         <div class="relative zindex-1 alien bg-dark-gray mw-400 m-0-auto border-radius-5">
           <form id="form" class="d-flex justify-center mw-400 flex-column m-0-auto gap-05"
@@ -225,6 +220,10 @@
 
   <div
     class="share-buttons popUp fixed centerAbsolute bg-dark-gray p-05 border-radius-5 drop-shadow zindex-100 hidden opacityEffect">
+    <!-- <i class="fa-solid fa-chevron-up"></i> -->
+    <i class="fa-solid fa-chevron-right"></i>
+    <!-- <i class="fa-solid fa-chevron-down"></i> -->
+    <i class="fa-solid fa-chevron-left"></i>
     <button class="closeButton absolute top-0 right-0 p-05 bg-principal-color">X</button>
     <p class="text-center p-1">¿Te gustó mi página? Podés compartirla 😊</p>
     <div class="d-flex justify-center">
