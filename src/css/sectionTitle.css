@@ -15,6 +15,12 @@
     align-self: flex-end;
 }
 
+.titlePage img {
+    width: 1.5rem;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+
 @media (min-width: 576px) {
     .titlePage {
         margin-top: 0!important;

@@ -14,6 +14,12 @@
     display: none;
 }
 
+.footer img {
+    width: 1rem;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+
 .footer .leftOffset-100 {
     left: -100%;
 }
