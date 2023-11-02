@@ -47,7 +47,7 @@ function addCardPortfolioInfo() {
 
 function createCardPortfolioInfo(title, description,languages, thumbnail, github, webpage) {
   const div = document.createElement("div")
-  div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto")
+  div.setAttribute("class", "section__box relative p-05 m-0-auto d-grid")
 
   function createDivWithClasses(classes) {
     const div = document.createElement("div");
@@ -108,8 +108,6 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
   p.appendChild(pText)
   divContainerText.append(divImg,h2,p)
 
-  const divIcons = document.createElement("div")
-  divIcons.setAttribute("class", "section__icons d-flex justify-center  gap-05")
 
   for (let i = 0; i < languages.length; i++) {
       const icon = document.createElement("img")
@@ -118,23 +116,20 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
       divGradient.appendChild(icon)
   }
 
-  const divLinks = document.createElement("div")
-  divLinks.setAttribute("class", "d-flex justify-center gap-05")
   const aGitHub = document.createElement("a")
   const gitHubText = document.createTextNode("GitHub")
   aGitHub.appendChild(gitHubText)
-  aGitHub.setAttribute("class", "section__button zindex-5 p-1 relative border-radius-5 w-100 text-center")
+  aGitHub.setAttribute("class", "section__button zindex-5 relative border-radius-5 w-100 text-center")
   aGitHub.setAttribute("href", `${github}`)
   aGitHub.setAttribute("target", `_blank`)
   const aWebPage = document.createElement("a")
   const webPageText = document.createTextNode("WebPage")
   aWebPage.appendChild(webPageText)
-  aWebPage.setAttribute("class", "section__button zindex-5 p-1 relative border-radius-5 w-100 text-center")
+  aWebPage.setAttribute("class", "section__button zindex-5 relative border-radius-5 w-100 text-center")
   aWebPage.setAttribute("href",`${webpage}`)
   aWebPage.setAttribute("target", `_blank`)
-  divLinks.append(aGitHub,aWebPage)
 
-  div.append(divRightTop,divRightBottom, divLeftTop,divLeftBottom, divContainerText,divIcons,divLinks)
+  div.append(divRightTop,divRightBottom, divLeftTop,divLeftBottom, divContainerText,aGitHub,aWebPage)
   portfolio.appendChild(div)
 }
 
