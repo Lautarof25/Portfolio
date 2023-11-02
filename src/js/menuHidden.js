@@ -17,10 +17,10 @@ function showMenuBar() {
   removeIcons(footerIcons)
   faBars.classList.toggle("d-none");
   logo.classList.toggle("d-none");
-  main.classList.toggle("blur");
-  titlePage.classList.toggle("blur");
-  buttonDown.classList.toggle("blur");
-  buttonUp.classList.toggle("blur");
+  main.classList.add("blur");
+  titlePage.classList.add("blur");
+  buttonDown.classList.add("blur");
+  buttonUp.classList.add("blur");
 }
 
 function hideMenuBar() {

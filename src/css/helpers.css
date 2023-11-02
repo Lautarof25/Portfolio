@@ -305,8 +305,8 @@
 }
 
 .blur-effect {
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
+    filter: blur(4px)!important;
+    -webkit-filter: blur(4px)!important;
 }
 
 .gradientTransparent {
@@ -336,6 +336,7 @@
 
 @media (max-width: 576px) {
     .blur {
-        filter: blur(4px);
-    }
+        filter: blur(4px)!important;
+        -webkit-filter: blur(4px)!important;
+}
 }

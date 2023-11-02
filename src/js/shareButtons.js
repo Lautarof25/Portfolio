@@ -45,16 +45,10 @@ shareButtons.forEach(button => {
                 shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
                 break;
             case 'twitter':
-                shareUrl = `https://twitter.com/share?url=${encodeURIComponent(url)}`;
+                shareUrl = `https://twitter.com/share?url=${encodeURIComponent(url)}&text=Me gustó esta página`;
                 break;
             case 'linkedin':
-                shareUrl = `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(url)}`;
-                break;
-            case 'pinterest':
-                shareUrl = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}`;
-                break;
-            case 'reddit':
-                shareUrl = `https://reddit.com/submit?url=${encodeURIComponent(url)}`;
+                shareUrl = `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(url)}&title=Me gustó esta página`;
                 break;
             case 'whatsapp':
                 shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`;
