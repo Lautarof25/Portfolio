@@ -17,6 +17,12 @@
     opacity: 0.8;
 }
 
+.share-button img {
+    width: 1rem;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+
 .share-button:active {
     color: #e2e2e2;
 }
