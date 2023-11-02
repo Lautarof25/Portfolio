@@ -16,7 +16,8 @@
 }
 
 .titlePage img {
-    width: 1.5rem;
+    width: 25px;
+    height: 25px;
     filter: invert(1);
     -webkit-filter: invert(1);
 }

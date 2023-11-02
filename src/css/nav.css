@@ -24,7 +24,8 @@
 }
 
 .nav img {
-    width: 1rem;
+    width: 20px;
+    height: 20px;
     filter: invert(1);
     -webkit-filter: invert(1);
 }
