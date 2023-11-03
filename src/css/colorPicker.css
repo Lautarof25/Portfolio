@@ -5,6 +5,7 @@
     -moz-transition: bottom .2s;
     -ms-transition: bottom .2s;
     -o-transition: bottom .2s;
+    width: 205px;
 }
 .colorPicker:hover {
     bottom: -80px;
@@ -38,16 +39,16 @@ input[value='darkorange']:after {
     background-color: darkorange;
 }
 
-input[value='slateblue']:after {
-    background-color: slateblue;
+input[value='dodgerblue']:after {
+    background-color: dodgerblue;
 }
 
-input[value='purple']:after {
-    background-color: purple;
+input[value='mediumorchid']:after {
+    background-color: mediumorchid;
 }
 
-input[value='cadetblue']:after {
-    background-color: cadetblue;
+input[value='gold']:after {
+    background-color: gold;
 }
 
 input[value='deeppink']:after {

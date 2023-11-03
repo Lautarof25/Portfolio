@@ -194,8 +194,16 @@
     margin: 0;
 }
 
+.mt-0 {
+    margin-top: 0;
+}
+
 .p-05 {
     padding: 0.5rem;
+}
+
+.pb-3 {
+    padding-bottom: 3rem!important;
 }
 
 .w-fit-content {
