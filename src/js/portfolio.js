@@ -45,28 +45,15 @@ function addCardPortfolioInfo() {
     })
 }
 
-/*
-<i class="fa-solid fa-chevron-up"></i>
-<i class="fa-solid fa-chevron-right"></i>
-<i class="fa-solid fa-chevron-down"></i>
-<i class="fa-solid fa-chevron-left"></i>
-*/
 
 function createCardPortfolioInfo(title, description,languages, thumbnail, github, webpage) {
   const div = document.createElement("div")
   div.setAttribute("class", "section__box relative p-05 m-0-auto d-grid")
 
-  const createElementWithClass = (element,className) => {
-    const newDiv = document.createElement(element);
-    newDiv.className = className;
-    return newDiv;
-  };
-
-  const divRight = createElementWithClass("i","fa-solid fa-chevron-right");
-  const divLeft = createElementWithClass("i","fa-solid fa-chevron-left");
-  const divBottom = createElementWithClass("i","fa-solid fa-chevron-down");
-  const divTop = createElementWithClass("i","fa-solid fa-chevron-up");
-  
+  const chevronBottomRight = createSVG("chevron-bottom-right");
+  const chevronBottomLeft = createSVG("chevron-bottom-left");
+  const chevronTopRight = createSVG("chevron-top-right");
+  const chevronTopLeft = createSVG("chevron-top-left");
 
   const divContainerText = document.createElement("div")
   divContainerText.setAttribute("class", "relative")
@@ -114,7 +101,7 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
   aWebPage.setAttribute("href",`${webpage}`)
   aWebPage.setAttribute("target", `_blank`)
 
-  div.append(divRight,divLeft, divBottom,divTop, divContainerText,aGitHub,aWebPage)
+  div.append(chevronTopLeft,chevronTopRight,chevronBottomRight,chevronBottomLeft , divContainerText,aGitHub,aWebPage)
   portfolio.appendChild(div)
 }
 

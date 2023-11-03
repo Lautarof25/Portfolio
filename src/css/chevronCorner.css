@@ -1,54 +1,132 @@
-.main i {
-    font-weight: bolder;
+/* Default */
+svg[class*="chevron"] {
     position: absolute;
-    transform: rotate(45deg);
-    font-size: 5rem;
-    color: var(--principal-color)!important;
+    width: 1.5rem;
+    fill: var(--principal-color);
 }
 
-.header i {
-    padding: 1.5rem;
-    font-weight: bolder;
-    position: absolute;
-    transform: rotate(45deg);
-    font-size: 2rem;
-    color: var(--principal-color)!important;
-}
-
-.share-buttons i {
-    padding: 1.5rem;
-    font-weight: bolder;
-    position: absolute;
-    transform: rotate(45deg);
-    font-size: 2rem;
-    color: var(--principal-color)!important;
-}
-
-.share-buttons .fa-chevron-right {
-    right: -1.8rem;
-    bottom: -2.2rem;
-}
-.share-buttons .fa-chevron-left {
-    left: -1.8rem;
-    top: -2.2rem;
-}
-
-.fa-chevron-right {
-    right: -1rem;
-    bottom: -1.9rem;
-}
-
-.fa-chevron-left {
+.chevron-top-left {
+    top: -1rem;
     left: -1rem;
-    top: -1.9rem;
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
 }
 
-.fa-chevron-down {
-    bottom: -1.9rem;
-    left: -1.9rem;
+.chevron-bottom-right {
+    bottom: -1rem;
+    right: -1rem;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
 }
 
-.fa-chevron-up {
-    right: -1.9rem;
-    top: -1.9rem;
+.chevron-top-right {
+    top: -1rem;
+    right: -1rem;
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+}
+
+.chevron-bottom-left {
+    bottom: -1rem;
+    left: -1rem;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+}
+
+/* Header */
+
+.header .chevron-top-right {
+    right: 0;
+}
+
+.header .chevron-bottom-left {
+    left: 0;
+}
+
+/* Main About */
+
+.main .about svg {
+    width: 3rem;
+}
+.main .about .chevron-top-left {
+    left: 0;
+}
+
+.main .about .chevron-bottom-right {
+    right: 0;
+}
+
+/* Main Portfolio */
+.main:has(.portfolio, .certificates) svg {
+    width: 2.5rem;
+}
+.main:has(.portfolio, .certificates) .chevron-top-left {
+    top: -1.2rem;
+    left: -.4rem;
+}
+
+.main:has(.portfolio, .certificates) .chevron-bottom-right {
+    right: -.4rem;
+    bottom: -1.2rem;
+}
+.main:has(.portfolio, .certificates) .chevron-bottom-left {
+    left: -.4rem;
+    bottom: -1.2rem;
+}
+
+.main:has(.portfolio, .certificates) .chevron-top-right {
+    top: -1.2rem;
+    right: -.4rem;
+}
+/* Main contact */
+
+.main .contact svg {
+    width: 2rem;
+}
+
+.main .contact:has(.chevron-top-left, .chevron-top-right) {
+    top: -1.5rem;
+}
+
+.main .contact .chevron-top-left {
+    left: -1rem;
+}
+
+.main .contact .chevron-top-right {
+    right: -1rem;
+}
+
+.main .contact:has(.chevron-bottom-right, .chevron-bottom-left) {
+    bottom: -1.5rem;
+}
+
+.main .contact .chevron-bottom-left {
+    left: -1rem;
+}
+.main .contact .chevron-bottom-right {
+    right: -1rem;
+}
+
+/* share buttons */
+
+.share-buttons .chevron-top-left {
+    top: -.8rem;
+    left: -.4rem;
+}
+
+.share-buttons .chevron-bottom-right {
+    bottom: -.8rem;
+    right: -.4rem;
 }

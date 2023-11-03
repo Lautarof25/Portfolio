@@ -32,16 +32,8 @@ function createCardServicesInfo(title, description, icons) {
     const div = document.createElement("div")
     div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto")
 
-    const createElementWithClass = (element,className) => {
-        const newDiv = document.createElement(element);
-        newDiv.className = className;
-        return newDiv;
-      };
-    
-    // const divRight = createElementWithClass("i","fa-solid fa-chevron-right");
-    // const divLeft = createElementWithClass("i","fa-solid fa-chevron-left");
-    const divBottom = createElementWithClass("i","fa-solid fa-chevron-down");
-    const divTop = createElementWithClass("i","fa-solid fa-chevron-up");
+    const chevronBottomLeft = createSVG("chevron-bottom-left");
+    const chevronTopRight = createSVG("chevron-top-right");
 
     const divContainer = document.createElement("div")
     divContainer.setAttribute("class", "relative zindex-1 d-flex flex-column p-1 align-center")
@@ -66,7 +58,7 @@ function createCardServicesInfo(title, description, icons) {
         divIcons.appendChild(icon)
     }
 
-    div.append(divBottom, divTop, divContainer)
+    div.append(chevronTopRight, chevronBottomLeft, divContainer)
     services.appendChild(div)
 }
 

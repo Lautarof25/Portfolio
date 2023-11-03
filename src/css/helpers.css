@@ -74,32 +74,33 @@
 }
 
 .topCenterAbsolute {
-   top: 0;
-   left: 50%;
-   transform: translate(0%,-50%);
-   -webkit-transform: translate(0%,-50%);
-   -moz-transform: translate(0%,-50%);
-   -ms-transform: translate(0%,-50%);
-   -o-transform: translate(0%,-50%);
+    top: 0;
+    left: 50%;
+    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
 }
+
 .bottomCenterAbsolute {
-   bottom: 0%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   -webkit-transform: translate(-50%, -50%);
-   -moz-transform: translate(-50%, -50%);
-   -ms-transform: translate(-50%, -50%);
-   -o-transform: translate(-50%, -50%);
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
 .centerAbsolute {
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
 
@@ -160,8 +161,8 @@
 }
 
 .plr-0 {
-    padding-left: 0!important;
-    padding-right: 0!important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 /* margins and paddings */
@@ -203,7 +204,7 @@
 }
 
 .pb-3 {
-    padding-bottom: 3rem!important;
+    padding-bottom: 3rem !important;
 }
 
 .w-fit-content {
@@ -312,9 +313,18 @@
     -webkit-filter: drop-shadow(0 0 5px var(--white));
 }
 
+.box-shadow-right {
+    box-shadow: 15px 0 15px -15px var(--white);
+}
+.box-shadow-bottom {
+    box-shadow: 15px 15px 15px -15px var(--white);
+    -webkit-box-shadow: 15px 15px 15px -15px var(--white);
+    -moz-box-shadow: 15px 15px 15px -15px var(--white);
+}
+
 .blur-effect {
-    filter: blur(4px)!important;
-    -webkit-filter: blur(4px)!important;
+    filter: blur(4px) !important;
+    -webkit-filter: blur(4px) !important;
 }
 
 .gradientTransparent {
@@ -344,7 +354,7 @@
 
 @media (max-width: 576px) {
     .blur {
-        filter: blur(4px)!important;
-        -webkit-filter: blur(4px)!important;
-}
+        filter: blur(4px) !important;
+        -webkit-filter: blur(4px) !important;
+    }
 }

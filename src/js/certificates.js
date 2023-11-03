@@ -63,18 +63,12 @@ function addCardCertificatesInfo() {
 
 function createCardCertificatesInfo(title, description, thumbnail, hours, year, link) {
   const div = document.createElement("div")
-  div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto w-100")
+  div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto w-100") 
 
-  const createElementWithClass = (element,className) => {
-    const newDiv = document.createElement(element);
-    newDiv.className = className;
-    return newDiv;
-  };
-
-  const divRight = createElementWithClass("i","fa-solid fa-chevron-right");
-  const divLeft = createElementWithClass("i","fa-solid fa-chevron-left");
-  const divBottom = createElementWithClass("i","fa-solid fa-chevron-down");
-  const divTop = createElementWithClass("i","fa-solid fa-chevron-up");
+  const chevronBottomRight = createSVG("chevron-bottom-right");
+  const chevronBottomLeft = createSVG("chevron-bottom-left");
+  const chevronTopRight = createSVG("chevron-top-right");
+  const chevronTopLeft = createSVG("chevron-top-left");
 
 
   const divContainer = document.createElement("div")
@@ -115,7 +109,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   divLinks.append(aLink,aLinkImg)
   divContainer.append(h2, p, pHours, pYear, divLinks)
 
-  div.append(divLeft, divRight, divBottom, divTop, divContainer)
+  div.append(chevronTopRight, chevronTopLeft, chevronBottomLeft, chevronBottomRight, divContainer)
   certificates.appendChild(div)
 }
 

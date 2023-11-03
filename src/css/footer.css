@@ -1,5 +1,6 @@
 .footer {
     width: 100%;
+    box-shadow: 15px -15px 15px -15px var(--white);
 }
 
 .footer a {
@@ -30,6 +31,7 @@
      .footer {
         width: fit-content!important;
         margin-left: 1.25rem;
+        box-shadow: none;
      }
      .footer .d-none {
         display: block;

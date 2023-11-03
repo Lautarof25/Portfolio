@@ -60,9 +60,8 @@ function createCardAboutInfo(description, icons) {
     return newDiv;
   };
 
-  const divRight = createElementWithClass("i","fa-solid fa-chevron-right");
-
-  const divLeft = createElementWithClass("i","fa-solid fa-chevron-left");
+  const chevronBottomRight = createSVG("chevron-bottom-right");
+  const chevronTopLeft = createSVG("chevron-top-left");
 
   const divContainer = createElementWithClass("div","relative zindex-1 d-flex flex-column p-1 align-center gap-05");
   const p = document.createElement("p");
@@ -79,8 +78,8 @@ function createCardAboutInfo(description, icons) {
     divIcons.appendChild(icon);
   }
 
-  div.appendChild(divRight);
-  div.appendChild(divLeft);
+  div.appendChild(chevronBottomRight);
+  div.appendChild(chevronTopLeft);
   div.appendChild(divContainer);
 
   about.appendChild(div);
