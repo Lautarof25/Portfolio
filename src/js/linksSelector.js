@@ -1,5 +1,3 @@
-const links = document.querySelectorAll('a[href="#"');
-
 function activeLinkSelector(){
     links.forEach(link => {
         link.addEventListener('click',function(){

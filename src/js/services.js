@@ -18,8 +18,6 @@ const servicesInfo = {
     ]
 }
 
-const services = document.querySelector('.services');
-
 const databaseServices = servicesInfo.info
 
 function addCardServicesInfo() {
@@ -32,8 +30,8 @@ function createCardServicesInfo(title, description, icons) {
     const div = document.createElement("div")
     div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto")
 
-    const chevronBottomLeft = createSVG("chevron-bottom-left");
-    const chevronTopRight = createSVG("chevron-top-right");
+    const chevronBottomLeft = createSVG("chevron-bottom-left")
+    const chevronTopRight = createSVG("chevron-top-right")
 
     const divContainer = document.createElement("div")
     divContainer.setAttribute("class", "relative zindex-1 d-flex flex-column p-1 align-center")

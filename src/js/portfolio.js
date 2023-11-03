@@ -35,8 +35,6 @@ const portfolioInfo = {
   ]
 }
 
-const portfolio = document.querySelector('.portfolio');
-
 const databasePortfolio = portfolioInfo.info
 
 function addCardPortfolioInfo() {
@@ -45,15 +43,14 @@ function addCardPortfolioInfo() {
     })
 }
 
-
 function createCardPortfolioInfo(title, description,languages, thumbnail, github, webpage) {
   const div = document.createElement("div")
   div.setAttribute("class", "section__box relative p-05 m-0-auto d-grid")
 
-  const chevronBottomRight = createSVG("chevron-bottom-right");
-  const chevronBottomLeft = createSVG("chevron-bottom-left");
-  const chevronTopRight = createSVG("chevron-top-right");
-  const chevronTopLeft = createSVG("chevron-top-left");
+  const chevronBottomRight = createSVG("chevron-bottom-right")
+  const chevronBottomLeft = createSVG("chevron-bottom-left")
+  const chevronTopRight = createSVG("chevron-top-right")
+  const chevronTopLeft = createSVG("chevron-top-left")
 
   const divContainerText = document.createElement("div")
   divContainerText.setAttribute("class", "relative")
@@ -73,7 +70,6 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
   const divGradient = document.createElement("div")
   divGradient.setAttribute("class","gradientTransparent d-flex justify-center align-end w-100 h-50px zindex-5 absolute bottom-0 gap-05")
   divImg.append(img,divGradient)
-  
 
   const p = document.createElement("p")
   p.setAttribute("class", "section__description text-center")

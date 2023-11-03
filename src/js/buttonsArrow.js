@@ -1,6 +1,3 @@
-const buttonUp = document.querySelector('[src="./src/img/icons/chevron-up-solid.svg"]');
-const buttonDown = document.querySelector('[src="./src/img/icons/chevron-down-solid.svg"]');
-
 buttonDown.addEventListener('click', () => navigatePage(1));
 buttonUp.addEventListener('click', () => navigatePage(-1));
 

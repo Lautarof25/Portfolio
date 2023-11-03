@@ -1,7 +1,3 @@
-const shareButtons = document.querySelectorAll(".share-button")
-const containerButton = document.querySelector(".share-buttons")
-const closeButton = document.querySelector(".closeButton")
-
 let countClicks = 0
 
 addEventListener('click', function () {

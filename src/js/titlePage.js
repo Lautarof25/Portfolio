@@ -1,5 +1,3 @@
-const titlePage = document.querySelector('.titlePage h2')
-
 titlePage.textContent = document.querySelector('.link-active').textContent
 
 function changeTittlePage(){

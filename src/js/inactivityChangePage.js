@@ -1,4 +1,3 @@
-const demoMode = document.querySelector('.demoMode')
 let timer = 0
 function idleTimer() {
     setInterval(function () {

@@ -1,0 +1,32 @@
+const links = document.querySelectorAll('a[href="#"')
+const titlePage = document.querySelector('.titlePage h2')
+// Form
+const name = document.querySelector("#name")
+const email = document.querySelector("#email")
+const message = document.querySelector("#message")
+// Navigation arrows
+const buttonUp = document.querySelector('[src="./src/img/icons/chevron-up-solid.svg"]')
+const buttonDown = document.querySelector('[src="./src/img/icons/chevron-down-solid.svg"]')
+// Semantic containers
+const body = document.querySelector("body")
+const header = document.querySelector("header")
+const nav = document.querySelector("nav")
+const about = document.querySelector('.about')
+const section = document.querySelector("section")
+const main = document.querySelector("main")
+const services = document.querySelector('.services')
+const portfolio = document.querySelector('.portfolio')
+const certificates = document.querySelector('.certificates')
+const footer = document.querySelector("footer")
+// Menu Bar
+const toggleMenu = document.querySelector("#toggle-menu")
+const navIcons = document.querySelectorAll(".nav img")
+const faBars = document.querySelector("[src='./src/img/icons/bars-solid.svg']")
+// Components 
+const footerIcons = document.querySelectorAll(".footer a")
+const logo = document.querySelector("#logo")
+const demoMode = document.querySelector('.demoMode')
+const shareButtons = document.querySelectorAll(".share-button")
+const containerButton = document.querySelector(".share-buttons")
+const closeButton = document.querySelector(".closeButton")
+const radios = document.querySelectorAll('[type="radio"]')

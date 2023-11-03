@@ -35,8 +35,6 @@ const aboutInfo = {
   ]
 }
 
-const about = document.querySelector('.about');
-
 const databaseAbout = aboutInfo.info
 
 function addCardAboutInfo() {

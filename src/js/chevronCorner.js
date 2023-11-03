@@ -11,8 +11,3 @@ function createSVG(className) {
 
     return svg;
 }
-
-const chevronBottomRight = createSVG("chevron-bottom-right");
-const chevronBottomLeft = createSVG("chevron-bottom-left");
-const chevronTopRight = createSVG("chevron-top-right");
-const chevronTopLeft = createSVG("chevron-top-left");

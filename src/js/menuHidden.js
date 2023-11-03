@@ -1,14 +1,3 @@
-const header = document.querySelector("header");
-const nav = document.querySelector("nav");
-const footer = document.querySelector("footer");
-const navIcons = document.querySelectorAll(".nav img")
-const footerIcons = document.querySelectorAll(".footer a")
-const main = document.querySelector("main");
-const faBars = document.querySelector("[src='./src/img/icons/bars-solid.svg']")
-const logo = document.querySelector("#logo")
-const section = document.querySelector("section")
-const toggleMenu = document.querySelector("#toggle-menu")
-
 function showMenuBar() {
   header.classList.toggle("show");
   nav.classList.toggle("show");

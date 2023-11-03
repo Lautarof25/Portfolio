@@ -51,8 +51,6 @@ const certificatesInfo = {
   ]
 }
 
-const certificates = document.querySelector('.certificates');
-
 const databaseCertificates = certificatesInfo.info
 
 function addCardCertificatesInfo() {
