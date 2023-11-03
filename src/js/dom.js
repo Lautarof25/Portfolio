@@ -5,8 +5,8 @@ const name = document.querySelector("#name")
 const email = document.querySelector("#email")
 const message = document.querySelector("#message")
 // Navigation arrows
-const buttonUp = document.querySelector('[src="./src/img/icons/chevron-up-solid.svg"]')
-const buttonDown = document.querySelector('[src="./src/img/icons/chevron-down-solid.svg"]')
+const buttonUp = document.querySelector('.button-chevron-up')
+const buttonDown = document.querySelector('.button-chevron-down')
 // Semantic containers
 const body = document.querySelector("body")
 const header = document.querySelector("header")
@@ -21,7 +21,7 @@ const footer = document.querySelector("footer")
 // Menu Bar
 const toggleMenu = document.querySelector("#toggle-menu")
 const navIcons = document.querySelectorAll(".nav img")
-const faBars = document.querySelector("[src='./src/img/icons/bars-solid.svg']")
+const faBars = document.querySelector('[viewBox="0 0 448 512"]')
 // Components 
 const footerIcons = document.querySelectorAll(".footer a")
 const logo = document.querySelector("#logo")

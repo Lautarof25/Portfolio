@@ -15,11 +15,15 @@
     align-self: flex-end;
 }
 
-.titlePage img {
+.titlePage [aria-label="Previous page"] {
+    
+}
+
+.titlePage svg {
     width: 25px;
     height: 25px;
-    filter: invert(1);
-    -webkit-filter: invert(1);
+    fill: var(--white) !important;
+    background-color: var(--principal-color);
 }
 
 @media (min-width: 576px) {
