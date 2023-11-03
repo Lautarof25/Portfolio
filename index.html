@@ -26,27 +26,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="./src/css/normalize.css">
-  <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="stylesheet" href="./src/css/header.css">
+  <link rel="preload" as="style"  href="./src/css/normalize.css" onload="this.rel='stylesheet'">
+  <link rel="preload" as="style"  href="./src/css/style.css" onload="this.rel='stylesheet'">
+  <link rel="preload" as="style"  href="./src/css/header.css" onload="this.rel='stylesheet'">
+  <link rel="preload" as="style"  href="./src/css/sectionTitle.css" onload="this.rel='stylesheet'">
+  <link rel="preload" as="style"  href="./src/css/main.css" onload="this.rel='stylesheet'">
+  <link rel="preload" as="style"  href="./src/css/nav.css" onload="this.rel='stylesheet'">
+  <link rel="preload" as="style"  href="./src/css/footer.css" onload="this.rel='stylesheet'">
   <link rel="stylesheet" href="./src/css/chevronCorner.css">
-  <link rel="stylesheet" href="./src/css/nav.css">
-  <link rel="stylesheet" href="./src/css/main.css">
-  <link rel="stylesheet" href="./src/css/main_home.css">
-  <link rel="stylesheet" href="./src/css/main_about.css">
-  <link rel="stylesheet" href="./src/css/main_services.css">
-  <link rel="stylesheet" href="./src/css/main_contact.css" defer>
-  <link rel="stylesheet" href="./src/css/main_certifications.css">
-  <link rel="stylesheet" href="./src/css/main_portfolio.css">
-  <link rel="stylesheet" href="./src/css/footer.css">
-  <link rel="stylesheet" href="./src/css/helpers.css">
-  <link rel="stylesheet" href="./src/css/scrollbar.css">
-  <link rel="stylesheet" href="./src/css/animation.css">
-  <link rel="stylesheet" href="./src/css/sectionTitle.css" defer>
-  <link rel="stylesheet" href="./src/css/shareButtons.css">
-  <link rel="stylesheet" href="./src/css/colorPicker.css">
-  <link rel="stylesheet" href="./src/css/demoMode.css">
+  <link rel="stylesheet" href="./src/css/helpers.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./src/css/scrollbar.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./src/css/animation.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./src/css/shareButtons.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./src/css/colorPicker.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./src/css/demoMode.css" media="print" onload="this.media='all'">
   <link rel="shortcut icon" href="./src/img/iconweb.ico" type="image/x-icon">
+
 </head>
 
 <body class="d-grid relative">
@@ -182,7 +177,7 @@
               <path
                 d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
             </svg>
-      
+
             <svg xmlns="http://www.w3.org/2000/svg" class="chevron-top-right" viewBox="0 0 320 512">
               <path
                 d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
@@ -269,8 +264,6 @@
     </svg>
   </div>
 
-
-  <script src="./src/js/iconsRoute.js" defer></script>
   <script src="./src/js/chevronCorner.js" defer></script>
   <script src="./src/js/linksSelector.js" defer></script>
   <script src="./src/js/about.js" defer></script>

@@ -3,17 +3,17 @@ const servicesInfo = {
         {
             "title": "Mantenimiento y armado de PC",
             "description": "Armado de pc y reciclado de hardware",
-            "icons": [computerSolid, screwdriverWrenchSolid]
+            "icons": ["computer-solid", "screwdriver-wrench-solid"]
         },
         {
             "title": "Clases de internet avanzado",
             "description": "Imparto clases particulares a adultos mayores para contribuir con la alfabetización digital",
-            "icons": [chalkboardUserSolid, bookSolid]
+            "icons": ["chalkboard-user-solid", "book-solid"]
         },
         {
             "title": "Optimización tecnológica",
             "description": "Automatización en procesos de trabajo para ahorrar tiempos de ejecución de tareas",
-            "icons": [rocketSolid, handHoldingHandSolid]
+            "icons": ["rocket-solid", "hand-holding-hand-solid"]
         },
     ]
 }
@@ -54,7 +54,7 @@ function createCardServicesInfo(title, description, icons) {
 
     for (let i = 0; i < icons.length; i++) {
         const icon = document.createElement("img")
-        icon.setAttribute("src", `./src/img/icons/${icons[i]}`)
+        icon.setAttribute("src", `./src/img/icons/${icons[i]}.svg`)
         divIcons.appendChild(icon)
     }
 

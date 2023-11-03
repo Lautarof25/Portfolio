@@ -3,7 +3,7 @@ const portfolioInfo = {
     {
       "title": "CV Online",
       "description": "Cv online dinámico",
-      "languages": [ html5,css3Alt,squareJs],
+      "languages": [ "html5","css3-alt","square-js"],
       "thumbnail": ["cv_online.webp","cv_online_dark.webp"],
       "github": "https://github.com/Lautarof25/cv_online",
       "webpage": "https://lautarof25.github.io/cv_online/"
@@ -11,7 +11,7 @@ const portfolioInfo = {
     {
       "title": "Calculadora Python",
       "description": "Una simple calculadora creada con Python",
-      "languages": [ python],
+      "languages": [ "python"],
       "thumbnail": ["calculadora_python.webp"],
       "github": "https://github.com/Lautarof25/practicas_python",
       "webpage": "https://onlinegdb.com/qZjq7lwwj"
@@ -19,7 +19,7 @@ const portfolioInfo = {
     {
       "title": "WineStore",
       "description": "Una vineria con carrito de compras",
-      "languages": [ html5,bootstrap,squareJs],
+      "languages": [ "html5","bootstrap","square-js"],
       "thumbnail": ["winestore.webp","winestore_sesion.webp","winestore_newsletter.webp"],
       "github": "https://github.com/Lautarof25/Vinoteca",
       "webpage": "https://lautarof25.github.io/Vinoteca/"
@@ -27,7 +27,7 @@ const portfolioInfo = {
     {
       "title": "Guess The Number",
       "description": "Un juego para usar la lógica",
-      "languages": [ html5,bootstrap,squareJs],
+      "languages": [ "html5","bootstrap","square-js"],
       "thumbnail": ["guess_the_number.webp","guess_the_number_2.webp","guess_the_number_3.webp"],
       "github": "https://github.com/Lautarof25/guessTheNumber",
       "webpage": "https://lautarof25.github.io/guessTheNumber/"
@@ -67,6 +67,7 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
   divImg.setAttribute("class", "relative")
   const img = document.createElement("img")
   img.setAttribute("src",`./src/img/portfolio/${thumbnail[0]}`)
+  img.setAttribute("loading","lazy")
   img.setAttribute("alt",`${title}`)
   img.setAttribute("class","w-100 h-250 border-radius-5 object-cover")
   const divGradient = document.createElement("div")
@@ -83,7 +84,7 @@ function createCardPortfolioInfo(title, description,languages, thumbnail, github
 
   for (let i = 0; i < languages.length; i++) {
       const icon = document.createElement("img")
-      icon.setAttribute("src", `./src/img/icons/${languages[i]}`)
+      icon.setAttribute("src", `./src/img/icons/${languages[i]}.svg`)
       icon.setAttribute("class", `icon-language`)
       divGradient.appendChild(icon)
   }

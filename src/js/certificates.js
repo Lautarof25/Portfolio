@@ -70,7 +70,6 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   const chevronTopRight = createSVG("chevron-top-right");
   const chevronTopLeft = createSVG("chevron-top-left");
 
-
   const divContainer = document.createElement("div")
   divContainer.setAttribute("class", "relative zindex-1 d-flex flex-column align-center gap-05")
   const h2 = document.createElement("h2")
@@ -103,6 +102,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   aLinkImg.setAttribute("target", "_blanket")
   const img = document.createElement("img")
   img.setAttribute("src", `./src/img/certificates/${thumbnail}`)
+  img.setAttribute("loading", "lazy")
   img.setAttribute("alt", `${title}`)
   img.setAttribute("class", "w-250px")
   aLinkImg.appendChild(img)
