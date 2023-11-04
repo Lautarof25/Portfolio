@@ -21,7 +21,7 @@ body {
   background-color: var(--black);
   color: var(--white);
 
-  min-height: 100vh;
+  min-height: 100dvh;
   max-width: 1440px;
 
   grid-template-columns: 1fr;

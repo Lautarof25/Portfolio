@@ -9,6 +9,7 @@ function hidePage(link){
 
 function showPage(link){
     document.querySelector(`.${link}`).classList.remove('hidden')
+    changeTittlePage()
 }
 
 function hidePages(){
