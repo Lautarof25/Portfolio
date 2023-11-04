@@ -5,8 +5,8 @@ const name = document.querySelector("#name")
 const email = document.querySelector("#email")
 const message = document.querySelector("#message")
 // Navigation arrows
-const buttonUp = document.querySelector('.button-chevron-up')
-const buttonDown = document.querySelector('.button-chevron-down')
+const buttonUp = document.querySelector('.button-up')
+const buttonDown = document.querySelector('.button-down')
 // Semantic containers
 const body = document.querySelector("body")
 const header = document.querySelector("header")

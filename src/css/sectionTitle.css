@@ -1,40 +1,22 @@
 .titlePage {
     grid-area: title;
     font-size: clamp(14px, 3vw, 24px);
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "title title"
-        "buttonUp buttonDown"
-    ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.titlePage h2 {
-    grid-area: title;
-    align-self: flex-end;
-}
-
-.titlePage [aria-label="Previous page"] {
-    
+.titlePage .button-up,
+.titlePage .button-down {
+    fill: var(--white);
+    width: 25px;
+    height: 25px;
 }
 
 .titlePage svg {
-    width: 25px;
-    height: 25px;
     fill: var(--white) !important;
     background-color: var(--principal-color);
 }
 
 @media (min-width: 576px) {
-    .titlePage {
-        margin-top: 0!important;
-        display: flex;
-        justify-content: space-around;
-    }
-    .titlePage h2 {
-        text-align: center;
-        align-self: initial;
-        width: 50%;
-    }
 }

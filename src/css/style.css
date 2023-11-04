@@ -25,7 +25,7 @@ body {
   max-width: 1440px;
 
   grid-template-columns: 1fr;
-  grid-template-rows: 170px 1fr;
+  grid-template-rows: 160px 1fr;
   grid-template-areas:
     "title"
     "main"
