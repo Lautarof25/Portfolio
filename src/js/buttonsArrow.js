@@ -2,12 +2,16 @@ buttonDown.addEventListener('click', () => navigatePage(1));
 buttonUp.addEventListener('click', () => navigatePage(-1));
 
 function navigatePage(direction) {
+    // External function : showPage.js
     hidePages();
     const index = direction === 1 ? nextPage() : prevPage();
     const currentId = linksArray[index];
+    // External function : titlePage.js
     showPage(currentId);
+    // External function : linksSelector.js
     removeAllClassesLinkActive();
     document.getElementById(currentId).classList.add('link-active');
+    // External function : titlePage.js
     changeTitle();
 }
 

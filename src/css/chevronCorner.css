@@ -1,4 +1,4 @@
-/* Default */
+/* Default chevron corners */
 svg[class*="chevron"] {
     position: absolute;
     width: 1.5rem;
@@ -46,14 +46,28 @@ svg[class*="chevron"] {
 }
 
 /* Header */
-
-.header .chevron-top-right {
-    right: 0;
+.header .chevron-top-left {
+    left: 15px;
+    top: -12px;
 }
 
-.header .chevron-bottom-left {
-    left: 0;
+.header .chevron-bottom-right {
+    right: 15px;
+    bottom: -5px;
 }
+
+
+@media (min-width: 576px) { 
+    .header .chevron-top-left {
+        left: 1rem;
+        top: -.5rem;
+    }
+    
+    .header .chevron-bottom-right {
+        right: 1rem;
+        bottom: -.5rem;
+    }
+ }
 
 /* Main About */
 

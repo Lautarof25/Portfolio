@@ -9,7 +9,8 @@ function hidePage(link){
 
 function showPage(link){
     document.querySelector(`.${link}`).classList.remove('hidden')
-    changeTittlePage()
+    // External function : titlePage.js
+    changeTitle()
 }
 
 function hidePages(){

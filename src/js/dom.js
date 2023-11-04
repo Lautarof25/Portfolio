@@ -20,7 +20,7 @@ const buttonDown = document.querySelector('.button-down')
 const toggleMenu = document.querySelector("#toggle-menu")
 const navIcons = document.querySelectorAll(".nav img")
 const faBars = document.querySelector('[viewBox="0 0 448 512"]')
-const links = document.querySelectorAll('a[href="#"')
+const links = document.querySelectorAll('.nav a[href="#"')
 // Components 
 const titlePage = document.querySelector('.titlePage h2')
 const logo = document.querySelector("#logo")

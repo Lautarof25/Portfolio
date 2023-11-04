@@ -1,11 +1,14 @@
 function showMenuBar() {
   header.classList.toggle("show");
+  header.classList.toggle("opacity-50");
+  header.classList.toggle("top-0")
   nav.classList.toggle("show");
   footer.classList.toggle("show");
   removeIcons(navIcons)
   removeIcons(footerIcons)
   faBars.classList.toggle("d-none");
   logo.classList.toggle("d-none");
+  
   main.classList.add("blur");
   titlePage.classList.add("blur");
   buttonDown.classList.add("blur");
@@ -14,6 +17,7 @@ function showMenuBar() {
 
 function hideMenuBar() {
   header.classList.remove("show");
+  header.classList.toggle("opacity-50");
   nav.classList.remove("show");
   footer.classList.remove("show");
   faBars.classList.remove("d-none");
