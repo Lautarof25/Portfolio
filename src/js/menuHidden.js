@@ -1,14 +1,18 @@
 function showMenuBar() {
-  header.classList.toggle("show");
+  header.classList.add("show");
+  header.classList.add("opacity-50");
+  header.classList.add("top-0");
+  header.classList.remove("top-50off");
   header.classList.toggle("opacity-50");
-  header.classList.toggle("top-0")
-  nav.classList.toggle("show");
-  footer.classList.toggle("show");
+  header.classList.remove("left-50off");
+  headerLogo.classList.remove("right-15off");
+  headerLogo.classList.remove("bottom-15off");
+  nav.classList.add("show");
+  footer.classList.add("show");
   removeIcons(navIcons)
   removeIcons(footerIcons)
-  faBars.classList.toggle("d-none");
-  logo.classList.toggle("d-none");
-  
+  faBars.classList.add("d-none");
+  logo.classList.remove("d-none");
   main.classList.add("blur");
   titlePage.classList.add("blur");
   buttonDown.classList.add("blur");
@@ -16,18 +20,25 @@ function showMenuBar() {
 }
 
 function hideMenuBar() {
-  header.classList.remove("show");
-  header.classList.toggle("opacity-50");
-  nav.classList.remove("show");
-  footer.classList.remove("show");
-  faBars.classList.remove("d-none");
-  logo.classList.add("d-none");
-  hiddenIcons(navIcons)
-  hiddenIcons(footerIcons)
-  main.classList.remove("blur");
-  titlePage.classList.remove("blur");
-  buttonDown.classList.remove("blur");
-  buttonUp.classList.remove("blur");
+  if(header.classList.contains("show")){
+    header.classList.remove("show");
+    header.classList.toggle("opacity-50");
+    header.classList.remove("top-0");
+    header.classList.add("top-50off");
+    header.classList.add("left-50off");
+    headerLogo.classList.add("right-15off");
+    headerLogo.classList.add("bottom-15off");
+    nav.classList.remove("show");
+    footer.classList.remove("show");
+    faBars.classList.remove("d-none");
+    logo.classList.add("d-none");
+    hiddenIcons(navIcons)
+    hiddenIcons(footerIcons)
+    main.classList.remove("blur");
+    titlePage.classList.remove("blur");
+    buttonDown.classList.remove("blur");
+    buttonUp.classList.remove("blur");
+  } 
 }
 
 function hiddenIcons(element) {

@@ -14,13 +14,14 @@ const name = document.querySelector("#name")
 const email = document.querySelector("#email")
 const message = document.querySelector("#message")
 // Navigation arrows
-const buttonUp = document.querySelector('.button-up')
-const buttonDown = document.querySelector('.button-down')
+const buttonUp = document.querySelector('[aria-label="Previous page"]')
+const buttonDown = document.querySelector('[aria-label="Next page"]')
 // Menu Bar
 const toggleMenu = document.querySelector("#toggle-menu")
 const navIcons = document.querySelectorAll(".nav img")
 const faBars = document.querySelector('[viewBox="0 0 448 512"]')
 const links = document.querySelectorAll('.nav a[href="#"')
+const headerLogo = document.querySelector('.header__logo')
 // Components 
 const titlePage = document.querySelector('.titlePage h2')
 const logo = document.querySelector("#logo")

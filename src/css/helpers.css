@@ -112,6 +112,20 @@
     top: 0;
 }
 
+.top-50off {
+    top: -50px;
+}
+.left-50off {
+    left: -50px;
+}
+
+.bottom-15off {
+    bottom: -15px;
+}
+.right-15off {
+    right: -15px;
+}
+
 .right-0 {
     right: 0;
 }
@@ -251,6 +265,9 @@
 
 .h-50px {
     height: 50px;
+}
+.h-85px {
+    height: 85px;
 }
 
 .h-250 {
