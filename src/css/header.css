@@ -1,7 +1,5 @@
 .header {
     grid-area: header;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
     padding-bottom: 175px!important;
 }
 
@@ -36,6 +34,10 @@
         top: 0!important;
         left: 0!important;
         height: initial!important;
+    }
+    .header__logo {
+        bottom: 0!important;
+        right: 0!important;
     }
 }
 
