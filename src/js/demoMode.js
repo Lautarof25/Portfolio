@@ -7,6 +7,8 @@ function idleTimer() {
             navigatePage(1)
             timer = 0
             demoMode.classList.remove('hidden')
+            // External function : backgroundMainPage.js
+            createBackgroundPage()
         }
     },
         1000)

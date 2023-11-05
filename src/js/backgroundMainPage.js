@@ -1,11 +1,19 @@
-// Prueba de background image page
-/*
-Aplica de fondo el ícono de acuerdo a la página actual
-
-- Consultar actual ".link-active" (evento escuchador)
+function createBackgroundPage(){
     const elementLinkActive = document.querySelector(".link-active")
-- Clonar el elemento svg del elemento con ".link-active"
     const elementCloned = elementLinkActive.childNodes[1].cloneNode(true)
-- Agregar el elemento svg de fondo en el elemento ".backgroundPage"
-    document.querySelector(".backgroundPage").appendChild(elementCloned)
-*/
+    const backgroundPage = document.querySelector(".backgroundPage")
+    while (backgroundPage.firstChild) {
+        backgroundPage.removeChild(backgroundPage.firstChild);
+    }
+    backgroundPage.appendChild(elementCloned)
+}
+createBackgroundPage()
+
+links.forEach(link => {
+    link.addEventListener("click",createBackgroundPage)
+})
+buttonsNavigation.forEach(button => {
+    setTimeout(() => {
+        button.addEventListener("click",createBackgroundPage)    
+    }, 1000);
+})

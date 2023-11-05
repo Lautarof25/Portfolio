@@ -1,0 +1,7 @@
+.main .backgroundPage svg{
+    font-size: 15rem;
+    width: auto;
+    fill: var(--darkGray);
+    filter: drop-shadow(0 0 5px white) blur(4px);
+    -webkit-filter: drop-shadow(0 0 5px white) blur(4px);
+}
