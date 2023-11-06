@@ -9,6 +9,11 @@ const services = document.querySelector('.services')
 const portfolio = document.querySelector('.portfolio')
 const certificates = document.querySelector('.certificates')
 const footer = document.querySelector("footer")
+// Database information
+const databaseCertificates = certificatesInfo.info
+const databaseServices = servicesInfo.info
+const databasePortfolio = portfolioInfo.info
+const databaseAbout = aboutInfo.info
 // Form
 const name = document.querySelector("#name")
 const email = document.querySelector("#email")

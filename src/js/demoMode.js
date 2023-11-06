@@ -2,13 +2,15 @@ let timer = 0
 function idleTimer() {
     setInterval(function () {
         timer++
-        if (timer === 15) {
+        if (timer === 1550) {
             nextPage()
             navigatePage(1)
             timer = 0
             demoMode.classList.remove('hidden')
             // External function : backgroundMainPage.js
-            createBackgroundPage()
+            setTimeout(() => {
+                createBackgroundPage()    
+            }, 500);
         }
     },
         1000)

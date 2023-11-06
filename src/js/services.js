@@ -1,25 +1,3 @@
-const servicesInfo = {
-    "info": [
-        {
-            "title": "Mantenimiento y armado de PC",
-            "description": "Armado de pc y reciclado de hardware",
-            "icons": ["computer-solid", "screwdriver-wrench-solid"]
-        },
-        {
-            "title": "Clases de internet avanzado",
-            "description": "Imparto clases particulares a adultos mayores para contribuir con la alfabetización digital",
-            "icons": ["chalkboard-user-solid", "book-solid"]
-        },
-        {
-            "title": "Optimización tecnológica",
-            "description": "Automatización en procesos de trabajo para ahorrar tiempos de ejecución de tareas",
-            "icons": ["rocket-solid", "hand-holding-hand-solid"]
-        },
-    ]
-}
-
-const databaseServices = servicesInfo.info
-
 function addCardServicesInfo() {
     databaseServices.forEach(item => {
         createCardServicesInfo(item.title, item.description, item.icons)
@@ -28,13 +6,11 @@ function addCardServicesInfo() {
 
 function createCardServicesInfo(title, description, icons) {
     const div = document.createElement("div")
-    div.setAttribute("class", "section__box mw-500 relative p-05 m-0-auto")
+    div.setAttribute("class", "section__box mw-500 relative p-05 d-grid m-0-auto bg-dark-gray")
 
     const chevronBottomLeft = createSVG("chevron-bottom-left")
     const chevronTopRight = createSVG("chevron-top-right")
 
-    const divContainer = document.createElement("div")
-    divContainer.setAttribute("class", "relative zindex-1 d-flex flex-column p-1 align-center")
     const h2 = document.createElement("h2")
     h2.setAttribute("class", "text-center")
     const h2Text = document.createTextNode(`${title}`)
@@ -46,9 +22,7 @@ function createCardServicesInfo(title, description, icons) {
     p.appendChild(pText)
 
     const divIcons = document.createElement("div")
-    divIcons.setAttribute("class", "section__icons d-flex gap-05")
-
-    divContainer.append(h2, divIcons, p)
+    divIcons.setAttribute("class", "section__icons d-flex justify-center gap-05")
 
     for (let i = 0; i < icons.length; i++) {
         const icon = document.createElement("img")
@@ -56,7 +30,7 @@ function createCardServicesInfo(title, description, icons) {
         divIcons.appendChild(icon)
     }
 
-    div.append(chevronTopRight, chevronBottomLeft, divContainer)
+    div.append(chevronTopRight, chevronBottomLeft, h2, divIcons, p)
     services.appendChild(div)
 }
 

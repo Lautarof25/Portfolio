@@ -112,11 +112,11 @@
     top: 0;
 }
 
-.top-50off {
-    top: -50px;
+.top-40off {
+    top: -40px;
 }
-.left-50off {
-    left: -50px;
+.left-40off {
+    left: -40px;
 }
 
 .bottom-15off {
@@ -234,6 +234,9 @@
 .w-250px {
     width: 250px;
 }
+.h-250px {
+    height: 250px;
+}
 
 .mw-400 {
     max-width: 400px;
@@ -270,8 +273,8 @@
 .h-50px {
     height: 50px;
 }
-.h-85px {
-    height: 85px;
+.h-92px {
+    height: 92px;
 }
 
 .h-250 {

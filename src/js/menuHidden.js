@@ -2,9 +2,9 @@ function showMenuBar() {
   header.classList.add("show");
   header.classList.add("opacity-50");
   header.classList.add("top-0");
-  header.classList.remove("top-50off");
+  header.classList.remove("top-40off");
   header.classList.toggle("opacity-50");
-  header.classList.remove("left-50off");
+  header.classList.remove("left-40off");
   headerLogo.classList.remove("right-15off");
   headerLogo.classList.remove("bottom-15off");
   nav.classList.add("show");
@@ -24,8 +24,8 @@ function hideMenuBar() {
     header.classList.remove("show");
     header.classList.toggle("opacity-50");
     header.classList.remove("top-0");
-    header.classList.add("top-50off");
-    header.classList.add("left-50off");
+    header.classList.add("top-40off");
+    header.classList.add("left-40off");
     headerLogo.classList.add("right-15off");
     headerLogo.classList.add("bottom-15off");
     nav.classList.remove("show");
