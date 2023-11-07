@@ -6,7 +6,7 @@ function addCardPortfolioInfo() {
 
 function createCardPortfolioInfo(title, description, languages, thumbnail, github, webpage) {
     const div = document.createElement("div")
-    div.setAttribute("class", "section__box relative p-05 m-0-auto d-grid bg-dark-gray")
+    div.setAttribute("class", "section__box relative d-grid place-center gap-05 bg-dark-gray")
 
     const chevronBottomRight = createSVG("chevron-bottom-right")
     const chevronBottomLeft = createSVG("chevron-bottom-left")
@@ -14,7 +14,7 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     const chevronTopLeft = createSVG("chevron-top-left")
 
     const h2 = document.createElement("h2")
-    h2.setAttribute("class", "text-center")
+    h2.setAttribute("class", "text-center m-0")
     const h2Text = document.createTextNode(`${title}`)
     h2.appendChild(h2Text)
     const divImg = document.createElement("a")
@@ -27,7 +27,7 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     img.setAttribute("alt", `${title}`)
     img.setAttribute("class", "h-250px w-250px border-radius-5 object-cover")
     const divGradient = document.createElement("div")
-    divGradient.setAttribute("class", "gradientTransparent d-flex justify-center align-end w-100 h-50px zindex-5 absolute bottom-0 gap-05")
+    divGradient.setAttribute("class", "gradientTransparent d-flex justify-center align-end h-50px zindex-5 absolute bottom-0 gap-05 w-100")
     divImg.append(img, divGradient)
 
     const p = document.createElement("p")
@@ -45,13 +45,13 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     const aGitHub = document.createElement("a")
     const gitHubText = document.createTextNode("GitHub")
     aGitHub.appendChild(gitHubText)
-    aGitHub.setAttribute("class", "section__button zindex-5 relative border-radius-5 w-100 text-center")
+    aGitHub.setAttribute("class", "section__button zindex-5 relative border-radius-5 text-center p-1")
     aGitHub.setAttribute("href", `${github}`)
     aGitHub.setAttribute("target", `_blank`)
     const aWebPage = document.createElement("a")
     const webPageText = document.createTextNode("WebPage")
     aWebPage.appendChild(webPageText)
-    aWebPage.setAttribute("class", "section__button zindex-5 relative border-radius-5 w-100 text-center")
+    aWebPage.setAttribute("class", "section__button zindex-5 relative border-radius-5 text-center p-1")
     aWebPage.setAttribute("href", `${webpage}`)
     aWebPage.setAttribute("target", `_blank`)
 
