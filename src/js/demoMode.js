@@ -2,7 +2,7 @@ let timer = 0
 function idleTimer() {
     setInterval(function () {
         timer++
-        if (timer === 1550) {
+        if (timer === 15) {
             nextPage()
             navigatePage(1)
             timer = 0

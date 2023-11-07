@@ -31,7 +31,7 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     divImg.append(img, divGradient)
 
     const p = document.createElement("p")
-    p.setAttribute("class", "section__description text-center")
+    p.setAttribute("class", "section__description text-center m-0")
     const pText = document.createTextNode(`${description}`)
     p.appendChild(pText)
 
@@ -45,13 +45,13 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     const aGitHub = document.createElement("a")
     const gitHubText = document.createTextNode("GitHub")
     aGitHub.appendChild(gitHubText)
-    aGitHub.setAttribute("class", "section__button zindex-5 relative border-radius-5 text-center p-1")
+    aGitHub.setAttribute("class", "section__button relative border-radius-5 text-center w-250px")
     aGitHub.setAttribute("href", `${github}`)
     aGitHub.setAttribute("target", `_blank`)
     const aWebPage = document.createElement("a")
     const webPageText = document.createTextNode("WebPage")
     aWebPage.appendChild(webPageText)
-    aWebPage.setAttribute("class", "section__button zindex-5 relative border-radius-5 text-center p-1")
+    aWebPage.setAttribute("class", "section__button relative border-radius-5 text-center w-250px")
     aWebPage.setAttribute("href", `${webpage}`)
     aWebPage.setAttribute("target", `_blank`)
 

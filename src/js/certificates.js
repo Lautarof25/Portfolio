@@ -35,7 +35,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   aLink.appendChild(aLinkText)
   aLink.setAttribute("href", `${link}`)
   aLink.setAttribute("target", "_blanket")
-  aLink.setAttribute("class", "section__button p-1 w-100 plr-0 text-center border-radius-top-5")
+  aLink.setAttribute("class", "section__button w-250px text-center border-radius-top-5 m-0-auto")
   const aLinkImg = document.createElement("a")
   aLinkImg.setAttribute("href", `${link}`)
   aLinkImg.setAttribute("target", "_blanket")
