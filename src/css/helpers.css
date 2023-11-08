@@ -332,8 +332,11 @@
     text-align: justify;
 }
 
-.object-cover {
+.object-fit-cover {
     object-fit: cover;
+}
+.object-pos-center-top {
+    object-position: center top;
 }
 
 .drop-shadow {

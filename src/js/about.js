@@ -6,7 +6,7 @@ function addCardAboutInfo() {
 
 function createCardAboutInfo(description, icons) {
   const div = document.createElement("div");
-  div.className = "section__box mw-500 relative d-grid p-05 m-0-auto w-100 gap-1 bg-dark-gray border-radius-5";
+  div.className = "section__box relative d-grid p-05 m-0-auto w-100 gap-1 bg-dark-gray border-radius-5";
 
   const chevronBottomRight = createSVG("chevron-bottom-right");
   const chevronTopLeft = createSVG("chevron-top-left");

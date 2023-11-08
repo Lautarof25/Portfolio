@@ -57,22 +57,23 @@ svg[class*="chevron"] {
 }
 
 
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
     .header .chevron-top-left {
         left: 1rem;
         top: -.5rem;
     }
-    
+
     .header .chevron-bottom-right {
         right: 1rem;
         bottom: -.5rem;
     }
- }
+}
 
- /* Main Home */
- .main .home svg {
+/* Main Home */
+.main .home svg {
     width: 4rem;
 }
+
 .main .home .chevron-top-left {
     left: 0;
     top: -1.5rem;
@@ -89,6 +90,7 @@ svg[class*="chevron"] {
 .main .about svg {
     width: 3rem;
 }
+
 .main .about .chevron-top-left {
     left: -.5rem;
     top: -1.5rem;
@@ -104,33 +106,36 @@ svg[class*="chevron"] {
 .main .certificates svg {
     width: 2.5rem;
 }
-.main .portfolio .chevron-top-left ,
+
+.main .portfolio .chevron-top-left,
 .main .certificates .chevron-top-left {
     top: -1.2rem;
     left: -1rem;
 }
 
-.main .portfolio .chevron-bottom-right ,
+.main .portfolio .chevron-bottom-right,
 .main .certificates .chevron-bottom-right {
     right: -1rem;
     bottom: -1.2rem;
 }
-.main .portfolio .chevron-bottom-left ,
+
+.main .portfolio .chevron-bottom-left,
 .main .certificates .chevron-bottom-left {
     left: -1rem;
     bottom: -1.2rem;
 }
 
-.main .portfolio .chevron-top-right ,
+.main .portfolio .chevron-top-right,
 .main .certificates .chevron-top-right {
     top: -1.2rem;
     right: -1rem;
 }
 
- /* Main services */
- .main .services svg {
+/* Main services */
+.main .services svg {
     width: 2.5rem;
 }
+
 .main .services .chevron-top-right {
     right: -.5rem;
     top: -1rem;
@@ -166,6 +171,7 @@ svg[class*="chevron"] {
 .main .contact .chevron-bottom-left {
     left: -1rem;
 }
+
 .main .contact .chevron-bottom-right {
     right: -1rem;
 }

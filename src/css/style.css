@@ -32,21 +32,48 @@ body {
     "main";
 
   cursor: url("../img/cursor.cur") 4 12,
-  auto;
+    auto;
 
 }
 
-a, button, input[type='radio']:after {
-  cursor: url("../img/cursorPointer.cur") 4 12, pointer!important;
+.main .backgroundPage svg {
+  font-size: 15rem;
+  width: auto;
+  fill: var(--darkGray);
+  filter: drop-shadow(0 0 5px white) blur(8px);
+  -webkit-filter: drop-shadow(0 0 5px white) blur(8px);
 }
 
-.hidden-menu{
+.demoMode {
+  margin-left: -60px;
+}
+
+@media (min-width: 576px) { 
+   .demoMode {
+      margin-left: 55px;
+   }
+}
+
+::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+a,
+button,
+input[type='radio']:after {
+  cursor: url("../img/cursorPointer.cur") 4 12, pointer !important;
+}
+
+.hidden-menu {
   left: 100%;
 }
 
 .opacity {
   opacity: 0;
 }
+
 .show {
   left: 0 !important;
   opacity: 1;
@@ -62,6 +89,7 @@ a, button, input[type='radio']:after {
       "nav main"
     ;
   }
+
   .opacity {
     opacity: 1;
   }

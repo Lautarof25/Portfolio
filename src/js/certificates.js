@@ -6,12 +6,12 @@ function addCardCertificatesInfo() {
 
 function createCardCertificatesInfo(title, description, thumbnail, hours, year, link) {
   const div = document.createElement("div")
-  div.setAttribute("class", "section__box mw-500 relative d-grid p-05 m-0-auto w-100 bg-dark-gray text-center")
+  div.setAttribute("class", "section__box relative d-grid p-05 w-100 bg-dark-gray text-center")
 
-  const chevronBottomRight = createSVG("chevron-bottom-right");
-  const chevronBottomLeft = createSVG("chevron-bottom-left");
-  const chevronTopRight = createSVG("chevron-top-right");
-  const chevronTopLeft = createSVG("chevron-top-left");
+  const chevronBottomRight = createSVG("chevron-bottom-right")
+  const chevronBottomLeft = createSVG("chevron-bottom-left")
+  const chevronTopRight = createSVG("chevron-top-right")
+  const chevronTopLeft = createSVG("chevron-top-left")
 
   const h2 = document.createElement("h2")
   h2.setAttribute("class", "m-0")
@@ -35,7 +35,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   aLink.appendChild(aLinkText)
   aLink.setAttribute("href", `${link}`)
   aLink.setAttribute("target", "_blanket")
-  aLink.setAttribute("class", "section__button w-250px text-center border-radius-top-5 m-0-auto")
+  aLink.setAttribute("class", "section__button w-100 text-center border-radius-top-5 m-0-auto")
   const aLinkImg = document.createElement("a")
   aLinkImg.setAttribute("href", `${link}`)
   aLinkImg.setAttribute("target", "_blanket")
@@ -43,7 +43,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   img.setAttribute("src", `./src/img/certificates/${thumbnail}`)
   img.setAttribute("loading", "lazy")
   img.setAttribute("alt", `${title}`)
-  img.setAttribute("class", "w-250px h-250px object-cover")
+  img.setAttribute("class", "w-100 h-250px object-fit-cover object-pos-center-top")
   aLinkImg.appendChild(img)
 
   div.append(chevronTopRight, chevronTopLeft, chevronBottomLeft, chevronBottomRight, h2, p, pHours, pYear, aLinkImg, aLink)

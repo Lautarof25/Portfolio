@@ -6,7 +6,7 @@ function addCardServicesInfo() {
 
 function createCardServicesInfo(title, description, icons) {
     const div = document.createElement("div")
-    div.setAttribute("class", "section__box mw-500 relative p-05 d-grid m-0-auto bg-dark-gray border-radius-5")
+    div.setAttribute("class", "section__box relative p-05 d-grid m-0-auto bg-dark-gray border-radius-5")
 
     const chevronBottomLeft = createSVG("chevron-bottom-left")
     const chevronTopRight = createSVG("chevron-top-right")
