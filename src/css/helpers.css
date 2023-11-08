@@ -185,6 +185,10 @@
 
 /* margins and paddings */
 
+.bz-border-box {
+    box-sizing: border-box!important;
+}
+
 .gap-05 {
     gap: 0.5rem;
 }
@@ -354,6 +358,11 @@
 .gradientTransparent {
     background: rgb(0, 0, 0);
     background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.gradientTransparentGray {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(360deg, rgba(34, 34, 34, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .grayscale {

@@ -27,7 +27,7 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     img.setAttribute("alt", `${title}`)
     img.setAttribute("class", "h-250px w-250px border-radius-5 object-cover")
     const divGradient = document.createElement("div")
-    divGradient.setAttribute("class", "gradientTransparent d-flex justify-center align-end h-50px zindex-5 absolute bottom-0 gap-05 w-100")
+    divGradient.setAttribute("class", "gradientTransparentGray d-flex justify-center align-end h-50px zindex-5 absolute bottom-0 gap-05 w-100")
     divImg.append(img, divGradient)
 
     const p = document.createElement("p")
@@ -43,7 +43,7 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     }
 
     const aGitHub = document.createElement("a")
-    const gitHubText = document.createTextNode("GitHub")
+    const gitHubText = document.createTextNode("Repo")
     aGitHub.appendChild(gitHubText)
     aGitHub.setAttribute("class", "section__button relative border-radius-5 text-center w-250px")
     aGitHub.setAttribute("href", `${github}`)

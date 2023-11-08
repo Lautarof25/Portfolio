@@ -22,7 +22,7 @@ services
 
 function addCardPageInfo(arrayCorners, database){
     database.forEach(item => {
-        createCardPageInfo()
+        
     })
 }
 
