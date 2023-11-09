@@ -1,3 +1,5 @@
+const chevronBottomRight = document.querySelector('header svg.chevron-bottom-right');
+
 function showMenuBar() {
   header.classList.add("show");
   header.classList.add("opacity-50");
@@ -17,6 +19,7 @@ function showMenuBar() {
   titlePage.classList.add("blur");
   buttonDown.classList.add("blur");
   buttonUp.classList.add("blur");
+  chevronBottomRight.classList.add("d-none");
 }
 
 function hideMenuBar() {
@@ -38,6 +41,7 @@ function hideMenuBar() {
     titlePage.classList.remove("blur");
     buttonDown.classList.remove("blur");
     buttonUp.classList.remove("blur");
+    chevronBottomRight.classList.remove("d-none");
   } 
 }
 

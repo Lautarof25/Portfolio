@@ -16,11 +16,11 @@ function navigatePage(direction) {
 }
 
 function nextPage() {
-    return currentIndexPage() !== 5 ? currentIndexPage() + 1 : 0
+    return currentIndexPage() !== links.length-1 ? currentIndexPage() + 1 : 0
 }
 
 function prevPage() {
-    return currentIndexPage() !== 0 ? currentIndexPage() - 1 : 5
+    return currentIndexPage() !== 0 ? currentIndexPage() - 1 : links.length-1
 }
 
 function currentIndexPage() {

@@ -1,11 +1,16 @@
 .colorPicker {
-    bottom: -125px;
+    bottom: -150px;
     transition: bottom .2s;
     -webkit-transition: bottom .2s;
     -moz-transition: bottom .2s;
     -ms-transition: bottom .2s;
     -o-transition: bottom .2s;
     width: 205px;
+    padding: 1rem .5rem 2rem!important;
+}
+
+.colorPicker hr {
+    border: 1px solid var(--white);
 }
 
 .colorPicker:hover {
@@ -48,8 +53,8 @@ input[value='mediumorchid']:after {
     background-color: mediumorchid;
 }
 
-input[value='gold']:after {
-    background-color: gold;
+input[value='goldenrod']:after {
+    background-color: goldenrod;
 }
 
 input[value='deeppink']:after {

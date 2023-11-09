@@ -48,12 +48,6 @@ body {
   margin-left: -60px;
 }
 
-@media (min-width: 576px) { 
-   .demoMode {
-      margin-left: 55px;
-   }
-}
-
 ::-webkit-scrollbar { 
   display: none;  /* Safari and Chrome */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -79,6 +73,14 @@ input[type='radio']:after {
   opacity: 1;
 }
 
+#blog {
+  color: hsl(315, 100%, 72%);
+}
+
+.rainbow {
+  fill: url(#custom-gradient);
+}
+
 @media (min-width: 576px) {
   body {
     grid-template-columns: auto 1fr;
@@ -89,8 +91,13 @@ input[type='radio']:after {
       "nav main"
     ;
   }
-
+  .main {
+    padding: 2rem!important;
+  }
   .opacity {
     opacity: 1;
   }
+  .demoMode {
+    margin-left: 55px;
+ }
 }
