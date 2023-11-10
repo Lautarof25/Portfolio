@@ -1,7 +1,8 @@
 /* Default chevron corners */
 svg[class*="chevron"] {
     position: absolute;
-    width: 1.5rem;
+    --widthChevron: 1rem;
+    width: var(--widthChevron);
     fill: var(--principal-color);
 }
 

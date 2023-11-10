@@ -5,11 +5,11 @@ function addCardAboutInfo() {
 }
 
 function createCardAboutInfo(description, icons) {
-  const div = document.createElement("div");
-  div.className = "section__box relative d-grid p-05 gap-1 bg-dark-gray border-radius-5";
+  const div = document.createElement("div")
+  div.className = "section__box relative d-grid p-05 gap-1 bg-dark-gray border-radius-5"
 
-  const chevronBottomRight = createSVG("chevron-bottom-right");
-  const chevronTopLeft = createSVG("chevron-top-left");
+  const chevronTopLeft = createSVG("chevron-top-left")
+  const chevronBottomRight = createSVG("chevron-bottom-right")
 
   const p = document.createElement("p");
   p.setAttribute("class", "section__description text-center")
@@ -23,8 +23,8 @@ function createCardAboutInfo(description, icons) {
     divIcons.appendChild(icon);
   }
 
-  div.appendChild(chevronBottomRight);
   div.appendChild(chevronTopLeft);
+  div.appendChild(chevronBottomRight);
   div.appendChild(p);
   div.appendChild(divIcons);
 

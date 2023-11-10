@@ -8,8 +8,8 @@ function createCardServicesInfo(title, description, icons) {
     const div = document.createElement("div")
     div.setAttribute("class", "section__box relative p-05 d-grid bg-dark-gray border-radius-5")
 
-    const chevronBottomLeft = createSVG("chevron-bottom-left")
     const chevronTopRight = createSVG("chevron-top-right")
+    const chevronBottomLeft = createSVG("chevron-bottom-left")
 
     const h2 = document.createElement("h2")
     h2.setAttribute("class", "text-center")

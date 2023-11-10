@@ -20,9 +20,9 @@ services
 
 */
 
-function addCardPageInfo(arrayCorners, database){
+function addCardPageInfo(database){
     database.forEach(item => {
-        
+        console.log(item)
     })
 }
 
