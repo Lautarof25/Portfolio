@@ -6,19 +6,19 @@ function addCardServicesInfo() {
 
 function createCardServicesInfo(title, description, icons) {
     const div = document.createElement("div")
-    div.setAttribute("class", "section__box relative p-05 d-grid m-0-auto bg-dark-gray border-radius-5")
+    div.setAttribute("class", "section__box relative p-05 d-grid bg-dark-gray border-radius-5")
 
     const chevronBottomLeft = createSVG("chevron-bottom-left")
     const chevronTopRight = createSVG("chevron-top-right")
 
     const h2 = document.createElement("h2")
     h2.setAttribute("class", "text-center")
-    const h2Text = document.createTextNode(`${title}`)
+    const h2Text = document.createTextNode(title)
     h2.appendChild(h2Text)
 
     const p = document.createElement("p")
     p.setAttribute("class", "section__description text-center")
-    const pText = document.createTextNode(`${description}`)
+    const pText = document.createTextNode(description)
     p.appendChild(pText)
 
     const divIcons = document.createElement("div")
@@ -29,8 +29,12 @@ function createCardServicesInfo(title, description, icons) {
         icon.setAttribute("src", `./src/img/icons/${icons[i]}.svg`)
         divIcons.appendChild(icon)
     }
-
-    div.append(chevronTopRight, chevronBottomLeft, h2, divIcons, p)
+    
+    div.appendChild(chevronTopRight)
+    div.appendChild(chevronBottomLeft)
+    div.appendChild(h2)
+    div.appendChild(divIcons)
+    div.appendChild(p)
     services.appendChild(div)
 }
 

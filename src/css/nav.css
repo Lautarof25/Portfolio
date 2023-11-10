@@ -22,11 +22,8 @@
     color: var(--principal-color);
 }
 
-.nav img {
-    width: 20px;
-    height: 20px;
-    filter: invert(1);
-    -webkit-filter: invert(1);
+.nav .special-color {
+    fill: var(--principal-color);
 }
 
 .nav {
