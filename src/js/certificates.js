@@ -1,9 +1,3 @@
-function addCardCertificatesInfo() {
-  databaseCertificates.forEach(item => {
-    createCardCertificatesInfo(item.title, item.description, item.thumbnail, item.hours, item.year, item.link)
-  })
-}
-
 function createCardCertificatesInfo(title, description, thumbnail, hours, year, link) {
   const div = document.createElement("div")
   div.setAttribute("class", "section__box relative d-grid p-05 bg-dark-gray text-center")
@@ -58,5 +52,3 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   div.appendChild(aLink)
   certificates.appendChild(div)
 }
-
-addCardCertificatesInfo()

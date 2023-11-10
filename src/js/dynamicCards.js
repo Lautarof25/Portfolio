@@ -1,33 +1,40 @@
-/*
-TWO FUNCTIONES 
+function addCardInfo(type, database) {
+    const container = getContainerByType(type);
 
-addCardPageInfo(page)
-
-createCardPageInfo(topLeft,topRight,bottomRight,bottomLeft, ...)
-
-about
---  topLeft, bottomRight
---  {description}, {icons}
-certificates
---  allCorners
---  {title}, {description}, {thumbnail}, hours, year, {link}
-portfolio
---  allCorners
---  {title}, {description},languages, {thumbnail}, github, {link}
-services
---  topRight, bottomLeft
---  {title}, {description}, {icons}
-
-*/
-
-function addCardPageInfo(database){
     database.forEach(item => {
-        console.log(item)
-    })
+        switch (type) {
+            case 'portfolio':
+                createCardPortfolioInfo(item.title, item.description, item.languages, item.thumbnail, item.github, item.webpage);
+                break;
+            case 'services':
+                createCardServicesInfo(item.title, item.description, item.icons);
+                break;
+            case 'certificates':
+                createCardCertificatesInfo(item.title, item.description, item.thumbnail, item.hours, item.year, item.link);
+                break;
+            case 'about':
+                createCardAboutInfo(item.description, item.icons);
+                break;
+        }
+    });
 }
 
-function createCardPageInfo(arrayCorners, arrayDates){
-    
-
-    element.appendChild(div)
+function getContainerByType(type) {
+    switch (type) {
+        case 'portfolio':
+            return portfolio;
+        case 'services':
+            return services;
+        case 'certificates':
+            return certificates;
+        case 'about':
+            return about; 
+        default:
+            throw new Error(`Unknown card type: ${type}`);
+    }
 }
+
+addCardInfo('portfolio', databasePortfolio);
+addCardInfo('services', databaseServices);
+addCardInfo('certificates', databaseCertificates);
+addCardInfo('about', databaseAbout);

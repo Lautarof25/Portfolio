@@ -1,16 +1,8 @@
-function addCardPortfolioInfo() {
-    databasePortfolio.forEach(item => {
-        createCardPortfolioInfo(item.title, item.description, item.languages, item.thumbnail, item.github, item.webpage, item.webpage)
-    })
-}
-
 function createCardPortfolioInfo(title, description, languages, thumbnail, github, webpage) {
     const div = document.createElement("div")
     div.setAttribute("class", "section__box relative d-grid place-center border-radius-5 gap-05 bg-dark-gray")
 
     const chevronTopLeft = createSVG("chevron-top-left")
-    // const chevronTopRight = createSVG("chevron-top-right")
-    // const chevronBottomRight = createSVG("chevron-bottom-right")
     const chevronBottomLeft = createSVG("chevron-bottom-left")
 
     const h2 = document.createElement("h2")
@@ -57,8 +49,6 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     aWebPage.setAttribute("target", `_blank`)
 
     div.appendChild(chevronTopLeft)
-    // div.appendChild(chevronTopRight)
-    // div.appendChild(chevronBottomRight)
     div.appendChild(chevronBottomLeft)
     div.appendChild(divImg)
     div.appendChild(h2)
@@ -67,5 +57,3 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     div.appendChild(aWebPage)
     portfolio.appendChild(div)
 }
-
-addCardPortfolioInfo()
