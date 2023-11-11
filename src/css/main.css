@@ -123,7 +123,7 @@
         grid-template-columns: 1fr;
     } 
     .portfolio .section__box  {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: 2fr 1fr 1fr;
         grid-template-areas: 
         "img title title"
         "img para para"

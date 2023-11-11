@@ -34,7 +34,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   aLinkImg.setAttribute("href", link)
   aLinkImg.setAttribute("target", "_blanket")
   const img = document.createElement("img")
-  img.setAttribute("src", `./src/img/certificates/${thumbnail}`)
+  img.setAttribute("src", `https://ucarecdn.com/${thumbnail}/-/scale_crop/500x250/-/format/auto/-/quality/smart/`)
   img.setAttribute("loading", "lazy")
   img.setAttribute("alt", title)
   img.setAttribute("class", "w-100 h-250px object-fit-cover object-pos-center-top")

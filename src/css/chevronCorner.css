@@ -7,8 +7,8 @@ svg[class*="chevron"] {
 }
 
 .chevron-top-left {
-    top: -1rem;
-    left: -1rem;
+    top: calc(var(--widthChevron)/4 * -1);
+    left: calc(var(--widthChevron)/4 * -1);
     transform: rotate(225deg);
     -webkit-transform: rotate(225deg);
     -moz-transform: rotate(225deg);
@@ -17,8 +17,8 @@ svg[class*="chevron"] {
 }
 
 .chevron-bottom-right {
-    bottom: -1rem;
-    right: -1rem;
+    bottom: calc(var(--widthChevron)/4 * -1);
+    right: calc(var(--widthChevron)/4 * -1);
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -27,8 +27,8 @@ svg[class*="chevron"] {
 }
 
 .chevron-top-right {
-    top: -1rem;
-    right: -1rem;
+    top: calc(var(--widthChevron)/4 * -1);
+    right: calc(var(--widthChevron)/4 * -1);
     transform: rotate(315deg);
     -webkit-transform: rotate(315deg);
     -moz-transform: rotate(315deg);
@@ -37,8 +37,8 @@ svg[class*="chevron"] {
 }
 
 .chevron-bottom-left {
-    bottom: -1rem;
-    left: -1rem;
+    bottom: calc(var(--widthChevron)/4 * -1);
+    left: calc(var(--widthChevron)/4 * -1);
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);

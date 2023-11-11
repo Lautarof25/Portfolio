@@ -14,7 +14,7 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     divImg.setAttribute("target", "_blank")
     divImg.setAttribute("class", "relative w-100")
     const img = document.createElement("img")
-    img.setAttribute("src", `./src/img/portfolio/${thumbnail[0]}`)
+    img.setAttribute("src", `https://ucarecdn.com/${thumbnail}/-/scale_crop/531x250/-/format/auto/-/quality/smart/`)
     img.setAttribute("alt", title)
     img.setAttribute("loading", "lazy")
     img.setAttribute("alt", title)
