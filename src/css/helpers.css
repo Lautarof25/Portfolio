@@ -340,7 +340,7 @@
     object-fit: cover;
 }
 .object-pos-center-top {
-    object-position: center top;
+    object-position: left top;
 }
 
 .drop-shadow {

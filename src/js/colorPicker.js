@@ -1,5 +1,8 @@
 radios.forEach(radio => {
   radio.addEventListener("change", function(){
-    body.style.setProperty("--principal-color", radio.value)
+    if (radio.value === "default-color") {
+      body.style.setProperty("--principal-color", "#ff5b02")
+    }else 
+      body.style.setProperty("--principal-color", radio.value)
   })
 })

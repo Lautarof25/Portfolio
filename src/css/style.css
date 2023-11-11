@@ -48,6 +48,18 @@ body {
   margin-left: -60px;
 }
 
+.section__button {
+  all: unset;
+  cursor: pointer;
+  background-color: var(--principal-color);
+  width: fit-content;
+}
+
+.section__button:hover {
+  filter: brightness(.8);
+  -webkit-filter: brightness(.8);
+}
+
 ::-webkit-scrollbar { 
   display: none;  /* Safari and Chrome */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */

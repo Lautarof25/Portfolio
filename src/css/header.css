@@ -1,6 +1,9 @@
 .header {
     grid-area: header;
     padding-bottom: 175px!important;
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .unselect-text {
@@ -12,10 +15,6 @@
 .toggle-menu {
     all: unset;
     cursor: pointer;
-}
-
-.header:hover {
-    opacity: 1;
 }
 
 @media (min-width: 576px) {
@@ -45,14 +44,11 @@
     .header {
         padding: 14px 0 !important;
         width: 100px;
+        & p {
+            margin: 0;
+        }
+        & .d-none {
+            display: none;
+        }
     }
-
-    .header p {
-        margin: 0;
-    }
-
-    .header .d-none {
-        display: none;
-    }
-
 }

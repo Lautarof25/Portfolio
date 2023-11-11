@@ -1,18 +1,16 @@
 .colorPicker {
     bottom: -150px;
-    transition: bottom .2s;
-    -webkit-transition: bottom .2s;
-    -moz-transition: bottom .2s;
-    -ms-transition: bottom .2s;
-    -o-transition: bottom .2s;
+    transition: bottom .5s;
+    -webkit-transition: bottom .5s;
+    -moz-transition: bottom .5s;
+    -ms-transition: bottom .5s;
+    -o-transition: bottom .5s;
     width: 205px;
     padding: 1rem .5rem 2rem!important;
+        & hr {
+        border: 1px solid var(--white);
+    }
 }
-
-.colorPicker hr {
-    border: 1px solid var(--white);
-}
-
 .colorPicker:hover {
     bottom: -80px;
 }
@@ -41,8 +39,8 @@ input[type='radio']:after {
     -o-border-radius: 20px;
 }
 
-input[value='darkorange']:after {
-    background-color: darkorange;
+input[value='default-color']:after {
+    background-color: #ff5b02;
 }
 
 input[value='dodgerblue']:after {

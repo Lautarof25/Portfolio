@@ -47,162 +47,160 @@ svg[class*="chevron"] {
 }
 
 /* Header */
-.header .chevron-top-left {
-    left: 15px;
-    top: -12px;
-}
-
-.header .chevron-bottom-right {
-    right: 15px;
-    bottom: -5px;
+.header {
+    & .chevron-top-left {
+        left: 15px;
+        top: -12px;
+    }
+    & .chevron-bottom-right {
+        right: 15px;
+        bottom: -5px;
+    }
 }
 
 
 @media (min-width: 576px) {
-    .header .chevron-top-left {
-        left: 1rem;
-        top: -.5rem;
-    }
-
-    .header .chevron-bottom-right {
-        right: 1rem;
-        bottom: -.5rem;
+    .header {
+        & .chevron-top-left {
+            left: 1rem;
+            top: -.5rem;
+        }
+        & .chevron-bottom-right {
+            right: 1rem;
+            bottom: -.5rem;
+        }
     }
 }
 
 /* Main Home */
-.main .home svg {
-    width: 4rem;
+.home {
+    & svg {
+        width: 4rem;
+    }
+    & .chevron-top-left {
+        left: 0;
+        top: -1.5rem;
+    }
+    & .chevron-bottom-right {
+        right: 0;
+        bottom: -1.5rem;
+    }
 }
-
-.main .home .chevron-top-left {
-    left: 0;
-    top: -1.5rem;
-}
-
-.main .home .chevron-bottom-right {
-    right: 0;
-    bottom: -1.5rem;
-}
-
 
 /* Main About */
 
-.main .about svg {
-    width: 3rem;
-}
-
-.main .about .chevron-top-left {
-    left: -.5rem;
-    top: -1.5rem;
-}
-
-.main .about .chevron-bottom-right {
-    right: -.5rem;
-    bottom: -1.5rem;
+.about {
+    & svg {
+        width: 3rem;
+    }
+    & .chevron-top-left {
+        left: -.5rem;
+        top: -1.5rem;
+    }
+    & .chevron-bottom-right {
+        right: -.5rem;
+        bottom: -1.5rem;
+    }
 }
 
 /* Main Portfolio */
+
 .main .portfolio svg,
 .main .certificates svg {
     width: 2.5rem;
 }
 
-.main .portfolio .chevron-top-left{
-    top: -1.2rem;
-    left: -1rem;
-}
-
-.main .portfolio .chevron-bottom-right{
-    right: -1rem;
-    bottom: -1.2rem;
-}
-
-.main .portfolio .chevron-bottom-left{
-    left: -1rem;
-    bottom: -1.2rem;
-}
-
-.main .portfolio .chevron-top-right{
-    top: -1.2rem;
-    right: -1rem;
+.portfolio {
+    & .chevron-top-left{
+        top: -1.2rem;
+        left: -1rem;
+    }
+    & .chevron-bottom-right{
+        right: -1rem;
+        bottom: -1.2rem;
+    }
+    & .chevron-bottom-left{
+        left: -1rem;
+        bottom: -1.2rem;
+    }
+    & .chevron-top-right{
+        top: -1.2rem;
+        right: -1rem;
+    }
 }
 
 /* Main certificates */
 
-.main .certificates .chevron-top-left {
-    top: -1.2rem;
-    left: 0;
-}
-
-.main .certificates .chevron-bottom-right {
-    right: -.5rem;
-    bottom: -1.2rem;
-}
-
-.main .certificates .chevron-bottom-left {
-    left: -.5rem;
-    bottom: -1.2rem;
-}
-
-.main .certificates .chevron-top-right {
-    top: -1.2rem;
-    right: 0;
+.certificates {
+    & .chevron-top-left {
+        top: -1.2rem;
+        left: 0;
+    }
+    & .chevron-bottom-right {
+        right: -.5rem;
+        bottom: -1.2rem;
+    }
+    & .chevron-bottom-left {
+        left: -.5rem;
+        bottom: -1.2rem;
+    }
+    & .chevron-top-right {
+        top: -1.2rem;
+        right: 0;
+    }
 }
 
 /* Main services */
-.main .services svg {
-    width: 2.5rem;
-}
 
-.main .services .chevron-top-right {
-    right: -.5rem;
-    top: -1rem;
-}
-
-.main .services .chevron-bottom-left {
-    left: -.5rem;
-    bottom: -1rem;
+.services {
+    & svg {
+        width: 2.5rem;
+    }
+    & .chevron-top-right {
+        right: -.5rem;
+        top: -1rem;
+    }
+    & .chevron-bottom-left {
+        left: -.5rem;
+        bottom: -1rem;
+    }
 }
 
 /* Main contact */
 
-.main .contact svg {
-    width: 2rem;
-}
-
-.main .contact:has(.chevron-top-left, .chevron-top-right) {
-    top: -1.5rem;
-}
-
-.main .contact .chevron-top-left {
-    left: -1rem;
-}
-
-.main .contact .chevron-top-right {
-    right: -1rem;
-}
-
-.main .contact:has(.chevron-bottom-right, .chevron-bottom-left) {
-    bottom: -1.5rem;
-}
-
-.main .contact .chevron-bottom-left {
-    left: -1rem;
-}
-
-.main .contact .chevron-bottom-right {
-    right: -1rem;
+.contact {
+    & svg {
+        width: 2rem;
+    }
+    &:has(.chevron-top-left, .chevron-top-right) {
+        top: -1.5rem;
+    }
+    & .chevron-top-left {
+        left: -1rem;
+    }
+    & .chevron-top-right {
+        right: -1rem;
+    }
+    &:has(.chevron-bottom-right, .chevron-bottom-left) {
+        bottom: -1.5rem;
+    }
+    & .chevron-bottom-left {
+        left: -1rem;
+    }
+    & .chevron-bottom-right {
+        right: -1rem;
+    }
 }
 
 /* share buttons */
 
-.share-buttons .chevron-top-left {
-    top: -.8rem;
-    left: -.4rem;
-}
-
-.share-buttons .chevron-bottom-right {
-    bottom: -.8rem;
-    right: -.4rem;
+.share-buttons {
+    & .chevron-top-left {
+        top: -.6rem;
+        left: -.2rem;
+    }
+    & .chevron-bottom-right {
+        bottom: -.6rem;
+        right: -.2rem;
+    }
 }
