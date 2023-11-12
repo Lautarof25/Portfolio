@@ -17,7 +17,7 @@
 /* Layouts */
 
 .d-flex {
-    display: flex;
+    display: flex!important;
 }
 
 .d-grid {
@@ -340,7 +340,7 @@
     object-fit: cover;
 }
 .object-pos-center-top {
-    object-position: left top;
+    object-position: center top;
 }
 
 .drop-shadow {

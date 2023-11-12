@@ -4,6 +4,10 @@
     &:hover {
         opacity: 1;
     }
+    & svg {
+        fill: var(--white);
+        height: 2rem;
+    }
 }
 
 .unselect-text {

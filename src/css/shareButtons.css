@@ -9,6 +9,10 @@
     font-size: 0.9em;
     margin: 0 0.2em;
     text-decoration: none;
+    & svg{
+        fill: var(--white);
+        height: 1rem;
+    }
 }
 
 .share-button:focus,

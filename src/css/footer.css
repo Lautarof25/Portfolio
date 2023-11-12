@@ -2,6 +2,11 @@
     width: 100%;
     box-shadow: 15px -15px 15px -15px var(--white);
 
+    & svg {
+        fill: var(--white);
+        height: 1rem;
+    }
+
     & a {
         color: var(--black);
         font-weight: 500;
@@ -14,13 +19,6 @@
 
     & .d-none {
         display: none;
-    }
-
-    & img {
-        width: 16px;
-        height: 16px;
-        filter: invert(1);
-        -webkit-filter: invert(1);
     }
 
     & .leftOffset-100 {
