@@ -97,17 +97,57 @@
 }
 
 /* Background sparkle */
+.stars {
+    & .star {
+        position: absolute;
+        background: transparent;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        animation: sparkle 5s linear infinite;
+    }
 
-.star {
-    position: absolute;
-    background: transparent;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    animation: sparkle 5s linear infinite;
+    & .star-1 {
+        top: 10%;
+        left: 95%;
+    }
+
+    & .star-2 {
+        top: 50%;
+        left: 80%;
+    }
+
+    & .star-3 {
+        top: 30%;
+        left: 70%;
+    }
+
+    & .star-4 {
+        top: 90%;
+        left: 60%;
+    }
+
+    & .star-5,
+    .star-7 {
+        top: 50%;
+        left: 50%;
+    }
+
+    & .star-6 {
+        top: 60%;
+        left: 90%;
+    }
 }
 
-/* Define keyframes for sparkle animation */
+.star::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
+}
+
 @keyframes sparkle {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -118,50 +158,4 @@
         transform: translateY(-500px) rotate(360deg);
         opacity: 0;
     }
-}
-
-/* Use pseudo-elements to generate stars */
-.star::before {
-    content: "";
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: white;
-}
-
-/* Position the stars randomly across the universe */
-.star:nth-child(1) {
-    top: 10%;
-    left: 95%;
-}
-
-.star:nth-child(2) {
-    top: 50%;
-    left: 80%;
-}
-
-.star:nth-child(3) {
-    top: 30%;
-    left: 70%;
-}
-
-.star:nth-child(4) {
-    top: 90%;
-    left: 60%;
-}
-
-.star:nth-child(5) {
-    top: 50%;
-    left: 50%;
-}
-
-.star:nth-child(6) {
-    top: 60%;
-    left: 90%;
-}
-
-.star:nth-child(7) {
-    top: 50%;
-    left: 50%;
 }

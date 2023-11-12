@@ -9,12 +9,12 @@
         grid-row: 2;
     }
 
-    & [aria-label="Previous page"] {
+    & .previous-page {
         grid-row: 3;
         grid-column: 2;
     }
 
-    & [aria-label="Next page"] {
+    & .next-page {
         grid-column: 4;
         grid-row: 3;
     }
@@ -27,7 +27,7 @@
     }
 
     & svg {
-        fill: var(--white) !important;
+        fill: var(--white);
         background-color: var(--principal-color);
     }
 }

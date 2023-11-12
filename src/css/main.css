@@ -98,15 +98,15 @@
                 "btn1 btn2"
             ;
 
-            & a:first-of-type {
+            & .section__box__img {
                 grid-area: img;
             }
 
-            & h2 {
+            & .section__title {
                 grid-area: title;
             }
 
-            & p {
+            & .section__description {
                 grid-area: para;
             }
 
@@ -159,7 +159,7 @@
 /* Services */
 
 .services {
-    & img {
+    & .section__icons img {
         width: 2.5rem;
         filter: invert(1);
     }
