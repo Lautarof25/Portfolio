@@ -66,12 +66,6 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
-a,
-button,
-input[type='radio']:after {
-  cursor: url("../img/cursorPointer.cur") 4 12, pointer !important;
-}
-
 .hidden-menu {
   left: 100%;
 }
