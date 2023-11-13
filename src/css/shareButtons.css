@@ -2,22 +2,27 @@
 .share-button {
     display: inline-block;
     color: #ffffff;
-    border: none;
     padding: 0.1em 0.6em;
     outline: none;
     text-align: center;
     font-size: 0.9em;
     margin: 0 0.2em;
-    text-decoration: none;
     & svg{
         fill: var(--white);
         height: 1rem;
     }
 }
 
-.share-button:focus,
+.share-button,.closeButton {
+    border: none;
+}
+.share-button,.share-button:focus,
 .share-button:hover {
     text-decoration: none;
+}
+
+.share-button:focus,
+.share-button:hover {
     opacity: 0.8;
 }
 
@@ -42,5 +47,4 @@
 }
 .closeButton {
     color: var(--white);
-    border: none;
 }

@@ -50,10 +50,15 @@
 
 /* About */
 
+.about img,
+.portfolio .icon-language,
+.services .section__icons img {
+    filter: invert(1);
+}
+
 .about {
     & img {
         width: 2rem;
-        filter: invert(1);
     }
 }
 
@@ -68,7 +73,6 @@
 .portfolio {
     & .icon-language {
         width: 1.5rem;
-        filter: invert(1);
     }
 
     & .section__box {
@@ -161,7 +165,6 @@
 .services {
     & .section__icons img {
         width: 2.5rem;
-        filter: invert(1);
     }
 }
 
