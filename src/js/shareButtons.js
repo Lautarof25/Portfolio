@@ -25,33 +25,39 @@ closeButton.addEventListener('click', function () {
     buttonUp.classList.remove('blur-effect')
 });
 
-// Add click event listener to each button
 shareButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Get the URL of the current page
-        const url = window.location.href;
+  button.addEventListener('click', function () {
+    const shareURL = 'https://lautarof25.github.io/Portfolio/';
 
-        // Get the social media platform from the button's class name
-        const platform = button.classList[1];
+    function shareOnFacebook() {
+      window.open(shareURL, '_blank');
+      window.open('https://www.facebook.com/sharer/sharer.php?u=' + shareURL, '_blank');
+    }
 
-        // Set the URL to share based on the social media platform
-        let shareUrl;
-        switch (platform) {
-            case 'facebook':
-                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-                break;
-            case 'twitter':
-                shareUrl = `https://twitter.com/share?url=${encodeURIComponent(url)}&text=Me gustó esta página`;
-                break;
-            case 'linkedin':
-                shareUrl = `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(url)}&title=Me gustó esta página`;
-                break;
-            case 'whatsapp':
-                shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`;
-                break;
-        }
+    function shareOnTwitter() {
+      window.open(shareURL, '_blank');
+      window.open('https://twitter.com/intent/tweet?url=' + shareURL, '_blank');
+    }
 
-        // Open a new window to share the URL
-        window.open(shareUrl, '_blank');
-    });
+    function shareOnLinkedIn() {
+      window.open(shareURL, '_blank');
+      window.open('https://www.linkedin.com/shareArticle?url=' + shareURL, '_blank');
+    }
+
+    function shareOnWhatsApp() {
+      window.open(shareURL, '_blank');
+      window.open('https://api.whatsapp.com/send?text=' + shareURL, '_blank');
+    }
+
+    // Call the specific share function based on the clicked button
+    if (button.classList.contains('facebook')) {
+      shareOnFacebook();
+    } else if (button.classList.contains('twitter')) {
+      shareOnTwitter();
+    } else if (button.classList.contains('linkedin')) {
+      shareOnLinkedIn();
+    } else if (button.classList.contains('whatsapp')) {
+      shareOnWhatsApp();
+    }
+  });
 });

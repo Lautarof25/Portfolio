@@ -9,7 +9,7 @@ function idleTimer() {
             demoMode.classList.remove('hidden')
             // External function : backgroundMainPage.js
             setTimeout(() => {
-                createBackgroundPage()    
+                createBackgroundPage()
             }, 500);
         }
     },
