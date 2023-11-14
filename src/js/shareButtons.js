@@ -30,23 +30,19 @@ shareButtons.forEach(button => {
     const shareURL = 'https://lautarof25.github.io/Portfolio/';
 
     function shareOnFacebook() {
-      window.open(shareURL, '_blank');
-      window.open('https://www.facebook.com/sharer/sharer.php?u=' + shareURL, '_blank');
+      window.open('https://www.facebook.com/sharer/sharer.php?u=' + shareURL);
     }
 
     function shareOnTwitter() {
-      window.open(shareURL, '_blank');
-      window.open('https://twitter.com/intent/tweet?url=' + shareURL, '_blank');
+      window.open('https://twitter.com/intent/tweet?url=' + shareURL);
     }
 
     function shareOnLinkedIn() {
-      window.open(shareURL, '_blank');
-      window.open('https://www.linkedin.com/shareArticle?url=' + shareURL, '_blank');
+      window.open('https://www.linkedin.com/shareArticle?url=' + shareURL);
     }
 
     function shareOnWhatsApp() {
-      window.open(shareURL, '_blank');
-      window.open('https://api.whatsapp.com/send?text=' + shareURL, '_blank');
+      window.open('https://api.whatsapp.com/send?text=' + shareURL);
     }
 
     // Call the specific share function based on the clicked button
