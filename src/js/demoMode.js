@@ -8,9 +8,7 @@ function idleTimer() {
             timer = 0
             demoMode.classList.remove('hidden')
             // External function : backgroundMainPage.js
-            setTimeout(() => {
                 createBackgroundPage()
-            }, 500);
         }
     },
         1000)
