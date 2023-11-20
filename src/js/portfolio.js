@@ -1,9 +1,11 @@
 function createCardPortfolioInfo(title, description, languages, thumbnail, github, webpage) {
     const div = document.createElement("div")
-    div.setAttribute("class", "section__box relative d-grid place-center border-radius-5 gap-05 bg-dark-gray")
+    div.setAttribute("class", "section__box relative d-grid place-center border-radius-5 gap-05 bg-dark-gray pl-0")
 
     const chevronTopLeft = createSVG("chevron-top-left")
-    const chevronBottomLeft = createSVG("chevron-bottom-left")
+    const chevronTopRight = createSVG("chevron-top-right")
+    chevronTopLeft.className = "absolute"
+    chevronTopRight.className = "absolute"
 
     const h2 = document.createElement("h2")
     h2.setAttribute("class", "text-center m-0 section__title")
@@ -18,7 +20,7 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     img.setAttribute("alt", title)
     img.setAttribute("loading", "lazy")
     img.setAttribute("alt", title)
-    img.setAttribute("class", "h-250px w-100 border-radius-5 object-fit-cover object-pos-center-top")
+    img.setAttribute("class", "h-250px w-100 object-fit-cover object-pos-center-top")
     const divGradient = document.createElement("div")
     divGradient.setAttribute("class", "gradientTransparentGray d-flex justify-center align-end h-50px zindex-5 absolute bottom-0 gap-05 w-100")
     aContainer.append(img, divGradient)
@@ -49,7 +51,7 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     aWebPage.setAttribute("target", `_blank`)
 
     div.appendChild(chevronTopLeft)
-    div.appendChild(chevronBottomLeft)
+    div.appendChild(chevronTopRight)
     div.appendChild(aContainer)
     div.appendChild(h2)
     div.appendChild(p)
