@@ -2,6 +2,11 @@
 # Portfolio
 Personal Portfolio
 
+# Most commonly used screen resolutions
+
+![Screenshot 2023-11-29 184750](https://github.com/Lautarof25/Portfolio/assets/81919816/c6d062ef-a533-4888-b7ed-2939b707d43e)
+
+
 ## Wireframes
 
 ![wireFramePorftolio](https://github.com/Lautarof25/Portfolio/assets/81919816/00221674-6a96-471f-a869-46e0ee5b8e94)
