@@ -29,7 +29,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   aLink.appendChild(aLinkText)
   aLink.setAttribute("href", link)
   aLink.setAttribute("target", "_blanket")
-  aLink.setAttribute("class", "section__button w-100 text-center border-radius-top-5 m-0-auto")
+  aLink.setAttribute("class", "section__button w-100 text-center m-0-auto")
   const aLinkImg = document.createElement("a")
   aLinkImg.setAttribute("href", link)
   aLinkImg.setAttribute("target", "_blanket")
@@ -38,7 +38,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   img.setAttribute("src", `https://ucarecdn.com/${thumbnail}/-/scale_crop/500x250/-/format/auto/-/quality/smart/`)
   img.setAttribute("loading", "lazy")
   img.setAttribute("alt", title)
-  img.setAttribute("class", "w-100 h-250px object-fit-cover object-pos-center-top")
+  img.setAttribute("class", "w-100 h-250px object-fit-cover object-pos-center-top border-radius-top-5")
   aLinkImg.appendChild(img)
 
   div.appendChild(chevronTopLeft)
