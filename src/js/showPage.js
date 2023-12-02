@@ -1,6 +1,6 @@
 const linksArray = []
 links.forEach(link => {
-    linksArray.push(link.id);
+    linksArray.push(link.id)
 })
 
 function hidePage(link){

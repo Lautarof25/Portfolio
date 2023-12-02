@@ -1,5 +1,6 @@
 let timer = 0
 function idleTimer() {
+    // display next page when certain time in idle
     setInterval(function () {
         timer++
         if (timer === 15) {
@@ -7,8 +8,6 @@ function idleTimer() {
             navigatePage(1)
             timer = 0
             demoMode.classList.remove('hidden')
-            // External function : backgroundMainPage.js
-                createBackgroundPage()
         }
     },
         1000)

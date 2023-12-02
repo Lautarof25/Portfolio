@@ -12,15 +12,15 @@ function createCardAboutInfo(description, icons) {
   divIcons.setAttribute("class", "section__icons d-flex justify-center gap-05")
 
   for (let j = 0; j < icons.length; j++) {
-    const icon = document.createElement("img");
-    icon.setAttribute("src", `./src/img/icons/${icons[j]}.svg`);
-    divIcons.appendChild(icon);
+    const icon = document.createElement("img")
+    icon.setAttribute("src", `./src/img/icons/${icons[j]}.svg`)
+    divIcons.appendChild(icon)
   }
 
-  div.appendChild(chevronTopLeft);
-  div.appendChild(chevronBottomRight);
-  div.appendChild(p);
-  div.appendChild(divIcons);
+  div.appendChild(chevronTopLeft)
+  div.appendChild(chevronBottomRight)
+  div.appendChild(p)
+  div.appendChild(divIcons)
 
-  about.appendChild(div);
+  about.appendChild(div)
 }

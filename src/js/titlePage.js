@@ -1,13 +1,12 @@
-titlePage.textContent = document.querySelector('.link-active').textContent
-
-function changeTittlePage(){
+function changeTitlePage(){
+    // Change the current title page name
     links.forEach(link => {
         link.addEventListener('click',function(){
-            changeTitle();
+            changeTitle()
         })
-    });
+    })
 }
 function changeTitle() {
-    titlePage.textContent = document.querySelector('.link-active').textContent;
+    titlePage.textContent = document.querySelector('.link-active').textContent
 }
-changeTittlePage()
+changeTitlePage()

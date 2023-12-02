@@ -1,4 +1,5 @@
 function activeLinkSelector(){
+    // Select the item menu and add the class "link-active"
     links.forEach(link => {
         link.addEventListener('click',function(){
             removeAllClassesLinkActive()
