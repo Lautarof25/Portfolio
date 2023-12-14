@@ -36,7 +36,7 @@ window.addEventListener("wheel", (event) => {
     if (window.scrollY === 0){
         
     }
-    if(endPageCount === 15 ){
+    if(endPageCount === 20 ){
         endPageCount = 0
         nextPage()
         navigatePage(1)
@@ -47,7 +47,7 @@ window.addEventListener("wheel", (event) => {
           });
         
     }   
-    if(topPageCount === 15 ){
+    if(topPageCount === 20 ){
         topPageCount = 0
         prevPage()
         navigatePage(-1)
@@ -59,5 +59,33 @@ window.addEventListener("wheel", (event) => {
         
     }   
     
-
+});
+document.addEventListener("touchmove", (event) => {
+    
+    // DeltaY indica la dirección del scroll: positivo hacia abajo, negativo hacia arriba
+    const scrollDirection = event.deltaY > 0 ? endPageCount++ : topPageCount++;
+    if (window.scrollY === 0){
+        
+    }
+    // if(endPageCount >= 100 && window.innerHeight <= window.scrollY){
+    //     endPageCount = 0
+    //     navigatePage(-1)
+    //     window.scrollTo({
+    //         top: 0,
+    //         left: 0,
+    //         behavior: "smooth",
+    //       });
+        
+    // }   
+    if(topPageCount >= 50 && window.scrollY === 0){
+        topPageCount = 0
+        navigatePage(0)
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
+        
+    }   
+    
 });
