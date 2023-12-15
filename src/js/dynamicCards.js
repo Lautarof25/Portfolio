@@ -28,14 +28,12 @@ function getContainerByType(type) {
         case 'certificates':
             return certificates
         case 'about':
-            return about 
+            return about
         default:
             throw new Error(`Unknown card type: ${type}`)
     }
 }
-setTimeout(() => {
-    addCardInfo('portfolio', databasePortfolio)
-    addCardInfo('services', databaseServices)
-    addCardInfo('certificates', databaseCertificates)
-    addCardInfo('about', databaseAbout)    
-}, 1000)
+addCardInfo('portfolio', databasePortfolio)
+addCardInfo('services', databaseServices)
+addCardInfo('certificates', databaseCertificates)
+addCardInfo('about', databaseAbout)    
