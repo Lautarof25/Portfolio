@@ -28,6 +28,7 @@ HTML, CSS and JavaScript
 - Dynamic pages
 - Color picker
 - Form with formSpree
+- Scroll navigation
 
 ## Screenshots
 
