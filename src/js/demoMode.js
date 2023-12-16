@@ -23,3 +23,7 @@ addEventListener("scroll", function () {
     timer = 0
     demoMode.classList.add('hidden')
 })
+addEventListener("keydown", function () {
+    timer = 0
+    demoMode.classList.add('hidden')
+})
