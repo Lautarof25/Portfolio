@@ -1,29 +1,29 @@
 let timer = 0
+
+function resetTimerAndShowNextPage() {
+    timer = 0
+    nextPage()
+    navigatePage(1)
+    demoMode.classList.remove('hidden')
+}
+
 function idleTimer() {
-    // display next page when certain time in idle
-    setInterval(function () {
+    // Display the next page after a certain time of being idle
+    setInterval(() => {
         timer++
         if (timer === 15) {
-            nextPage()
-            navigatePage(1)
-            timer = 0
-            demoMode.classList.remove('hidden')
+            resetTimerAndShowNextPage()
         }
-    },
-        1000)
+    }, 1000)
 }
 
 idleTimer()
 
-addEventListener("mousemove", function () {
+function resetTimerAndHideDemoMode() {
     timer = 0
     demoMode.classList.add('hidden')
-})
-addEventListener("scroll", function () {
-    timer = 0
-    demoMode.classList.add('hidden')
-})
-addEventListener("keydown", function () {
-    timer = 0
-    demoMode.classList.add('hidden')
-})
+}
+
+addEventListener("mousemove", resetTimerAndHideDemoMode)
+addEventListener("scroll", resetTimerAndHideDemoMode)
+addEventListener("keydown", resetTimerAndHideDemoMode)

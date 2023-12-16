@@ -37,7 +37,7 @@ const handleTouchMove = (event) => {
     const visibleHeight = window.innerHeight
     const currentScrollPos = window.scrollY
 
-    if (endPageCount >= 5) {
+    if (endPageCount >= 10) {
         if (currentScrollPos + visibleHeight >= totalHeight) {
             endPageCount = 0
             navigatePage(1)
