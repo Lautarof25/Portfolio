@@ -1,25 +1,25 @@
-let topPageCount = 0
-let endPageCount = 0
+let topPageScrollCount = 0
+let endPageScrollCount = 0
 let startY
 
 const handleScroll = (event) => {
     const isScrollDown = event.deltaY > 0;
-    isScrollDown ? endPageCount++ : topPageCount++
+    isScrollDown ? endPageScrollCount++ : topPageScrollCount++
 
-    if (endPageCount >= 10) {
+    if (endPageScrollCount >= 10) {
         const totalHeight = document.body.scrollHeight
         const visibleHeight = window.innerHeight
         const currentScrollPos = window.scrollY
 
         if (currentScrollPos + visibleHeight >= totalHeight) {
-            endPageCount = 0
+            endPageScrollCount = 0
             navigatePage(1)
             scrollToTop()
         }
     }
 
-    if (window.scrollY === 0 && topPageCount >= 5) {
-        topPageCount = 0
+    if (window.scrollY === 0 && topPageScrollCount >= 5) {
+        topPageScrollCount = 0
         navigatePage(-1)
         scrollToTop()
     }
@@ -31,22 +31,22 @@ const handleTouchStart = (event) => {
 
 const handleTouchMove = (event) => {
     const currentY = event.touches[0].clientY
-    startY > currentY ? endPageCount++ : topPageCount++
+    startY > currentY ? endPageScrollCount++ : topPageScrollCount++
 
     const totalHeight = document.body.scrollHeight
     const visibleHeight = window.innerHeight
     const currentScrollPos = window.scrollY
 
-    if (endPageCount >= 10) {
+    if (endPageScrollCount >= 10) {
         if (currentScrollPos + visibleHeight >= totalHeight) {
-            endPageCount = 0
+            endPageScrollCount = 0
             navigatePage(1)
             scrollToTop()
         }
     }
 
-    if (topPageCount >= 5 && window.scrollY === 0) {
-        topPageCount = 0
+    if (topPageScrollCount >= 5 && window.scrollY === 0) {
+        topPageScrollCount = 0
         navigatePage(-1)
         scrollToTop()
     }

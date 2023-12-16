@@ -1,10 +1,10 @@
 let timer = 0
 
 function resetTimerAndShowNextPage() {
-    timer = 0
+    resetTimer()
     nextPage()
     navigatePage(1)
-    demoMode.classList.remove('hidden')
+    showDemoMode()
 }
 
 function idleTimer() {
@@ -20,10 +20,22 @@ function idleTimer() {
 idleTimer()
 
 function resetTimerAndHideDemoMode() {
-    timer = 0
+    resetTimer()
+    hideDemoMode()
+}
+
+function hideDemoMode(){
     demoMode.classList.add('hidden')
+}
+function showDemoMode(){
+    demoMode.classList.remove('hidden')
+}
+
+function resetTimer(){
+    timer = 0
 }
 
 addEventListener("mousemove", resetTimerAndHideDemoMode)
 addEventListener("scroll", resetTimerAndHideDemoMode)
+addEventListener("click", resetTimerAndHideDemoMode);
 addEventListener("keydown", resetTimerAndHideDemoMode)
