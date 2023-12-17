@@ -11,17 +11,17 @@ const handleScroll = (event) => {
         const visibleHeight = window.innerHeight
         const currentScrollPos = window.scrollY
 
-        if (currentScrollPos + visibleHeight >= totalHeight) {
+        if (currentScrollPos + endPageScrollCount + visibleHeight >= totalHeight) {
             endPageScrollCount = 0
-            navigatePage(1)
             scrollToTop()
+            navigatePage(1)
         }
     }
 
     if (window.scrollY === 0 && topPageScrollCount >= 5) {
         topPageScrollCount = 0
-        navigatePage(-1)
         scrollToTop()
+        navigatePage(-1)
     }
 }
 
