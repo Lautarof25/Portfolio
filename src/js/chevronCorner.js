@@ -2,10 +2,10 @@ function createSVG(className) {
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
     svg.setAttribute("xmlns", "http://www.w3.org/2000/svg")
     svg.setAttribute("class", className)
-    svg.setAttribute("viewBox", "0 0 320 512")
+    svg.setAttribute("viewBox", "0 0 20 20")
 
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path")
-    path.setAttribute("d", "M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z")
+    path.setAttribute("d", "M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z")
 
     svg.appendChild(path)
 
