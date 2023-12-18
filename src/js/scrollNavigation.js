@@ -5,13 +5,13 @@ let startY
 const handleScroll = (event) => {
     const isScrollDown = event.deltaY > 0;
     isScrollDown ? endPageScrollCount++ : topPageScrollCount++
+    const totalHeight = document.body.scrollHeight
+    const visibleHeight = window.innerHeight
+    const currentScrollPos = window.scrollY
+    const isAtTheEnd = currentScrollPos + endPageScrollCount + visibleHeight >= totalHeight
 
     if (endPageScrollCount >= 10) {
-        const totalHeight = document.body.scrollHeight
-        const visibleHeight = window.innerHeight
-        const currentScrollPos = window.scrollY
-
-        if (currentScrollPos + endPageScrollCount + visibleHeight >= totalHeight) {
+        if (isAtTheEnd && endPageScrollCount >= 15) {
             endPageScrollCount = 0
             scrollToTop()
             navigatePage(1)
