@@ -13,15 +13,15 @@ const handleScroll = (event) => {
     if (endPageScrollCount >= 10) {
         if (isAtTheEnd && endPageScrollCount >= 15) {
             endPageScrollCount = 0
-            scrollToTop()
             navigatePage(1)
+            scrollToTop()
         }
     }
 
     if (window.scrollY === 0 && topPageScrollCount >= 5) {
         topPageScrollCount = 0
-        scrollToTop()
         navigatePage(-1)
+        scrollToTop()
     }
 }
 
@@ -36,16 +36,27 @@ const handleTouchMove = (event) => {
     const totalHeight = document.body.scrollHeight
     const visibleHeight = window.innerHeight
     const currentScrollPos = window.scrollY
+    const isAtTheEnd = currentScrollPos + endPageScrollCount + visibleHeight >= totalHeight
 
-    if (endPageScrollCount >= 10) {
-        if (currentScrollPos + visibleHeight >= totalHeight) {
-            endPageScrollCount = 0
-            navigatePage(1)
-            scrollToTop()
+    const maxScrollCounts = {
+        Portfolio: 15,
+        Certificaciones: 20,
+        default: 0
+    };
+    
+    const activeLinkText = document.querySelector('.link-active').textContent;
+    
+    if (isAtTheEnd && endPageScrollCount >= 10) {
+        const maxScrollCount = maxScrollCounts[activeLinkText] || maxScrollCounts.default;
+    
+        if (endPageScrollCount >= maxScrollCount) {
+            endPageScrollCount = 0;
+            navigatePage(1);
+            scrollToTop();
         }
     }
 
-    if (topPageScrollCount >= 5 && window.scrollY === 0) {
+    if (topPageScrollCount >= 7 && window.scrollY >= -5) {
         topPageScrollCount = 0
         navigatePage(-1)
         scrollToTop()
@@ -59,7 +70,7 @@ const scrollToTop = () => {
             left: 0,
             behavior: "smooth",
         })
-    }, 700)
+    }, 1000)
 }
 
 // Add event listeners

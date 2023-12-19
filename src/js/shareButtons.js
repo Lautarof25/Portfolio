@@ -2,7 +2,7 @@ let countClicks = 0
 
 addEventListener('click', function () {
     countClicks++
-    if (countClicks === 5) {
+    if (countClicks === 10) {
         header.classList.add('blur-effect')
         nav.classList.add('blur-effect')
         footer.classList.add('blur-effect')
