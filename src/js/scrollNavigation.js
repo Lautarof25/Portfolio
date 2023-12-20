@@ -18,7 +18,7 @@ const handleScroll = (event) => {
         }
     }
 
-    if (window.scrollY === 0 && topPageScrollCount >= 5) {
+    if (currentScrollPos === 0 && topPageScrollCount >= 5) {
         topPageScrollCount = 0
         navigatePage(-1)
         scrollToTop()
@@ -39,8 +39,8 @@ const handleTouchMove = (event) => {
     const isAtTheEnd = currentScrollPos + endPageScrollCount + visibleHeight >= totalHeight
 
     const maxScrollCounts = {
-        Portfolio: 15,
         Certificaciones: 20,
+        Portfolio: 15,
         default: 0
     };
     
@@ -56,7 +56,7 @@ const handleTouchMove = (event) => {
         }
     }
 
-    if (topPageScrollCount >= 7 && window.scrollY >= -5) {
+    if (topPageScrollCount >= 7 && currentScrollPos === 0) {
         topPageScrollCount = 0
         navigatePage(-1)
         scrollToTop()
@@ -73,6 +73,17 @@ const scrollToTop = () => {
     }, 1000)
 }
 
+// Keyboard navigation
+
+document.addEventListener('keydown', function(event) {
+    const ctrlKey = event.ctrlKey || event.metaKey;
+    if (ctrlKey && event.key === 'ArrowUp') {
+      navigatePage(-1)
+    }
+    if (ctrlKey && event.key === 'ArrowDown') {
+      navigatePage(1)
+    }
+})
 // Add event listeners
 window.addEventListener("wheel", handleScroll)
 document.addEventListener("touchstart", handleTouchStart)
