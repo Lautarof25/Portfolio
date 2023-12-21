@@ -75,7 +75,7 @@ const scrollToTop = () => {
 
 // Keyboard navigation
 
-document.addEventListener('keydown', function(event) {
+function scrollKeyboard(event){
     const ctrlKey = event.ctrlKey || event.metaKey;
     if (ctrlKey && event.key === 'ArrowUp') {
       navigatePage(-1)
@@ -83,8 +83,10 @@ document.addEventListener('keydown', function(event) {
     if (ctrlKey && event.key === 'ArrowDown') {
       navigatePage(1)
     }
-})
+}
+
 // Add event listeners
+document.addEventListener('keydown',scrollKeyboard)
 window.addEventListener("wheel", handleScroll)
 document.addEventListener("touchstart", handleTouchStart)
 document.addEventListener("touchmove", handleTouchMove)
