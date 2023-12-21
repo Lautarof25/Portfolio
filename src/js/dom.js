@@ -42,3 +42,6 @@ const radios = document.querySelectorAll('[type="radio"]')
 const allLinks = document.querySelectorAll("a")
 const allButtons = document.querySelectorAll("button")
 titlePage.textContent = document.querySelector('.link-active').textContent
+const fechaActual = new Date()
+const añoActual = fechaActual.getFullYear()
+const currentYear = document.querySelector('.currentYear').textContent += fechaActual.getFullYear()
