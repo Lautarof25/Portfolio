@@ -30,7 +30,6 @@ function resetTimerAndHideDemoMode() {
 
 function hideDemoMode() {
     demoMode.classList.add('hidden')
-    window.scrollTo(0, 0)
 }
 function showDemoMode() {
     demoMode.classList.remove('hidden')
