@@ -39,8 +39,8 @@ const handleTouchMove = (event) => {
     const isAtTheEnd = currentScrollPos + endPageScrollCount + visibleHeight >= totalHeight
 
     const maxScrollCounts = {
-        Certificaciones: 20,
-        Portfolio: 15,
+        Certificaciones: 25,
+        Portfolio: 20,
         default: 0
     };
     
@@ -69,7 +69,7 @@ const scrollToTop = () => {
             left: 0,
             behavior: "smooth",
         })
-    }, 100)
+    }, 700)
 }
 
 // Keyboard navigation
