@@ -59,7 +59,6 @@ const handleTouchMove = (event) => {
     if (topPageScrollCount >= 7 && currentScrollPos === 0) {
         topPageScrollCount = 0
         navigatePage(-1)
-        scrollToTop()
     }
 }
 
@@ -70,7 +69,7 @@ const scrollToTop = () => {
             left: 0,
             behavior: "smooth",
         })
-    }, 1000)
+    }, 100)
 }
 
 // Keyboard navigation
