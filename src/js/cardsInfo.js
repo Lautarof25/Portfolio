@@ -76,6 +76,22 @@ const certificatesInfo = {
     "info": [
         {
             "title": "Cisco",
+            "description": "Cisco Certified Network Associate",
+            "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
+            "hours": 0,
+            "year": 2024,
+            "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
+        },
+        {
+            "title": "Cisco",
+            "description": "IT Essentials: PC Hardware and Software",
+            "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
+            "hours": 0,
+            "year": 2024,
+            "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
+        },
+        {
+            "title": "Cisco",
             "description": "JavaScript Essentially 1",
             "thumbnail": "ea933e57-8c6a-4a01-ba28-70a4b519a7ec",
             "hours": 40,
