@@ -1,10 +1,18 @@
 function clearForm() {
-    name.value = ''
-    email.value = ''
-    message.value = ''
+    if(currentIdPage() === 'contact'){
+        name.placeholder = ''
+        name.value = ''        
+        email.placeholder = ''
+        email.value = ''        
+        message.placeholder = ''
+        message.value = ''        
+    }
 }
 
+const contact = document.getElementById('contact')
+
 contact.addEventListener("click", clearForm)
+window.addEventListener("click", clearForm)
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -65,8 +73,11 @@ function automaticForm() {
 }
 
 // Llama a automaticForm cuando se carga la página
-addEventListener('click', function () {
-    if(currentIdPage() === "contact"){
-        automaticForm()
+function handleAutomaticForm() {
+    if (currentIdPage() === "contact") {
+        automaticForm();
     }
-},{once : true})
+}
+
+addEventListener('click', handleAutomaticForm, {once: true});
+addEventListener('wheel', handleAutomaticForm, {once: true});
