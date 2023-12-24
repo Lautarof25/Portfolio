@@ -1,18 +1,14 @@
 function clearForm() {
     if(currentIdPage() === 'contact'){
         name.placeholder = ''
-        name.value = ''        
         email.placeholder = ''
-        email.value = ''        
         message.placeholder = ''
-        message.value = ''        
     }
 }
 
 const contact = document.getElementById('contact')
 
-contact.addEventListener("click", clearForm)
-window.addEventListener("click", clearForm)
+submit.addEventListener("click", clearForm)
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
