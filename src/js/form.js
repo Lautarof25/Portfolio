@@ -74,6 +74,6 @@ function handleAutomaticForm() {
         automaticForm();
     }
 }
-
+// TODD: implement mutuation observer for this 
 addEventListener('click', handleAutomaticForm, {once: true});
 addEventListener('wheel', handleAutomaticForm, {once: true});

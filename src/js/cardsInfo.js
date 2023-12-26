@@ -76,7 +76,7 @@ const certificatesInfo = {
     "info": [
         {
             "title": "Cisco",
-            "description": "Cisco Certified Network Associate",
+            "description": "Cisco Certified Network Associate (CCNA1)",
             "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
             "hours": 0,
             "year": 2024,
@@ -102,7 +102,7 @@ const certificatesInfo = {
             "title": "Ratatype",
             "description": "Typing speed test",
             "thumbnail": "4993d985-0441-41e8-9322-f5005292fa1c",
-            "hours": 0.01,
+            "hours": 0.05,
             "year": 2023,
             "link": "https://www.ratatype.com/u5476932/certificate/es/",
         },
@@ -131,11 +131,27 @@ const certificatesInfo = {
             "link": "https://academiaqa.com/Certificado/9ea932d7a7265fedc49ddb5ae172cdf7/?swcfpc=1",
         },
         {
+            "title": "CFP Hurlingham",
+            "description": "Instalación, supervisión y administración de redes",
+            "thumbnail": "3fcec928-307c-493f-ba21-0e032109f8e2",
+            "hours": 32,
+            "year": 2018,
+            "link": "https://drive.google.com/file/d/1H7dtdL4Srb_J2-OiNfjHZ_lplxr3-j1N/view",
+        },
+        {
+            "title": "Centro de formación CTA",
+            "description": "Auxiliar en administración de pymes",
+            "thumbnail": "1d165baf-2072-4b35-9f61-a6cb06589528",
+            "hours": 250,
+            "year": 2018,
+            "link": "https://drive.google.com/file/d/1gsyaLra_2dUK7SngLg8hVF1rQ_4TfJd7/view",
+        },
+        {
             "title": "Instituto Argentino de computación",
             "description": "Armado y reparación de PC",
             "thumbnail": "438f3a56-a437-4b2d-9b60-d89e9c33eaee",
             "hours": 40,
-            "year": 2018,
+            "year": 201,
             "link": "https://drive.google.com/file/d/1LjbhEMNkH1O7B5Fn5ZqXB4uEaxvMn23c/view",
         },
     ]
