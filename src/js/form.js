@@ -27,7 +27,7 @@ async function fillForm() {
         const fictitiousName = 'Lautaro Fernández'
         const fictitiousEmail = 'Fernandez.Lautaro@hotmail.com'
         const fictitiousMessage = '👋​ Hi Lautaro, I really like your website!😍'
-
+        clearForm()
         await fillInput('name', fictitiousName, false)
         await waitFor(1000)
 
