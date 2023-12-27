@@ -42,40 +42,21 @@ function resetTimer() {
 }
 
 function modeDemoOn(){
-     // Obtener la altura total de la página
-     const documentHeight = Math.max(
-        document.body.scrollHeight,
-        document.documentElement.scrollHeight,
-        document.body.offsetHeight,
-        document.documentElement.offsetHeight,
-        document.body.clientHeight,
-        document.documentElement.clientHeight
-    );
-
-    // Configurar la cantidad de píxeles que deseas recorrer en cada paso
-    const scrollStep = 1;
-
-    // Configurar el intervalo de tiempo entre cada paso (en milisegundos)
-    const scrollInterval = 50;
-
-    // Iniciar el bucle de scroll
-    let scrollPosition = 0;
-    const scrollIntervalId = setInterval(function() {
-        // Calcular la nueva posición de scroll
-        const targetScrollPosition = scrollPosition + scrollStep;
-
-        // Hacer scroll a la nueva posición
-        window.scrollTo(0, targetScrollPosition);
-
-        // Actualizar la posición actual de scroll
-        scrollPosition = targetScrollPosition;
-
-        // Verificar hay actividad del usuario
-        if (!modeDemoActivity) {
-            // Detener el bucle 
-            clearInterval(scrollIntervalId);
+    const currentHeightPage = document.body.scrollHeight
+    const scrollPerSecond = currentHeightPage / idleTime
+    let currentScroll = 0
+    const refreshIntervalId = setInterval(() => {
+        if (currentScroll <= currentHeightPage && modeDemoActivity) {
+            window.scrollTo({
+                top: currentScroll,
+                left: 0,
+                behavior: "smooth",
+              })
+            currentScroll += scrollPerSecond
+        }else {
+            clearInterval(refreshIntervalId)
         }
-    }, scrollInterval);
+    }, 1000)
 }
 
 addEventListener("mousemove", resetTimerAndHideDemoMode)
