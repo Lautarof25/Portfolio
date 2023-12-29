@@ -22,7 +22,7 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
     img.setAttribute("alt", title)
     img.setAttribute("class", "h-250px w-100 object-fit-cover object-pos-center-top")
     const divGradient = document.createElement("div")
-    divGradient.setAttribute("class", "gradientTransparentGray d-flex justify-center align-end h-50px zindex-5 absolute bottom-0 gap-05 w-100")
+    divGradient.setAttribute("class", "gradientTransparentGray d-flex justify-center align-end h-50px absolute bottom-0 gap-05 w-100")
     aContainer.append(img, divGradient)
 
     const p = document.createElement("p")
