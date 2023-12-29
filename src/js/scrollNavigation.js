@@ -14,14 +14,12 @@ const handleScroll = (event) => {
         if (isAtTheEnd && endPageScrollCount >= 15) {
             endPageScrollCount = 0
             navigatePage(1)
-            scrollToTop()
         }
     }
 
     if (currentScrollPos === 0 && topPageScrollCount >= 5) {
         topPageScrollCount = 0
         navigatePage(-1)
-        scrollToTop()
     }
 }
 
@@ -52,7 +50,6 @@ const handleTouchMove = (event) => {
         if (endPageScrollCount >= maxScrollCount) {
             endPageScrollCount = 0;
             navigatePage(1);
-            scrollToTop();
         }
     }
 
@@ -60,16 +57,6 @@ const handleTouchMove = (event) => {
         topPageScrollCount = 0
         navigatePage(-1)
     }
-}
-
-const scrollToTop = () => {
-    setTimeout(() => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-        })
-    }, 700)
 }
 
 // Keyboard navigation

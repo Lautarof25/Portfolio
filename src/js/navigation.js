@@ -13,6 +13,7 @@ function navigatePage(direction) {
     document.getElementById(currentId).classList.add('link-active')
     // External function : titlePage.js
     changeTitle()
+    direction === 1 ? scrollToTop() : 0
 }
 
 function nextPage() {
@@ -29,4 +30,14 @@ function currentIndexPage() {
 
 function currentIdPage() {
     return document.querySelector(".link-active").id
+}
+
+const scrollToTop = () => {
+    setTimeout(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+        })
+    }, 1000)
 }
