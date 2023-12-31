@@ -162,6 +162,9 @@ svg {
     .demoMode {
         margin-left: 50px
     }
+    .nav__menu {
+        align-items: baseline!important;
+    }
 }
 
 @media (max-width:776px) {

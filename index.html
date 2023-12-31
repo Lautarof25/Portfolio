@@ -157,10 +157,10 @@
             </div>
         </section>
     </main>
-    <aside class="fixed box-shadow-right">
+    <aside class="fixed box-shadow-right d-flex flex-column justify-between bg-dark-gray transition-all h-100">
         <header
-            class="header fs-2 fw-bolder top-40off left-40off m-0 bg-dark-gray p-2 transition-all unselect-text ml-1 opacity-50 h-92px">
-            <div class="header__logo relative p-05 bottom-15off right-15off"><svg xmlns="http://www.w3.org/2000/svg"
+            class="header fs-2 fw-bolder unselect-text">
+            <div class="header__logo relative"><svg xmlns="http://www.w3.org/2000/svg"
                     class="chevron-top-left" viewBox="0 0 320 512">
                     <path
                         d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
@@ -179,8 +179,8 @@
             </div>
         </header>
 
-        <nav class="nav d-flex h-100 flex-column top-0 p-2 opacity transition-all ">
-            <div class="nav__menu d-flex flex-column gap-2"><a href="#" id="home"
+        <nav class="nav d-flex flex-column p-2">
+            <div class="nav__menu d-flex flex-column gap-2 align-center"><a href="#" id="home"
                     class="link-active transition-color d-flex align-center" aria-label="home"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                         <path
@@ -220,7 +220,7 @@
         </nav>
 
         <footer
-            class="footer d-flex leftOffset-100 w-100 flex-column justify-center bg-dark-gray opacity transition-all gap-05">
+            class="footer d-flex flex-column justify-center transition-all gap-05 align-self-center">
             <a href="./src/documents/desarrollador_web_fernandez_lautaro_2024.pdf" download="cv_fernandez_lautaro.pdf"
                 class="section__button p-1 border-radius-5 m-0-auto text-center"><span
                     class="d-none">Descargar</span>CV</a>
@@ -332,7 +332,7 @@
     <script defer src="./src/js/form.js"></script>
     <script defer src="./src/js/menuHidden.js"></script>
     <script defer src="./src/js/showPage.js"></script>
-    <script defer src="./src/js/demoMode.js"></script>
+    <!-- <script defer src="./src/js/demoMode.js"></script> -->
     <script defer src="./src/js/shareButtons.js"></script>
     <script defer src="./src/js/colorPicker.js"></script>
     <script defer src="./src/js/navigation.js"></script>
