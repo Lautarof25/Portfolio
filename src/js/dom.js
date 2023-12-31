@@ -10,6 +10,7 @@ const services = document.querySelector('.services')
 const portfolio = document.querySelector('.portfolio')
 const certificates = document.querySelector('.certificates')
 const footer = document.querySelector("footer")
+const allExceptShareButton = document.querySelectorAll('body > *:not(.share-buttons)')
 // Database information
 const databaseCertificates = certificatesInfo.info
 const databaseServices = servicesInfo.info
@@ -36,7 +37,7 @@ const logo = document.querySelector("#logo")
 const demoMode = document.querySelector('.demoMode')
 const footerIcons = document.querySelectorAll(".footer a")
 const shareButtons = document.querySelectorAll(".share-button")
-const containerButton = document.querySelector(".share-buttons")
+const containerShareButtons = document.querySelector(".share-buttons")
 const closeButton = document.querySelector(".closeButton")
 const radios = document.querySelectorAll('[type="radio"]')
 const allLinks = document.querySelectorAll("a")

@@ -3,26 +3,18 @@ let countClicks = 0
 addEventListener('click', function () {
     countClicks++
     if (countClicks === 10) {
-        header.classList.add('blur-effect')
-        nav.classList.add('blur-effect')
-        footer.classList.add('blur-effect')
-        main.classList.add('blur-effect')
-        titlePage.classList.add('blur-effect')
-        buttonDown.classList.add('blur-effect')
-        buttonUp.classList.add('blur-effect')
-        containerButton.classList.remove("hidden")
+        allExceptShareButton.forEach(element => {
+          element.classList.add('blur-effect')
+        })
+        containerShareButtons.classList.remove("hidden")
     }
 })
 
 closeButton.addEventListener('click', function () {
-    containerButton.classList.add('hidden')
-    header.classList.remove('blur-effect')
-    nav.classList.remove('blur-effect')
-    footer.classList.remove('blur-effect')
-    main.classList.remove('blur-effect')
-    titlePage.classList.remove('blur-effect')
-    buttonDown.classList.remove('blur-effect')
-    buttonUp.classList.remove('blur-effect')
+    allExceptShareButton.forEach(element => {
+      element.classList.remove('blur-effect')
+    });
+    containerShareButtons.classList.add("hidden")
 });
 
 shareButtons.forEach(button => {
