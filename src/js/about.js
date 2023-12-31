@@ -19,8 +19,7 @@ function createCardAboutInfo(description, icons) {
 
   div.appendChild(chevronTopLeft)
   div.appendChild(chevronBottomRight)
-  div.appendChild(p)
-  div.appendChild(divIcons)
+  div.append(p,divIcons)
 
   about.appendChild(div)
 }

@@ -26,8 +26,6 @@ function createCardServicesInfo(title, description, icons) {
     
     div.appendChild(chevronTopRight)
     div.appendChild(chevronBottomLeft)
-    div.appendChild(h2)
-    div.appendChild(divIcons)
-    div.appendChild(p)
+    div.append(h2, divIcons,p)
     services.appendChild(div)
 }

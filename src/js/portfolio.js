@@ -52,10 +52,6 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
 
     div.appendChild(chevronTopLeft)
     div.appendChild(chevronTopRight)
-    div.appendChild(aContainer)
-    div.appendChild(h2)
-    div.appendChild(p)
-    div.appendChild(aGitHub)
-    div.appendChild(aWebPage)
+    div.append(aContainer,h2,p,aGitHub,aWebPage)
     portfolio.appendChild(div)
 }

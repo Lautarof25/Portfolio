@@ -3,7 +3,7 @@ let endPageScrollCount = 0
 let startY
 
 const handleScroll = (event) => {
-    const isScrollDown = event.deltaY > 0;
+    const isScrollDown = event.deltaY > 0
     isScrollDown ? endPageScrollCount++ : topPageScrollCount++
     const totalHeight = document.body.scrollHeight
     const visibleHeight = window.innerHeight
@@ -63,11 +63,11 @@ const handleTouchMove = (event) => {
 
 function scrollKeyboard(event){
     const ctrlKey = event.ctrlKey || event.metaKey;
+    if (ctrlKey && event.key === 'ArrowDown') {
+        navigatePage(1)
+    }
     if (ctrlKey && event.key === 'ArrowUp') {
       navigatePage(-1)
-    }
-    if (ctrlKey && event.key === 'ArrowDown') {
-      navigatePage(1)
     }
 }
 

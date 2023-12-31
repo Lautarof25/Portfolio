@@ -41,15 +41,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   img.setAttribute("class", "w-100 h-250px object-fit-cover object-pos-center-top border-radius-top-5")
   aLinkImg.appendChild(img)
 
-  div.appendChild(chevronTopLeft)
-  div.appendChild(chevronTopRight)
-  div.appendChild(chevronBottomRight)
-  div.appendChild(chevronBottomLeft)
-  div.appendChild(h2)
-  div.appendChild(p)
-  div.appendChild(pHours)
-  div.appendChild(pYear)
-  div.appendChild(aLinkImg)
-  div.appendChild(aLink)
+  div.append(chevronTopLeft,chevronTopRight,chevronBottomRight,chevronBottomLeft)
+  div.append(h2,p,pHours,pYear,aLinkImg,aLink)
   certificates.appendChild(div)
 }
