@@ -151,7 +151,7 @@ const certificatesInfo = {
             "description": "Armado y reparación de PC",
             "thumbnail": "438f3a56-a437-4b2d-9b60-d89e9c33eaee",
             "hours": 40,
-            "year": 2019,
+            "year": 2017,
             "link": "https://drive.google.com/file/d/1LjbhEMNkH1O7B5Fn5ZqXB4uEaxvMn23c/view",
         },
     ]
