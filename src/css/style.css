@@ -162,8 +162,8 @@ svg {
     .demoMode {
         margin-left: 50px
     }
-    .nav__menu {
-        align-items: baseline!important;
+    nav .nav__menu {
+        align-items: baseline;
     }
 }
 
@@ -177,7 +177,7 @@ svg {
     .info::after {
         font-size: 2.5rem
     }
-    .christmas-hat {
-        position: absolute!important;
+    body .christmas-hat {
+        position: absolute;
     }
 }

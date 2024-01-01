@@ -1,4 +1,5 @@
 .footer {
+    margin-top: auto;
     & svg {
         fill: var(--white);
         height: 1rem;
@@ -17,17 +18,11 @@
     & .d-none {
         display: none;
     }
-
-    & .leftOffset-100 {
-        left: -100%;
-    }
 }
 
-@media (min-width: 576px) {
-    .footer {
+@media (min-width: 576px) { 
 
-        & .d-none {
-            display: block;
-        }
-    }
-}
+     .footer .d-none {
+        display: initial;
+     }
+ }

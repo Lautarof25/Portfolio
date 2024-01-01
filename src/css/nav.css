@@ -27,29 +27,13 @@
         border-bottom: 1px solid rgb(94, 94, 94);
         color: var(--principal-color)
     }
+    .d-none {
+        display: none;
+    }
 }
 
-@media (max-width:576px) {
-    .nav {
-        width: 100px;
-        top: 83px !important;
-        position: fixed;
-        padding: 0 !important;
-
-        & a {
-            justify-content: end
-        }
-
-        & .hidden-icon {
-            color: var(--darkGray)
-        }
-
-        & .d-none {
-            display: none
-        }
-    }
-
-    .show a {
-        justify-content: center !important
+@media (min-width: 576px) {
+    .nav .d-none {
+        display: initial;
     }
 }

@@ -1,10 +1,14 @@
 .header {
+    height: fit-content;
     &:hover {
         opacity: 1
     }
 
     & .toggle-menu svg {
         height: 2rem
+    }
+    .d-none {
+        display: none;
     }
 }
 
@@ -19,44 +23,11 @@
     cursor: pointer
 }
 
-@media (min-width:576px) {
-    .hidden {
-        display: none !important
-    }
-
-    .opacity-50 {
-        opacity: 1 !important
-    }
-
-    .toggle-menu {
-        display: none
-    }
-
+@media (min-width: 576px) { 
     .header {
-        position: relative !important;
-        font-size: medium !important;
-        top: 0 !important;
-        left: 0 !important;
-        height: initial !important
+        height: 200px;
     }
-
-    .header__logo {
-        bottom: 0 !important;
-        right: 0 !important
-    }
-}
-
-@media (max-width:575px) {
-    .header {
-        padding: 14px 0 !important;
-        width: 100px;
-
-        & p {
-            margin: 0
-        }
-
-        & .d-none {
-            display: none
-        }
-    }
+    .header .d-none {
+        display: initial;
+     }
 }
