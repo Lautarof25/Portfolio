@@ -10,6 +10,12 @@ function handleRadioChange(radio) {
 
 radios.forEach(radio => {
   radio.addEventListener("change", () => {
-      handleRadioChange(radio);
-  });
-});
+      handleRadioChange(radio)
+  })
+  radio.addEventListener("focus", () => {
+    colorPicker.style.bottom = "-80px"
+  })
+  radio.addEventListener("focusout", () => {
+    colorPicker.style.bottom = "-150px"
+  })
+})

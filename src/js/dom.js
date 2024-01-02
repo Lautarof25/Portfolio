@@ -33,6 +33,7 @@ const headerLogo = document.querySelector('.header__logo')
 const chevronBottomRight = document.querySelector('header svg.chevron-bottom-right')
 // Components 
 const titlePage = document.querySelector('.titlePage h2')
+const colorPicker = document.querySelector('.color-picker')
 const logo = document.querySelector("#logo")
 const demoMode = document.querySelector('.demoMode')
 const footerIcons = document.querySelectorAll(".footer a")
