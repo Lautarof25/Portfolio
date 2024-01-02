@@ -8,6 +8,13 @@ function handleRadioChange(radio) {
   }
 }
 
+colorPicker.addEventListener("mouseover", function(){
+  colorPicker.style.bottom = "-80px"
+})
+colorPicker.addEventListener("mouseout", function(){
+  colorPicker.style.bottom = "-150px"
+})
+
 radios.forEach(radio => {
   radio.addEventListener("change", () => {
       handleRadioChange(radio)
