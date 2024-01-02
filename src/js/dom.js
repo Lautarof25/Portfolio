@@ -4,6 +4,7 @@ const header = document.querySelector("header")
 const nav = document.querySelector("nav")
 const about = document.querySelector('.about')
 const section = document.querySelector("section")
+const aside = document.querySelector("aside")
 const sectionTitlePage = document.querySelector(".titlePage")
 const main = document.querySelector("main")
 const services = document.querySelector('.services')
@@ -11,6 +12,7 @@ const portfolio = document.querySelector('.portfolio')
 const certificates = document.querySelector('.certificates')
 const footer = document.querySelector("footer")
 const allExceptShareButton = document.querySelectorAll('body > *:not(.share-buttons)')
+const allExceptAside = document.querySelectorAll('body > *:not(aside)')
 // Database information
 const databaseCertificates = certificatesInfo.info
 const databaseServices = servicesInfo.info
