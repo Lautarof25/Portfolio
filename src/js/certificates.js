@@ -1,11 +1,9 @@
 function createCardCertificatesInfo(title, description, thumbnail, hours, year, link) {
   const div = document.createElement("div")
-  div.setAttribute("class", "section__box relative d-grid p-05 bg-dark-gray text-center")
+  div.setAttribute("class", "section__box relative d-grid bg-dark-gray text-center")
 
   const chevronTopLeft = createSVG("chevron-top-left")
   const chevronTopRight = createSVG("chevron-top-right")
-  const chevronBottomRight = createSVG("chevron-bottom-right")
-  const chevronBottomLeft = createSVG("chevron-bottom-left")
 
   const h2 = document.createElement("h2")
   h2.setAttribute("class", "m-0")
@@ -41,7 +39,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   img.setAttribute("class", "w-100 h-250px object-fit-cover object-pos-center-top border-radius-top-5")
   aLinkImg.appendChild(img)
 
-  div.append(chevronTopLeft,chevronTopRight,chevronBottomRight,chevronBottomLeft)
+  div.append(chevronTopLeft,chevronTopRight)
   div.append(h2,p,pHours,pYear,aLinkImg,aLink)
   certificates.appendChild(div)
 }

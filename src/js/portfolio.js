@@ -1,16 +1,20 @@
-function createCardPortfolioInfo(title, description, languages, thumbnail, github, webpage) {
+function createCardPortfolioInfo(title,date, description, languages, thumbnail, github, webpage) {
     const div = document.createElement("div")
     div.setAttribute("class", "section__box relative d-grid place-center border-radius-5 gap-05 bg-dark-gray")
 
     const chevronTopLeft = createSVG("chevron-top-left")
     const chevronTopRight = createSVG("chevron-top-right")
-    chevronTopLeft.className = "absolute"
-    chevronTopRight.className = "absolute"
 
     const h2 = document.createElement("h2")
     h2.setAttribute("class", "text-center m-0 section__title")
     const h2Text = document.createTextNode(title)
     h2.appendChild(h2Text)
+
+    const pDate = document.createElement("p")
+    pDate.setAttribute("class", "section__date text-center")
+    const pDateText = document.createTextNode(date)
+    pDate.appendChild(pDateText)
+
     const aContainer = document.createElement("a")
     aContainer.setAttribute("href", webpage)
     aContainer.setAttribute("target", "_blank")
@@ -52,6 +56,6 @@ function createCardPortfolioInfo(title, description, languages, thumbnail, githu
 
     div.appendChild(chevronTopLeft)
     div.appendChild(chevronTopRight)
-    div.append(aContainer,h2,p,aGitHub,aWebPage)
+    div.append(aContainer,h2,pDate,p,aGitHub,aWebPage)
     portfolio.appendChild(div)
 }

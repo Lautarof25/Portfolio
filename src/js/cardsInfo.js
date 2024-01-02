@@ -39,14 +39,16 @@ const portfolioInfo = {
     "info": [
         {
             "title": "CV Online",
+            "date": "2022-11-06",
             "description": "Cv online dinámico",
             "languages": ["html5", "css3-alt", "square-js"],
-            "thumbnail": ["b085cf63-e665-48aa-a16d-4eb0419e91c8"],
+            "thumbnail": ["46fd0d08-53a0-4ace-b9e2-52935fc2cce9"],
             "github": "https://github.com/Lautarof25/cv_online",
             "webpage": "https://lautarof25.github.io/cv_online/"
         },
         {
             "title": "Calculadora Python",
+            "date": "2022-11-01",
             "description": "Una simple calculadora creada con Python",
             "languages": ["python"],
             "thumbnail": ["452e0b60-c82e-407c-b716-38fa3ad7c6b3"],
@@ -55,6 +57,7 @@ const portfolioInfo = {
         },
         {
             "title": "WineStore",
+            "date": "2023-05-14",
             "description": "Una vineria con carrito de compras",
             "languages": ["html5", "bootstrap", "square-js"],
             "thumbnail": ["64010ed8-5574-4686-ae1a-9ac829d9c87b"],
@@ -63,6 +66,7 @@ const portfolioInfo = {
         },
         {
             "title": "Guess The Number",
+            "date": "2023-06-03",
             "description": "Un juego para usar la lógica",
             "languages": ["html5", "bootstrap", "square-js"],
             "thumbnail": ["f2afcce7-0ffd-44ae-a28b-e117198f7a14"],

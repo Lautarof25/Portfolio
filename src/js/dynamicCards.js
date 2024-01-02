@@ -4,7 +4,7 @@ function addCardInfo(type, database) {
     database.forEach(item => {
         switch (type) {
             case 'portfolio':
-                createCardPortfolioInfo(item.title, item.description, item.languages, item.thumbnail, item.github, item.webpage);
+                createCardPortfolioInfo(item.title,item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage);
                 break
             case 'services':
                 createCardServicesInfo(item.title, item.description, item.icons)
