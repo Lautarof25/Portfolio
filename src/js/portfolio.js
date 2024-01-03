@@ -24,7 +24,7 @@ function createCardPortfolioInfo(title,date, description, languages, thumbnail, 
     img.setAttribute("alt", title)
     img.setAttribute("loading", "lazy")
     img.setAttribute("alt", title)
-    img.setAttribute("class", "h-250px w-100 object-fit-cover object-pos-center-top")
+    img.setAttribute("class", "h-100 w-100 object-fit-cover object-pos-left")
     const divGradient = document.createElement("div")
     divGradient.setAttribute("class", "gradientTransparentGray d-flex justify-center align-end h-50px absolute bottom-0 gap-05 w-100")
     aContainer.append(img, divGradient)
