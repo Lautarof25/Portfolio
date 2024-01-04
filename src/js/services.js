@@ -20,7 +20,9 @@ function createCardServicesInfo(title, description, icons) {
 
     for (let i = 0; i < icons.length; i++) {
         const icon = document.createElement("img")
+        icon.setAttribute("loading", `lazy`)
         icon.setAttribute("src", `./src/img/icons/${icons[i]}.svg`)
+        icon.setAttribute("alt", `${icons[i]}`)
         divIcons.appendChild(icon)
     }
     

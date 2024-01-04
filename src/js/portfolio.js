@@ -38,6 +38,8 @@ function createCardPortfolioInfo(title,date, description, languages, thumbnail, 
         const icon = document.createElement("img")
         icon.setAttribute("src", `./src/img/icons/${languages[i]}.svg`)
         icon.setAttribute("class", `icon-language`)
+        icon.setAttribute("loading", `lazy`)
+        icon.setAttribute("alt", `${languages[i]}`)
         divGradient.appendChild(icon)
     }
 
