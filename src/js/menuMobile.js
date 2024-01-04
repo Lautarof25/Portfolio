@@ -1,19 +1,19 @@
-aside.addEventListener("mouseover", function () {
-    if (window.innerWidth <= 576) {
-        aside.classList.add("show-aside")
-        allExceptAside.forEach(element => {
-            element.classList.add("blur-effect")
-        });
-    }
-
+allExceptAside.forEach(e => {
+    e.addEventListener('click', function () {
+        if (aside.classList.contains("show-aside")) {
+            aside.classList.remove("show-aside")
+            allExceptAside.forEach(element => {
+                element.classList.remove("blur-effect")
+            });
+        }
+    })
 })
-aside.addEventListener("mouseout", function () {
-    if (window.innerWidth <= 576) {
-        aside.classList.remove("show-aside")
-        allExceptAside.forEach(element => {
-            element.classList.remove("blur-effect")
-        });
-    }
+
+toggleMenu.addEventListener("click", function () {
+    aside.classList.toggle("show-aside")
+    allExceptAside.forEach(element => {
+        element.classList.toggle("blur-effect")
+    });
 })
 
 links.forEach(link => {
@@ -21,7 +21,7 @@ links.forEach(link => {
         if (window.innerWidth <= 576) {
             aside.classList.remove("show-aside")
             allExceptShareButton.forEach(element => {
-                element.style.filter = "blur(0)"
+                element.classList.remove("blur-effect")
             });
         }
         allExceptAside.forEach(element => {

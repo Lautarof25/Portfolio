@@ -6,6 +6,7 @@ addEventListener('click', function () {
         allExceptShareButton.forEach(element => {
           element.classList.add('blur-effect')
         })
+        containerShareButtons.classList.remove('blur-effect')
         containerShareButtons.classList.remove("hidden")
     }
 })
