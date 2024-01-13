@@ -37,8 +37,9 @@ const handleTouchMove = (event) => {
     const isAtTheEnd = currentScrollPos + endPageScrollCount + visibleHeight >= totalHeight
 
     const maxScrollCounts = {
-        Certificaciones: 25,
-        Portfolio: 20,
+        Certificaciones: 45,
+        Portfolio: 40,
+        "Sobre mi": 40,
         default: 0
     };
     

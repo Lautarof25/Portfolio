@@ -34,7 +34,7 @@ function currentIdPage() {
 
 const scrollToTop = () => {
     setTimeout(() => {
-        window.scrollTo({
+        main.scrollTo({
             top: 0,
             left: 0,
             behavior: "smooth",

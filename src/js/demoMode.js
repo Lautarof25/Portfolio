@@ -33,7 +33,7 @@ function hideDemoMode() {
 }
 function showDemoMode() {
     demoMode.classList.remove('hidden')
-    window.scrollTo(0,0)
+    main.scrollTo(0,0)
     modeDemoOn()
 }
 
@@ -47,7 +47,7 @@ function modeDemoOn(){
     let currentScroll = 0
     const refreshIntervalId = setInterval(() => {
         if (currentScroll <= currentHeightPage && modeDemoActivity) {
-            window.scrollTo({
+            main.scrollTo({
                 top: currentScroll,
                 left: 0,
                 behavior: "smooth",
