@@ -13,11 +13,6 @@ const certificates = document.querySelector('.certificates')
 const footer = document.querySelector("footer")
 const allExceptShareButton = document.querySelectorAll('body > *:not(.share-buttons)')
 const allExceptAside = document.querySelectorAll('body > *:not(aside)')
-// Database information
-const databaseCertificates = certificatesInfo.info
-const databaseServices = servicesInfo.info
-const databasePortfolio = portfolioInfo.info
-const databaseAbout = aboutInfo.info
 // Form
 const name = document.querySelector("#name")
 const email = document.querySelector("#email")
