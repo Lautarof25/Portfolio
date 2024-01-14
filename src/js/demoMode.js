@@ -60,6 +60,7 @@ function modeDemoOn(){
 }
 
 addEventListener("mousemove", resetTimerAndHideDemoMode)
+addEventListener("wheel", resetTimerAndHideDemoMode)
 addEventListener("touchmove", resetTimerAndHideDemoMode)
 addEventListener("click", resetTimerAndHideDemoMode)
 addEventListener("keydown", resetTimerAndHideDemoMode)
