@@ -9,7 +9,9 @@ function activityUser() {
     document.removeEventListener("keydown", activityUser)
     document.removeEventListener("click", activityUser)
     document.removeEventListener("mousemove", activityUser)
+    document.removeEventListener("touchmove", activityUser)
 }
 document.addEventListener("mousemove", activityUser, { once: true })
 document.addEventListener("keydown", activityUser, { once: true })
 document.addEventListener("click", activityUser, { once: true })
+document.addEventListener("touchmove", activityUser, { once: true })
