@@ -28,6 +28,7 @@ const faBars = document.querySelector('[viewBox="0 0 448 512"]')
 const links = document.querySelectorAll('.nav a[href="#"]')
 const headerLogo = document.querySelector('.header__logo')
 const chevronBottomRight = document.querySelector('header svg.chevron-bottom-right')
+const hideMenuDesktop = document.querySelector("#hideMenuDesktop")
 // Components 
 const titlePage = document.querySelector('.titlePage h2')
 const colorPicker = document.querySelector('.color-picker')

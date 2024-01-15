@@ -1,5 +1,5 @@
 function activityUser() {
-    var scripts = ["cardsInfo", "chevronCorner", "titlePage", "about", "services", "portfolio", "certificates", "dynamicCards", "linksSelector", "form", "showPage", "demoMode", "shareButtons", "colorPicker", "navigation", "scrollNavigation", "menuMobile"]
+    var scripts = ["cardsInfo", "chevronCorner", "titlePage", "about", "services", "portfolio", "certificates", "dynamicCards", "linksSelector", "form", "showPage", "demoMode", "shareButtons", "colorPicker", "navigation", "scrollNavigation"]
 
     scripts.forEach(script => {
         var s = document.createElement("script")

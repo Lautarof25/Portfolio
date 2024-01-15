@@ -30,8 +30,6 @@ links.forEach(link => {
     })
 })
 
-// Prueba button aside
-const hideMenuDesktop = document.querySelector("#hideMenuDesktop")
 hideMenuDesktop.addEventListener("click", ()=>{
     if(window.innerWidth >= 576) {
         body.classList.toggle("removePaddingLeft")
