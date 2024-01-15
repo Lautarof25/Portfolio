@@ -34,32 +34,27 @@ const handleTouchMove = (event) => {
     const currentY = event.touches[0].clientY
     startY > currentY ? endPageScrollCount++ : topPageScrollCount++
 
-    const totalHeight = document.body.scrollHeight
-    const visibleHeight = window.innerHeight
-    const currentScrollPos = window.scrollY
-    const isAtTheEnd = currentScrollPos + endPageScrollCount + visibleHeight >= totalHeight
+    const totalHeight = main.scrollHeight
+    const scrollPosition = main.scrollTop + main.clientHeight + 1;
+    const scrollPositionTop = main.scrollTop;
+    const isAtTheEnd = scrollPosition >= totalHeight
 
-    const maxScrollCounts = {
-        Certificaciones: 45,
-        Portfolio: 40,
-        "Sobre mi": 40,
-        default: 0
-    };
-
-    const activeLinkText = document.querySelector('.link-active').textContent;
-
-    if (isAtTheEnd && endPageScrollCount >= 10) {
-        const maxScrollCount = maxScrollCounts[activeLinkText] || maxScrollCounts.default;
-
-        if (endPageScrollCount >= maxScrollCount) {
-            endPageScrollCount = 0;
+    if (isAtTheEnd) {
+        startY > currentY ? endPageScrollCount++ : endPageScrollCount--
+        if (endPageScrollCount > 5) {
+            endPageScrollCount = 0
+            topPageScrollCount = 0
             navigatePage(1);
         }
     }
 
-    if (topPageScrollCount >= 7 && currentScrollPos === 0) {
-        topPageScrollCount = 0
-        navigatePage(-1)
+    if (scrollPositionTop === 0) {
+        startY > currentY ? topPageScrollCount-- : topPageScrollCount++
+        if(topPageScrollCount > 5){
+            topPageScrollCount = 0
+            endPageScrollCount = 0
+            navigatePage(-1)
+        }
     }
 }
 
