@@ -8,13 +8,11 @@ function handleRadioChange(radio) {
   }
 }
 
-const innerWidth = window.innerWidth
-
 colorPicker.addEventListener("mouseover", function(){
   colorPicker.style.bottom = "-80px"
 })
 colorPicker.addEventListener("mouseout", function(){
-  if(innerWidth <= 576){
+  if(window.innerWidth <= 576){
     colorPicker.style.bottom = "-150px"
   }else {
     colorPicker.style.bottom = "-180px"
@@ -29,7 +27,7 @@ radios.forEach(radio => {
     colorPicker.style.bottom = "-80px"
   })
   radio.addEventListener("focusout", () => {
-    if(innerWidth <= 576){
+    if(window.innerWidth <= 576){
       colorPicker.style.bottom = "-150px"
     }else {
       colorPicker.style.bottom = "-180px"

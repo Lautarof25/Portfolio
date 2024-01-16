@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var words = ['Lautaro', 'Exequiel', 'Fernández']
-    var index = 0
-    var currentLetter = 0
-    var direction = 1
-    var speedWriting = 250 // milisegundos por letra
-    var speedChangeWords = 1000 // milisegundos entre cambios de palabra
+    let words = ['Lautaro', 'Exequiel', 'Fernández']
+    let index = 0
+    let currentLetter = 0
+    let direction = 1
+    let speedWriting = 250 // milisegundos por letra
+    let speedChangeWords = 1000 // milisegundos entre cambios de palabra
 
     function writeDeleteWords() {
-      var currentWord = words[index]
-      var element = document.querySelector('.nameChange')
+      let currentWord = words[index]
+      let element = document.querySelector('.nameChange')
 
       if (direction === 1) {
         element.textContent = currentWord.substring(0, currentLetter)
