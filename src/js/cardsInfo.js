@@ -2,34 +2,42 @@ const aboutInfo = {
     "info": [
         {
             "description": "Soy técnico en mantenimiento y armado de PC certificado del IAC.",
+            "descriptionHidden": "Estudié y me certifiqué en el Instituto Argentino de Computación.",
             "icons": ["computer-solid", "screwdriver-wrench-solid"]
         },
         {
             "description": "Estudio programación desde mediados del 2020",
+            "descriptionHidden": "Inicié mi camino en la programación en la UnaHur(universidad de Hurlingham)",
             "icons": ["pencil-solid", "code-solid"]
         },
         {
             "description": "Tengo conocimientos en HTML, CSS, JS y algunos frameworks (Bootstrap y Tailwind)",
+            "descriptionHidden": "Estudié de manera autodidacta en sitios web, youtube, foros, etc",
             "icons": ["html5", "css3-alt", "square-js", "bootstrap"]
         },
         {
             "description": "También conozco Python y Java, y estoy estudiando ReactJS, Spring, PHP, entre otros.",
+            "descriptionHidden": "Hice un curso de Python en la UnaHur, estudié Java en un bootcamp autoguiado",
             "icons": ["python", "java", "react", "php"]
         },
         {
             "description": "Usando herramientas de planificación e inteligencia artificial para potenciar el trabajo y proyectos",
+            "descriptionHidden": "Combinando Notion y google docs con herramientas de inteligencia artificial",
             "icons": ["pen-to-square-solid", "brain-solid", "comment-dots-solid"]
         },
         {
             "description": "Me interesa también la parte de testing QA y bases de datos.",
+            "descriptionHidden": "Hice cursos referidos a testing manual y bases de datos en Tecno3f",
             "icons": ["bug-solid", "database-solid"]
         },
         {
             "description": "Conocimientos sólidos en herramientas ofimáticas, diseño gráfico y web.",
+            "descriptionHidden": "Google docs, sheet, slides, photophea y balsamiq",
             "icons": ["file-excel-solid", "palette-solid", "globe-solid"]
         },
         {
             "description": "Trabajar colaborativamente, aprendizaje constante y conocer distintas metodologías de trabajo",
+            "descriptionHidden": "Usar herramientas para potenciar el trabajo colaborativo y aprender de los demás",
             "icons": ["users-solid", "hand-holding-hand-solid"]
         },
     ]

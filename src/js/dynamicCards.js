@@ -8,17 +8,17 @@ function addCardInfo(type, database) {
 
     database.forEach(item => {
         switch (type) {
-            case 'portfolio':
-                createCardPortfolioInfo(item.title,item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage);
+            case 'about':
+                createCardAboutInfo(item.description, item.descriptionHidden, item.icons)
                 break
-            case 'services':
-                createCardServicesInfo(item.title, item.description, item.icons)
+            case 'portfolio':
+                createCardPortfolioInfo(item.title, item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage);
                 break
             case 'certificates':
                 createCardCertificatesInfo(item.title, item.description, item.thumbnail, item.hours, item.year, item.link)
                 break
-            case 'about':
-                createCardAboutInfo(item.description, item.icons)
+            case 'services':
+                createCardServicesInfo(item.title, item.description, item.icons)
                 break
         }
     })
@@ -26,19 +26,19 @@ function addCardInfo(type, database) {
 
 function getContainerByType(type) {
     switch (type) {
-        case 'portfolio':
-            return portfolio
-        case 'services':
-            return services
-        case 'certificates':
-            return certificates
         case 'about':
             return about
+        case 'portfolio':
+            return portfolio
+        case 'certificates':
+            return certificates
+        case 'services':
+            return services
         default:
             throw new Error(`Unknown card type: ${type}`)
     }
 }
-addCardInfo('about', databaseAbout)    
+addCardInfo('about', databaseAbout)
 addCardInfo('portfolio', databasePortfolio)
 addCardInfo('certificates', databaseCertificates)
 addCardInfo('services', databaseServices)

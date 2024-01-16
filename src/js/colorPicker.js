@@ -12,7 +12,13 @@ colorPicker.addEventListener("mouseover", function(){
   colorPicker.style.bottom = "-80px"
 })
 colorPicker.addEventListener("mouseout", function(){
-  colorPicker.style.bottom = "-150px"
+  if(window.innerHeight <= 576){
+    colorPicker.style.bottom = "-150px"
+    console.log("ventana chica")
+  }else {
+    colorPicker.style.bottom = "-180px"
+    console.log("ventana grande")
+  }
 })
 
 radios.forEach(radio => {
@@ -23,6 +29,10 @@ radios.forEach(radio => {
     colorPicker.style.bottom = "-80px"
   })
   radio.addEventListener("focusout", () => {
-    colorPicker.style.bottom = "-150px"
+    if(window.innerHeight <= 576){
+      colorPicker.style.bottom = "-150px"
+    }else {
+      colorPicker.style.bottom = "-180px"
+    }
   })
 })
