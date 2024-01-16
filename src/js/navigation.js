@@ -13,7 +13,7 @@ function navigatePage(direction) {
     document.getElementById(currentId).classList.add('link-active')
     // External function : titlePage.js
     changeTitle()
-    direction === 1 ? scrollToTop() : 0
+    scrollToTop()
 }
 
 function nextPage() {

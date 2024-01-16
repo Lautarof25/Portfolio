@@ -23,5 +23,6 @@ links.forEach(link => {
     link.addEventListener('click',function(){
         hidePages()
         showPage(link.id)
+        scrollToTop()
     })
 })
