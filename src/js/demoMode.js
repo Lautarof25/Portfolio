@@ -25,6 +25,7 @@ idleTimer()
 function resetTimerAndHideDemoMode() {
     resetTimer()
     hideDemoMode()
+    body.classList.remove('hide-cursor')
     modeDemoActivity = false
 }
 
@@ -33,6 +34,7 @@ function hideDemoMode() {
 }
 function showDemoMode() {
     demoMode.classList.remove('hidden')
+    body.classList.add('hide-cursor')
     main.scrollTo(0,0)
     modeDemoOn()
 }
