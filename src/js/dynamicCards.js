@@ -1,8 +1,3 @@
-const databaseAbout = aboutInfo.info
-const databasePortfolio = portfolioInfo.info
-const databaseCertificates = certificatesInfo.info
-const databaseServices = servicesInfo.info
-
 function addCardInfo(type, database) {
     const container = getContainerByType(type);
 
@@ -38,7 +33,7 @@ function getContainerByType(type) {
             throw new Error(`Unknown card type: ${type}`)
     }
 }
-addCardInfo('about', databaseAbout)
-addCardInfo('portfolio', databasePortfolio)
-addCardInfo('certificates', databaseCertificates)
-addCardInfo('services', databaseServices)
+addCardInfo('about', aboutInfo.info)
+addCardInfo('portfolio', portfolioInfo.info)
+addCardInfo('certificates', certificatesInfo.info)
+addCardInfo('services', servicesInfo.info)

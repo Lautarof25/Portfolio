@@ -44,7 +44,7 @@ function resetTimer() {
 }
 
 function modeDemoOn(){
-    const currentHeightPage = document.body.scrollHeight
+    const currentHeightPage = main.scrollHeight
     const scrollPerSecond = currentHeightPage / idleTime
     let currentScroll = 0
     const refreshIntervalId = setInterval(() => {

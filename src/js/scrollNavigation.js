@@ -41,7 +41,7 @@ const handleTouchMove = (event) => {
 
     if (isAtTheEnd) {
         startY > currentY ? endPageScrollCount++ : endPageScrollCount--
-        if (endPageScrollCount > 5) {
+        if (endPageScrollCount > 8) {
             endPageScrollCount = 0
             topPageScrollCount = 0
             navigatePage(1);
@@ -50,7 +50,7 @@ const handleTouchMove = (event) => {
 
     if (scrollPositionTop === 0) {
         startY > currentY ? topPageScrollCount-- : topPageScrollCount++
-        if(topPageScrollCount > 5){
+        if(topPageScrollCount > 8){
             topPageScrollCount = 0
             endPageScrollCount = 0
             navigatePage(-1)

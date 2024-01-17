@@ -1,22 +1,26 @@
 let countClicks = 0
+function clickHandler() {
+  countClicks++
+  if (countClicks === 10) {
+    allExceptShareButton.forEach((element) => {
+      element.classList.add('blur-effect')
+    })
+    containerShareButtons.classList.remove('blur-effect')
+    containerShareButtons.classList.remove('hidden')
 
-addEventListener('click', function () {
-    countClicks++
-    if (countClicks === 10) {
-        allExceptShareButton.forEach(element => {
-          element.classList.add('blur-effect')
-        })
-        containerShareButtons.classList.remove('blur-effect')
-        containerShareButtons.classList.remove("hidden")
-    }
-})
+    // Eliminar el event listener después de alcanzar la condición
+    document.removeEventListener('click', clickHandler)
+  }
+}
 
-closeButton.addEventListener('click', function () {
+document.addEventListener('click', clickHandler)
+
+closeButton.addEventListener('click', () => {
     allExceptShareButton.forEach(element => {
       element.classList.remove('blur-effect')
-    });
+    })
     containerShareButtons.classList.add("hidden")
-});
+})
 
 shareButtons.forEach(button => {
   button.addEventListener('click', function () {
@@ -52,7 +56,6 @@ shareButtons.forEach(button => {
       case button.classList.contains('whatsapp'):
         shareOnWhatsApp()
         break
-      default:
     }
   })
 })
