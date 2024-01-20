@@ -4,11 +4,11 @@ links.forEach(link => {
 })
 
 function hidePage(link){
-    document.querySelector(`.${link}`).classList.add('hidden')
+    $(`.${link}`).classList.add('hidden')
 }
 
 function showPage(link){
-    document.querySelector(`.${link}`).classList.remove('hidden')
+    $(`.${link}`).classList.remove('hidden')
     // External function : titlePage.js
     changeTitle()
 }

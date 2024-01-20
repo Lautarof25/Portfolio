@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function writeDeleteWords() {
       let currentWord = words[index]
-      let element = document.querySelector('.nameChange')
+      let element = $('.nameChange')
 
       if (direction === 1) {
           element.innerHTML = currentWord.substring(0, currentLetter) + '<span class="blinking-cursor">|</span>'

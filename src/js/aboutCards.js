@@ -1,4 +1,4 @@
-const cardsAbout = document.querySelectorAll(".about .section__box")
+const cardsAbout = $$(".about .section__box")
 links.forEach(link => {
     link.addEventListener("click", () => {
         if (currentIdPage() === "about") {
