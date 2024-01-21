@@ -71,7 +71,7 @@ function scrollKeyboard(event) {
 }
 
 // Add event listeners
-document.addEventListener('keydown', scrollKeyboard)
-main.addEventListener("wheel", handleScroll)
-document.addEventListener("touchstart", handleTouchStart)
-document.addEventListener("touchmove", handleTouchMove)
+document.addEventListener('keydown', scrollKeyboard,{passive: true})
+main.addEventListener("wheel", handleScroll,{passive: true})
+document.addEventListener("touchstart", handleTouchStart,{passive: true})
+document.addEventListener("touchmove", handleTouchMove,{passive: true})

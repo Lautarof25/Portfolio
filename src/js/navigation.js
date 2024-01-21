@@ -14,6 +14,7 @@ function navigatePage(direction) {
     // External function : titlePage.js
     changeTitle()
     scrollToTop()
+    cardsScale()
 }
 
 function nextPage() {
