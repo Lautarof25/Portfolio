@@ -1,3 +1,10 @@
+const sortByDate = (a, b) => {
+    const dateA = new Date(a.date || `${a.year}-01-01`);
+    const dateB = new Date(b.date || `${b.year}-01-01`);
+
+    return dateB - dateA;
+};
+
 const aboutInfo = {
     "info": [
         {
@@ -84,6 +91,8 @@ const portfolioInfo = {
     ]
 }
 
+portfolioInfo.info.sort(sortByDate)
+
 const certificatesInfo = {
     "info": [
         {
@@ -109,6 +118,14 @@ const certificatesInfo = {
             "hours": 40,
             "year": 2023,
             "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
+        },
+        {
+            "title": "Instituto Argentino de computación",
+            "description": "Armado y reparación de PC",
+            "thumbnail": "438f3a56-a437-4b2d-9b60-d89e9c33eaee",
+            "hours": 40,
+            "year": 2017,
+            "link": "https://drive.google.com/file/d/1LjbhEMNkH1O7B5Fn5ZqXB4uEaxvMn23c/view",
         },
         {
             "title": "Ratatype",
@@ -158,16 +175,11 @@ const certificatesInfo = {
             "year": 2018,
             "link": "https://drive.google.com/file/d/1gsyaLra_2dUK7SngLg8hVF1rQ_4TfJd7/view",
         },
-        {
-            "title": "Instituto Argentino de computación",
-            "description": "Armado y reparación de PC",
-            "thumbnail": "438f3a56-a437-4b2d-9b60-d89e9c33eaee",
-            "hours": 40,
-            "year": 2017,
-            "link": "https://drive.google.com/file/d/1LjbhEMNkH1O7B5Fn5ZqXB4uEaxvMn23c/view",
-        },
+
     ]
 }
+
+certificatesInfo.info.sort(sortByDate)
 
 const servicesInfo = {
     "info": [
