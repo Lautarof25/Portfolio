@@ -3,38 +3,62 @@ const checkboxesCertificates = $$('.certificates input[type="checkbox"]')
 let checkboxesPortfolioChecked = []
 let checkboxesCertificatesChecked = []
 
-// const getCheckedDefault = () => {
-//     checkboxesPortfolio.forEach(checkbox => {
-//         if (checkbox.checked) {
-//             checkboxesPortfolioChecked.push(checkbox.value.slice(-4))
-//         }
-//     })
-// }
+const getCheckedDefault = () => {
+    checkboxesPortfolio.forEach(checkbox => {
+        if (checkbox.checked) {
+            checkboxesPortfolioChecked.push(checkbox.value.slice(-4))
+        }
+    })
+    checkboxesCertificates.forEach(checkbox => {
+        if (checkbox.checked) {
+            checkboxesCertificatesChecked.push(checkbox.value.slice(-4))
+        }
+    })
+}
 
-// getCheckedDefault()
+getCheckedDefault()
 
-// const addChecked = (ckbs, array) => {
-//     ckbs.forEach(ckb => {
-//         ckb.addEventListener('change', () => {
-//             if (ckb.checked) {
-//                 array.push(ckb.value.slice(-4))
-//             } else {
-//                 array = array.filter(function (i) { return i !== ckb.value.slice(-4) });
-//             }
-//             array.sort((a, b) => b - a)
-//             removeElements()
-//             addCardInfo(currentIdPage(), eval(`${currentIdPage()}Info.info`))
-//         })
-//     })
-// }
+checkboxesPortfolio.forEach(ckb => {
+    ckb.addEventListener('change', () => {
+        if (ckb.checked) {
+            checkboxesPortfolioChecked.push(ckb.value.slice(-4))
+        } if (!ckb.checked) {
+            checkboxesPortfolioChecked = checkboxesPortfolioChecked.filter(function (i) { return i !== ckb.value.slice(-4) });
+        }
+        checkboxesPortfolioChecked.sort((a, b) => b - a)
+        console.log(checkboxesPortfolioChecked)
+    })
+})
 
-// addChecked(checkboxesPortfolio, checkboxesPortfolioChecked)
-// addChecked(checkboxesCertificates, checkboxesCertificatesChecked)
+checkboxesCertificates.forEach(ckb => {
+    ckb.addEventListener('change', () => {
+        if (ckb.checked) {
+            checkboxesCertificatesChecked.push(ckb.value.slice(-4))
+        } if (!ckb.checked) {
+            checkboxesCertificatesChecked = checkboxesCertificatesChecked.filter(function (i) { return i !== ckb.value.slice(-4) });
+        }
+        checkboxesCertificatesChecked.sort((a, b) => b - a)
+        console.log(checkboxesCertificatesChecked)
+    })
+})
 
-// function removeElements() {
-//     var sectionBoxes = $$(`.${currentIdPage()} .section__box`);
+checkboxesPortfolio.forEach(chk => {
+    chk.addEventListener('change', () => {
+        removeElements()
+        addCardInfo("portfolio", portfolioInfo.info)
+    })
+})
+checkboxesCertificates.forEach(chk => {
+    chk.addEventListener('change', () => {
+        removeElements()
+        addCardInfo("certificates", certificatesInfo.info)
+    })
+})
 
-//     sectionBoxes.forEach(function (sectionBox) {
-//         sectionBox.parentNode.removeChild(sectionBox);
-//     });
-// }   
+function removeElements() {
+    var sectionBoxes = $$(`.${currentIdPage()} .section__box`);
+
+    sectionBoxes.forEach(function (sectionBox) {
+        sectionBox.parentNode.removeChild(sectionBox);
+    });
+}   

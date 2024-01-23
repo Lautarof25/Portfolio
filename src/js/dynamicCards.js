@@ -7,14 +7,14 @@ function addCardInfo(type, database) {
                 createCardAboutInfo(item.description, item.descriptionHidden, item.icons)
                 break
             case 'portfolio':
-                // if(checkboxesPortfolioChecked.includes(item.date.slice(0,4))){
+                if(checkboxesPortfolioChecked.includes(item.date.slice(0,4))){
                     createCardPortfolioInfo(item.title, item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage);
-                // }
+                }
                 break
             case 'certificates':
-                // if(checkboxesCertificatesChecked.includes(String(item.year))){
+                if(checkboxesCertificatesChecked.includes(item.year)){
                     createCardCertificatesInfo(item.title, item.description, item.thumbnail, item.hours, item.year, item.link)
-                // }
+                }
                 break
             case 'services':
                 createCardServicesInfo(item.title, item.description, item.icons)
