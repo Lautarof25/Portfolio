@@ -7,10 +7,14 @@ function addCardInfo(type, database) {
                 createCardAboutInfo(item.description, item.descriptionHidden, item.icons)
                 break
             case 'portfolio':
-                createCardPortfolioInfo(item.title, item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage);
+                if(checkboxesPortfolioChecked.includes(item.date.slice(0,4))){
+                    createCardPortfolioInfo(item.title, item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage);
+                }
                 break
             case 'certificates':
-                createCardCertificatesInfo(item.title, item.description, item.thumbnail, item.hours, item.year, item.link)
+                if(checkboxesCertificatesChecked.includes(String(item.year))){
+                    createCardCertificatesInfo(item.title, item.description, item.thumbnail, item.hours, item.year, item.link)
+                }
                 break
             case 'services':
                 createCardServicesInfo(item.title, item.description, item.icons)
