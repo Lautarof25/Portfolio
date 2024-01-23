@@ -34,7 +34,6 @@ years.forEach(item => {
     addCheckbox("certificates", item)
 })
 
-
 const checkboxesPortfolio = $$('.portfolio input[type="checkbox"]')
 const checkboxesCertificates = $$('.certificates input[type="checkbox"]')
 let checkboxesPortfolioChecked = []
@@ -63,7 +62,6 @@ checkboxesPortfolio.forEach(ckb => {
             checkboxesPortfolioChecked = checkboxesPortfolioChecked.filter(function (i) { return i !== ckb.value.slice(-4) });
         }
         checkboxesPortfolioChecked.sort((a, b) => b - a)
-        console.log(checkboxesPortfolioChecked)
     })
 })
 
@@ -71,26 +69,24 @@ checkboxesCertificates.forEach(ckb => {
     ckb.addEventListener('change', () => {
         if (ckb.checked) {
             checkboxesCertificatesChecked.push(ckb.value.slice(-4))
-        } if (!ckb.checked) {
+        } else {
             checkboxesCertificatesChecked = checkboxesCertificatesChecked.filter(function (i) { return i !== ckb.value.slice(-4) });
         }
         checkboxesCertificatesChecked.sort((a, b) => b - a)
-        console.log(checkboxesCertificatesChecked)
     })
 })
 
-checkboxesPortfolio.forEach(chk => {
-    chk.addEventListener('change', () => {
-        removeElements()
-        addCardInfo("portfolio", portfolioInfo.info)
+const filterCards = (checkboxes,section,data) =>{
+    checkboxes.forEach(chk => {
+        chk.addEventListener('change', () => {
+            removeElements()
+            addCardInfo(section, data)
+        })
     })
-})
-checkboxesCertificates.forEach(chk => {
-    chk.addEventListener('change', () => {
-        removeElements()
-        addCardInfo("certificates", certificatesInfo.info)
-    })
-})
+}
+
+filterCards(checkboxesCertificates,"certificates",certificatesInfo.info)
+filterCards(checkboxesPortfolio,"portfolio",portfolioInfo.info)
 
 function removeElements() {
     var sectionBoxes = $$(`.${currentIdPage()} .section__box`)
