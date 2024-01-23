@@ -1,3 +1,40 @@
+const addCheckbox = (section,date) => {
+    const sectionDate = section + date
+    const input = document.createElement("input")
+    const label = document.createElement("label")
+    input.setAttribute("type", "checkbox")
+    input.setAttribute("name", sectionDate)
+    input.setAttribute("value", sectionDate)
+    input.setAttribute("id", sectionDate)
+    input.checked = true
+    label.setAttribute("for", sectionDate)
+    const labelText = document.createTextNode(date)
+    label.appendChild(labelText)
+    label.setAttribute("for", sectionDate)
+
+    const inputFilter = document.querySelector(`.${section} .section__filter`)
+    inputFilter.append(input, label)
+}
+
+const dates = new Set()
+const years = new Set()
+
+portfolioInfo.info.forEach(item => {
+    dates.add(item.date.slice(0, 4))
+})
+certificatesInfo.info.forEach(item => {
+    years.add(item.year)
+})
+
+dates.forEach(item => {
+    addCheckbox("portfolio", item)
+})
+
+years.forEach(item => {
+    addCheckbox("certificates", item)
+})
+
+
 const checkboxesPortfolio = $$('.portfolio input[type="checkbox"]')
 const checkboxesCertificates = $$('.certificates input[type="checkbox"]')
 let checkboxesPortfolioChecked = []
@@ -56,9 +93,9 @@ checkboxesCertificates.forEach(chk => {
 })
 
 function removeElements() {
-    var sectionBoxes = $$(`.${currentIdPage()} .section__box`);
+    var sectionBoxes = $$(`.${currentIdPage()} .section__box`)
 
     sectionBoxes.forEach(function (sectionBox) {
-        sectionBox.parentNode.removeChild(sectionBox);
-    });
+        sectionBox.parentNode.removeChild(sectionBox)
+    })
 }   
