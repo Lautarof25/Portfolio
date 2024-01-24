@@ -71,6 +71,33 @@ const portfolioInfo = {
             "webpage": "https://onlinegdb.com/qZjq7lwwj"
         },
         {
+            "title": "Build your PC",
+            "date": "2024-02-25",
+            "description": "A webapp to build your best PC",
+            "languages": ["react"],
+            "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
+            "github": "#",
+            "webpage": "#"
+        },
+        {
+            "title": "Blog",
+            "date": "2024-02-25",
+            "description": "A simple blog",
+            "languages": ["react"],
+            "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
+            "github": "#",
+            "webpage": "#"
+        },
+        {
+            "title": "English Test",
+            "date": "2024-02-25",
+            "description": "English test level",
+            "languages": ["react"],
+            "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
+            "github": "#",
+            "webpage": "#"
+        },
+        {
             "title": "WineStore",
             "date": "2023-05-14",
             "description": "Una vineria con carrito de compras",
