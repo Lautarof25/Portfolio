@@ -8,12 +8,19 @@ function addCardInfo(type, database) {
                 break
             case 'portfolio':
                 if(checkboxesPortfolioChecked.includes(item.date.slice(0,4))){
-                    createCardPortfolioInfo(item.title, item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage);
+                    createCardPortfolioInfo(item.title, item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage)
+                    portfolio.querySelector('.empty').classList.add('hidden')
+                }if (checkboxesPortfolioChecked.length === 0){
+                    portfolio.querySelector('.empty').classList.remove('hidden')
                 }
                 break
             case 'certificates':
                 if(checkboxesCertificatesChecked.includes(item.year)){
                     createCardCertificatesInfo(item.title, item.description, item.thumbnail, item.hours, item.year, item.link)
+                    certificates.querySelector('.empty').classList.add('hidden')
+                }
+                if (checkboxesCertificatesChecked.length === 0){
+                    certificates.querySelector('.empty').classList.remove('hidden')
                 }
                 break
             case 'services':
