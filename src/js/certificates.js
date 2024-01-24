@@ -5,7 +5,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   const chevronTopLeft = createSVG("chevron-top-left")
   const chevronTopRight = createSVG("chevron-top-right")
 
-  const h2 = document.createElement("h2")
+  const h2 = document.createElement("h3")
   h2.setAttribute("class", "m-0")
   const h2Text = document.createTextNode(title)
   h2.appendChild(h2Text)
