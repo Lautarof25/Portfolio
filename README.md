@@ -26,6 +26,8 @@ HTML, CSS and JavaScript
 
 - Demo mode
 - Dynamic pages
+- Dynamic cards
+- Filter cards
 - Color picker
 - Form with formSpree
 - Scroll navigation
