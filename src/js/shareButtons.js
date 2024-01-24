@@ -2,9 +2,10 @@ let countClicks = 0
 function clickHandler() {
   countClicks++
   if (countClicks === 10) {
-    allExceptShareButton.forEach((element) => {
+      allExceptShareButton.forEach((element) => {
       element.classList.add('blur-effect')
     })
+    share.style.visibility = "visible"
     containerShareButtons.classList.remove('blur-effect')
     containerShareButtons.classList.remove('hidden')
 
@@ -58,4 +59,12 @@ shareButtons.forEach(button => {
         break
     }
   })
+})
+
+share.addEventListener('click',() => {
+  allExceptShareButton.forEach((element) => {
+    element.classList.add('blur-effect')
+  })
+  containerShareButtons.classList.remove('blur-effect')
+  containerShareButtons.classList.remove('hidden')
 })
