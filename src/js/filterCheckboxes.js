@@ -6,7 +6,8 @@ const addCheckbox = (section,date) => {
     input.setAttribute("name", sectionDate)
     input.setAttribute("value", sectionDate)
     input.setAttribute("id", sectionDate)
-    input.checked = true
+    if(date !== "2024")
+        input.checked = true
     label.setAttribute("for", sectionDate)
     const labelText = document.createTextNode(date)
     label.appendChild(labelText)
