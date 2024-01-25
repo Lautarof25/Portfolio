@@ -5,7 +5,6 @@ function clickHandler() {
       allExceptShareButton.forEach((element) => {
       element.classList.add('blur-effect')
     })
-    share.style.visibility = "visible"
     containerShareButtons.classList.remove('blur-effect')
     containerShareButtons.classList.remove('hidden')
 
