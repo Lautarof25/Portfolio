@@ -1,15 +1,18 @@
 const boxesCard = $$("main .section__box")
 
 function cardsScale() {
-    setTimeout(() => {
-        boxesCard.forEach((card, index) => {
-            setTimeout(() => {
-                card.classList.add("scale");
-
+    if(currentIdPage() !== "home" && currentIdPage() !== "contact"){
+        setTimeout(() => {
+            boxesCard.forEach((card, index) => {
                 setTimeout(() => {
-                    card.classList.remove("scale");
-                }, 500);
-            }, 100 * index);
-        });
-    }, 500);
+                    card.classList.add("scale");
+                    card.classList.add("box-shadow");
+                    setTimeout(() => {
+                        card.classList.remove("scale");
+                        card.classList.remove("box-shadow");
+                    }, 500);
+                }, 100 * index);
+            });
+        }, 500);
+    }
 }
