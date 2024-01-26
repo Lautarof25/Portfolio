@@ -9,7 +9,8 @@ Personal Portfolio
 
 ## Wireframes (imspiration)
 
-[![wireFramePorftolio](https://github.com/Lautarof25/Portfolio/assets/81919816/00221674-6a96-471f-a869-46e0ee5b8e94)](https://i.morioh.com/2023/06/08/fcbb0deb.webp)
+![image](https://github.com/Lautarof25/Portfolio/assets/81919816/decef40c-85e5-4c6f-82a7-c93e86db8cc4)
+
 
 
 ## Color Reference
