@@ -1,7 +1,6 @@
-const boxesCard = $$("main .section__box")
-
 function cardsScale() {
     if(currentIdPage() !== "home" && currentIdPage() !== "contact"){
+        const boxesCard = $$(`main .${currentIdPage()} .section__box`)
         setTimeout(() => {
             boxesCard.forEach((card, index) => {
                 setTimeout(() => {
@@ -13,6 +12,6 @@ function cardsScale() {
                     }, 500);
                 }, 100 * index);
             });
-        }, 500);
+        }, 1500);
     }
 }
