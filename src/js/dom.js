@@ -1,5 +1,5 @@
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+const $ = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
 // Semantic containers
 const body = $("body")
 const header = $("header")
@@ -48,5 +48,61 @@ titlePage.textContent = $('.link-active').textContent
 const fechaActual = new Date()
 const añoActual = fechaActual.getFullYear()
 const currentYear = $('.currentYear').textContent += fechaActual.getFullYear()
-let copy = $(".logos-slide").cloneNode(true);
-$(".logos").appendChild(copy);
+let copy = $(".logos-slide").cloneNode(true)
+$(".logos").appendChild(copy)
+
+let words = ['Lautaro', 'Exequiel', 'Fernández']
+let index = 0
+let currentLetter = 0
+let direction = 1
+let speedWriting = 250 // milisegundos por letra
+let speedChangeWords = 1000 // milisegundos entre cambios de palabra
+
+let active = true
+
+function writeDeleteWords() {
+    let currentWord = words[index]
+    let element = $('.nameChange')
+    if(active){
+        if (direction === 1) {
+            element.innerHTML = currentWord.substring(0, currentLetter)
+            currentLetter++
+            if (currentLetter > currentWord.length) {
+                direction = -1
+                setTimeout(writeDeleteWords, speedChangeWords)
+            } else {
+                setTimeout(writeDeleteWords, speedWriting)
+            }
+        } else {
+            element.innerHTML = currentWord.substring(0, currentLetter)
+            currentLetter--
+            if (currentLetter === 0) {
+                direction = 1
+                index = (index + 1) % words.length
+                setTimeout(writeDeleteWords, speedChangeWords)
+            } else {
+                setTimeout(writeDeleteWords, speedWriting / 2)
+            }
+        }
+    }
+    
+}
+
+writeDeleteWords()
+
+const targetElement = document.querySelector('.home')
+
+const observer = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+        if (currentIdPage() === "home") {
+            active = true
+            writeDeleteWords()
+        }else {
+            active = false
+        }
+        if(currentIdPage() === "contact")
+            automaticForm()
+    }
+})
+
+observer.observe(targetElement, { attributes: true });
