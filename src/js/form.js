@@ -24,7 +24,7 @@ async function fillInput(e, t, a = !1) {
         n.placeholder = "";
         for (let e = 0; e < t.length; e++) (n.placeholder += t[e]), await waitFor(100);
     } else {
-        n.value = "";
+        n.placeholder = "";
         for (let e = 0; e < t.length; e++) (n.placeholder += t[e]), await waitFor(100);
     }
 }
