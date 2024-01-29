@@ -1,9 +1,10 @@
 const cardsService = $$(".services .section__box")
-const closeCardsService = $$(".section__box .closeCard")
+const closeCardService = $(".closeCardService")
 
 cardsService.forEach(card => {
     card.addEventListener("click", () =>{
         card.classList.add("modalUp")
+        closeCardService.classList.remove("hidden")
     })
 })
 
@@ -13,11 +14,7 @@ function closeAllCards(){
     })
 }
 
-closeCardsService.forEach(button => {
-    button.addEventListener("click", () =>{
-        if(button.parentNode.classList.contains("modalUp")){
-            console.log("Yes")
-            button.parentNode.classList.add("modalUp")
-        }
-    })
+closeCardService.addEventListener("click", () =>{
+    closeAllCards()
+    closeCardService.classList.add("hidden")
 })
