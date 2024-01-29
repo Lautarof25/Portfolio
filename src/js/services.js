@@ -9,6 +9,11 @@ function createCardServicesInfo(title, description, icons) {
     h2.setAttribute("class", "text-center")
     const h2Text = document.createTextNode(title)
     h2.appendChild(h2Text)
+    const buttonClose = document.createElement("button")
+    buttonClose.setAttribute("class", "hidden closeCard")
+    buttonClose.setAttribute("type", "button")
+    const spanCloseText = document.createTextNode("X")
+    buttonClose.appendChild(spanCloseText)
 
     const p = document.createElement("p")
     p.setAttribute("class", "section__description text-center")
@@ -28,6 +33,6 @@ function createCardServicesInfo(title, description, icons) {
     
     div.appendChild(chevronTopRight)
     div.appendChild(chevronBottomLeft)
-    div.append(h2, divIcons,p)
+    div.append(h2, divIcons,p,buttonClose)
     services.appendChild(div)
 }
