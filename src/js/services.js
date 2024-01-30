@@ -1,4 +1,4 @@
-function createCardServicesInfo(title, description, icons) {
+function createCardServicesInfo(title, description,details, icons) {
     const div = document.createElement("div")
     div.setAttribute("class", "section__box relative p-05 d-grid bg-dark-gray border-radius-5 drop-shadow")
 
@@ -9,6 +9,15 @@ function createCardServicesInfo(title, description, icons) {
     h2.setAttribute("class", "text-center")
     const h2Text = document.createTextNode(title)
     h2.appendChild(h2Text)
+
+    const ul = document.createElement("ul")
+    ul.setAttribute("class", "serviceUl hidden")
+    details.forEach(detail => {
+        const li = document.createElement("li")
+        const liText = document.createTextNode(detail)
+        li.appendChild(liText)
+        ul.appendChild(li)  
+    })
 
     const p = document.createElement("p")
     p.setAttribute("class", "section__description text-center")
@@ -28,6 +37,6 @@ function createCardServicesInfo(title, description, icons) {
     
     div.appendChild(chevronTopRight)
     div.appendChild(chevronBottomLeft)
-    div.append(h2, divIcons,p)
+    div.append(h2, divIcons,p,ul)
     services.appendChild(div)
 }

@@ -213,16 +213,19 @@ const servicesInfo = {
         {
             "title": "Mantenimiento y armado de PC",
             "description": "Armado de pc, mantenimiento y reciclado de hardware",
+            "details": ["Presupuesto y armado de PC a medida","Mantenimiento lógico y físico","Backup de datos","Soporte técnico remoto","Soluciones informáticas generales"],
             "icons": ["computer-solid", "screwdriver-wrench-solid"]
         },
         {
             "title": "Clases de internet avanzado",
             "description": "Imparto clases particulares a adultos mayores para contribuir con la alfabetización digital",
+            "details": ["Clases de internet para aprovechar el mundo digital","Correcta utilización de programas y aplicaciones de escritorio y celular","Usos más frecuentes para la vida diaria"],
             "icons": ["chalkboard-user-solid", "book-solid"]
         },
         {
             "title": "Optimización tecnológica",
             "description": "Automatización en procesos de trabajo para ahorrar tiempos de ejecución de tareas",
+            "details": ["Creación de plantillas a medida","Creación de mini programas para maximizar tiempos","Asesoramiento para aprovechar tecnologías al alcance"],
             "icons": ["rocket-solid", "hand-holding-hand-solid"]
         },
     ]

@@ -36,6 +36,8 @@ function showDemoMode() {
     demoMode.classList.remove('hidden')
     body.classList.add('hide-cursor')
     main.scrollTo(0,0)
+    // modalServices.js
+    closeAllCards()
     modeDemoOn()
 }
 

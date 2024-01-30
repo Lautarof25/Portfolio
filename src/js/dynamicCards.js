@@ -24,7 +24,7 @@ function addCardInfo(type, database) {
                 }
                 break
             case 'services':
-                createCardServicesInfo(item.title, item.description, item.icons)
+                createCardServicesInfo(item.title, item.description,item.details, item.icons)
                 break
         }
     })
