@@ -1,16 +1,6 @@
 const cardsService = $$(".services .section__box")
 const closeCardService = $(".closeCardService")
 
-cardsService.forEach(card => {
-    card.addEventListener("click", () => {
-        closeAllCards()
-        card.classList.add("modalUp")
-        // The Ul element
-        card.children[5].classList.remove("hidden")
-        closeCardService.classList.remove("hidden")
-    })
-})
-
 function closeAllCards() {
     cardsService.forEach(card => {
         // The Ul element
@@ -24,7 +14,7 @@ closeCardService.addEventListener("click", () => {
     closeCardService.classList.add("hidden")
 })
 
-function clickOutside() {
+function openCloseCards() {
     cardsService.forEach(card => {
         if (card) {
             card.addEventListener('click', function (event) {
@@ -34,6 +24,7 @@ function clickOutside() {
                 card.children[5].classList.remove("hidden")
                 closeCardService.classList.remove("hidden")
                 card.classList.remove("hoverCard")
+                main.scrollTo(0,0)
                 event.stopPropagation()
             })
         } else {
@@ -50,4 +41,4 @@ function clickOutside() {
     })
 }
 
-clickOutside()
+openCloseCards()
