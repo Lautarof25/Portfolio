@@ -1,6 +1,6 @@
 function createCardServicesInfo(title, description,details, icons) {
     const div = document.createElement("div")
-    div.setAttribute("class", "section__box relative p-05 d-grid bg-dark-gray border-radius-5 drop-shadow")
+    div.setAttribute("class", "section__box relative p-05 d-grid bg-dark-gray border-radius-5 drop-shadow hoverCard")
 
     const chevronTopRight = createSVG("chevron-top-right")
     const chevronBottomLeft = createSVG("chevron-bottom-left")
