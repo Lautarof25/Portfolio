@@ -23,13 +23,8 @@ function showModal(card) {
     card.children[5].classList.remove("hidden")
     card.classList.remove("hoverCard")
     bodyOpacityEffect(1)
+    card.style.cursor = "default"
 }
-
-closeCardService.addEventListener("click", () => {
-    closeAllCards()
-    closeCardServiceClick(1)
-    bodyOpacityEffect(0)
-})
 
 function closeCardServiceClick(mode) {
     mode === 1 ? closeCardService.classList.add("hidden") : closeCardService.classList.remove("hidden")
