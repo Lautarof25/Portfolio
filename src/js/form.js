@@ -32,11 +32,11 @@ async function fillForm() {
 
 async function fillInput(inputId, text, gradualTyping = false) {
     const inputElement = document.getElementById(inputId);
-    inputElement.value = "";
+    inputElement.placeholder = "";
 
     if (gradualTyping) {
         for (let i = 0; i < text.length; i++) {
-            inputElement.value += text[i];
+            inputElement.placeholder += text[i];
             await waitFor(100);
         }
     } else {
