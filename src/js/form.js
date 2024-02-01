@@ -7,32 +7,59 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     emailInput = document.getElementById("email"),
     emailValue = emailInput.value.trim();
 let contactPageActive = !1;
-function waitFor(e) {
-    return new Promise((t) => setTimeout(t, e));
+
+function waitFor(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
 }
+
 async function fillForm() {
-    try {
-        const e = "Lautaro Fernández",
-            t = "Fernandez.Lautaro@hotmail.com",
-            a = "👋​ Hi Lautaro, I really like your website!😍";
-        clearForm(), await fillInput("name", e, !1), await waitFor(1e3), await fillInput("email", t, !1), await waitFor(1e3), await fillInput("message", a, !0);
-    } catch (e) {}
+
+    const name = "Lautaro Fernández";
+    const email = "Fernandez.Lautaro@hotmail.com";
+    const message = "👋​ Hi Lautaro, I really like your website!😍";
+
+    clearFormPlaceholders();
+
+    await fillInput("name", name, true);
+    await waitFor(1000);
+
+    await fillInput("email", email, true);
+    await waitFor(1000);
+
+    await fillInput("message", message, true);
+
 }
-async function fillInput(e, t, a = !1) {
-    const n = document.getElementById(e);
-    if (a) {
-        n.placeholder = "";
-        for (let e = 0; e < t.length; e++) (n.placeholder += t[e]), await waitFor(100);
+
+async function fillInput(inputId, text, gradualTyping = false) {
+    const inputElement = document.getElementById(inputId);
+    inputElement.value = "";
+
+    if (gradualTyping) {
+        for (let i = 0; i < text.length; i++) {
+            inputElement.value += text[i];
+            await waitFor(100);
+        }
     } else {
-        n.placeholder = "";
-        for (let e = 0; e < t.length; e++) (n.placeholder += t[e]), await waitFor(100);
+        inputElement.value = text;
     }
 }
+
+function clearFormPlaceholders() {
+    const inputIds = ["name", "email", "message"];
+    inputIds.forEach(id => {
+        const inputElement = document.getElementById(id);
+        inputElement.placeholder = "";
+    });
+}
+
 function automaticForm() {
     setTimeout(() => {
         fillForm();
     }, 500);
 }
+
 function handleAutomaticForm() {
-    "contact" === currentIdPage() && automaticForm();
+    if (currentIdPage() === "contact") {
+        automaticForm();
+    }
 }
