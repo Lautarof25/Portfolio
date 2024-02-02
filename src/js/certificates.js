@@ -36,7 +36,7 @@ function createCardCertificatesInfo(title, description, thumbnail, hours, year, 
   img.setAttribute("src", `https://ucarecdn.com/${thumbnail}/-/scale_crop/500x250/-/format/auto/-/quality/smart/`)
   img.setAttribute("loading", "lazy")
   img.setAttribute("alt", title)
-  img.setAttribute("class", "w-100 h-250px object-fit-cover object-pos-center-top border-radius-top-5")
+  img.setAttribute("class", "w-100 h-250px object-fit-cover object-pos-center-top border-radius-top-5 d-block")
   aLinkImg.appendChild(img)
 
   div.append(chevronTopLeft,chevronTopRight)
