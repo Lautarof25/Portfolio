@@ -44,7 +44,7 @@ const closeButton = $(".closeButton")
 const radios = $$('[type="radio"]')
 const allLinks = $$("a")
 const allButtons = $$("button")
-titlePage.textContent = $('.link-active').textContent
+const freeColor = $("#freeColor")
 const fechaActual = new Date()
 const añoActual = fechaActual.getFullYear()
 const currentYear = $('.currentYear').textContent += fechaActual.getFullYear()
