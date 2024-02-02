@@ -19,13 +19,13 @@ const aboutInfo = {
         },
         {
             "description": "Tengo conocimientos en HTML, CSS, JS y algunos frameworks (Bootstrap y Tailwind)",
-            "descriptionHidden": "Estudié de manera autodidacta en sitios web, youtube, foros, etc",
+            "descriptionHidden": "Estudié de manera autodidacta en sitios web, cursos online, youtube, foros, etc",
             "icons": ["html5", "css3-alt", "square-js", "bootstrap"]
         },
         {
-            "description": "También conozco Python y Java, y estoy estudiando ReactJS, Spring, PHP, entre otros.",
+            "description": "También conozco Python y Java, y estoy estudiando React y NodeJs",
             "descriptionHidden": "Hice un curso de Python en la UnaHur, estudié Java en un bootcamp autoguiado",
-            "icons": ["python", "java", "react", "php"]
+            "icons": ["python", "java", "react","node"]
         },
         {
             "description": "Usando herramientas de planificación e inteligencia artificial para potenciar el trabajo y proyectos",
@@ -34,7 +34,7 @@ const aboutInfo = {
         },
         {
             "description": "Me interesa también la parte de testing QA y bases de datos.",
-            "descriptionHidden": "Hice cursos referidos a testing manual y bases de datos en Tecno3f",
+            "descriptionHidden": "Hice cursos referidos a testing manual y bases de datos en Tecno3F",
             "icons": ["bug-solid", "database-solid"]
         },
         {
