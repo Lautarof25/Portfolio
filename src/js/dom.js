@@ -58,14 +58,14 @@ let direction = 1
 let speedWriting = 150 // milisegundos por letra
 let speedChangeWords = 1000 // milisegundos entre cambios de palabra
 
-let active = true
+let activeWriteWords = true
 
 function writeDeleteWords() {
     let currentWord = words[index]
     let element = $('.nameChange')
-    if(active){
+    if(activeWriteWords){
         if (direction === 1) {
-            element.innerHTML = currentWord.substring(0, currentLetter)
+            element.textContent = currentWord.substring(0, currentLetter)
             currentLetter++
             if (currentLetter > currentWord.length) {
                 direction = -1
@@ -74,7 +74,7 @@ function writeDeleteWords() {
                 setTimeout(writeDeleteWords, speedWriting)
             }
         } else {
-            element.innerHTML = currentWord.substring(0, currentLetter)
+            element.textContent = currentWord.substring(0, currentLetter)
             currentLetter--
             if (currentLetter === 0) {
                 direction = 1
@@ -85,7 +85,6 @@ function writeDeleteWords() {
             }
         }
     }
-    
 }
 
 writeDeleteWords()
@@ -95,10 +94,10 @@ const targetElement = document.querySelector('.home')
 const observer = new MutationObserver((mutationsList) => {
     for (const mutation of mutationsList) {
         if (currentIdPage() === "home") {
-            active = true
+            activeWriteWords = true
             writeDeleteWords()
         }else {
-            active = false
+            activeWriteWords = false
         }
         if(currentIdPage() === "contact")
             automaticForm()

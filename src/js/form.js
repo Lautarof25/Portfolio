@@ -1,10 +1,10 @@
 function clearForm() {
     "contact" === currentIdPage() && ((name.placeholder = ""), (email.placeholder = ""), (message.placeholder = ""));
 }
-const contact = document.getElementById("contact");
+const contact = $("#contact");
 submit.addEventListener("click", clearForm);
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    emailInput = document.getElementById("email"),
+    emailInput = $("#email"),
     emailValue = emailInput.value.trim();
 let contactPageActive = !1;
 
@@ -31,7 +31,7 @@ async function fillForm() {
 }
 
 async function fillInput(inputId, text, gradualTyping = false) {
-    const inputElement = document.getElementById(inputId);
+    const inputElement = $(`#${inputId}`);
     inputElement.placeholder = "";
 
     if (gradualTyping) {
@@ -47,7 +47,7 @@ async function fillInput(inputId, text, gradualTyping = false) {
 function clearFormPlaceholders() {
     const inputIds = ["name", "email", "message"];
     inputIds.forEach(id => {
-        const inputElement = document.getElementById(id);
+        const inputElement = $(`#${id}`);
         inputElement.placeholder = "";
     });
 }
