@@ -1,4 +1,4 @@
-function createCardCertificatesInfo(title, description, thumbnail, hours, year, link) {
+const createCardCertificatesInfo = (title, description, thumbnail, hours, year, link) =>{
   const div = document.createElement("div")
   div.setAttribute("class", "section__box relative d-grid bg-dark-gray text-center opacityEffect")
 

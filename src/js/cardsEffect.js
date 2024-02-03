@@ -1,4 +1,4 @@
-function cardsScale() {
+const cardsScale = () =>{
     if(currentIdPage() !== "home" && currentIdPage() !== "contact"){
         const boxesCard = $$(`main .${currentIdPage()} .section__box`)
         setTimeout(() => {

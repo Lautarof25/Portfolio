@@ -1,4 +1,4 @@
-function addCardInfo(type, database) {
+const addCardInfo = (type, database) => {
     const container = getContainerByType(type);
 
     database.forEach(item => {
@@ -30,7 +30,7 @@ function addCardInfo(type, database) {
     })
 }
 
-function getContainerByType(type) {
+const getContainerByType = (type) => {
     switch (type) {
         case 'about':
             return about

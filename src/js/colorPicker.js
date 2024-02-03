@@ -10,34 +10,45 @@ const handleRadioChange = (radio) => {
   }
 }
 
-freeColor.addEventListener("input", () => {
-  body.style.setProperty("--principal-color", `${freeColor.value}`)
-  body.style.cursor = "default"
-})
-
-colorPicker.addEventListener("mouseover", function () {
-  colorPicker.style.bottom = "-80px"
-})
-colorPicker.addEventListener("mouseout", function () {
-  if (window.innerWidth <= 576) {
-    colorPicker.style.bottom = "-150px"
-  } else {
-    colorPicker.style.bottom = "-180px"
-  }
-})
-
-radios.forEach(radio => {
-  radio.addEventListener("change", () => {
-    handleRadioChange(radio)
+const handleCustomizeColor = () => {
+  freeColor.addEventListener("input", () => {
+    body.style.setProperty("--principal-color", `${freeColor.value}`)
+    body.style.cursor = "default"
   })
-  radio.addEventListener("focus", () => {
+}
+
+handleCustomizeColor()
+
+const hoverColorPicker = () => {
+  colorPicker.addEventListener("mouseover", function () {
     colorPicker.style.bottom = "-80px"
   })
-  radio.addEventListener("focusout", () => {
+  colorPicker.addEventListener("mouseout", function () {
     if (window.innerWidth <= 576) {
       colorPicker.style.bottom = "-150px"
     } else {
       colorPicker.style.bottom = "-180px"
     }
   })
-})
+}
+
+hoverColorPicker()
+
+const handleColorAndHover = () => {
+  radios.forEach(radio => {
+    radio.addEventListener("change", () => {
+      handleRadioChange(radio)
+    })
+    radio.addEventListener("focus", () => {
+      colorPicker.style.bottom = "-80px"
+    })
+    radio.addEventListener("focusout", () => {
+      if (window.innerWidth <= 576) {
+        colorPicker.style.bottom = "-150px"
+      } else {
+        colorPicker.style.bottom = "-180px"
+      }
+    })
+  })
+}
+handleColorAndHover()

@@ -60,7 +60,7 @@ const handleTouchMove = (event) => {
 
 // Keyboard navigation
 
-function scrollKeyboard(event) {
+const scrollKeyboard = (event) =>{
     const ctrlKey = event.ctrlKey || event.metaKey;
     if (ctrlKey && event.key === 'ArrowDown') {
         navigatePage(1)

@@ -1,13 +1,13 @@
 const cardsService = $$(".services .section__box")
 const closeCardService = $(".closeCardService")
 
-function closeAllCards() {
+const closeAllCards = () =>{
     cardsService.forEach(card => {
         closeModal(card)
     })
 }
 
-function closeModal(card) {
+const closeModal = (card) =>{
     closeCardServiceClick(1)
     card.children[5].classList.add("hidden")
     card.classList.remove("modalUp")
@@ -16,7 +16,7 @@ function closeModal(card) {
     bodyOpacityEffect(0)
 }
 
-function showModal(card) {
+const showModal = (card) =>{
     card.classList.add("modalUp")
     card.classList.add("opacityEffect")
     closeCardServiceClick(0)
@@ -26,15 +26,15 @@ function showModal(card) {
     card.style.cursor = "default"
 }
 
-function closeCardServiceClick(mode) {
+const closeCardServiceClick = (mode) =>{
     mode === 1 ? closeCardService.classList.add("hidden") : closeCardService.classList.remove("hidden")
 }
 
-function bodyOpacityEffect(mode) {
+const bodyOpacityEffect = (mode) =>{
     mode === 1 ? body.classList.add("opacityBody") : body.classList.remove("opacityBody")
 }
 
-function openCloseCards() {
+const openCloseCards = () =>{
     cardsService.forEach(card => {
         if (card) {
             card.addEventListener('click', function (event) {

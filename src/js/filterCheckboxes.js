@@ -55,27 +55,27 @@ const getCheckedDefault = () => {
 
 getCheckedDefault()
 
-checkboxesPortfolio.forEach(ckb => {
-    ckb.addEventListener('change', () => {
-        if (ckb.checked) {
-            checkboxesPortfolioChecked.push(ckb.value.slice(-4))
-        } if (!ckb.checked) {
-            checkboxesPortfolioChecked = checkboxesPortfolioChecked.filter(function (i) { return i !== ckb.value.slice(-4) });
-        }
-        checkboxesPortfolioChecked.sort((a, b) => b - a)
+const getCheckedChanged = (element, array) => {
+    element.forEach(ckb => {
+        ckb.addEventListener('change', () => {
+            let arrayDefault = [...array]
+            if (ckb.checked) {
+                arrayDefault.push(ckb.value.slice(-4))
+            } else {
+                arrayDefault = arrayDefault.filter(function (i) {
+                    return i !== ckb.value.slice(-4)
+                })
+            }
+            arrayDefault.sort((a, b) => b - a)
+            
+            array.length = 0
+            array.push(...arrayDefault)
+        })
     })
-})
+}
 
-checkboxesCertificates.forEach(ckb => {
-    ckb.addEventListener('change', () => {
-        if (ckb.checked) {
-            checkboxesCertificatesChecked.push(ckb.value.slice(-4))
-        } else {
-            checkboxesCertificatesChecked = checkboxesCertificatesChecked.filter(function (i) { return i !== ckb.value.slice(-4) });
-        }
-        checkboxesCertificatesChecked.sort((a, b) => b - a)
-    })
-})
+getCheckedChanged(checkboxesPortfolio, checkboxesPortfolioChecked)
+getCheckedChanged(checkboxesCertificates, checkboxesCertificatesChecked)
 
 const filterCards = (checkboxes,section,data) =>{
     checkboxes.forEach(chk => {
@@ -89,7 +89,7 @@ const filterCards = (checkboxes,section,data) =>{
 filterCards(checkboxesCertificates,"certificates",certificatesInfo.info)
 filterCards(checkboxesPortfolio,"portfolio",portfolioInfo.info)
 
-function removeElements() {
+const removeElements = () => {
     var sectionBoxes = $$(`.${currentIdPage()} .section__box`)
 
     sectionBoxes.forEach(function (sectionBox) {

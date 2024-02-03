@@ -2,14 +2,14 @@ let timer = 0
 const idleTime = 15
 let modeDemoActivity = false
 
-function resetTimerAndShowNextPage() {
+const resetTimerAndShowNextPage = () =>{
     resetTimer()
     nextPage()
     navigatePage(1)
     showDemoMode()
 }
 
-function idleTimer() {
+const idleTimer = () =>{
     // Display the next page after a certain time of being idle
     setInterval(() => {
         timer++
@@ -22,14 +22,14 @@ function idleTimer() {
 
 idleTimer()
 
-function resetTimerAndHideDemoMode() {
+const resetTimerAndHideDemoMode = () =>{
     resetTimer()
     hideDemoMode()
     body.classList.remove('hide-cursor')
     modeDemoActivity = false
 }
 
-function hideDemoMode() {
+const hideDemoMode = () =>{
     demoMode.classList.add('hidden')
 }
 function showDemoMode() {
@@ -41,11 +41,11 @@ function showDemoMode() {
     modeDemoOn()
 }
 
-function resetTimer() {
+const resetTimer = () => {
     timer = 0
 }
 
-function modeDemoOn(){
+const modeDemoOn = () => {
     const currentHeightPage = main.scrollHeight
     const scrollPerSecond = currentHeightPage / idleTime
     let currentScroll = 0

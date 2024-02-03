@@ -44,7 +44,7 @@ async function fillInput(inputId, text, gradualTyping = false) {
     }
 }
 
-function clearFormPlaceholders() {
+const clearFormPlaceholders = () =>{
     const inputIds = ["name", "email", "message"];
     inputIds.forEach(id => {
         const inputElement = $(`#${id}`);
@@ -52,13 +52,13 @@ function clearFormPlaceholders() {
     });
 }
 
-function automaticForm() {
+const automaticForm = () =>{
     setTimeout(() => {
         fillForm();
     }, 500);
 }
 
-function handleAutomaticForm() {
+const handleAutomaticForm = () =>{
     if (currentIdPage() === "contact") {
         automaticForm();
     }

@@ -1,7 +1,7 @@
 buttonDown.addEventListener('click', () => navigatePage(1))
 buttonUp.addEventListener('click', () => navigatePage(-1))
 
-function navigatePage(direction) {
+const navigatePage = (direction) =>{
     // External function : showPage.js
     hidePages()
     const index = direction === 1 ? nextPage() : prevPage()
@@ -17,19 +17,19 @@ function navigatePage(direction) {
     cardsScale()
 }
 
-function nextPage() {
+const nextPage = () =>{
     return currentIndexPage() !== links.length-1 ? currentIndexPage() + 1 : 0
 }
 
-function prevPage() {
+const prevPage = () =>{
     return currentIndexPage() !== 0 ? currentIndexPage() - 1 : links.length-1
 }
 
-function currentIndexPage() {
+const currentIndexPage = () =>{
     return linksArray.indexOf(currentIdPage())
 }
 
-function currentIdPage() {
+const currentIdPage = () =>{
     return document.querySelector(".link-active").id
 }
 
