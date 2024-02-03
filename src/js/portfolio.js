@@ -1,6 +1,6 @@
 function createCardPortfolioInfo(title,date, description, languages, thumbnail, github, webpage) {
     const div = document.createElement("div")
-    div.setAttribute("class", "section__box relative d-grid place-center border-radius-5 gap-05 bg-dark-gray opacityEffect")
+    div.setAttribute("class", "section__box relative d-grid align-end border-radius-5 gap-05 bg-dark-gray opacityEffect")
 
     const chevronTopLeft = createSVG("chevron-top-left")
     const chevronTopRight = createSVG("chevron-top-right")
