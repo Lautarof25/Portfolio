@@ -1,3 +1,5 @@
+const bgMenu = $(".bg-menu")
+
 const hideMenu = () =>{
     allExceptAside.forEach(e => {
         e.addEventListener('click', function () {
@@ -6,6 +8,7 @@ const hideMenu = () =>{
                 allExceptAside.forEach(element => {
                     element.classList.remove("blur-effect")
                 })
+                bgMenu.classList.add("hidden")
             }
         })
     })
@@ -15,6 +18,7 @@ hideMenu()
 
 const showMenu = () =>{
     toggleMenu.addEventListener("click", function () {
+        bgMenu.classList.remove("hidden")
         aside.classList.toggle("show-aside")
         allExceptAside.forEach(element => {
             element.classList.toggle("blur-effect")
@@ -31,11 +35,12 @@ const hideMenuAfterClick = () =>{
                 aside.classList.remove("show-aside")
                 allExceptShareButton.forEach(element => {
                     element.classList.remove("blur-effect")
-                });
+                })
             }
             allExceptAside.forEach(element => {
                 element.classList.remove("blur-effect")
             })
+            bgMenu.classList.add("hidden")
         })
     })
 }
