@@ -19,6 +19,8 @@ const hidePages = () =>{
 
 const showPage = (link)=>{
     $(`.${link}`).classList.remove('hidden')
+    // External function : carsEffect.js
+    cardsScale()
     // External function : titlePage.js
     changeTitle()
 }
