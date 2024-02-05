@@ -22,6 +22,7 @@ const showMenu = () => {
     toggleMenu.addEventListener("click", function () {
         bgDisable(1)
         aside.classList.toggle("show-aside")
+        aside.style.zIndex = "20"
         allExceptAside.forEach(element => {
             element.classList.toggle("blur-effect")
         })
