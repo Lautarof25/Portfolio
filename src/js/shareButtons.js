@@ -20,6 +20,7 @@ const removeBlurAndClosePopUp = () => {
       element.classList.remove('blur-effect')
     })
     openPopUp(0)
+    bgDisable(0)
   })
 }
 
@@ -31,6 +32,7 @@ const addBlurEffect = (element,mode) => {
 const openPopUp = (mode) => {
   mode === 1 ? containerShareButtons.classList.remove("hidden") 
              : containerShareButtons.classList.add("hidden")
+  bgDisable(1)
 }
 
 removeBlurAndClosePopUp()

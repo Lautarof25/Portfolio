@@ -32,6 +32,7 @@ const headerLogo = $('.header__logo')
 const chevronBottomRight = $('header svg.chevron-bottom-right')
 const hideMenuDesktop = $("#hideMenuDesktop")
 // Components 
+const bgDisabled = $(".bgDisabled")
 const titlePage = $('.titlePage h2')
 const colorPicker = $('.color-picker')
 const logo = $("#logo")

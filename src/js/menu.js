@@ -1,6 +1,4 @@
-const bgMenu = $(".bg-menu")
-
-const hideMenu = () =>{
+const hideMenu = () => {
     allExceptAside.forEach(e => {
         e.addEventListener('click', function () {
             if (aside.classList.contains("show-aside")) {
@@ -8,17 +6,21 @@ const hideMenu = () =>{
                 allExceptAside.forEach(element => {
                     element.classList.remove("blur-effect")
                 })
-                bgMenu.classList.add("hidden")
+                bgDisable(0)
             }
         })
     })
 }
 
+const bgDisable = (mode) => {
+    mode === 1 ? bgDisabled.classList.remove("hidden") : bgDisabled.classList.add("hidden")
+}
+
 hideMenu()
 
-const showMenu = () =>{
+const showMenu = () => {
     toggleMenu.addEventListener("click", function () {
-        bgMenu.classList.remove("hidden")
+        bgDisable(1)
         aside.classList.toggle("show-aside")
         allExceptAside.forEach(element => {
             element.classList.toggle("blur-effect")
@@ -28,7 +30,7 @@ const showMenu = () =>{
 
 showMenu()
 
-const hideMenuAfterClick = () =>{
+const hideMenuAfterClick = () => {
     links.forEach(link => {
         link.addEventListener("click", function () {
             if (window.innerWidth <= 576) {
@@ -40,15 +42,15 @@ const hideMenuAfterClick = () =>{
             allExceptAside.forEach(element => {
                 element.classList.remove("blur-effect")
             })
-            bgMenu.classList.add("hidden")
+            bgDisable(0)
         })
     })
 }
 hideMenuAfterClick()
 
-const hideMenuDestktopAction = () =>{
-    hideMenuDesktop.addEventListener("click", ()=>{
-        if(window.innerWidth >= 576) {
+const hideMenuDestktopAction = () => {
+    hideMenuDesktop.addEventListener("click", () => {
+        if (window.innerWidth >= 576) {
             body.classList.toggle("removePaddingLeft")
             aside.classList.toggle("hideMenuDesktop")
             colorPicker.classList.toggle("removeMarginLeft")
