@@ -20,20 +20,28 @@ const addCheckbox = (section,date) => {
 const dates = new Set()
 const years = new Set()
 
-portfolioInfo.info.forEach(item => {
-    dates.add(item.date.slice(0, 4))
-})
-certificatesInfo.info.forEach(item => {
-    years.add(item.year)
-})
+const getDates = ()=> {
+    portfolioInfo.info.forEach(item => {
+        dates.add(item.date.slice(0, 4))
+    })
+    certificatesInfo.info.forEach(item => {
+        years.add(item.year)
+    })
+}
 
-dates.forEach(item => {
-    addCheckbox("portfolio", item)
-})
+getDates()
 
-years.forEach(item => {
-    addCheckbox("certificates", item)
-})
+const addDates = () => {
+    dates.forEach(item => {
+        addCheckbox("portfolio", item)
+    })
+    
+    years.forEach(item => {
+        addCheckbox("certificates", item)
+    })
+}
+
+addDates()
 
 const checkboxesPortfolio = $$('.portfolio input[type="checkbox"]')
 const checkboxesCertificates = $$('.certificates input[type="checkbox"]')

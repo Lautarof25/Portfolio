@@ -4,13 +4,11 @@ const cardsScale = () =>{
         setTimeout(() => {
             boxesCard.forEach((card, index) => {
                 setTimeout(() => {
-                    card.classList.add("scale");
-                    card.classList.add("box-shadow");
+                    card.classList.add("scale","box-shadow")
                     setTimeout(() => {
-                        card.classList.remove("scale");
-                        card.classList.remove("box-shadow");
-                    }, 500);
-                }, 100 * index);
+                        card.classList.remove("scale","box-shadow")
+                    }, 500)
+                }, 100 * index)
             });
         }, 1500);
     }

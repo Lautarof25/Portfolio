@@ -27,13 +27,13 @@ const createCardServicesInfo = (title, description,details, icons) =>{
     const divIcons = document.createElement("div")
     divIcons.setAttribute("class", "section__icons d-flex justify-center gap-05")
 
-    for (let i = 0; i < icons.length; i++) {
+    icons.forEach(i => {
         const icon = document.createElement("img")
         icon.setAttribute("loading", `lazy`)
-        icon.setAttribute("src", `./src/img/icons/${icons[i]}.svg`)
-        icon.setAttribute("alt", `${icons[i]}`)
+        icon.setAttribute("src", `./src/img/icons/${i}.svg`)
+        icon.setAttribute("alt", i)
         divIcons.appendChild(icon)
-    }
+    })
     
     div.appendChild(chevronTopRight)
     div.appendChild(chevronBottomLeft)

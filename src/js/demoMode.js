@@ -32,7 +32,7 @@ const resetTimerAndHideDemoMode = () =>{
 const hideDemoMode = () =>{
     demoMode.classList.add('hidden')
 }
-function showDemoMode() {
+const showDemoMode = () =>{
     demoMode.classList.remove('hidden')
     body.classList.add('hide-cursor')
     main.scrollTo(0,0)

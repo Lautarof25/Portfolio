@@ -17,21 +17,13 @@ const navigatePage = (direction) =>{
     cardsScale()
 }
 
-const nextPage = () =>{
-    return currentIndexPage() !== links.length-1 ? currentIndexPage() + 1 : 0
-}
+const nextPage = () => currentIndexPage() !== links.length-1 ? currentIndexPage() + 1 : 0
 
-const prevPage = () =>{
-    return currentIndexPage() !== 0 ? currentIndexPage() - 1 : links.length-1
-}
+const prevPage = () =>currentIndexPage() !== 0 ? currentIndexPage() - 1 : links.length-1
 
-const currentIndexPage = () =>{
-    return linksArray.indexOf(currentIdPage())
-}
+const currentIndexPage = () =>linksArray.indexOf(currentIdPage())
 
-const currentIdPage = () =>{
-    return document.querySelector(".link-active").id
-}
+const currentIdPage = () =>document.querySelector(".link-active").id
 
 const scrollToTop = () => {
     setTimeout(() => {

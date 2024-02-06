@@ -105,4 +105,4 @@ const observer = new MutationObserver((mutationsList) => {
     }
 })
 
-observer.observe(targetElement, { attributes: true });
+observer.observe(targetElement, { attributes: true })

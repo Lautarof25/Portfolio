@@ -7,9 +7,7 @@ const getLinksId = () => {
 }
 getLinksId()
 
-const hidePage = (link) =>{
-    $(`.${link}`).classList.add('hidden')
-}
+const hidePage = (link) =>{ $(`.${link}`).classList.add('hidden') }
 
 const hidePages = () =>{
     linksArray.forEach(link => {

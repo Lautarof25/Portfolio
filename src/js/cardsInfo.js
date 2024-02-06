@@ -1,9 +1,9 @@
 const sortByDate = (a, b) => {
-    const dateA = new Date(a.date || `${a.year}-01-01`);
-    const dateB = new Date(b.date || `${b.year}-01-01`);
+    const dateA = new Date(a.date || `${a.year}-01-01`)
+    const dateB = new Date(b.date || `${b.year}-01-01`)
 
-    return dateB - dateA;
-};
+    return dateB - dateA
+}
 
 const aboutInfo = {
     "info": [

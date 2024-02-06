@@ -1,13 +1,3 @@
-function clearForm() {
-    "contact" === currentIdPage() && ((name.placeholder = ""), (email.placeholder = ""), (message.placeholder = ""));
-}
-const contact = $("#contact");
-submit.addEventListener("click", clearForm);
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    emailInput = $("#email"),
-    emailValue = emailInput.value.trim();
-let contactPageActive = !1;
-
 function waitFor(time) {
     return new Promise(resolve => setTimeout(resolve, time));
 }
