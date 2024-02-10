@@ -54,7 +54,7 @@ const hideMenuDestktopAction = () => {
         if (window.innerWidth >= 576) {
             body.classList.toggle("removePaddingLeft")
             aside.classList.toggle("hideMenuDesktop")
-            colorPicker.classList.toggle("removeMarginLeft")
+            colorPicker.classList.toggle("color-picker-margin")
         }
     })
 }
