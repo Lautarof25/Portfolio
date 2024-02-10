@@ -63,7 +63,7 @@ const portfolioInfo = {
         },
         {
             "title": "Calculadora Python",
-            "date": "2022-11-01",
+            "date": "2021-12-12",
             "description": "Una simple calculadora creada con Python",
             "languages": ["python"],
             "thumbnail": ["452e0b60-c82e-407c-b716-38fa3ad7c6b3"],
@@ -114,6 +114,33 @@ const portfolioInfo = {
             "thumbnail": ["f2afcce7-0ffd-44ae-a28b-e117198f7a14"],
             "github": "https://github.com/Lautarof25/guessTheNumber",
             "webpage": "https://lautarof25.github.io/guessTheNumber/"
+        },
+        {
+            "title": "QA testing",
+            "date": "2022-12-12",
+            "description": "Proyecto final de testing manual",
+            "languages": ["bug-solid", "magnifying-glass-solid"],
+            "thumbnail": ["4993a6e3-e0cb-4c2e-a446-40672b83fefc"],
+            "github": "https://github.com/Lautarof25/TestingQaCourse",
+            "webpage": "https://docs.google.com/document/d/1gT0I7ybXtWPM4TDxHybNK0OPhNw1uGB1FgIXvJ8UWxg/edit?usp=sharing"
+        },
+        {
+            "title": "FreeCode Camp portfolio",
+            "date": "2022-06-06",
+            "description": "Portafolio en freeCodeCamp",
+            "languages": ["html5", "css3-alt"],
+            "thumbnail": ["36f2fbc0-fefe-41b9-9ebe-130394a79b18"],
+            "github": "https://codepen.io/Lautadev/full/vYWvJvr",
+            "webpage": "https://codepen.io/Lautadev/full/vYWvJvr"
+        },
+        {
+            "title": "SQL introducción",
+            "date": "2022-12-12",
+            "description": "Proyecto final de SQL",
+            "languages": ["database-solid", "code-solid"],
+            "thumbnail": ["efe313a3-e135-4e11-8033-c1de68ee1117"],
+            "github": "https://github.com/Lautarof25/sql_proyecto",
+            "webpage": "https://docs.google.com/document/d/1cm_Kl6JF4r-TfspA-vYy8WxB77lZBctBUTDmYYZG3PQ/edit?usp=sharing"
         },
     ]
 }
