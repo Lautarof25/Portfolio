@@ -49,8 +49,6 @@ const freeColor = $("#freeColor")
 const fechaActual = new Date()
 const añoActual = fechaActual.getFullYear()
 const currentYear = $('.currentYear').textContent += fechaActual.getFullYear()
-let copy = $(".logos-slide").cloneNode(true)
-$(".logos").appendChild(copy)
 
 let words = ['Lautaro', 'Exequiel', 'Fernández']
 let index = 0
