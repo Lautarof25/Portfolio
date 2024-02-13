@@ -21,7 +21,7 @@ const dates = new Set()
 const years = new Set()
 
 const getDates = ()=> {
-    portfolioInfo.info.forEach(item => {
+    projectsInfo.info.forEach(item => {
         dates.add(item.date.slice(0, 4))
     })
     certificatesInfo.info.forEach(item => {
@@ -33,7 +33,7 @@ getDates()
 
 const addDates = () => {
     dates.forEach(item => {
-        addCheckbox("portfolio", item)
+        addCheckbox("projects", item)
     })
     
     years.forEach(item => {
@@ -43,15 +43,15 @@ const addDates = () => {
 
 addDates()
 
-const checkboxesPortfolio = $$('.portfolio input[type="checkbox"]')
+const checkboxesprojects = $$('.projects input[type="checkbox"]')
 const checkboxesCertificates = $$('.certificates input[type="checkbox"]')
-let checkboxesPortfolioChecked = []
+let checkboxesprojectsChecked = []
 let checkboxesCertificatesChecked = []
 
 const getCheckedDefault = () => {
-    checkboxesPortfolio.forEach(checkbox => {
+    checkboxesprojects.forEach(checkbox => {
         if (checkbox.checked) {
-            checkboxesPortfolioChecked.push(checkbox.value.slice(-4))
+            checkboxesprojectsChecked.push(checkbox.value.slice(-4))
         }
     })
     checkboxesCertificates.forEach(checkbox => {
@@ -82,7 +82,7 @@ const getCheckedChanged = (element, array) => {
     })
 }
 
-getCheckedChanged(checkboxesPortfolio, checkboxesPortfolioChecked)
+getCheckedChanged(checkboxesprojects, checkboxesprojectsChecked)
 getCheckedChanged(checkboxesCertificates, checkboxesCertificatesChecked)
 
 const filterCards = (checkboxes,section,data) =>{
@@ -95,7 +95,7 @@ const filterCards = (checkboxes,section,data) =>{
 }
 
 filterCards(checkboxesCertificates,"certificates",certificatesInfo.info)
-filterCards(checkboxesPortfolio,"portfolio",portfolioInfo.info)
+filterCards(checkboxesprojects,"projects",projectsInfo.info)
 
 const removeElements = () => {
     var sectionBoxes = $$(`.${currentIdPage()} .section__box`)

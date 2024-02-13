@@ -50,7 +50,7 @@ const aboutInfo = {
     ]
 }
 
-const portfolioInfo = {
+const projectsInfo = {
     "info": [
         {
             "title": "CV Online",
@@ -145,7 +145,7 @@ const portfolioInfo = {
     ]
 }
 
-portfolioInfo.info.sort(sortByDate)
+projectsInfo.info.sort(sortByDate)
 
 const certificatesInfo = {
     "info": [

@@ -6,12 +6,12 @@ const addCardInfo = (type, database) => {
             case 'about':
                 createCardAboutInfo(item.description, item.descriptionHidden, item.icons)
                 break
-            case 'portfolio':
-                if(checkboxesPortfolioChecked.includes(item.date.slice(0,4))){
-                    createCardPortfolioInfo(item.title, item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage)
-                    portfolio.querySelector('.empty').classList.add('hidden')
-                }if (checkboxesPortfolioChecked.length === 0){
-                    portfolio.querySelector('.empty').classList.remove('hidden')
+            case 'projects':
+                if(checkboxesprojectsChecked.includes(item.date.slice(0,4))){
+                    createCardProjectInfo(item.title, item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage)
+                    projects.querySelector('.empty').classList.add('hidden')
+                }if (checkboxesprojectsChecked.length === 0){
+                    projects.querySelector('.empty').classList.remove('hidden')
                 }
                 break
             case 'certificates':
@@ -34,8 +34,8 @@ const getContainerByType = (type) => {
     switch (type) {
         case 'about':
             return about
-        case 'portfolio':
-            return portfolio
+        case 'projects':
+            return projects
         case 'certificates':
             return certificates
         case 'services':
@@ -45,6 +45,6 @@ const getContainerByType = (type) => {
     }
 }
 addCardInfo('about', aboutInfo.info)
-addCardInfo('portfolio', portfolioInfo.info)
+addCardInfo('projects', projectsInfo.info)
 addCardInfo('certificates', certificatesInfo.info)
 addCardInfo('services', servicesInfo.info)
