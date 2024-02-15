@@ -1,6 +1,6 @@
 const createCardAboutInfo = (description,descriptionHidden, icons) =>{
   const div = document.createElement("div")
-  div.className = "section__box relative d-grid p-05 gap-1 bg-dark-gray border-radius-5 drop-shadow"
+  div.className = "section__box relative d-grid p-05 gap-1 bg-dark-gray border-radius-5 drop-shadow opacityEffect"
 
   const chevronTopLeft = createSVG("chevron-top-left")
   const chevronBottomRight = createSVG("chevron-bottom-right")
