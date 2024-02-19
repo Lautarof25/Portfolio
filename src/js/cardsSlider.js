@@ -14,12 +14,16 @@ const addRadio = (index) => {
   radioContainer.appendChild(label)
 }
 
-cards.forEach((card, index) => {
-  if (index !== 0) {
-    card.style.display = "none"
-  }
-  addRadio(index)
-})
+const checkFirstCheckbox = () => {
+  cards.forEach((card, index) => {
+    if (index !== 0) {
+      card.style.display = "none"
+    }
+    addRadio(index)
+  })
+}
+
+checkFirstCheckbox()
 
 const dynamicRadios = document.querySelectorAll("input[name='options']")
 
@@ -36,25 +40,27 @@ leftButton.addEventListener("click", () => {
   const currentIndex = checkChecked()
   const newIndex = currentIndex === 0 ? dynamicRadios.length - 1 : currentIndex - 1
   dynamicRadios[newIndex].checked = true
-  toggleCards(newIndex)
+  toggleCards(newIndex,"leftEffect")
 })
 
 rightButton.addEventListener("click", () => {
   const currentIndex = checkChecked()
   const newIndex = currentIndex === dynamicRadios.length - 1 ? 0 : currentIndex + 1
   dynamicRadios[newIndex].checked = true
-  toggleCards(newIndex)
+  toggleCards(newIndex,"rightEffect")
 })
 
 dynamicRadios.forEach((radio, index) => {
   radio.addEventListener("click", () => {
     dynamicRadios[index].checked = true
-    toggleCards(index)
+    toggleCards(index,"opacityEffect")
   })
 })
 
-const toggleCards = (index) => {
+const toggleCards = (index,effect) => {
   cards.forEach((card, i) => {
     card.style.display = i === index ? "grid" : "none"
+    card.classList.remove("rightEffect","leftEffect","opacityEffect")
+    card.classList.add(effect)
   })
 }
