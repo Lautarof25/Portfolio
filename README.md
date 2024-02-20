@@ -22,7 +22,7 @@ Personal Portfolio
 
 HTML, CSS and JavaScript
 ## Features
-
+- Analytics (tinyBird)
 - Demo mode
 - Dynamic pages
 - Dynamic cards
