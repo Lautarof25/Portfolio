@@ -24,11 +24,7 @@ const hoverColorPicker = () => {
     colorPicker.style.bottom = "-80px"
   })
   colorPicker.addEventListener("mouseout", function () {
-    if (window.innerWidth <= 576) {
-      colorPicker.style.bottom = "-150px"
-    } else {
-      colorPicker.style.bottom = "-180px"
-    }
+    colorPicker.style.bottom = "-150px"
   })
 }
 
@@ -43,11 +39,7 @@ const handleColorAndHover = () => {
       colorPicker.style.bottom = "-80px"
     })
     radio.addEventListener("focusout", () => {
-      if (window.innerWidth <= 576) {
-        colorPicker.style.bottom = "-150px"
-      } else {
-        colorPicker.style.bottom = "-180px"
-      }
+      colorPicker.style.bottom = "-150px"
     })
   })
 }
