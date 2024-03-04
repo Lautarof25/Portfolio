@@ -6,22 +6,17 @@ const navigatePage = (direction) =>{
     hidePages()
     const index = direction === 1 ? nextPage() : prevPage()
     const currentId = linksArray[index]
-    console.log(currentId)
     if(direction == 1){
         $(`.${currentId}`).classList.remove("downEffect")
         $(`.${currentId}`).classList.remove("centerEffect")
-        $(`.${currentId}`).classList.add("upEffect") 
+        $(`.${currentId}`).classList.add("upEffect")
     }   
     else if(direction == -1){
         $(`.${currentId}`).classList.remove("upEffect")
         $(`.${currentId}`).classList.remove("centerEffect")
         $(`.${currentId}`).classList.add("downEffect") 
     }
-    else {
-        $(`.${currentId}`).classList.remove("downEffect")
-        $(`.${currentId}`).classList.remove("upEffect")
-        $(`.${currentId}`).classList.add("centerEffect") 
-    }
+    direction = 0
     // External function : titlePage.js
     showPage(currentId)
     // External function : linksSelector.js

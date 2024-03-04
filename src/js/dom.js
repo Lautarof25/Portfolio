@@ -54,7 +54,7 @@ let words = ['Lautaro', 'Exequiel', 'Fernández']
 let index = 0
 let currentLetter = 0
 let direction = 1
-let speedWriting = 150 // milisegundos por letra
+const speedWriting = 250 // milisegundos por letra
 let speedChangeWords = 1000 // milisegundos entre cambios de palabra
 
 let activeWriteWords = true
