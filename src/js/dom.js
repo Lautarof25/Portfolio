@@ -54,8 +54,8 @@ let words = ['Lautaro', 'Exequiel', 'Fernández']
 let index = 0
 let currentLetter = 0
 let direction = 1
-const speedWriting = 250 // milisegundos por letra
-let speedChangeWords = 1000 // milisegundos entre cambios de palabra
+const speedWriting = 250
+let speedChangeWords = 1000
 
 let activeWriteWords = true
 
@@ -88,7 +88,7 @@ function writeDeleteWords() {
 
 writeDeleteWords()
 
-const targetElement = document.querySelector('.home')
+const targetElement = $('.home')
 
 const observer = new MutationObserver((mutationsList) => {
     for (const mutation of mutationsList) {
@@ -97,6 +97,7 @@ const observer = new MutationObserver((mutationsList) => {
             writeDeleteWords()
         }else {
             activeWriteWords = false
+            speedChangeWords = 2000
         }
         if(currentIdPage() === "contact")
             automaticForm()
