@@ -9,6 +9,7 @@ const section = $("section")
 const aside = $("aside")
 const sectionTitlePage = $(".titlePage")
 const main = $("main")
+const home = $('.home')
 const services = $('.services')
 const projects = $('.projects')
 const certificates = $('.certificates')
@@ -88,8 +89,6 @@ function writeDeleteWords() {
 
 writeDeleteWords()
 
-const targetElement = $('.home')
-
 const observer = new MutationObserver((mutationsList) => {
     for (const mutation of mutationsList) {
         if (currentIdPage() === "home") {
@@ -104,4 +103,4 @@ const observer = new MutationObserver((mutationsList) => {
     }
 })
 
-observer.observe(targetElement, { attributes: true })
+observer.observe(home, { attributes: true })
