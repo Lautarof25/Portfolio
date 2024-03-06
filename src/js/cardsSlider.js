@@ -84,8 +84,10 @@ grillAbout.addEventListener("change", ()=>{
   if(grillAbout.checked){
     document.querySelector(".container__buttons").style.display = "none"
     showAllCards(true)
+    about.classList.add("grid-template-auto")
   }else {
     document.querySelector(".container__buttons").style.display = "grid"
     showAllCards(false)
+    about.classList.remove("grid-template-auto")
   }
 })
