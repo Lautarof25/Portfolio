@@ -1,7 +1,7 @@
-const cards = document.querySelectorAll(".about .section__box")
-const radioContainer = document.querySelector("#radioContainer")
-const leftButton = document.querySelector("#leftButton")
-const rightButton = document.querySelector("#rightButton")
+const cards = $$(".about .section__box")
+const radioContainer = $("#radioContainer")
+const leftButton = $("#leftButton")
+const rightButton = $("#rightButton")
 
 const addRadio = (index) => {
   const label = document.createElement("label")
@@ -25,7 +25,7 @@ const checkFirstCheckbox = () => {
 
 checkFirstCheckbox()
 
-const dynamicRadios = document.querySelectorAll("input[name='options']")
+const dynamicRadios = $$("input[name='options']")
 
 const checkChecked = () => {
   for (let i = 0; i < dynamicRadios.length; i++) {
@@ -64,3 +64,28 @@ const toggleCards = (index,effect) => {
     card.classList.add(effect)
   })
 }
+
+const showAllCards = (activate) => {
+  if(activate){
+    cards.forEach(card => {
+      card.style.display = "block"
+    })
+  }else {
+    cards.forEach((card,i)=> {
+      if(i !== 0)
+        card.style.display = "none"
+    })
+  }
+}
+
+const grillAbout = $("#grillAbout")
+
+grillAbout.addEventListener("change", ()=>{
+  if(grillAbout.checked){
+    document.querySelector(".container__buttons").style.display = "none"
+    showAllCards(true)
+  }else {
+    document.querySelector(".container__buttons").style.display = "grid"
+    showAllCards(false)
+  }
+})
