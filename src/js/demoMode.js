@@ -27,7 +27,6 @@ const resetTimerAndHideDemoMode = () =>{
     hideDemoMode()
     body.classList.remove('hide-cursor')
     modeDemoActivity = false
-    grillAboutCheckbox.checked = false
     showAllCards(false)
 }
 
@@ -41,7 +40,6 @@ const showDemoMode = () =>{
     // modalServices.js
     closeAllCards()
     modeDemoOn()
-    grillAboutCheckbox.checked = true
     showAllCards(true)
 }
 
