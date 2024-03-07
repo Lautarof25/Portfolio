@@ -36,26 +36,30 @@ const checkChecked = () => {
   return 0 
 }
 
-leftButton.addEventListener("click", () => {
-  const currentIndex = checkChecked()
-  const newIndex = currentIndex === 0 ? dynamicRadios.length - 1 : currentIndex - 1
-  dynamicRadios[newIndex].checked = true
-  toggleCards(newIndex,"leftEffect")
-})
-
-rightButton.addEventListener("click", () => {
-  const currentIndex = checkChecked()
-  const newIndex = currentIndex === dynamicRadios.length - 1 ? 0 : currentIndex + 1
-  dynamicRadios[newIndex].checked = true
-  toggleCards(newIndex,"rightEffect")
-})
-
-dynamicRadios.forEach((radio, index) => {
-  radio.addEventListener("click", () => {
-    dynamicRadios[index].checked = true
-    toggleCards(index,"opacityEffect")
+const sliderActions = () => {
+  leftButton.addEventListener("click", () => {
+    const currentIndex = checkChecked()
+    const newIndex = currentIndex === 0 ? dynamicRadios.length - 1 : currentIndex - 1
+    dynamicRadios[newIndex].checked = true
+    toggleCards(newIndex,"leftEffect")
   })
-})
+
+  rightButton.addEventListener("click", () => {
+    const currentIndex = checkChecked()
+    const newIndex = currentIndex === dynamicRadios.length - 1 ? 0 : currentIndex + 1
+    dynamicRadios[newIndex].checked = true
+    toggleCards(newIndex,"rightEffect")
+  })
+
+  dynamicRadios.forEach((radio, index) => {
+    radio.addEventListener("click", () => {
+      dynamicRadios[index].checked = true
+      toggleCards(index,"opacityEffect")
+    })
+  })
+}
+
+sliderActions()
 
 const toggleCards = (index,effect) => {
   cards.forEach((card, i) => {
@@ -70,24 +74,27 @@ const showAllCards = (activate) => {
     cards.forEach(card => {
       card.style.display = "block"
     })
+    document.querySelector(".container__buttons").style.display = "none"
+    about.classList.add("grid-template-auto")
   }else {
     cards.forEach((card,i)=> {
       if(i !== 0)
         card.style.display = "none"
     })
+    document.querySelector(".container__buttons").style.display = "grid"
+    about.classList.remove("grid-template-auto")
   }
 }
 
-const grillAbout = $("#grillAbout")
+const grillAboutCheckbox = $("#grillAboutCheckbox")
 
-grillAbout.addEventListener("change", ()=>{
-  if(grillAbout.checked){
-    document.querySelector(".container__buttons").style.display = "none"
-    showAllCards(true)
-    about.classList.add("grid-template-auto")
-  }else {
-    document.querySelector(".container__buttons").style.display = "grid"
-    showAllCards(false)
-    about.classList.remove("grid-template-auto")
-  }
-})
+const cardsShowActions = () => {
+  grillAboutCheckbox.addEventListener("change", ()=>{
+    if(grillAboutCheckbox.checked){
+      showAllCards(true)
+    }else {
+      showAllCards(false)
+    }
+  })
+}
+cardsShowActions()
