@@ -106,3 +106,5 @@ const setCheckboxValue = (value) => {
 }
 
 cardsShowActions()
+
+setCheckboxValue(true)
