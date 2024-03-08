@@ -7,13 +7,11 @@ const navigatePage = (direction) =>{
     const index = direction === 1 ? nextPage() : prevPage()
     const currentId = linksArray[index]
     if(direction == 1){
-        $(`.${currentId}`).classList.remove("downEffect")
-        $(`.${currentId}`).classList.remove("centerEffect")
+        $(`.${currentId}`).classList.remove("downEffect","centerEffect")
         $(`.${currentId}`).classList.add("upEffect")
     }   
     else if(direction == -1){
-        $(`.${currentId}`).classList.remove("upEffect")
-        $(`.${currentId}`).classList.remove("centerEffect")
+        $(`.${currentId}`).classList.remove("upEffect","centerEffect")
         $(`.${currentId}`).classList.add("downEffect") 
     }
     direction = 0
