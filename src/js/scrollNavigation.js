@@ -4,7 +4,7 @@ let startY
 
 const handleScroll = (event) => {
     const isScrollDown = event.deltaY > 0
-    const scrollPosition = main.scrollTop + main.clientHeight + 1;
+    const scrollPosition = main.scrollTop + main.clientHeight + 2;
     const scrollPositionTop = main.scrollTop;
     const totalHeight = main.scrollHeight;
     const isAtTheEndOfMain = scrollPosition >= totalHeight
