@@ -39,8 +39,7 @@ const showDemoMode = () =>{
     // modalServices.js
     closeAllCards()
     modeDemoOn()
-    showAllCards(true)
-    grillAboutCheckbox.checked = true
+    setCheckboxValue(true)
 }
 
 const resetTimer = () => {

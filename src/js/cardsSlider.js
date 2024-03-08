@@ -97,4 +97,12 @@ const cardsShowActions = () => {
     }
   })
 }
+
+const setCheckboxValue = (value) => {
+  grillAboutCheckbox.checked = value;
+
+  const changeEvent = new Event("change")
+  grillAboutCheckbox.dispatchEvent(changeEvent)
+}
+
 cardsShowActions()
