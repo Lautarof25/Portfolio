@@ -14,7 +14,7 @@ const aboutInfo = {
         },
         {
             "description": "Estudio programación desde mediados del 2020",
-            "descriptionHidden": "Inicié mi camino en la programación en la UnaHur(universidad de Hurlingham)",
+            "descriptionHidden": "Inicié mi camino en la programación en la universidad de Hurlingham",
             "icons": ["pencil-solid", "code-solid"]
         },
         {
@@ -28,7 +28,7 @@ const aboutInfo = {
             "icons": ["python", "java", "react","node"]
         },
         {
-            "description": "Usando herramientas de planificación e inteligencia artificial para potenciar el trabajo y proyectos",
+            "description": "Usando herramientas de planificación e IA para potenciar el trabajo y proyectos",
             "descriptionHidden": "Combinando Notion y google docs con herramientas de inteligencia artificial",
             "icons": ["pen-to-square-solid", "brain-solid", "comment-dots-solid"]
         },
