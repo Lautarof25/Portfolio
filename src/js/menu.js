@@ -23,6 +23,7 @@ const showMenu = () => {
         bgDisable(1)
         aside.classList.toggle("show-aside")
         aside.style.zIndex = "20"
+        document.querySelector("#hideMenuDesktop").classList.remove("left-0")
         allExceptAside.forEach(element => {
             element.classList.toggle("blur-effect")
         })
@@ -54,6 +55,7 @@ const hideMenuDestktopAction = () => {
         if (window.innerWidth >= 576) {
             body.classList.toggle("removePaddingLeft")
             aside.classList.toggle("hideMenuDesktop")
+            document.querySelector("#hideMenuDesktop").classList.toggle("left-0")
             colorPicker.classList.toggle("color-picker-margin")
         }
     })
