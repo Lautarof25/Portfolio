@@ -50,6 +50,104 @@ const aboutInfo = {
     ]
 }
 
+const certificatesInfo = {
+    "info": [
+        {
+            "title": "Cisco Certified Network Associate 1(CCNA1)",
+            "institution": "Cisco",
+            "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
+            "hours": 0,
+            "year": "2024",
+            "category": "Technical support",
+            "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
+        },
+        {
+            "title": "IT Essentials: PC Hardware and Software",
+            "institution": "Cisco",
+            "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
+            "hours": 0,
+            "year": "2024",
+            "category": "Technical support",
+            "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
+        },
+        {
+            "title": "JavaScript Essentially 1",
+            "institution": "Cisco",
+            "thumbnail": "ea933e57-8c6a-4a01-ba28-70a4b519a7ec",
+            "hours": 40,
+            "year": "2023",
+            "category": "Programming",
+            "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
+        },
+        {
+            "title": "Armado y reparación de PC",
+            "institution": "Instituto Argentino de computación",
+            "thumbnail": "438f3a56-a437-4b2d-9b60-d89e9c33eaee",
+            "hours": 40,
+            "year": "2017",
+            "category": "Technical support",
+            "link": "https://drive.google.com/file/d/1LjbhEMNkH1O7B5Fn5ZqXB4uEaxvMn23c/view",
+        },
+        {
+            "title": "Typing speed test",
+            "institution": "Ratatype",
+            "thumbnail": "4993d985-0441-41e8-9322-f5005292fa1c",
+            "hours": 0.05,
+            "year": "2023",
+            "category": "Hard Skill",
+            "link": "https://www.ratatype.com/u5476932/certificate/es/",
+        },
+        {
+            "title": "EF Standard English Test",
+            "institution": "EF Set",
+            "thumbnail": "ff6cd6ea-35a2-40b1-b0ad-1ab33e74d715",
+            "hours": 1,
+            "year": "2023",
+            "category": "Soft Skill",
+            "link": "https://www.efset.org/cert/KDPqio",
+        },
+        {
+            "title": "Responsive web design",
+            "institution": "FreeCodeCamp",
+            "thumbnail": "f731e29b-89ee-4956-a06e-02763f234753",
+            "hours": 300,
+            "year": "2022",
+            "category": "Web development",
+            "link": "https://freecodecamp.org/certification/lautarof/responsive-web-design",
+        },
+        {
+            "title": "Testing de software Básico",
+            "institution": "Academia QA",
+            "thumbnail": "c60cae28-12b8-438d-a71a-3320858a90fd",
+            "hours": 20,
+            "year": "2022",
+            "category": "Technical support",
+            "link": "https://academiaqa.com/Certificado/9ea932d7a7265fedc49ddb5ae172cdf7/?swcfpc=1",
+        },
+        {
+            "title": "Auxiliar de redes",
+            "institution": "CFP Hurlingham",
+            "thumbnail": "3fcec928-307c-493f-ba21-0e032109f8e2",
+            "hours": 32,
+            "year": "2018",
+            "category": "Technical support",
+            "link": "https://drive.google.com/file/d/1H7dtdL4Srb_J2-OiNfjHZ_lplxr3-j1N/view",
+        },
+        {
+            "title": "Auxiliar en administración de pymes",
+            "institution": "Centro de formación CTA",
+            "thumbnail": "1d165baf-2072-4b35-9f61-a6cb06589528",
+            "hours": 250,
+            "year": "2018",
+            "category": "Soft Skill",
+            "link": "https://drive.google.com/file/d/1gsyaLra_2dUK7SngLg8hVF1rQ_4TfJd7/view",
+        },
+
+    ]
+}
+
+certificatesInfo.info.sort(sortByDate)
+
 const projectsInfo = {
     "info": [
         {
@@ -146,94 +244,6 @@ const projectsInfo = {
 }
 
 projectsInfo.info.sort(sortByDate)
-
-const certificatesInfo = {
-    "info": [
-        {
-            "title": "Cisco Certified Network Associate 1(CCNA1)",
-            "institution": "Cisco",
-            "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
-            "hours": 0,
-            "year": "2024",
-            "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
-        },
-        {
-            "title": "IT Essentials: PC Hardware and Software",
-            "institution": "Cisco",
-            "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
-            "hours": 0,
-            "year": "2024",
-            "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
-        },
-        {
-            "title": "JavaScript Essentially 1",
-            "institution": "Cisco",
-            "thumbnail": "ea933e57-8c6a-4a01-ba28-70a4b519a7ec",
-            "hours": 40,
-            "year": "2023",
-            "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
-        },
-        {
-            "title": "Armado y reparación de PC",
-            "institution": "Instituto Argentino de computación",
-            "thumbnail": "438f3a56-a437-4b2d-9b60-d89e9c33eaee",
-            "hours": 40,
-            "year": "2017",
-            "link": "https://drive.google.com/file/d/1LjbhEMNkH1O7B5Fn5ZqXB4uEaxvMn23c/view",
-        },
-        {
-            "title": "Typing speed test",
-            "institution": "Ratatype",
-            "thumbnail": "4993d985-0441-41e8-9322-f5005292fa1c",
-            "hours": 0.05,
-            "year": "2023",
-            "link": "https://www.ratatype.com/u5476932/certificate/es/",
-        },
-        {
-            "title": "EF Standard English Test",
-            "institution": "EF Set",
-            "thumbnail": "ff6cd6ea-35a2-40b1-b0ad-1ab33e74d715",
-            "hours": 1,
-            "year": "2023",
-            "link": "https://www.efset.org/cert/KDPqio",
-        },
-        {
-            "title": "Responsive web design",
-            "institution": "FreeCodeCamp",
-            "thumbnail": "f731e29b-89ee-4956-a06e-02763f234753",
-            "hours": 300,
-            "year": "2022",
-            "link": "https://freecodecamp.org/certification/lautarof/responsive-web-design",
-        },
-        {
-            "title": "Testing de software Básico",
-            "institution": "Academia QA",
-            "thumbnail": "c60cae28-12b8-438d-a71a-3320858a90fd",
-            "hours": 20,
-            "year": "2022",
-            "link": "https://academiaqa.com/Certificado/9ea932d7a7265fedc49ddb5ae172cdf7/?swcfpc=1",
-        },
-        {
-            "title": "Auxiliar de redes",
-            "institution": "CFP Hurlingham",
-            "thumbnail": "3fcec928-307c-493f-ba21-0e032109f8e2",
-            "hours": 32,
-            "year": "2018",
-            "link": "https://drive.google.com/file/d/1H7dtdL4Srb_J2-OiNfjHZ_lplxr3-j1N/view",
-        },
-        {
-            "title": "Auxiliar en administración de pymes",
-            "institution": "Centro de formación CTA",
-            "thumbnail": "1d165baf-2072-4b35-9f61-a6cb06589528",
-            "hours": 250,
-            "year": "2018",
-            "link": "https://drive.google.com/file/d/1gsyaLra_2dUK7SngLg8hVF1rQ_4TfJd7/view",
-        },
-
-    ]
-}
-
-certificatesInfo.info.sort(sortByDate)
 
 const servicesInfo = {
     "info": [
