@@ -1,4 +1,4 @@
-const createCardCertificatesInfo = (title, description, thumbnail, hours, year, link) =>{
+const createCardCertificatesInfo = (title, description, thumbnail,category, hours, year, link) =>{
   const div = document.createElement("div")
   div.setAttribute("class", "section__box relative d-grid bg-dark-gray text-center opacityEffect")
 
@@ -13,6 +13,13 @@ const createCardCertificatesInfo = (title, description, thumbnail, hours, year, 
   const pText = document.createTextNode(description)
   p.appendChild(pText)
   p.setAttribute("class", "mt-0")
+
+
+  const pCategory = document.createElement("p")
+  const pCategoryText = document.createTextNode(`Categoría: ${category}`)
+  pCategory.appendChild(pCategoryText)
+  pCategory.setAttribute("class", "m-0")
+
   const pHours = document.createElement("p")
   const pHoursText = document.createTextNode(`Horas: ${hours}`)
   pHours.appendChild(pHoursText)
@@ -40,6 +47,6 @@ const createCardCertificatesInfo = (title, description, thumbnail, hours, year, 
   aLinkImg.appendChild(img)
 
   div.append(chevronTopLeft,chevronTopRight)
-  div.append(h2,p,pHours,pYear,aLinkImg,aLink)
+  div.append(h2,p,pCategory,pHours,pYear,aLinkImg,aLink)
   certificates.appendChild(div)
 }
