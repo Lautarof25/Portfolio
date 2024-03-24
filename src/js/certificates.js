@@ -1,14 +1,14 @@
 const createCardCertificatesInfo = (title, description, thumbnail,category, hours, year, link) =>{
   const div = document.createElement("div")
-  div.setAttribute("class", "section__box relative d-grid bg-dark-gray text-center opacityEffect")
+  div.setAttribute("class", "section__box pt-1 relative d-grid bg-dark-gray text-center opacityEffect")
 
   const chevronTopLeft = createSVG("chevron-top-left")
   const chevronTopRight = createSVG("chevron-top-right")
 
-  const h2 = document.createElement("h3")
-  h2.setAttribute("class", "m-0")
-  const h2Text = document.createTextNode(title)
-  h2.appendChild(h2Text)
+  const h3 = document.createElement("h3")
+  h3.setAttribute("class", "m-0")
+  const h3Text = document.createTextNode(title)
+  h3.appendChild(h3Text)
   const p = document.createElement("p")
   const pText = document.createTextNode(description)
   p.appendChild(pText)
@@ -43,10 +43,10 @@ const createCardCertificatesInfo = (title, description, thumbnail,category, hour
   img.setAttribute("src", `https://ucarecdn.com/${thumbnail}/-/scale_crop/500x250/-/format/auto/-/quality/smart/`)
   img.setAttribute("loading", "lazy")
   img.setAttribute("alt", title)
-  img.setAttribute("class", "w-100 h-250px object-fit-cover object-pos-center-top border-radius-top-5 d-block")
+  img.setAttribute("class", "w-100 pt-1 object-fit-cover object-pos-center-top border-radius-top-5 d-block")
   aLinkImg.appendChild(img)
 
   div.append(chevronTopLeft,chevronTopRight)
-  div.append(h2,p,pCategory,pHours,pYear,aLinkImg,aLink)
+  div.append(h3,p,pHours,pYear,pCategory,aLinkImg,aLink)
   certificates.appendChild(div)
 }
