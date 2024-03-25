@@ -14,7 +14,7 @@ const addCheckbox = (section,date) => {
     label.appendChild(labelText)
     label.setAttribute("for", sectionDate)
 
-    const inputFilter = document.querySelector(`.${section} .section__filter`)
+    const inputFilter = document.querySelector(`.${section} .yearCheckboxes`)
     inputFilter.append(input, label)
 }
 
