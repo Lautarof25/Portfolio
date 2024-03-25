@@ -6,6 +6,7 @@ const addCheckbox = (section,date) => {
     input.setAttribute("name", sectionDate)
     input.setAttribute("value", sectionDate)
     input.setAttribute("id", sectionDate)
+    input.setAttribute("class",section+"Year")
     if(date !== "2024")
         input.checked = true
     label.setAttribute("for", sectionDate)
@@ -19,6 +20,7 @@ const addCheckbox = (section,date) => {
 
 const dates = new Set()
 const years = new Set()
+const categoriesCertificates = new Set()
 
 const getDates = ()=> {
     projectsInfo.info.forEach(item => {
@@ -29,7 +31,15 @@ const getDates = ()=> {
     })
 }
 
+const getCategories = ()=> {
+    certificatesInfo.info.forEach(item => {
+        categoriesCertificates.add(item.category)
+    })
+}
+
 getDates()
+
+getCategories()
 
 const addDates = () => {
     dates.forEach(item => {
