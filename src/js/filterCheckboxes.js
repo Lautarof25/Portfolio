@@ -1,20 +1,27 @@
-const addCheckbox = (section,date) => {
-    const sectionDate = section + date
+function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
+
+const addCheckbox = (section,item) => {
+    const sectionItem = section + item
     const input = document.createElement("input")
     const label = document.createElement("label")
     input.setAttribute("type", "checkbox")
-    input.setAttribute("name", sectionDate)
-    input.setAttribute("value", sectionDate)
-    input.setAttribute("id", sectionDate)
+    input.setAttribute("name", sectionItem)
+    input.setAttribute("value", sectionItem)
+    input.setAttribute("id", sectionItem)
     input.setAttribute("class",section+"Year")
-    if(date !== "2024")
+    if(item !== "2024")
         input.checked = true
-    label.setAttribute("for", sectionDate)
-    const labelText = document.createTextNode(date)
+    label.setAttribute("for", sectionItem)
+    const labelText = document.createTextNode(item)
     label.appendChild(labelText)
-    label.setAttribute("for", sectionDate)
-
-    const inputFilter = document.querySelector(`.${section} .yearCheckboxes`)
+    label.setAttribute("for", sectionItem)
+    let inputFilter
+    if(isNumber(item)){
+        inputFilter = document.querySelector(`.${section} .yearCheckboxes`)
+    }
+    else {
+        inputFilter = document.querySelector(`.${section} .categoryCheckboxes`)
+    }
     inputFilter.append(input, label)
 }
 
@@ -42,16 +49,23 @@ getDates()
 getCategories()
 
 const addDates = () => {
-    dates.forEach(item => {
-        addCheckbox("projects", item)
+    dates.forEach(date => {
+        addCheckbox("projects", date)
     })
     
-    years.forEach(item => {
-        addCheckbox("certificates", item)
+    years.forEach(year => {
+        addCheckbox("certificates", year)
+    })
+}
+
+const addCategories = () => {    
+    categoriesCertificates.forEach(category => {
+        addCheckbox("certificates", category)
     })
 }
 
 addDates()
+addCategories()
 
 const checkboxesprojects = $$('.projects input[type="checkbox"]')
 const checkboxesCertificates = $$('.certificates input[type="checkbox"]')
