@@ -8,7 +8,6 @@ const addCheckbox = (section,item) => {
     input.setAttribute("name", sectionItem)
     input.setAttribute("value", sectionItem)
     input.setAttribute("id", sectionItem)
-    input.setAttribute("class",section+"Year")
     if(item !== "2024")
         input.checked = true
     label.setAttribute("for", sectionItem)
@@ -18,9 +17,11 @@ const addCheckbox = (section,item) => {
     let inputFilter
     if(isNumber(item)){
         inputFilter = document.querySelector(`.${section} .yearCheckboxes`)
+        input.setAttribute("class",section+"Year")
     }
     else {
         inputFilter = document.querySelector(`.${section} .categoryCheckboxes`)
+        input.setAttribute("class",section+"Category")
     }
     inputFilter.append(input, label)
 }
@@ -67,10 +68,12 @@ const addCategories = () => {
 addDates()
 addCategories()
 
-const checkboxesprojects = $$('.projects input[type="checkbox"]')
-const checkboxesCertificates = $$('.certificates input[type="checkbox"]')
+const checkboxesprojects = $$('.projects .yearCheckboxes input[type="checkbox"]')
+const checkboxesCertificates = $$('.certificates .yearCheckboxes input[type="checkbox"]')
+const checkboxesCertificatesCategories = $$('.certificates .categoryCheckboxes input[type="checkbox"]')
 let checkboxesprojectsChecked = []
 let checkboxesCertificatesChecked = []
+let checkboxesCertificatesCheckedCategories = []
 
 const getCheckedDefault = () => {
     checkboxesprojects.forEach(checkbox => {
@@ -81,6 +84,11 @@ const getCheckedDefault = () => {
     checkboxesCertificates.forEach(checkbox => {
         if (checkbox.checked) {
             checkboxesCertificatesChecked.push(checkbox.value.slice(-4))
+        }
+    })
+    checkboxesCertificatesCategories.forEach(checkbox => {
+        if (checkbox.checked) {
+            checkboxesCertificatesCheckedCategories.push(checkbox.className)
         }
     })
 }
