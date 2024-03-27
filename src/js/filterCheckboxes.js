@@ -73,7 +73,7 @@ const checkboxesCertificates = $$('.certificates .yearCheckboxes input[type="che
 const checkboxesCertificatesCategories = $$('.certificates .categoryCheckboxes input[type="checkbox"]')
 let checkboxesprojectsChecked = []
 let checkboxesCertificatesChecked = []
-let checkboxesCertificatesCheckedCategories = []
+let checkboxesCertificatesCategoriesChecked = []
 
 const getCheckedDefault = () => {
     checkboxesprojects.forEach(checkbox => {
@@ -88,7 +88,7 @@ const getCheckedDefault = () => {
     })
     checkboxesCertificatesCategories.forEach(checkbox => {
         if (checkbox.checked) {
-            checkboxesCertificatesCheckedCategories.push(checkbox.className)
+            checkboxesCertificatesCategoriesChecked.push(checkbox.className)
         }
     })
 }
@@ -116,6 +116,7 @@ const getCheckedChanged = (element, array) => {
 
 getCheckedChanged(checkboxesprojects, checkboxesprojectsChecked)
 getCheckedChanged(checkboxesCertificates, checkboxesCertificatesChecked)
+getCheckedChanged(checkboxesCertificatesCategories, checkboxesCertificatesCategoriesChecked)
 
 const filterCards = (checkboxes,section,data) =>{
     checkboxes.forEach(chk => {
@@ -128,6 +129,7 @@ const filterCards = (checkboxes,section,data) =>{
 
 filterCards(checkboxesCertificates,"certificates",certificatesInfo.info)
 filterCards(checkboxesprojects,"projects",projectsInfo.info)
+filterCards(checkboxesCertificatesCategories,"certificates",certificatesInfo.info)
 
 const removeElements = () => {
     var sectionBoxes = $$(`.${currentIdPage()} .section__box`)
