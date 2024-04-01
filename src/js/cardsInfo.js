@@ -62,6 +62,15 @@ const certificatesInfo = {
             "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
         },
         {
+            "title": "Curso de introducción al desarrollo web: HTML y CSS (2/2)",
+            "institution": "Google Skillshop",
+            "thumbnail": "a8f87612-18de-40c0-b0ab-0ba032e49769",
+            "hours": 40,
+            "year": "2023",
+            "category": "Web development",
+            "link": "https://skillshop.exceedlms.com/student/award/XtaRh8oHPP9P4yCnGFk78rwo",
+        },
+        {
             "title": "Python básico",
             "institution": "UnaHur",
             "thumbnail": "37ae60e9-8f86-4e31-860f-4a242d8a693c",
