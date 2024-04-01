@@ -7,19 +7,19 @@ const addCardInfo = (type, database) => {
                 createCardAboutInfo(item.description, item.descriptionHidden, item.icons)
                 break
             case 'projects':
-                if(checkboxesprojectsChecked.includes(item.date.slice(0,4))){
+                if(checkboxesProjectsYearsChecked.includes(item.date.slice(0,4))){
                     createCardProjectInfo(item.title, item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage)
                     projects.querySelector('.empty').classList.add('hidden')
-                }if (checkboxesprojectsChecked.length === 0){
+                }if (checkboxesProjectsYearsChecked.length === 0){
                     projects.querySelector('.empty').classList.remove('hidden')
                 }
                 break
             case 'certificates':
-                if(checkboxesCertificatesChecked.includes(item.year)){
+                if(checkboxesCertificatesYearsChecked.includes(item.year)){
                     createCardCertificatesInfo(item.title, item.institution, item.thumbnail,item.category, item.hours, item.year, item.link)
                     certificates.querySelector('.empty').classList.add('hidden')
                 }
-                if (checkboxesCertificatesChecked.length === 0){
+                if (checkboxesCertificatesYearsChecked.length === 0){
                     certificates.querySelector('.empty').classList.remove('hidden')
                 }
                 break

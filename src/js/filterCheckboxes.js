@@ -68,34 +68,34 @@ const addCategories = () => {
 addDates()
 addCategories()
 
-const checkboxesprojects = $$('.projects .yearCheckboxes input[type="checkbox"]')
-const checkboxesCertificates = $$('.certificates .yearCheckboxes input[type="checkbox"]')
+const checkboxesProjectsYears = $$('.projects .yearCheckboxes input[type="checkbox"]')
+const checkboxesCertificatesYears = $$('.certificates .yearCheckboxes input[type="checkbox"]')
 const checkboxesCertificatesCategories = $$('.certificates .categoryCheckboxes input[type="checkbox"]')
-let checkboxesprojectsChecked = []
-let checkboxesCertificatesChecked = []
+let checkboxesProjectsYearsChecked = []
+let checkboxesCertificatesYearsChecked = []
 let checkboxesCertificatesCategoriesChecked = []
 
 const getCheckedDefault = () => {
-    checkboxesprojects.forEach(checkbox => {
+    checkboxesProjectsYears.forEach(checkbox => {
         if (checkbox.checked) {
-            checkboxesprojectsChecked.push(checkbox.value.slice(-4))
+            checkboxesProjectsYearsChecked.push(checkbox.value.slice(-4))
         }
     })
-    checkboxesCertificates.forEach(checkbox => {
+    checkboxesCertificatesYears.forEach(checkbox => {
         if (checkbox.checked) {
-            checkboxesCertificatesChecked.push(checkbox.value.slice(-4))
+            checkboxesCertificatesYearsChecked.push(checkbox.value.slice(-4))
         }
     })
     checkboxesCertificatesCategories.forEach(checkbox => {
         if (checkbox.checked) {
-            checkboxesCertificatesCategoriesChecked.push(checkbox.className)
+            checkboxesCertificatesCategoriesChecked.push(checkbox.id)
         }
     })
 }
 
 getCheckedDefault()
 
-const getCheckedChanged = (element, array) => {
+const getCheckedUpdated = (element, array) => {
     element.forEach(ckb => {
         ckb.addEventListener('change', () => {
             let arrayDefault = [...array]
@@ -114,21 +114,22 @@ const getCheckedChanged = (element, array) => {
     })
 }
 
-getCheckedChanged(checkboxesprojects, checkboxesprojectsChecked)
-getCheckedChanged(checkboxesCertificates, checkboxesCertificatesChecked)
-getCheckedChanged(checkboxesCertificatesCategories, checkboxesCertificatesCategoriesChecked)
+getCheckedUpdated(checkboxesProjectsYears, checkboxesProjectsYearsChecked)
+getCheckedUpdated(checkboxesCertificatesYears, checkboxesCertificatesYearsChecked)
+getCheckedUpdated(checkboxesCertificatesCategories, checkboxesCertificatesCategoriesChecked)
 
 const filterCards = (checkboxes,section,data) =>{
     checkboxes.forEach(chk => {
         chk.addEventListener('change', () => {
             removeElements()
+            // Function externa : DynamicsCards.js
             addCardInfo(section, data)
         })
     })
 }
 
-filterCards(checkboxesCertificates,"certificates",certificatesInfo.info)
-filterCards(checkboxesprojects,"projects",projectsInfo.info)
+filterCards(checkboxesCertificatesYears,"certificates",certificatesInfo.info)
+filterCards(checkboxesProjectsYears,"projects",projectsInfo.info)
 filterCards(checkboxesCertificatesCategories,"certificates",certificatesInfo.info)
 
 const removeElements = () => {
