@@ -53,7 +53,7 @@ const aboutInfo = {
 const certificatesInfo = {
     "info": [
         {
-            "title": "Cisco Certified Network Associate 1(CCNA1)",
+            "title": "IT Essentials: PC Hardware and Software",
             "institution": "Cisco",
             "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
             "hours": 0,
@@ -62,13 +62,22 @@ const certificatesInfo = {
             "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
         },
         {
-            "title": "IT Essentials: PC Hardware and Software",
-            "institution": "Cisco",
-            "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
-            "hours": 0,
-            "year": "2024",
-            "category": "Technical support",
-            "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
+            "title": "Python básico",
+            "institution": "UnaHur",
+            "thumbnail": "37ae60e9-8f86-4e31-860f-4a242d8a693c",
+            "hours": 60,
+            "year": "2021",
+            "category": "Programming",
+            "link": "https://drive.google.com/file/d/154wx91m_Wss7Vxm1V7GYOyb23yK8sXul/view",
+        },
+        {
+            "title": "Python Core",
+            "institution": "SoloLearn",
+            "thumbnail": "ad060eb5-0c30-4db1-9359-805814aa5467",
+            "hours": 32,
+            "year": "2022",
+            "category": "Programming",
+            "link": "https://www.sololearn.com/certificates/CT-AVDTLOPO",
         },
         {
             "title": "JavaScript Essentially 1",
@@ -170,7 +179,7 @@ const projectsInfo = {
         },
         {
             "title": "Build your PC",
-            "date": "2024-02-25",
+            "date": "2024-05-25",
             "description": "A webapp to build your best PC",
             "languages": ["react"],
             "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
@@ -179,7 +188,7 @@ const projectsInfo = {
         },
         {
             "title": "Blog",
-            "date": "2024-02-25",
+            "date": "2024-05-25",
             "description": "A simple blog",
             "languages": ["react"],
             "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
@@ -188,7 +197,7 @@ const projectsInfo = {
         },
         {
             "title": "English Test",
-            "date": "2024-02-25",
+            "date": "2024-05-25",
             "description": "English test level",
             "languages": ["react"],
             "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
