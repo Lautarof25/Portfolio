@@ -88,14 +88,14 @@ const getCheckedDefault = () => {
     })
     checkboxesCertificatesCategories.forEach(checkbox => {
         if (checkbox.checked) {
-            checkboxesCertificatesCategoriesChecked.push(checkbox.id)
+            checkboxesCertificatesCategoriesChecked.push(checkbox.id.slice(12,15))
         }
     })
 }
 
 getCheckedDefault()
 
-const getCheckedUpdated = (element, array) => {
+const getCheckedYearUpdated = (element, array) => {
     element.forEach(ckb => {
         ckb.addEventListener('change', () => {
             let arrayDefault = [...array]
@@ -114,9 +114,27 @@ const getCheckedUpdated = (element, array) => {
     })
 }
 
-getCheckedUpdated(checkboxesProjectsYears, checkboxesProjectsYearsChecked)
-getCheckedUpdated(checkboxesCertificatesYears, checkboxesCertificatesYearsChecked)
-getCheckedUpdated(checkboxesCertificatesCategories, checkboxesCertificatesCategoriesChecked)
+const getCheckedCategoriesUpdated = (element, array) => {
+    element.forEach(ckb => {
+        ckb.addEventListener('change', () => {
+            let arrayDefault = [...array]
+            if (ckb.checked) {
+                arrayDefault.push(ckb.value.slice(12,15))
+            } else {
+                arrayDefault = arrayDefault.filter(function (i) {
+                    return i !== ckb.value.slice(12,15)
+                })
+            }
+            
+            array.length = 0
+            array.push(...arrayDefault)
+        })
+    })
+}
+
+getCheckedYearUpdated(checkboxesProjectsYears, checkboxesProjectsYearsChecked)
+getCheckedYearUpdated(checkboxesCertificatesYears, checkboxesCertificatesYearsChecked)
+getCheckedCategoriesUpdated(checkboxesCertificatesCategories, checkboxesCertificatesCategoriesChecked)
 
 const filterCards = (checkboxes,section,data) =>{
     checkboxes.forEach(chk => {
@@ -129,8 +147,8 @@ const filterCards = (checkboxes,section,data) =>{
 }
 
 filterCards(checkboxesCertificatesYears,"certificates",certificatesInfo.info)
-filterCards(checkboxesProjectsYears,"projects",projectsInfo.info)
 filterCards(checkboxesCertificatesCategories,"certificates",certificatesInfo.info)
+filterCards(checkboxesProjectsYears,"projects",projectsInfo.info)
 
 const removeElements = () => {
     var sectionBoxes = $$(`.${currentIdPage()} .section__box`)
@@ -138,4 +156,4 @@ const removeElements = () => {
     sectionBoxes.forEach(function (sectionBox) {
         sectionBox.parentNode.removeChild(sectionBox)
     })
-}   
+}

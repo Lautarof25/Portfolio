@@ -15,7 +15,7 @@ const addCardInfo = (type, database) => {
                 }
                 break
             case 'certificates':
-                if(checkboxesCertificatesYearsChecked.includes(item.year)){
+                if(checkboxesCertificatesYearsChecked.includes(item.year) && checkboxesCertificatesCategoriesChecked.includes(item.category.substring(0,3))){
                     createCardCertificatesInfo(item.title, item.institution, item.thumbnail,item.category, item.hours, item.year, item.link)
                     certificates.querySelector('.empty').classList.add('hidden')
                 }
