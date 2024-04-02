@@ -58,7 +58,7 @@ const certificatesInfo = {
             "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
             "hours": 0,
             "year": "2024",
-            "category": "Technical support",
+            "category": "Tec. Sup.",
             "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
         },
         {
@@ -67,7 +67,7 @@ const certificatesInfo = {
             "thumbnail": "a8f87612-18de-40c0-b0ab-0ba032e49769",
             "hours": 40,
             "year": "2023",
-            "category": "Web development",
+            "category": "Web dev.",
             "link": "https://skillshop.exceedlms.com/student/award/XtaRh8oHPP9P4yCnGFk78rwo",
         },
         {
@@ -76,7 +76,7 @@ const certificatesInfo = {
             "thumbnail": "37ae60e9-8f86-4e31-860f-4a242d8a693c",
             "hours": 60,
             "year": "2021",
-            "category": "Programming",
+            "category": "Prog.",
             "link": "https://drive.google.com/file/d/154wx91m_Wss7Vxm1V7GYOyb23yK8sXul/view",
         },
         {
@@ -85,7 +85,7 @@ const certificatesInfo = {
             "thumbnail": "ad060eb5-0c30-4db1-9359-805814aa5467",
             "hours": 32,
             "year": "2022",
-            "category": "Programming",
+            "category": "Prog.",
             "link": "https://www.sololearn.com/certificates/CT-AVDTLOPO",
         },
         {
@@ -94,7 +94,7 @@ const certificatesInfo = {
             "thumbnail": "ea933e57-8c6a-4a01-ba28-70a4b519a7ec",
             "hours": 40,
             "year": "2023",
-            "category": "Programming",
+            "category": "Prog.",
             "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
         },
         {
@@ -103,7 +103,7 @@ const certificatesInfo = {
             "thumbnail": "438f3a56-a437-4b2d-9b60-d89e9c33eaee",
             "hours": 40,
             "year": "2017",
-            "category": "Technical support",
+            "category": "Tec. Sup.",
             "link": "https://drive.google.com/file/d/1LjbhEMNkH1O7B5Fn5ZqXB4uEaxvMn23c/view",
         },
         {
@@ -112,7 +112,7 @@ const certificatesInfo = {
             "thumbnail": "4993d985-0441-41e8-9322-f5005292fa1c",
             "hours": 0.05,
             "year": "2023",
-            "category": "Hard Skill",
+            "category": "H. Skill",
             "link": "https://www.ratatype.com/u5476932/certificate/es/",
         },
         {
@@ -121,7 +121,7 @@ const certificatesInfo = {
             "thumbnail": "ff6cd6ea-35a2-40b1-b0ad-1ab33e74d715",
             "hours": 1,
             "year": "2023",
-            "category": "Soft Skill",
+            "category": "S. Skill",
             "link": "https://www.efset.org/cert/KDPqio",
         },
         {
@@ -130,7 +130,7 @@ const certificatesInfo = {
             "thumbnail": "f731e29b-89ee-4956-a06e-02763f234753",
             "hours": 300,
             "year": "2022",
-            "category": "Web development",
+            "category": "Web dev.",
             "link": "https://freecodecamp.org/certification/lautarof/responsive-web-design",
         },
         {
@@ -139,7 +139,7 @@ const certificatesInfo = {
             "thumbnail": "c60cae28-12b8-438d-a71a-3320858a90fd",
             "hours": 20,
             "year": "2022",
-            "category": "Technical support",
+            "category": "Tec. Sup.",
             "link": "https://academiaqa.com/Certificado/9ea932d7a7265fedc49ddb5ae172cdf7/?swcfpc=1",
         },
         {
@@ -148,7 +148,7 @@ const certificatesInfo = {
             "thumbnail": "3fcec928-307c-493f-ba21-0e032109f8e2",
             "hours": 32,
             "year": "2018",
-            "category": "Technical support",
+            "category": "Tec. Sup.",
             "link": "https://drive.google.com/file/d/1H7dtdL4Srb_J2-OiNfjHZ_lplxr3-j1N/view",
         },
         {
@@ -157,7 +157,7 @@ const certificatesInfo = {
             "thumbnail": "1d165baf-2072-4b35-9f61-a6cb06589528",
             "hours": 250,
             "year": "2018",
-            "category": "Soft Skill",
+            "category": "S. Skill",
             "link": "https://drive.google.com/file/d/1gsyaLra_2dUK7SngLg8hVF1rQ_4TfJd7/view",
         },
 
