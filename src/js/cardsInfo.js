@@ -73,11 +73,11 @@ const certificatesInfo = {
         {
             "title": "Python básico",
             "institution": "UnaHur",
-            "thumbnail": "37ae60e9-8f86-4e31-860f-4a242d8a693c",
+            "thumbnail": "b8f026f1-7fdb-47b1-b81c-bb9265b650a5",
             "hours": 60,
             "year": "2021",
             "category": "Prog.",
-            "link": "https://drive.google.com/file/d/154wx91m_Wss7Vxm1V7GYOyb23yK8sXul/view",
+            "link": "https://drive.google.com/file/d/1AuYWDRpXjdCUyRwDyiM_pdSVqXVnA2K_/view?usp=sharing",
         },
         {
             "title": "Python Core",
@@ -145,11 +145,11 @@ const certificatesInfo = {
         {
             "title": "Auxiliar de redes",
             "institution": "CFP Hurlingham",
-            "thumbnail": "3fcec928-307c-493f-ba21-0e032109f8e2",
+            "thumbnail": "51edfbdc-b422-444f-9cb1-1b22b9665143",
             "hours": 32,
             "year": "2018",
             "category": "Tec. Sup.",
-            "link": "https://drive.google.com/file/d/1H7dtdL4Srb_J2-OiNfjHZ_lplxr3-j1N/view",
+            "link": "https://drive.google.com/file/d/1H7dtdL4Srb_J2-OiNfjHZ_lplxr3-j1N/view?usp=sharing",
         },
         {
             "title": "Auxiliar en administración de pymes",
