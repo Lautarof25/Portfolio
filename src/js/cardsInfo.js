@@ -178,6 +178,15 @@ const projectsInfo = {
             "webpage": "https://lautarof25.github.io/cv_online/"
         },
         {
+            "title": "Armar cubo - Notion",
+            "date": "2022-02-06",
+            "description": "Tutorial para armar el cubo rubik, en Notion",
+            "languages": ["pen-to-square-solid"],
+            "thumbnail": ["34f4d94a-2b5d-48e9-933c-400f91afe578"],
+            "github": "https://fan-utahraptor-cfe.notion.site/Armar-Cubo-Rubik-3x3-M-todo-f-cil-a71f34e67d784d70988a4021989f5b72",
+            "webpage": "https://fan-utahraptor-cfe.notion.site/Armar-Cubo-Rubik-3x3-M-todo-f-cil-a71f34e67d784d70988a4021989f5b72"
+        },
+        {
             "title": "Calculadora Python",
             "date": "2021-12-12",
             "description": "Una simple calculadora creada con Python",
