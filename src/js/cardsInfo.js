@@ -178,6 +178,15 @@ const projectsInfo = {
             "webpage": "https://lautarof25.github.io/cv_online/"
         },
         {
+            "title": "Tienda Cursos Tech",
+            "date": "2024-05-05",
+            "description": "Tienda Cursos Tech",
+            "languages": ["react"],
+            "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
+            "github": "https://github.com/Lautarof25/",
+            "webpage": "https://lautarof25.github.io/"
+        },
+        {
             "title": "Armar cubo - Notion",
             "date": "2022-02-06",
             "description": "Tutorial para armar el cubo rubik, en Notion",
