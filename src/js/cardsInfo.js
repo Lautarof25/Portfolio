@@ -53,13 +53,22 @@ const aboutInfo = {
 const certificatesInfo = {
     "info": [
         {
-            "title": "IT Essentials: PC Hardware and Software",
+            "title": "JavaScript Essentials 2",
             "institution": "Cisco",
             "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
-            "hours": 0,
+            "hours": 50,
             "year": "2024",
-            "category": "Tec. Sup.",
-            "link": "https://www.credly.com/badges/85c38784-390e-4e55-8dcc-94e447fd32b0/linked_in?t=s0151l",
+            "category": "Prog.",
+            "link": "javascript:void(0);",
+        },
+        {
+            "title": "JavaScript Algorithms and Data Structures",
+            "institution": "FreeCodeCamp",
+            "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
+            "hours": 150,
+            "year": "2024",
+            "category": "Prog.",
+            "link": "javascript:void(0);",
         },
         {
             "title": "Curso de introducción al desarrollo web: HTML y CSS (2/2)",
@@ -89,7 +98,7 @@ const certificatesInfo = {
             "link": "https://www.sololearn.com/certificates/CT-AVDTLOPO",
         },
         {
-            "title": "JavaScript Essentially 1",
+            "title": "JavaScript Essentials 1",
             "institution": "Cisco",
             "thumbnail": "ea933e57-8c6a-4a01-ba28-70a4b519a7ec",
             "hours": 40,

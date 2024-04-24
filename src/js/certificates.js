@@ -33,7 +33,7 @@ const createCardCertificatesInfo = (title, description, thumbnail,category, hour
   const aLinkText = document.createTextNode("Link")
   aLink.appendChild(aLinkText)
   aLink.setAttribute("href", link)
-  aLink.setAttribute("target", "_blanket")
+  aLink.setAttribute("target", "_blank")
   aLink.setAttribute("class", "section__button w-100 text-center m-0-auto")
   const aLinkImg = document.createElement("a")
   aLinkImg.setAttribute("href", link)
