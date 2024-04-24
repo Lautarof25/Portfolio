@@ -1,6 +1,6 @@
 const createCardCertificatesInfo = (title, description, thumbnail,category, hours, year, link) =>{
   const div = document.createElement("div")
-  div.setAttribute("class", "section__box pt-1 relative d-grid bg-dark-gray text-center opacityEffect")
+  div.setAttribute("class", "section__box pt-1 drop-shadow relative d-grid bg-dark-gray text-center opacityEffect")
 
   const chevronTopLeft = createSVG("chevron-top-left")
   const chevronTopRight = createSVG("chevron-top-right")
