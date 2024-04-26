@@ -62,6 +62,15 @@ const certificatesInfo = {
             "link": "javascript:void(0);",
         },
         {
+            "title": "Introduction to MS Excel",
+            "institution": "SimpliLearn",
+            "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
+            "hours": 7,
+            "year": "2024",
+            "category": "H. Skill",
+            "link": "javascript:void(0);",
+        },
+        {
             "title": "Test English",
             "institution": "Platzi",
             "thumbnail": "4d8a24e8-d6a9-4fa6-969b-ae8f638ea1a6",
@@ -233,7 +242,7 @@ const projectsInfo = {
         },
         {
             "title": "Build your PC",
-            "date": "2024-05-25",
+            "date": "2024-12-30",
             "description": "A webapp to build your best PC",
             "languages": ["react"],
             "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
