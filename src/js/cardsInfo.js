@@ -62,6 +62,15 @@ const certificatesInfo = {
             "link": "javascript:void(0);",
         },
         {
+            "title": "Test English",
+            "institution": "Platzi",
+            "thumbnail": "4d8a24e8-d6a9-4fa6-969b-ae8f638ea1a6",
+            "hours": 0.5,
+            "year": "2024",
+            "category": "S. Skill",
+            "link": "https://platzi.com/ruta-compartida/english/g1714097724-430b0f3c-0829-4d41-b91e-0e1ee7a3d736/",
+        },
+        {
             "title": "JavaScript Algorithms and Data Structures",
             "institution": "FreeCodeCamp",
             "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
