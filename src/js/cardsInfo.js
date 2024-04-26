@@ -197,8 +197,17 @@ const projectsInfo = {
         },
         {
             "title": "Tienda Cursos Tech",
-            "date": "2024-05-05",
+            "date": "2024-12-30",
             "description": "Tienda Cursos Tech",
+            "languages": ["react"],
+            "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
+            "github": "https://github.com/Lautarof25/",
+            "webpage": "https://lautarof25.github.io/"
+        },
+        {
+            "title": "Tv & Series",
+            "date": "2024-12-30",
+            "description": "Catálogo de peliculas y series",
             "languages": ["react"],
             "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
             "github": "https://github.com/Lautarof25/",
@@ -233,7 +242,7 @@ const projectsInfo = {
         },
         {
             "title": "Blog",
-            "date": "2024-05-25",
+            "date": "2024-12-30",
             "description": "A simple blog",
             "languages": ["react"],
             "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
@@ -242,7 +251,7 @@ const projectsInfo = {
         },
         {
             "title": "English Test",
-            "date": "2024-05-25",
+            "date": "2024-12-30",
             "description": "English test level",
             "languages": ["react"],
             "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
