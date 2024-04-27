@@ -41,5 +41,5 @@ const scrollToTop = () => {
             left: 0,
             behavior: "smooth",
         })
-    }, 1000)
+    }, 100)
 }
