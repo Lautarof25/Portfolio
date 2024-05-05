@@ -64,11 +64,11 @@ const certificatesInfo = {
         {
             "title": "Introduction to MS Excel",
             "institution": "SimpliLearn",
-            "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
+            "thumbnail": "75560815-78f1-4eb0-902c-50be339990c5",
             "hours": 7,
             "year": "2024",
             "category": "H. Skill",
-            "link": "javascript:void(0);",
+            "link": "https://ucarecdn.com/75560815-78f1-4eb0-902c-50be339990c5/5115107_1714874213_page-0001.jpg",
         },
         {
             "title": "Full Stack Java",
