@@ -185,7 +185,7 @@ const certificatesInfo = {
             "hours": 20,
             "year": "2022",
             "category": "Tec. Sup.",
-            "link": "https://academiaqa.com/Certificado/9ea932d7a7265fedc49ddb5ae172cdf7/?swcfpc=1",
+            "link": "https://academiaqa.com/Certificado/9c6191794bd568b530334858439156d4",
         },
         {
             "title": "Auxiliar de redes",
