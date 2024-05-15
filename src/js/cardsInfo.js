@@ -62,6 +62,15 @@ const certificatesInfo = {
             "link": "javascript:void(0);",
         },
         {
+            "title": "Back End - Full Stack Node JS",
+            "institution": "Codo a Codo",
+            "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
+            "hours": 104,
+            "year": "2024",
+            "category": "Prog.",
+            "link": "javascript:void(0);",
+        },
+        {
             "title": "Introduction to MS Excel",
             "institution": "SimpliLearn",
             "thumbnail": "75560815-78f1-4eb0-902c-50be339990c5",
