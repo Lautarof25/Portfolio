@@ -206,6 +206,15 @@ const certificatesInfo = {
             "link": "https://drive.google.com/file/d/1AeD8rFoBhPmhIiVIz5L3C6u3aFOQODRl/view?usp=sharing",
         },
         {
+            "title": "Introducción al desarrollo web II (revalidación)",
+            "institution": "Google Activate",
+            "thumbnail": "a8f87612-18de-40c0-b0ab-0ba032e49769",
+            "hours": 40,
+            "year": "2023",
+            "category": "Web dev.",
+            "link": "https://skillshop.exceedlms.com/student/award/XtaRh8oHPP9P4yCnGFk78rwo",
+        },
+        {
             "title": "Auxiliar en administración de pymes",
             "institution": "Centro de formación CTA",
             "thumbnail": "1d165baf-2072-4b35-9f61-a6cb06589528",
