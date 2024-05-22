@@ -197,6 +197,15 @@ const certificatesInfo = {
             "link": "https://drive.google.com/file/d/1H7dtdL4Srb_J2-OiNfjHZ_lplxr3-j1N/view?usp=sharing",
         },
         {
+            "title": "Diseño web y marketing digital",
+            "institution": "ITUOM caseros",
+            "thumbnail": "2de24ae3-5a7a-4fc1-9844-a6a9573b7d22",
+            "hours": 180,
+            "year": "2018",
+            "category": "Web dev.",
+            "link": "https://drive.google.com/file/d/1AeD8rFoBhPmhIiVIz5L3C6u3aFOQODRl/view?usp=sharing",
+        },
+        {
             "title": "Auxiliar en administración de pymes",
             "institution": "Centro de formación CTA",
             "thumbnail": "1d165baf-2072-4b35-9f61-a6cb06589528",
