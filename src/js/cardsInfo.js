@@ -286,9 +286,9 @@ const projectsInfo = {
             "webpage": "#"
         },
         {
-            "title": "Blog",
+            "title": "Slider blog",
             "date": "2024-12-30",
-            "description": "A simple blog",
+            "description": "A slider blog concept",
             "languages": ["react"],
             "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
             "github": "#",

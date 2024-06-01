@@ -10,8 +10,13 @@ const createCardProjectInfo = (title,date, description, languages, thumbnail, gi
     const h2Text = document.createTextNode(title)
     h2.appendChild(h2Text)
 
+    const p = document.createElement("p")
+    p.setAttribute("class", "section__description text-center")
+    const pText = document.createTextNode(description)
+    p.appendChild(pText)
+
     const pDate = document.createElement("p")
-    pDate.setAttribute("class", "section__date text-center")
+    pDate.setAttribute("class", "section__date text-center m-0")
     const pDateText = document.createTextNode(date)
     pDate.appendChild(pDateText)
 
@@ -28,11 +33,6 @@ const createCardProjectInfo = (title,date, description, languages, thumbnail, gi
     const divGradient = document.createElement("div")
     divGradient.setAttribute("class", "gradientTransparentGray d-flex justify-center align-end h-50px absolute bottom-0 gap-05 w-100")
     aContainer.append(img, divGradient)
-
-    const p = document.createElement("p")
-    p.setAttribute("class", "section__description text-center m-0")
-    const pText = document.createTextNode(description)
-    p.appendChild(pText)
 
     for (let i = 0; i < languages.length; i++) {
         const icon = document.createElement("img")
@@ -58,6 +58,6 @@ const createCardProjectInfo = (title,date, description, languages, thumbnail, gi
 
     div.appendChild(chevronTopLeft)
     div.appendChild(chevronTopRight)
-    div.append(aContainer,h2,pDate,p,aGitHub,aWebPage)
+    div.append(aContainer,h2,p,pDate,aGitHub,aWebPage)
     projects.appendChild(div)
 }
