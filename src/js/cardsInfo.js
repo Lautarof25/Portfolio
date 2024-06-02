@@ -241,6 +241,15 @@ const projectsInfo = {
             "webpage": "https://lautarof25.github.io/cv_online/"
         },
         {
+            "title": "Conferencia BS AS",
+            "date": "2023-05-17",
+            "description": "Proyecto integrador Codo a codo - Full stack",
+            "languages": ["html5", "bootstrap", "square-js"],
+            "thumbnail": ["ed45c97e-6cd6-403d-9723-27f2b94c229d"],
+            "github": "https://github.com/Lautarof25/integradorcac2",
+            "webpage": "https://lautarof25.github.io/integradorcac2/"
+        },
+        {
             "title": "Tienda Cursos Tech",
             "date": "2024-12-30",
             "description": "Tienda Cursos Tech",
