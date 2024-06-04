@@ -104,3 +104,5 @@ const observer = new MutationObserver((mutationsList) => {
 })
 
 observer.observe(home, { attributes: true })
+
+console.log('%c¡Bienvenidos a mi Portafolio!😊', 'background: #222; color: #ff5b02; font-size: 24px; padding: 4px; border-radius: 5px;');
