@@ -62,6 +62,15 @@ const certificatesInfo = {
             "link": "javascript:void(0);",
         },
         {
+            "title": " Bootcamp de IA Generativa de AWS",
+            "institution": "AWS Entrena Argentina",
+            "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
+            "hours": 7,
+            "year": "2024",
+            "category": "Prog.",
+            "link": "javascript:void(0);",
+        },
+        {
             "title": "Back End - Full Stack Node JS",
             "institution": "Codo a Codo",
             "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
