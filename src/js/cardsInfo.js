@@ -134,6 +134,15 @@ const certificatesInfo = {
             "link": "https://www.sololearn.com/certificates/CT-AVDTLOPO",
         },
         {
+            "title": "JavaScript",
+            "institution": "SoloLearn",
+            "thumbnail": "33bb019f-6b74-4318-bed0-d9e416f662c5",
+            "hours": 32,
+            "year": "2022",
+            "category": "Prog.",
+            "link": "https://www.sololearn.com/certificates/CT-LMKX9OKE",
+        },
+        {
             "title": "JavaScript Essentials 1",
             "institution": "Cisco",
             "thumbnail": "ea933e57-8c6a-4a01-ba28-70a4b519a7ec",
@@ -149,7 +158,7 @@ const certificatesInfo = {
             "hours": 40,
             "year": "2017",
             "category": "Tec. Sup.",
-            "link": "https://drive.google.com/file/d/1LjbhEMNkH1O7B5Fn5ZqXB4uEaxvMn23c/view",
+            "link": "https://certificados.iacvilladevoto.com.ar/?codigo=35174222",
         },
         {
             "title": "Typing speed test",
