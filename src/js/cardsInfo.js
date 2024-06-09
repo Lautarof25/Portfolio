@@ -397,7 +397,7 @@ const servicesInfo = {
         {
             "title": "Optimización tecnológica",
             "description": "Automatización en procesos de trabajo para ahorrar tiempos de ejecución de tareas",
-            "details": ["Creación de plantillas a medida","Creación de mini programas para maximizar tiempos","Asesoramiento para aprovechar tecnologías digitales al alcance"],
+            "details": ["Creación de planillas a medida","Creación de mini programas para maximizar tiempos","Asesoramiento para aprovechar tecnologías digitales al alcance"],
             "icons": ["rocket-solid", "hand-holding-hand-solid"]
         },
         {
