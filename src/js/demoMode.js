@@ -2,13 +2,6 @@ let timer = 0
 const idleTime = 15
 let modeDemoActivity = false
 
-const resetTimerAndShowNextPage = () =>{
-    resetTimer()
-    nextPage()
-    navigatePage(1)
-    showDemoMode()
-}
-
 const idleTimer = () =>{
     // Display the next page after a certain time of being idle
     setInterval(() => {
@@ -22,19 +15,32 @@ const idleTimer = () =>{
 
 idleTimer()
 
+// TODO: create an event handler to handle when the page is in the background
+
+const resetTimerAndShowNextPage = () =>{
+    resetTimer()
+    navigatePage(1)
+    showDemoMode()
+}
+
 const resetTimerAndHideDemoMode = () =>{
     resetTimer()
-    hideDemoMode()
-    body.classList.remove('hide-cursor')
+    hideDemoModePopUp(1)
+    hideCursor(0)
     modeDemoActivity = false
 }
 
-const hideDemoMode = () =>{
-    demoMode.classList.add('hidden')
+const hideCursor = (mode) => {
+    mode === 0 ? body.classList.remove('hide-cursor') : body.classList.add('hide-cursor');
 }
+
+const hideDemoModePopUp = (mode) =>{
+   mode === 0 ? demoMode.classList.remove('hidden') : demoMode.classList.add('hidden');
+}
+
 const showDemoMode = () =>{
-    demoMode.classList.remove('hidden')
-    body.classList.add('hide-cursor')
+    hideDemoModePopUp(0)
+    hideCursor(1)
     main.scrollTo(0,0)
     // modalServices.js
     closeAllCards()

@@ -126,7 +126,7 @@ const certificatesInfo = {
         },
         {
             "title": "Python básico",
-            "institution": "UnaHur",
+            "institution": "Universidad de Hurlingham",
             "thumbnail": "b8f026f1-7fdb-47b1-b81c-bb9265b650a5",
             "hours": 60,
             "year": "2021",
