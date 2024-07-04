@@ -24,7 +24,7 @@ const hoverColorPicker = () => {
     colorPicker.style.bottom = "-80px"
   })
   colorPicker.addEventListener("mouseout", function () {
-    colorPicker.style.bottom = "-150px"
+    colorPicker.style.bottom = "-155px"
   })
 }
 
@@ -39,7 +39,7 @@ const handleColorAndHover = () => {
       colorPicker.style.bottom = "-80px"
     })
     radio.addEventListener("focusout", () => {
-      colorPicker.style.bottom = "-150px"
+      colorPicker.style.bottom = "-155px"
     })
   })
 }
