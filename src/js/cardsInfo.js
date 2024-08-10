@@ -295,6 +295,15 @@ const projectsInfo = {
             "webpage": "https://fan-utahraptor-cfe.notion.site/Armar-Cubo-Rubik-3x3-M-todo-f-cil-a71f34e67d784d70988a4021989f5b72"
         },
         {
+            "title": "Duoling con esteroides - Notion",
+            "date": "2024-06-06",
+            "description": "Una guía/articulo sobre Duolingo y cómo aprovecharlo!",
+            "languages": ["pen-to-square-solid"],
+            "thumbnail": ["97556ea0-d48c-452c-99d3-50ea378c1dc3"],
+            "github": "https://fan-utahraptor-cfe.notion.site/Duolingo-con-esteroides-8a61ce39f11544de831b8e00765a3c56",
+            "webpage": "https://fan-utahraptor-cfe.notion.site/Duolingo-con-esteroides-8a61ce39f11544de831b8e00765a3c56"
+        },
+        {
             "title": "Calculadora Python",
             "date": "2021-12-12",
             "description": "Una simple calculadora creada con Python",
