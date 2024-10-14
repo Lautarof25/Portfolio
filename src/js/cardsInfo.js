@@ -88,15 +88,15 @@ const certificatesInfo = {
             "category": "H. Skill",
             "link": "https://ucarecdn.com/75560815-78f1-4eb0-902c-50be339990c5/5115107_1714874213_page-0001.jpg",
         },
-        // {
-        //     "title": "Full Stack Java",
-        //     "institution": "Codo a codo",
-        //     "thumbnail": "c60d4a44-af79-48a8-940e-657f4b394cf7",
-        //     "hours": 208,
-        //     "year": "2023",
-        //     "category": "Prog.",
-        //     "link": "https://drive.google.com/file/d/1eigAF5HYFDfpVh2W4FM8V1zd2NmEdR6L/view",
-        // },
+        {
+            "title": "Full Stack Java",
+            "institution": "Codo a codo",
+            "thumbnail": "c60d4a44-af79-48a8-940e-657f4b394cf7",
+            "hours": 208,
+            "year": "2023",
+            "category": "Prog.",
+            "link": "https://drive.google.com/file/d/1eigAF5HYFDfpVh2W4FM8V1zd2NmEdR6L/view",
+        },
         {
             "title": "Programación desde cero",
             "institution": "Egg cooperación",
@@ -267,24 +267,24 @@ const projectsInfo = {
             "github": "https://github.com/Lautarof25/integradorcac2",
             "webpage": "https://lautarof25.github.io/integradorcac2/"
         },
-        {
-            "title": "Tienda Cursos Tech",
-            "date": "2024-12-30",
-            "description": "Tienda Cursos Tech",
-            "languages": ["react"],
-            "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
-            "github": "https://github.com/Lautarof25/",
-            "webpage": "https://lautarof25.github.io/"
-        },
-        {
-            "title": "Tv & Series",
-            "date": "2024-12-30",
-            "description": "Catálogo de peliculas y series",
-            "languages": ["react"],
-            "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
-            "github": "https://github.com/Lautarof25/",
-            "webpage": "https://lautarof25.github.io/"
-        },
+        // {
+        //     "title": "Tienda Cursos Tech",
+        //     "date": "2024-12-30",
+        //     "description": "Tienda Cursos Tech",
+        //     "languages": ["react"],
+        //     "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
+        //     "github": "https://github.com/Lautarof25/",
+        //     "webpage": "https://lautarof25.github.io/"
+        // },
+        // {
+        //     "title": "Tv & Series",
+        //     "date": "2024-12-30",
+        //     "description": "Catálogo de peliculas y series",
+        //     "languages": ["react"],
+        //     "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
+        //     "github": "https://github.com/Lautarof25/",
+        //     "webpage": "https://lautarof25.github.io/"
+        // },
         {
             "title": "Armar cubo - Notion",
             "date": "2022-02-06",
@@ -312,33 +312,33 @@ const projectsInfo = {
             "github": "https://github.com/Lautarof25/practicas_python",
             "webpage": "https://onlinegdb.com/qZjq7lwwj"
         },
-        {
-            "title": "Build your PC",
-            "date": "2024-12-30",
-            "description": "A webapp to build your best PC",
-            "languages": ["react"],
-            "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
-            "github": "#",
-            "webpage": "#"
-        },
-        {
-            "title": "Slider blog",
-            "date": "2024-12-30",
-            "description": "A slider blog concept",
-            "languages": ["react"],
-            "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
-            "github": "#",
-            "webpage": "#"
-        },
-        {
-            "title": "English Test",
-            "date": "2024-12-30",
-            "description": "English test level",
-            "languages": ["react"],
-            "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
-            "github": "#",
-            "webpage": "#"
-        },
+        // {
+        //     "title": "Build your PC",
+        //     "date": "2024-12-30",
+        //     "description": "A webapp to build your best PC",
+        //     "languages": ["react"],
+        //     "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
+        //     "github": "#",
+        //     "webpage": "#"
+        // },
+        // {
+        //     "title": "Slider blog",
+        //     "date": "2024-12-30",
+        //     "description": "A slider blog concept",
+        //     "languages": ["react"],
+        //     "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
+        //     "github": "#",
+        //     "webpage": "#"
+        // },
+        // {
+        //     "title": "English Test",
+        //     "date": "2024-12-30",
+        //     "description": "English test level",
+        //     "languages": ["react"],
+        //     "thumbnail": ["79d73eeb-043b-48ea-93e1-2d990f3b47a9"],
+        //     "github": "#",
+        //     "webpage": "#"
+        // },
         {
             "title": "WineStore",
             "date": "2023-05-14",
