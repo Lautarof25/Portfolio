@@ -267,6 +267,16 @@ const projectsInfo = {
             "github": "https://github.com/Lautarof25/integradorcac2",
             "webpage": "https://lautarof25.github.io/integradorcac2/"
         },
+        {
+            "title": "IEA!(control de gastos)",
+            "date": "2024-12-20",
+            "description": "Planilla de ingresos, egresos y ahorros",
+            "languages": ["file-excel-solid"],
+            "thumbnail": ["6ae42567-46b6-427b-bdda-a6571eb75df6"],
+            /* Todo: Agregar readme con github para describir el proyecto */
+            "github": "https://docs.google.com/spreadsheets/d/1z9rU4-KahOp0cRNhzQpnamk2wuG6QhSdWHPYoT84ZvA/edit?usp=sharing",
+            "webpage": "https://docs.google.com/spreadsheets/d/1z9rU4-KahOp0cRNhzQpnamk2wuG6QhSdWHPYoT84ZvA/edit?usp=sharing"
+        },
         // {
         //     "title": "Tienda Cursos Tech",
         //     "date": "2024-12-30",
