@@ -8,7 +8,7 @@ const addCheckbox = (section,item) => {
     input.setAttribute("name", sectionItem)
     input.setAttribute("value", sectionItem)
     input.setAttribute("id", sectionItem)
-    if(item !== "2024")
+    // if(item !== "2024")
         input.checked = true
     label.setAttribute("for", sectionItem)
     const labelText = document.createTextNode(item)

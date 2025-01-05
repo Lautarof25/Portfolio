@@ -57,7 +57,7 @@ const certificatesInfo = {
             "institution": "Cisco",
             "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
             "hours": 50,
-            "year": "2024",
+            "year": "2025",
             "category": "Prog.",
             "link": "javascript:void(0);",
         },
@@ -120,7 +120,7 @@ const certificatesInfo = {
             "institution": "FreeCodeCamp",
             "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
             "hours": 150,
-            "year": "2024",
+            "year": "2025",
             "category": "Prog.",
             "link": "javascript:void(0);",
         },
@@ -305,7 +305,7 @@ const projectsInfo = {
             "webpage": "https://fan-utahraptor-cfe.notion.site/Armar-Cubo-Rubik-3x3-M-todo-f-cil-a71f34e67d784d70988a4021989f5b72"
         },
         {
-            "title": "Duoling con esteroides - Notion",
+            "title": "Duolingo con esteroides - Notion",
             "date": "2024-06-06",
             "description": "Una guía/articulo sobre Duolingo y cómo aprovecharlo!",
             "languages": ["pen-to-square-solid"],
