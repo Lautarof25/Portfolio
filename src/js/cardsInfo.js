@@ -259,6 +259,15 @@ const projectsInfo = {
             "webpage": "https://lautarof25.github.io/cv_online/"
         },
         {
+            "title": "Nativos digitales - Slideshow",
+            "date": "2020-06-15",
+            "description": "La falacia del nativo digital",
+            "languages": ["file-powerpoint-solid"],
+            "thumbnail": ["35d96722-71c3-4910-9285-1cfdd10d3443"],
+            "github": "https://docs.google.com/presentation/d/1g71wzwUaldSan7ulb_25VWRbA06FkVhwqNtKegNnec4/edit?usp=sharing",
+            "webpage": "https://docs.google.com/presentation/d/1g71wzwUaldSan7ulb_25VWRbA06FkVhwqNtKegNnec4/edit?usp=sharing"
+        },
+        {
             "title": "Conferencia BS AS",
             "date": "2023-05-17",
             "description": "Proyecto integrador Codo a codo - Full stack",
