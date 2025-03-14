@@ -47,9 +47,6 @@ const radios = $$('[type="radio"]')
 const allLinks = $$("a")
 const allButtons = $$("button")
 const freeColor = $("#freeColor")
-const fechaActual = new Date()
-const añoActual = fechaActual.getFullYear()
-const currentYear = $('.currentYear').textContent += fechaActual.getFullYear()
 
 let words = ['Lautaro', 'Exequiel', 'Fernández']
 let index = 0
