@@ -86,7 +86,7 @@ const certificatesInfo = {
             "hours": 7,
             "year": "2024",
             "category": "H. Skill",
-            "link": "https://ucarecdn.com/75560815-78f1-4eb0-902c-50be339990c5/5115107_1714874213_page-0001.jpg",
+            "link": "https://simpli-web.app.link/e/rXDjr7mYWRb",
         },
         {
             "title": "Full Stack Java",
