@@ -179,6 +179,15 @@ const certificatesInfo = {
             "link": "https://www.ratatype.com/u5476932/certificate/es/",
         },
         {
+            "title": "Prompt Engineer",
+            "institution": "SoloLearn",
+            "thumbnail": "b9120f58-ff81-4ccd-a115-8d3688b45b41",
+            "hours": 3,
+            "year": "2025",
+            "category": "H. Skill",
+            "link": "https://www.sololearn.com/certificates/CC-UU0VPAX3",
+        },
+        {
             "title": "EF Standard English Test",
             "institution": "EF Set",
             "thumbnail": "ff6cd6ea-35a2-40b1-b0ad-1ab33e74d715",
