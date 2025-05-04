@@ -277,6 +277,15 @@ const projectsInfo = {
             "webpage": "https://docs.google.com/presentation/d/1g71wzwUaldSan7ulb_25VWRbA06FkVhwqNtKegNnec4/edit?usp=sharing"
         },
         {
+            "title": "Dilema de Monty Hall - Sheet",
+            "date": "2025-04-04",
+            "description": "Una explicación simulada del problema de Monty Hall",
+            "languages": ["file-excel-solid"],
+            "thumbnail": ["cc9c2289-3e11-4969-993a-2b055f90ff4a"],
+            "github": "https://docs.google.com/spreadsheets/d/1T254ek27gyHDzU0C7XLNe-ktjCMkWkP7jD8Q5rZE_uU/edit?gid=0#gid=0",
+            "webpage": "https://docs.google.com/spreadsheets/d/1T254ek27gyHDzU0C7XLNe-ktjCMkWkP7jD8Q5rZE_uU/edit?gid=0#gid=0"
+        },
+        {
             "title": "Conferencia BS AS",
             "date": "2023-05-17",
             "description": "Proyecto integrador Codo a codo - Full stack",
