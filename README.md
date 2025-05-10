@@ -22,13 +22,15 @@ Personal Portfolio
 
 HTML, CSS and JavaScript
 ## Features
-- Analytics (tinyBird)
+- Analytics (Google)
 - Demo mode
 - Dynamic pages
 - Dynamic cards
+- Audio player
 - Filter cards
 - Color picker
-- Form with formSpree
+- Adding Netlify
+- Form with Serverless by Netlify
 - Scroll navigation
 
 ## Screenshots
