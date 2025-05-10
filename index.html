@@ -315,16 +315,37 @@
             <div class="section__box p-05">
                 <h2 class="text-center mt-0">Charlemos 🤝</h2>
                 <div class="relative bg-dark-gray mw-400 m-0-auto border-radius-5 drop-shadow">
-                    <form id="form" class="d-flex justify-center flex-column gap-05 p-1"
-                        action="https://formspree.io/f/xqkvnkwp" method="POST" autocomplete="on"><label
-                            for="name">Nombre:</label><input type="text" class="border-radius-5 w-100"
-                            placeholder="Lautaro Fernández" id="name" name="name" required
-                            autocomplete="cc-name" /><label for="email">Email:</label><input type="email"
-                            class="border-radius-5 w-100" placeholder="fernandez.lautaro25@gmail.com" id="email"
-                            name="email" required autocomplete="email" /><label for="message">Mensaje:</label><textarea
-                            class="border-radius-5 w-100" placeholder="👋​ Hi Lautaro, I really like your website!😍"
-                            id="message" name="message" rows="4" required></textarea><button id="submit"
-                            class="section__button p-1 border-radius-5 m-0-auto" type="submit">Enviar</button><svg
+                    <form 
+                    id="form"
+        name="contacto"
+        method="POST"
+        netlify
+        netlify-honeypot="bot-field"
+        class="d-flex justify-center flex-column gap-05 p-1"
+        autocomplete="on"
+    >
+        <!-- Campo oculto anti-spam (importante) -->
+        <input type="hidden" name="form-name" value="contacto">
+        <p style="display: none">
+            <label>No llenes este campo si eres humano: <input name="bot-field"></label>
+        </p>
+        
+        <!-- Campos de tu formulario (manteniendo tus estilos) -->
+        <label for="name">Nombre:</label>
+        <input type="text" class="border-radius-5 w-100" 
+               placeholder="Lautaro Fernández" id="name" name="name" required autocomplete="cc-name">
+        
+        <label for="email">Email:</label>
+        <input type="email" class="border-radius-5 w-100" 
+               placeholder="fernandez.lautaro25@gmail.com" id="email" name="email" required autocomplete="email">
+        
+        <label for="message">Mensaje:</label>
+        <textarea class="border-radius-5 w-100" 
+                  placeholder="👋​ Hi Lautaro, I really like your website!😍" 
+                  id="message" name="message" rows="4" required></textarea>
+        
+        <button id="submit" class="section__button p-1 border-radius-5 m-0-auto" type="submit">Enviar</button>
+                            <svg
                             xmlns="http://www.w3.org/2000/svg" class="chevron-bottom-left" viewBox="0 0 20 20">
                             <path
                                 d="M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z" />
