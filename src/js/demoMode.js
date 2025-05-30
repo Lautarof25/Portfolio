@@ -53,21 +53,40 @@ const resetTimer = () => {
 }
 
 const modeDemoOn = () => {
-    const currentHeightPage = main.scrollHeight
-    const scrollPerSecond = currentHeightPage / idleTime
-    let currentScroll = 0
-    const refreshIntervalId = setInterval(() => {
-        if (currentScroll <= currentHeightPage && modeDemoActivity) {
-            main.scrollTo({
-                top: currentScroll,
-                left: 0,
-                behavior: "smooth",
-              })
-            currentScroll += scrollPerSecond
-        }else {
-            clearInterval(refreshIntervalId)
+    const currentHeightPage = main.scrollHeight;
+    const scrollDuration = idleTime * 1000; // Convert to milliseconds
+    const startTime = Date.now();
+    const startPosition = main.scrollTop;
+    
+    const easeInOutQuad = (t) => {
+        return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+    };
+
+    const smoothScroll = () => {
+        if (!modeDemoActivity) return;
+        
+        const currentTime = Date.now();
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / scrollDuration, 1);
+        
+        // Apply easing function
+        const easedProgress = easeInOutQuad(progress);
+        
+        // Calculate new scroll position
+        const newPosition = startPosition + (currentHeightPage - startPosition) * easedProgress;
+        
+        main.scrollTo({
+            top: newPosition,
+            left: 0,
+            behavior: "auto" // Using auto for smoother animation
+        });
+        
+        if (progress < 1) {
+            requestAnimationFrame(smoothScroll);
         }
-    }, 1000)
+    };
+    
+    requestAnimationFrame(smoothScroll);
 }
 
 addEventListener("mousemove", resetTimerAndHideDemoMode)
