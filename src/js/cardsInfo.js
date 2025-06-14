@@ -59,7 +59,7 @@ const certificatesInfo = {
             "hours": 50,
             "year": "2025",
             "category": "Prog.",
-            "link": "javascript:void(0);",
+            "link": "#",
         },
         {
             "title": " Bootcamp de IA Generativa de AWS",
@@ -122,7 +122,7 @@ const certificatesInfo = {
             "hours": 150,
             "year": "2025",
             "category": "Prog.",
-            "link": "javascript:void(0);",
+            "link": "#",
         },
         {
             "title": "Python básico",
@@ -275,6 +275,15 @@ const projectsInfo = {
             "thumbnail": ["35d96722-71c3-4910-9285-1cfdd10d3443"],
             "github": "https://docs.google.com/presentation/d/1g71wzwUaldSan7ulb_25VWRbA06FkVhwqNtKegNnec4/edit?usp=sharing",
             "webpage": "https://docs.google.com/presentation/d/1g71wzwUaldSan7ulb_25VWRbA06FkVhwqNtKegNnec4/edit?usp=sharing"
+        },
+        {
+            "title": "Proyecto Guiado - Guess the Number",
+            "date": "2025-06-14",
+            "description": "Una presentación sobre cómo desarrollar un juego de adivinanza",
+            "languages": ["file-powerpoint-solid"],
+            "thumbnail": ["4f84a8e9-f3f9-4dad-9486-49167117ede0"],
+            "github": "https://docs.google.com/presentation/d/e/2PACX-1vTWIhMiQZH5IIRLRapqS9lNN1LgHOVNqN5oMq7sW2-1s7oCNl3JD22io2ZV9Gl4xWvKjN54eJwSTm8A/pub?start=false&loop=false&delayms=3000", 
+            "webpage": "https://docs.google.com/presentation/d/e/2PACX-1vTWIhMiQZH5IIRLRapqS9lNN1LgHOVNqN5oMq7sW2-1s7oCNl3JD22io2ZV9Gl4xWvKjN54eJwSTm8A/pub?start=false&loop=false&delayms=3000"
         },
         {
             "title": "Dilema de Monty Hall - Sheet",
