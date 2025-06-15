@@ -282,8 +282,8 @@ const projectsInfo = {
             "description": "Una presentación sobre cómo desarrollar un juego de adivinanza",
             "languages": ["file-powerpoint-solid"],
             "thumbnail": ["4f84a8e9-f3f9-4dad-9486-49167117ede0"],
-            "github": "https://docs.google.com/presentation/d/e/2PACX-1vTWIhMiQZH5IIRLRapqS9lNN1LgHOVNqN5oMq7sW2-1s7oCNl3JD22io2ZV9Gl4xWvKjN54eJwSTm8A/pub?start=false&loop=false&delayms=3000", 
-            "webpage": "https://docs.google.com/presentation/d/e/2PACX-1vTWIhMiQZH5IIRLRapqS9lNN1LgHOVNqN5oMq7sW2-1s7oCNl3JD22io2ZV9Gl4xWvKjN54eJwSTm8A/pub?start=false&loop=false&delayms=3000"
+            "github": "https://github.com/Lautarof25/SlidesGoogle", 
+            "webpage": "https://slidesgoogle.netlify.app/"
         },
         {
             "title": "Dilema de Monty Hall - Sheet",
