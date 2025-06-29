@@ -286,9 +286,9 @@ const projectsInfo = {
             "webpage": "https://slidesgoogle.netlify.app/"
         },
         {
-            "title": "Quiz App ",
+            "title": "Quiz App - Sin terminar",
             "date": "2025-04-15",
-            "description": "Una aplicación de preguntas y respuestas",
+            "description": "Una aplicación de preguntas y respuestas, hecha con IA",
             "languages": ["square-js", "html5", "css3-alt"],
             "thumbnail": ["093388c0-3477-4ee4-9e84-f14f401faf44"],
             "github": "https://q-a-app-lf25.web.app/", 
