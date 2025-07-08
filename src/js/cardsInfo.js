@@ -284,7 +284,7 @@ const projectsInfo = {
             "thumbnail": ["4f84a8e9-f3f9-4dad-9486-49167117ede0"],
             "github": "https://github.com/Lautarof25/SlidesGoogle", 
             "webpage": "https://slidesgoogle.netlify.app/"
-        },
+        },/*
         {
             "title": "Quiz App - Sin terminar",
             "date": "2025-04-15",
@@ -293,7 +293,7 @@ const projectsInfo = {
             "thumbnail": ["093388c0-3477-4ee4-9e84-f14f401faf44"],
             "github": "https://q-a-app-lf25.web.app/", 
             "webpage": "https://q-a-app-lf25.web.app/"
-        },
+        },*/
         {
             "title": "Dilema de Monty Hall - Sheet",
             "date": "2025-04-04",
