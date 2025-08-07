@@ -7,7 +7,7 @@ Personal Portfolio
 ![Screenshot 2023-11-29 184750](https://github.com/Lautarof25/Portfolio/assets/81919816/c6d062ef-a533-4888-b7ed-2939b707d43e)
 
 
-## Wireframes (inspiration)
+## Design Inspiration
 
 ![image](https://github.com/Lautarof25/Portfolio/assets/81919816/decef40c-85e5-4c6f-82a7-c93e86db8cc4)
 
@@ -21,17 +21,23 @@ Personal Portfolio
 ## 🛠 Skills
 
 HTML, CSS and JavaScript
+
 ## Features
-- Analytics (Google)
-- Demo mode
-- Dynamic pages
-- Dynamic cards
-- Audio player
-- Filter cards
-- Color picker
-- Adding Netlify
-- Form with Serverless by Netlify
-- Scroll navigation
+- **Analytics Integration** - Google Analytics and Google Tag Manager
+- **Demo Mode** - Interactive demonstration mode
+- **Dynamic Content** - Dynamic pages and cards with smooth transitions
+- **Audio Player** - Background music with controls
+- **Advanced Filtering** - Filter cards by categories with checkboxes
+- **Custom Color Themes** - Color picker with preset themes and custom colors
+- **Social Media Integration** - Share buttons for Facebook, Twitter, LinkedIn, and WhatsApp
+- **Responsive Design** - Mobile-first approach with adaptive layouts
+- **Smooth Animations** - CSS animations and card effects
+- **Modal Services** - Interactive service modals
+- **Card Slider** - Dynamic card carousel functionality
+- **Contact Form** - Serverless form with Netlify integration
+- **Scroll Navigation** - Smooth scrolling between sections
+- **SEO Optimized** - Meta tags, Open Graph, and Twitter Cards
+- **Performance Optimized** - CSS preloading and lazy loading
 
 ## Screenshots
 
