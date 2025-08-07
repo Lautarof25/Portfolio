@@ -24,6 +24,11 @@ const navigatePage = (direction) =>{
     changeTitle()
     scrollToTop()
     cardsScale()
+    
+    // Keep focus on main element for keyboard navigation
+    setTimeout(() => {
+        main.focus()
+    }, 200)
 }
 
 const nextPage = () => currentIndexPage() !== links.length-1 ? currentIndexPage() + 1 : 0

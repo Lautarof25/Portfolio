@@ -62,11 +62,56 @@ const handleTouchMove = (event) => {
 
 const scrollKeyboard = (event) =>{
     const ctrlKey = event.ctrlKey || event.metaKey;
+    
+    // Navigation with Ctrl + arrows (existing functionality)
     if (ctrlKey && event.key === 'ArrowDown') {
         navigatePage(1)
     }
     if (ctrlKey && event.key === 'ArrowUp') {
         navigatePage(-1)
+    }
+    
+    // Direct navigation with arrow keys (faster than scroll simulation)
+    if (event.key === 'ArrowDown') {
+        const scrollPosition = main.scrollTop + main.clientHeight + 2;
+        const totalHeight = main.scrollHeight;
+        const isAtTheEndOfMain = scrollPosition >= totalHeight
+        
+        if (isAtTheEndOfMain) {
+            endPageScrollCount += 3; // Increment faster for keyboard
+            if (endPageScrollCount > 2) { // Lower threshold for keyboard
+                navigatePage(1)
+                endPageScrollCount = 0
+                topPageScrollCount = 0
+            }
+        } else {
+            // If not at the end, just scroll down normally
+            const scrollEvent = new WheelEvent('wheel', {
+                deltaY: 100,
+                bubbles: true
+            });
+            main.dispatchEvent(scrollEvent);
+        }
+    }
+    
+    if (event.key === 'ArrowUp') {
+        const scrollPositionTop = main.scrollTop;
+        
+        if (scrollPositionTop === 0) {
+            topPageScrollCount += 3; // Increment faster for keyboard
+            if (topPageScrollCount > 2) { // Lower threshold for keyboard
+                navigatePage(-1)
+                topPageScrollCount = 0
+                endPageScrollCount = 0
+            }
+        } else {
+            // If not at the top, just scroll up normally
+            const scrollEvent = new WheelEvent('wheel', {
+                deltaY: -100,
+                bubbles: true
+            });
+            main.dispatchEvent(scrollEvent);
+        }
     }
 }
 
@@ -75,3 +120,23 @@ document.addEventListener('keydown', scrollKeyboard,{passive: true})
 main.addEventListener("wheel", handleScroll,{passive: true})
 document.addEventListener("touchstart", handleTouchStart,{passive: true})
 document.addEventListener("touchmove", handleTouchMove,{passive: true})
+
+// Ensure main element can receive focus and handle keyboard events
+main.setAttribute('tabindex', '0')
+main.addEventListener('focus', () => {
+    // Focus is already handled by tabindex
+})
+main.addEventListener('blur', () => {
+    // Keep focus on main element
+    main.focus()
+})
+
+// Set initial focus on main element when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    main.focus()
+})
+
+// Also set focus when window gains focus
+window.addEventListener('focus', () => {
+    main.focus()
+})
