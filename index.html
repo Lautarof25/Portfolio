@@ -356,6 +356,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   id="message" name="message" rows="4" required></textarea>
         
         <button id="submit" class="section__button p-1 border-radius-5 m-0-auto" type="submit">Enviar</button>
+        <script>
+            // Debug del formulario
+            document.addEventListener('DOMContentLoaded', function() {
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const messageInput = document.getElementById('message');
+                
+                console.log('Form inputs found:', {nameInput, emailInput, messageInput});
+                
+                // Test de escritura
+                nameInput.addEventListener('input', function(e) {
+                    console.log('Name input event:', e.target.value);
+                });
+                
+                emailInput.addEventListener('input', function(e) {
+                    console.log('Email input event:', e.target.value);
+                });
+                
+                messageInput.addEventListener('input', function(e) {
+                    console.log('Message input event:', e.target.value);
+                });
+            });
+        </script>
                             <svg
                             xmlns="http://www.w3.org/2000/svg" class="chevron-bottom-left" viewBox="0 0 20 20">
                             <path

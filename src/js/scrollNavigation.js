@@ -61,6 +61,19 @@ const handleTouchMove = (event) => {
 // Keyboard navigation
 
 const scrollKeyboard = (event) =>{
+    // Check if user is typing in a form input, textarea, or contenteditable element
+    const target = event.target;
+    const isTyping = target.tagName === 'INPUT' || 
+                     target.tagName === 'TEXTAREA' || 
+                     target.tagName === 'SELECT' ||
+                     target.contentEditable === 'true' ||
+                     target.isContentEditable;
+    
+    // If user is typing, don't handle navigation
+    if (isTyping) {
+        return;
+    }
+    
     const ctrlKey = event.ctrlKey || event.metaKey;
     
     // Navigation with Ctrl + arrows (existing functionality)
@@ -123,12 +136,31 @@ document.addEventListener("touchmove", handleTouchMove,{passive: true})
 
 // Ensure main element can receive focus and handle keyboard events
 main.setAttribute('tabindex', '0')
+
+// Only set focus on main when no form element is focused
+const shouldFocusMain = () => {
+    const activeElement = document.activeElement;
+    const isFormElement = activeElement.tagName === 'INPUT' || 
+                         activeElement.tagName === 'TEXTAREA' || 
+                         activeElement.tagName === 'SELECT' ||
+                         activeElement.contentEditable === 'true' ||
+                         activeElement.isContentEditable;
+    
+    return !isFormElement;
+};
+
 main.addEventListener('focus', () => {
     // Focus is already handled by tabindex
 })
-main.addEventListener('blur', () => {
-    // Keep focus on main element
-    main.focus()
+
+main.addEventListener('blur', (event) => {
+    // Only refocus main if the new focus target is not a form element
+    // and if we're not switching to another form element
+    setTimeout(() => {
+        if (shouldFocusMain()) {
+            main.focus();
+        }
+    }, 10);
 })
 
 // Set initial focus on main element when page loads
@@ -136,7 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
     main.focus()
 })
 
-// Also set focus when window gains focus
+// Also set focus when window gains focus, but only if no form is focused
 window.addEventListener('focus', () => {
-    main.focus()
+    if (shouldFocusMain()) {
+        main.focus()
+    }
 })

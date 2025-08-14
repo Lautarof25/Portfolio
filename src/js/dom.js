@@ -95,8 +95,8 @@ const observer = new MutationObserver((mutationsList) => {
             activeWriteWords = false
             speedChangeWords = 2000
         }
-        if(currentIdPage() === "contact")
-            automaticForm()
+        // if(currentIdPage() === "contact")
+        //     automaticForm()
     }
 })
 

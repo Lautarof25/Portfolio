@@ -93,4 +93,19 @@ addEventListener("mousemove", resetTimerAndHideDemoMode)
 addEventListener("wheel", resetTimerAndHideDemoMode)
 addEventListener("touchmove", resetTimerAndHideDemoMode)
 addEventListener("click", resetTimerAndHideDemoMode)
-addEventListener("keydown", resetTimerAndHideDemoMode)
+addEventListener("keydown", (event) => {
+    // Check if user is typing in a form input, textarea, or contenteditable element
+    const target = event.target;
+    const isTyping = target.tagName === 'INPUT' || 
+                     target.tagName === 'TEXTAREA' || 
+                     target.tagName === 'SELECT' ||
+                     target.contentEditable === 'true' ||
+                     target.isContentEditable;
+    
+    // If user is typing, don't reset timer
+    if (isTyping) {
+        return;
+    }
+    
+    resetTimerAndHideDemoMode();
+})
