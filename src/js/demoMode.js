@@ -102,10 +102,37 @@ addEventListener("keydown", (event) => {
                      target.contentEditable === 'true' ||
                      target.isContentEditable;
     
-    // If user is typing, don't reset timer
+    // If user is typing, reset timer to prevent demo mode
     if (isTyping) {
+        resetTimerAndHideDemoMode();
         return;
     }
     
     resetTimerAndHideDemoMode();
 })
+
+// Add specific form activity detection
+const setupFormActivityDetection = () => {
+    const formInputs = document.querySelectorAll('input, textarea, select');
+    
+    formInputs.forEach(input => {
+        // Reset timer on input events
+        input.addEventListener('input', resetTimerAndHideDemoMode);
+        input.addEventListener('focus', resetTimerAndHideDemoMode);
+        input.addEventListener('blur', resetTimerAndHideDemoMode);
+        
+        // Reset timer on paste events
+        input.addEventListener('paste', resetTimerAndHideDemoMode);
+        
+        // Reset timer on composition events (for IME input methods)
+        input.addEventListener('compositionstart', resetTimerAndHideDemoMode);
+        input.addEventListener('compositionend', resetTimerAndHideDemoMode);
+    });
+};
+
+// Setup form detection when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFormActivityDetection);
+} else {
+    setupFormActivityDetection();
+}

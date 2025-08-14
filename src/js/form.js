@@ -43,9 +43,20 @@ const clearFormPlaceholders = () =>{
 }
 
 const automaticForm = () =>{
-    setTimeout(() => {
-        fillForm()
-    }, 500)
+    // Solo ejecutar si el formulario está vacío
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    
+    if (nameInput && emailInput && messageInput) {
+        const isFormEmpty = !nameInput.value && !emailInput.value && !messageInput.value;
+        
+        if (isFormEmpty) {
+            setTimeout(() => {
+                fillForm()
+            }, 500)
+        }
+    }
 }
 
 const handleAutomaticForm = () =>{
