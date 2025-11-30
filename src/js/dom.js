@@ -60,7 +60,7 @@ let activeWriteWords = true
 function writeDeleteWords() {
     let currentWord = words[index]
     let element = $('.nameChange')
-    if(activeWriteWords){
+    if (activeWriteWords) {
         if (direction === 1) {
             element.textContent = currentWord.substring(0, currentLetter)
             currentLetter++
@@ -91,15 +91,29 @@ const observer = new MutationObserver((mutationsList) => {
         if (currentIdPage() === "home") {
             activeWriteWords = true
             writeDeleteWords()
-        }else {
+        } else {
             activeWriteWords = false
             speedChangeWords = 2000
         }
-        if(currentIdPage() === "contact")
+        if (currentIdPage() === "contact")
             automaticForm()
     }
 })
 
 observer.observe(home, { attributes: true })
+
+document.getElementById("downloadCV").addEventListener("click", async (e) => {
+    e.preventDefault();
+    const res = await fetch(e.target.href);
+    const blob = await res.blob();
+    const now = new Date();
+    const fecha = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}_${String(now.getHours()).padStart(2, "0")}-${String(now.getMinutes()).padStart(2, "0")}`;
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `cv_fernandez_lautaro_${fecha}.pdf`;
+    a.click();
+    URL.revokeObjectURL(url);
+});
 
 console.log('%c¡Bienvenidos a mi Portafolio!😊', 'background: #222; color: #ff5b02; font-size: 24px; padding: 4px; border-radius: 5px;');
