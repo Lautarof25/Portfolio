@@ -26,9 +26,14 @@ const showPage = (link)=>{
 const changePage = () => {
     links.forEach(link => {
         link.addEventListener('click',function(){
+            // Resetear scroll inmediatamente antes de cambiar
+            main.scrollTop = 0
             hidePages()
             showPage(link.id)
-            scrollToTop()
+            // Asegurar scroll en 0 después de mostrar la página
+            requestAnimationFrame(() => {
+                main.scrollTop = 0
+            })
         })
     })
 }

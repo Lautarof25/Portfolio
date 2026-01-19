@@ -2,12 +2,19 @@ const cardsService = $$(".services .section__box")
 const closeCardService = $(".closeCardService")
 
 const closeAllCards = () => {
+    // Optimizado: solo procesar cards que están abiertas
     cardsService.forEach(card => {
-        closeModal(card)
+        if (card.classList.contains("modalUp")) {
+            closeModal(card)
+        }
     })
+    currentOpenCard = null
 }
 
 const closeModal = (card) => {
+    // Solo cerrar si la card está realmente abierta
+    if (!card.classList.contains("modalUp")) return
+    
     closeCardServiceClick(1)
     card.children[5].classList.add("hidden")
     card.classList.remove("modalUp", "opacityEffect")
@@ -34,20 +41,31 @@ const bodyOpacityEffect = (mode) => {
         : body.classList.remove("opacityBody")
 }
 
+// Optimizado: usar un solo listener en document con delegación en lugar de múltiples listeners
+let currentOpenCard = null
+
 const openCloseCards = () => {
     cardsService.forEach(card => {
         card.addEventListener('click', function (event) {
-            closeAllCards()
+            // Solo cerrar todas si hay una card abierta diferente
+            if (currentOpenCard && currentOpenCard !== card) {
+                closeAllCards()
+            }
             showModal(card)
+            currentOpenCard = card
             main.scrollTo(0, 0)
             event.stopPropagation()
         })
-        document.addEventListener('click', function (event) {
-            if (event.target !== card) {
-                closeAllCards()
-                closeModal(card)
-            }
-        })
+    })
+    
+    // Un solo listener en document para cerrar cards al hacer click fuera
+    document.addEventListener('click', function (event) {
+        // Verificar si el click fue fuera de cualquier card de servicio
+        const clickedCard = event.target.closest('.services .section__box')
+        if (!clickedCard && currentOpenCard) {
+            closeAllCards()
+            currentOpenCard = null
+        }
     })
 }
 

@@ -69,19 +69,22 @@ const toggleCards = (index,effect) => {
   })
 }
 
+// Cachear elemento para evitar querySelector repetido
+const containerButtons = document.querySelector(".container__buttons")
+
 const showAllCards = (activate) => {
   if(activate){
     cards.forEach(card => {
       card.style.display = "block"
     })
-    document.querySelector(".container__buttons").style.display = "none"
+    if (containerButtons) containerButtons.style.display = "none"
     about.classList.add("grid-template-auto")
   }else {
     cards.forEach((card,i)=> {
       if(i !== 0)
         card.style.display = "none"
     })
-    document.querySelector(".container__buttons").style.display = "grid"
+    if (containerButtons) containerButtons.style.display = "grid"
     about.classList.remove("grid-template-auto")
   }
 }

@@ -151,9 +151,11 @@ filterCards(checkboxesCertificatesCategories,"certificates",certificatesInfo.inf
 filterCards(checkboxesProjectsYears,"projects",projectsInfo.info)
 
 const removeElements = () => {
-    var sectionBoxes = $$(`.${currentIdPage()} .section__box`)
+    const currentPage = currentIdPage() // Cachear para evitar llamar dos veces
+    const sectionBoxes = $$(`.${currentPage} .section__box`)
 
+    // Usar remove() que es más moderno y eficiente que removeChild
     sectionBoxes.forEach(function (sectionBox) {
-        sectionBox.parentNode.removeChild(sectionBox)
+        sectionBox.remove()
     })
 }

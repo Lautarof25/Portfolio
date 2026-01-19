@@ -2,6 +2,9 @@ buttonDown.addEventListener('click', () => navigatePage(1))
 buttonUp.addEventListener('click', () => navigatePage(-1))
 
 const navigatePage = (direction) =>{
+    // Resetear scroll inmediatamente ANTES de cambiar de página
+    main.scrollTop = 0
+    
     // External function : showPage.js
     hidePages()
     const index = direction === 1 ? nextPage() : prevPage()
@@ -22,7 +25,12 @@ const navigatePage = (direction) =>{
     document.getElementById(currentId).classList.add('link-active')
     // External function : titlePage.js
     changeTitle()
-    scrollToTop()
+    
+    // Asegurar que el scroll esté en 0 después de mostrar la página
+    requestAnimationFrame(() => {
+        main.scrollTop = 0
+    })
+    
     cardsScale()
     
     // Keep focus on main element for keyboard navigation
@@ -40,11 +48,10 @@ const currentIndexPage = () =>linksArray.indexOf(currentIdPage())
 const currentIdPage = () =>document.querySelector(".link-active").id
 
 const scrollToTop = () => {
-    setTimeout(() => {
-        main.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-        })
-    }, 100)
+    // Scroll inmediato sin animación para evitar que la nueva página aparezca desde abajo
+    main.scrollTop = 0
+    // Usar requestAnimationFrame para asegurar que se ejecute después del render
+    requestAnimationFrame(() => {
+        main.scrollTop = 0
+    })
 }

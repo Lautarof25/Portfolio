@@ -57,29 +57,31 @@ let speedChangeWords = 1000
 
 let activeWriteWords = true
 
+// Cachear elemento una sola vez fuera de la función
+const nameChangeElement = $('.nameChange')
+
 function writeDeleteWords() {
+    if (!nameChangeElement || !activeWriteWords) return
+    
     let currentWord = words[index]
-    let element = $('.nameChange')
-    if (activeWriteWords) {
-        if (direction === 1) {
-            element.textContent = currentWord.substring(0, currentLetter)
-            currentLetter++
-            if (currentLetter > currentWord.length) {
-                direction = -1
-                setTimeout(writeDeleteWords, speedChangeWords)
-            } else {
-                setTimeout(writeDeleteWords, speedWriting)
-            }
+    if (direction === 1) {
+        nameChangeElement.textContent = currentWord.substring(0, currentLetter)
+        currentLetter++
+        if (currentLetter > currentWord.length) {
+            direction = -1
+            setTimeout(writeDeleteWords, speedChangeWords)
         } else {
-            element.textContent = currentWord.substring(0, currentLetter)
-            currentLetter--
-            if (currentLetter === 0) {
-                direction = 1
-                index = (index + 1) % words.length
-                setTimeout(writeDeleteWords, speedChangeWords)
-            } else {
-                setTimeout(writeDeleteWords, speedWriting / 2)
-            }
+            setTimeout(writeDeleteWords, speedWriting)
+        }
+    } else {
+        nameChangeElement.textContent = currentWord.substring(0, currentLetter)
+        currentLetter--
+        if (currentLetter === 0) {
+            direction = 1
+            index = (index + 1) % words.length
+            setTimeout(writeDeleteWords, speedChangeWords)
+        } else {
+            setTimeout(writeDeleteWords, speedWriting / 2)
         }
     }
 }

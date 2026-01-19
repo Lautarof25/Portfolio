@@ -1,13 +1,25 @@
 let topPageScrollCount = 0
 let endPageScrollCount = 0
 let startY
+let lastScrollTime = 0
+const SCROLL_THROTTLE_MS = 16 // ~60fps, muy sutil
 
 const handleScroll = (event) => {
+    // Throttle muy sutil: solo limita frecuencia sin cambiar lógica
+    const now = performance.now()
+    if (now - lastScrollTime < SCROLL_THROTTLE_MS) return
+    lastScrollTime = now
+    
+    // Cachear propiedades del scroll para evitar múltiples accesos
+    const scrollTop = main.scrollTop
+    const clientHeight = main.clientHeight
+    const scrollHeight = main.scrollHeight
+    
     const isScrollDown = event.deltaY > 0
-    const scrollPosition = main.scrollTop + main.clientHeight + 2;
-    const scrollPositionTop = main.scrollTop;
-    const totalHeight = main.scrollHeight;
-    const isAtTheEndOfMain = scrollPosition >= totalHeight
+    const scrollPosition = scrollTop + clientHeight + 2;
+    const scrollPositionTop = scrollTop;
+    const isAtTheEndOfMain = scrollPosition >= scrollHeight
+    
     if(isAtTheEndOfMain){
         isScrollDown ? endPageScrollCount++ : endPageScrollCount--
         if(endPageScrollCount > 5){
@@ -34,10 +46,13 @@ const handleTouchMove = (event) => {
     const currentY = event.touches[0].clientY
     startY > currentY ? endPageScrollCount++ : topPageScrollCount++
 
-    const totalHeight = main.scrollHeight
-    const scrollPosition = main.scrollTop + main.clientHeight + 1;
-    const scrollPositionTop = main.scrollTop;
-    const isAtTheEnd = scrollPosition >= totalHeight
+    // Cachear propiedades para evitar múltiples accesos
+    const scrollTop = main.scrollTop
+    const clientHeight = main.clientHeight
+    const scrollHeight = main.scrollHeight
+    const scrollPosition = scrollTop + clientHeight + 1;
+    const scrollPositionTop = scrollTop;
+    const isAtTheEnd = scrollPosition >= scrollHeight
 
     if (isAtTheEnd) {
         startY > currentY ? endPageScrollCount++ : endPageScrollCount--

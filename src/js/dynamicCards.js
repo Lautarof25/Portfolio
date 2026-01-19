@@ -1,5 +1,11 @@
 const addCardInfo = (type, database) => {
     const container = getContainerByType(type);
+    
+    // Cachear elementos empty una sola vez para evitar múltiples querySelector
+    let projectsEmpty = null
+    let certificatesEmpty = null
+    if (type === 'projects') projectsEmpty = projects.querySelector('.empty')
+    if (type === 'certificates') certificatesEmpty = certificates.querySelector('.empty')
 
     database.forEach(item => {
         switch (type) {
@@ -9,18 +15,13 @@ const addCardInfo = (type, database) => {
             case 'projects':
                 if(checkboxesProjectsYearsChecked.includes(item.date.slice(0,4))){
                     createCardProjectInfo(item.title, item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage)
-                    projects.querySelector('.empty').classList.add('hidden')
-                }if (checkboxesProjectsYearsChecked.length === 0){
-                    projects.querySelector('.empty').classList.remove('hidden')
+                    if (projectsEmpty) projectsEmpty.classList.add('hidden')
                 }
                 break
             case 'certificates':
                 if(checkboxesCertificatesYearsChecked.includes(item.year) && checkboxesCertificatesCategoriesChecked.includes(item.category.substring(0,3))){
                     createCardCertificatesInfo(item.title, item.institution, item.thumbnail,item.category, item.hours, item.year, item.link)
-                    certificates.querySelector('.empty').classList.add('hidden')
-                }
-                if (checkboxesCertificatesYearsChecked.length === 0){
-                    certificates.querySelector('.empty').classList.remove('hidden')
+                    if (certificatesEmpty) certificatesEmpty.classList.add('hidden')
                 }
                 break
             case 'services':
@@ -28,6 +29,18 @@ const addCardInfo = (type, database) => {
                 break
         }
     })
+    
+    // Actualizar empty solo una vez después del loop
+    if (type === 'projects' && projectsEmpty) {
+        if (checkboxesProjectsYearsChecked.length === 0) {
+            projectsEmpty.classList.remove('hidden')
+        }
+    }
+    if (type === 'certificates' && certificatesEmpty) {
+        if (checkboxesCertificatesYearsChecked.length === 0) {
+            certificatesEmpty.classList.remove('hidden')
+        }
+    }
 }
 
 const getContainerByType = (type) => {

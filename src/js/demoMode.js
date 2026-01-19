@@ -1,10 +1,15 @@
 let timer = 0
 const idleTime = 15
 let modeDemoActivity = false
+let idleInterval = null // Guardar referencia para poder limpiarlo
 
 const idleTimer = () =>{
+    // Limpiar intervalo anterior si existe
+    if (idleInterval) {
+        clearInterval(idleInterval)
+    }
     // Display the next page after a certain time of being idle
-    setInterval(() => {
+    idleInterval = setInterval(() => {
         timer++
         if (timer === idleTime) {
             resetTimerAndShowNextPage()
@@ -89,10 +94,20 @@ const modeDemoOn = () => {
     requestAnimationFrame(smoothScroll);
 }
 
-addEventListener("mousemove", resetTimerAndHideDemoMode)
-addEventListener("wheel", resetTimerAndHideDemoMode)
-addEventListener("touchmove", resetTimerAndHideDemoMode)
-addEventListener("click", resetTimerAndHideDemoMode)
+// Optimizado: agregar throttle a eventos que se disparan muy frecuentemente
+let resetTimerTimeout = null
+const throttledResetTimer = () => {
+    if (resetTimerTimeout) return
+    resetTimerTimeout = setTimeout(() => {
+        resetTimerAndHideDemoMode()
+        resetTimerTimeout = null
+    }, 100) // Throttle de 100ms
+}
+
+addEventListener("mousemove", throttledResetTimer, {passive: true})
+addEventListener("wheel", resetTimerAndHideDemoMode, {passive: true})
+addEventListener("touchmove", throttledResetTimer, {passive: true})
+addEventListener("click", resetTimerAndHideDemoMode, {passive: true})
 addEventListener("keydown", (event) => {
     // Check if user is typing in a form input, textarea, or contenteditable element
     const target = event.target;
