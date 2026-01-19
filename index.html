@@ -154,15 +154,7 @@
         }
     </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1DM8D5FJYN"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'G-1DM8D5FJYN');
-</script>
 
 <body>
     <div class="stars">
@@ -579,12 +571,7 @@
             </div>
         </div>
     </main>
-    <!-- Popup de prototipo -->
-    <div class="prototype-popup">
-        <div class="prototype-popup-content">
-            <p>Este portafolio es un prototipo antiguo. Se está trabajando en un portfolio nuevo</p>
-        </div>
-    </div>
+
 
     <div class="bgDisabled hidden zindex-10"></div>
     <div
@@ -645,6 +632,31 @@
     <script defer src="./src/js/cardsEffect.js"></script>
     <script defer src="./src/js/modalServices.js"></script>
     <script defer src="./src/js/cardsSlider.js"></script>
+
+    <!-- Lazy Load Google Analytics -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+
+        function loadGoogleAnalytics() {
+            if (window.gaLoaded) return;
+            window.gaLoaded = true;
+
+            var script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-1DM8D5FJYN';
+            script.async = true;
+            document.head.appendChild(script);
+
+            gtag('js', new Date());
+            gtag('config', 'G-1DM8D5FJYN');
+        }
+
+        ['click', 'scroll', 'mousemove', 'touchstart'].forEach(event => {
+            window.addEventListener(event, loadGoogleAnalytics, { once: true, passive: true });
+        });
+
+        setTimeout(loadGoogleAnalytics, 3500);
+    </script>
 </body>
 
 </html>
