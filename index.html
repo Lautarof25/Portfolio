@@ -651,11 +651,11 @@
             gtag('config', 'G-1DM8D5FJYN');
         }
 
-        ['click', 'scroll', 'mousemove', 'touchstart'].forEach(event => {
+        ['click', 'scroll', 'touchstart'].forEach(event => {
             window.addEventListener(event, loadGoogleAnalytics, { once: true, passive: true });
         });
 
-        setTimeout(loadGoogleAnalytics, 3500);
+        setTimeout(loadGoogleAnalytics, 7000);
     </script>
 </body>
 
