@@ -7,7 +7,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preload" as="style" href="./src/css/normalize.css" onload="this.rel='stylesheet'" />
     <link rel="preload" as="style" href="./src/css/style.css" onload="this.rel='stylesheet'" />
-    <link rel="stylesheet" href="./src/css/chevronCorner.css" />
+    <style>
+        /* Base chevron styles */
+        .chevron-bottom-right,
+        .chevron-bottom-left,
+        .chevron-top-left,
+        .chevron-top-right {
+            position: absolute;
+            fill: var(--principal-color);
+        }
+
+        /* Chevron rotations */
+        .chevron-top-left {
+            transform: rotate(225deg);
+        }
+
+        .chevron-bottom-right {
+            transform: rotate(45deg);
+        }
+
+        .chevron-top-right {
+            transform: rotate(315deg);
+        }
+
+        .chevron-bottom-left {
+            transform: rotate(135deg);
+        }
+
+        /* Common section styles */
+        .about,
+        .certificates,
+        .services,
+        .contact {
+
+            /* Top and bottom positioning */
+            & .chevron-top-left,
+            & .chevron-top-right {
+                top: -1rem;
+            }
+
+            & .chevron-bottom-right,
+            & .chevron-bottom-left {
+                bottom: -1rem;
+            }
+
+            /* Left and right positioning */
+            & .chevron-top-left,
+            & .chevron-bottom-left {
+                left: -1rem;
+            }
+
+            & .chevron-bottom-right,
+            & .chevron-top-right {
+                right: -1rem;
+            }
+        }
+
+        /* Section-specific sizes */
+        .about svg {
+            width: 3rem;
+        }
+
+        .projects svg {
+            width: 4rem;
+        }
+
+        .certificates svg,
+        .services svg,
+        .contact svg {
+            width: 2.5rem;
+        }
+
+        /* Projects specific positioning */
+        .projects {
+
+            & .chevron-bottom-left,
+            & .chevron-bottom-right {
+                bottom: -1.5rem;
+            }
+
+            & .chevron-top-left,
+            & .chevron-top-right {
+                top: -1.5rem;
+            }
+
+            & .chevron-top-left,
+            & .chevron-bottom-left {
+                left: -1.5rem;
+            }
+
+            & .chevron-bottom-right,
+            & .chevron-top-right {
+                right: -1.5rem;
+            }
+        }
+
+        /* Share buttons specific styles */
+        .share-buttons {
+            & svg {
+                width: 1.5rem;
+            }
+
+            & .chevron-top-left {
+                top: -.5rem;
+                left: -.5rem;
+            }
+
+            & .chevron-bottom-right {
+                bottom: -.5rem;
+                right: -.5rem;
+            }
+        }
+    </style>
     <link rel="preload" as="style" href="./src/css/main.css" onload="this.rel='stylesheet'" />
     <link rel="stylesheet" href="./src/css/helpers.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="./src/css/animation.css" media="print" onload="this.media='all'" />
@@ -170,8 +281,8 @@
                     class="blinking-cursor">|</span></h1>
             <div class="section__box"><img loading="eager" fetchpriority="high" draggable="false"
                     src="https://ucarecdn.com/99eb445a-5c36-4cf5-b3a7-0ffe0bd9e4a7/-/preview/300x400/-/quality/smart/-/format/auto/"
-                    alt="profile_picture_lautaro" width="300" height="400" /><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    class="chevron-page-left">
+                    alt="profile_picture_lautaro" width="300" height="400" /><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20" class="chevron-page-left">
                     <path
                         d="M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z">
                     </path>
