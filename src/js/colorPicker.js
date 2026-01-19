@@ -11,6 +11,8 @@ const handleRadioChange = (radio) => {
 }
 
 const handleCustomizeColor = () => {
+  // Si no existe el color libre (freeColor) porque se redujeron las opciones, salir.
+  if (!freeColor) return
   freeColor.addEventListener("input", () => {
     body.style.setProperty("--principal-color", `${freeColor.value}`)
     body.style.cursor = "default"
