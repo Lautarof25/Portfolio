@@ -5,7 +5,9 @@
     <meta charset="UTF-8" />
     <title>Portfolio Web | Fernández Lautaro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="style" href="./src/css/normalize.css" onload="this.rel='stylesheet'" />
+    <link rel="preconnect" href="https://ucarecdn.com" crossorigin />
+    <link rel="preload" href="./src/montserrat/Montserrat-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./src/montserrat/Montserrat-Bold.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" as="style" href="./src/css/style.css" onload="this.rel='stylesheet'" />
     <style>
         /* Base chevron styles */
@@ -118,6 +120,21 @@
                 right: -.5rem;
             }
         }
+
+        /* Color picker tactile improvements */
+        .color-picker input[type="radio"],
+        .color-picker input[type="color"] {
+            width: 26px;
+            height: 26px;
+            margin: 6px;
+        }
+
+        .color-picker label {
+            padding: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
     <link rel="preload" as="style" href="./src/css/main.css" onload="this.rel='stylesheet'" />
     <link rel="stylesheet" href="./src/css/helpers.css" media="print" onload="this.media='all'" />
@@ -137,22 +154,6 @@
     <meta property="twitter:title" content="Portfolio Web | Fernández Lautaro" />
     <meta property="twitter:description" content="¡Visita este portafolio creado por Lautaro!" />
     <meta property="twitter:image" content="https://lautarof25.github.io/Portfolio/og_image.jpg" />
-    <!-- Mejora de usabilidad táctil en selector de color -->
-    <style>
-        .color-picker input[type="radio"],
-        .color-picker input[type="color"] {
-            width: 26px;
-            height: 26px;
-            margin: 6px;
-        }
-
-        .color-picker label {
-            padding: 4px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
 </head>
 
 
@@ -271,8 +272,11 @@
                 </svg></div>
             <h1 class="section__title">Hola, mi nombre es <span class="nameChange">Lautaro</span><span
                     class="blinking-cursor">|</span></h1>
-            <div class="section__box"><img loading="eager" fetchpriority="high" draggable="false"
+            <div class="section__box"><img loading="eager" fetchpriority="high" decoding="async" draggable="false"
                     src="https://ucarecdn.com/99eb445a-5c36-4cf5-b3a7-0ffe0bd9e4a7/-/preview/300x400/-/quality/smart/-/format/auto/"
+                    srcset="https://ucarecdn.com/99eb445a-5c36-4cf5-b3a7-0ffe0bd9e4a7/-/preview/300x400/-/quality/smart/-/format/auto/ 300w,
+                            https://ucarecdn.com/99eb445a-5c36-4cf5-b3a7-0ffe0bd9e4a7/-/preview/600x800/-/quality/smart/-/format/auto/ 600w"
+                    sizes="(max-width: 600px) 300px, 600px"
                     alt="profile_picture_lautaro" width="300" height="400" /><svg xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20" class="chevron-page-left">
                     <path

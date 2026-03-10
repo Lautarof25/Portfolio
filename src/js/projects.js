@@ -28,6 +28,7 @@ const createCardProjectInfo = (title,date, description, languages, thumbnail, gi
     img.setAttribute("src", `https://ucarecdn.com/${thumbnail}/-/scale_crop/531x250/-/format/auto/-/quality/smart/`)
     img.setAttribute("alt", title)
     img.setAttribute("loading", "lazy")
+    img.setAttribute("decoding", "async")
     img.setAttribute("width", "531")
     img.setAttribute("height", "250")
     img.setAttribute("class", "h-100 w-100 object-fit-cover object-pos-left")

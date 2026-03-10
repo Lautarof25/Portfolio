@@ -42,6 +42,7 @@ const createCardCertificatesInfo = (title, description, thumbnail,category, hour
   const img = document.createElement("img")
   img.setAttribute("src", `https://ucarecdn.com/${thumbnail}/-/scale_crop/500x250/-/format/auto/-/quality/smart/`)
   img.setAttribute("loading", "lazy")
+  img.setAttribute("decoding", "async")
   img.setAttribute("alt", title)
   img.setAttribute("width", "500")
   img.setAttribute("height", "250")
