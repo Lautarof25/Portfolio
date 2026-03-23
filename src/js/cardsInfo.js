@@ -25,7 +25,7 @@ const aboutInfo = {
         {
             "description": "También conozco Python y Java, y estoy estudiando React y NodeJs",
             "descriptionHidden": "Hice un curso de Python en la UnaHur, estudié Java en un bootcamp autoguiado",
-            "icons": ["python", "java", "react","node"]
+            "icons": ["python", "java", "react", "node"]
         },
         {
             "description": "Usando herramientas de planificación e IA para potenciar el trabajo y proyectos",
@@ -282,7 +282,7 @@ const projectsInfo = {
             "description": "Una presentación sobre cómo desarrollar un juego de adivinanza",
             "languages": ["file-powerpoint-solid"],
             "thumbnail": ["4f84a8e9-f3f9-4dad-9486-49167117ede0"],
-            "github": "https://github.com/Lautarof25/SlidesGoogle", 
+            "github": "https://github.com/Lautarof25/SlidesGoogle",
             "webpage": "https://slidesgoogle.netlify.app/"
         },/*
         {
@@ -294,6 +294,16 @@ const projectsInfo = {
             "github": "https://q-a-app-lf25.web.app/", 
             "webpage": "https://q-a-app-lf25.web.app/"
         },*/
+        ,
+        {
+            "title": "Desarrollo web con IA - Canva",
+            "date": "2026-03-23",
+            "description": "Diapositivas sobre cómo desarrollar webs con IA",
+            "languages": ["file-powerpoint-solid"],
+            "thumbnail": ["327b893e-1438-4e49-a671-f921de48f786"],
+            "github": "https://www.canva.com/design/DAHEVSLNBdU/Af7xBzvGSmiIv1PTDtVb9w/edit?utm_content=DAHEVSLNBdU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+            "webpage": "https://www.canva.com/design/DAHEVSLNBdU/Af7xBzvGSmiIv1PTDtVb9w/edit?utm_content=DAHEVSLNBdU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+        },
         {
             "title": "Dilema de Monty Hall - Sheet",
             "date": "2025-04-04",
@@ -449,19 +459,19 @@ const servicesInfo = {
         {
             "title": "Mantenimiento y armado de PC",
             "description": "Armado de pc, mantenimiento y reciclado de hardware",
-            "details": ["Presupuesto y armado de PC a medida","Mantenimiento lógico y físico","Backup de datos","Soporte técnico remoto","Soluciones informáticas generales"],
+            "details": ["Presupuesto y armado de PC a medida", "Mantenimiento lógico y físico", "Backup de datos", "Soporte técnico remoto", "Soluciones informáticas generales"],
             "icons": ["computer-solid", "screwdriver-wrench-solid"]
         },
         {
             "title": "Clases de internet avanzado",
             "description": "Imparto clases particulares a adultos mayores para contribuir con la alfabetización digital",
-            "details": ["Clases de internet para aprovechar el mundo digital","Correcta utilización de programas y aplicaciones de escritorio y celular","Usos más frecuentes para la vida diaria"],
+            "details": ["Clases de internet para aprovechar el mundo digital", "Correcta utilización de programas y aplicaciones de escritorio y celular", "Usos más frecuentes para la vida diaria"],
             "icons": ["chalkboard-user-solid", "book-solid"]
         },
         {
             "title": "Optimización tecnológica",
             "description": "Automatización en procesos de trabajo para ahorrar tiempos de ejecución de tareas",
-            "details": ["Creación de planillas a medida","Creación de mini programas para maximizar tiempos","Asesoramiento para aprovechar tecnologías digitales al alcance"],
+            "details": ["Creación de planillas a medida", "Creación de mini programas para maximizar tiempos", "Asesoramiento para aprovechar tecnologías digitales al alcance"],
             "icons": ["rocket-solid", "hand-holding-hand-solid"]
         },
         {
