@@ -8,140 +8,12 @@
     <link rel="preconnect" href="https://ucarecdn.com" crossorigin />
     <link rel="preload" href="./src/montserrat/Montserrat-Regular.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="./src/montserrat/Montserrat-Bold.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" as="style" href="./src/css/style.css" onload="this.rel='stylesheet'" />
-    <style>
-        /* Base chevron styles */
-        .chevron-bottom-right,
-        .chevron-bottom-left,
-        .chevron-top-left,
-        .chevron-top-right {
-            position: absolute;
-            fill: var(--principal-color);
-        }
+    <link rel="preload" as="style" href="./src/css/bundle.css" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="./src/css/bundle.css" /></noscript>
 
-        /* Chevron rotations */
-        .chevron-top-left {
-            transform: rotate(225deg);
-        }
+    
 
-        .chevron-bottom-right {
-            transform: rotate(45deg);
-        }
-
-        .chevron-top-right {
-            transform: rotate(315deg);
-        }
-
-        .chevron-bottom-left {
-            transform: rotate(135deg);
-        }
-
-        /* Common section styles */
-        .about,
-        .certificates,
-        .services,
-        .contact {
-
-            /* Top and bottom positioning */
-            & .chevron-top-left,
-            & .chevron-top-right {
-                top: -1rem;
-            }
-
-            & .chevron-bottom-right,
-            & .chevron-bottom-left {
-                bottom: -1rem;
-            }
-
-            /* Left and right positioning */
-            & .chevron-top-left,
-            & .chevron-bottom-left {
-                left: -1rem;
-            }
-
-            & .chevron-bottom-right,
-            & .chevron-top-right {
-                right: -1rem;
-            }
-        }
-
-        /* Section-specific sizes */
-        .about svg {
-            width: 3rem;
-        }
-
-        .projects svg {
-            width: 4rem;
-        }
-
-        .certificates svg,
-        .services svg,
-        .contact svg {
-            width: 2.5rem;
-        }
-
-        /* Projects specific positioning */
-        .projects {
-
-            & .chevron-bottom-left,
-            & .chevron-bottom-right {
-                bottom: -1.5rem;
-            }
-
-            & .chevron-top-left,
-            & .chevron-top-right {
-                top: -1.5rem;
-            }
-
-            & .chevron-top-left,
-            & .chevron-bottom-left {
-                left: -1.5rem;
-            }
-
-            & .chevron-bottom-right,
-            & .chevron-top-right {
-                right: -1.5rem;
-            }
-        }
-
-        /* Share buttons specific styles */
-        .share-buttons {
-            & svg {
-                width: 1.5rem;
-            }
-
-            & .chevron-top-left {
-                top: -.5rem;
-                left: -.5rem;
-            }
-
-            & .chevron-bottom-right {
-                bottom: -.5rem;
-                right: -.5rem;
-            }
-        }
-
-        /* Color picker tactile improvements */
-        .color-picker input[type="radio"],
-        .color-picker input[type="color"] {
-            width: 26px;
-            height: 26px;
-            margin: 6px;
-        }
-
-        .color-picker label {
-            padding: 4px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
-    <link rel="preload" as="style" href="./src/css/main.css" onload="this.rel='stylesheet'" />
-    <link rel="stylesheet" href="./src/css/helpers.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./src/css/animation.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./src/css/shareButtons.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./src/css/colorPicker.css" media="print" onload="this.media='all'" />
-    <link rel="shortcut icon" href="./src/img/iconweb.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="./src/img/iconweb.ico" type="image/x-icon" />
     <meta name="title" content="Portfolio Web | Fernández Lautaro" />
     <meta name="description" content="¡Visita este portafolio creado por Lautaro!" />
     <meta property="og:type" content="website" />
@@ -155,7 +27,6 @@
     <meta property="twitter:description" content="¡Visita este portafolio creado por Lautaro!" />
     <meta property="twitter:image" content="https://lautarof25.github.io/Portfolio/og_image.jpg" />
 </head>
-
 
 <body>
     <div class="stars">
@@ -576,7 +447,6 @@
         </div>
     </main>
 
-
     <div class="bgDisabled hidden zindex-10"></div>
     <div
         class="share-buttons popUp fixed centerAbsolute bg-dark-gray p-05 border-radius-5 drop-shadow hidden opacityEffect zindex-10">
@@ -613,29 +483,7 @@
             <path
                 d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
         </svg></button>
-    <script defer src="./src/js/dom.js"></script>
-    <script defer src="./src/js/menu.js"></script>
-    <script defer src="./src/js/cardsInfo.js"></script>
-    <script defer src="./src/js/chevronCorner.js"></script>
-    <script defer src="./src/js/titlePage.js"></script>
-    <script defer src="./src/js/about.js"></script>
-    <script defer src="./src/js/projects.js"></script>
-    <script defer src="./src/js/certificates.js"></script>
-    <script defer src="./src/js/services.js"></script>
-    <script defer src="./src/js/filterCheckboxes.js"></script>
-    <script defer src="./src/js/dynamicCards.js"></script>
-    <script defer src="./src/js/linksSelector.js"></script>
-    <script defer src="./src/js/form.js"></script>
-    <script defer src="./src/js/showPage.js"></script>
-    <script defer src="./src/js/navigation.js"></script>
-    <script defer src="./src/js/demoMode.js"></script>
-    <script defer src="./src/js/shareButtons.js"></script>
-    <script defer src="./src/js/scrollNavigation.js"></script>
-    <script defer src="./src/js/colorPicker.js"></script>
-    <script defer src="./src/js/backgroundSound.js"></script>
-    <script defer src="./src/js/cardsEffect.js"></script>
-    <script defer src="./src/js/modalServices.js"></script>
-    <script defer src="./src/js/cardsSlider.js"></script>
+    <script defer src="./src/js/bundle.js"></script>
 
     <!-- Lazy Load Google Analytics -->
     <script>
