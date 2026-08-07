@@ -277,6 +277,15 @@ const projectsInfo = {
             "webpage": "https://docs.google.com/presentation/d/1g71wzwUaldSan7ulb_25VWRbA06FkVhwqNtKegNnec4/edit?usp=sharing"
         },
         {
+            "title": "Landings page - Emprendedores",
+            "date": "2026-08-01",
+            "description": "Iniciativa para emprendedores, con el objetivo de ayudar a los que recién comienzan",
+            "languages": ["html5", "css3-alt", "square-js"],
+            "thumbnail": ["35d96722-71c3-4910-9285-1cfdd10d3443"],
+            "github": "",
+            "webpage": ""
+        },
+        {
             "title": "Proyecto Guiado - Guess the Number",
             "date": "2025-06-14",
             "description": "Una presentación sobre cómo desarrollar un juego de adivinanza",
