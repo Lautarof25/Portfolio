@@ -108,7 +108,10 @@ observer.observe(home, { attributes: true })
 
 document.getElementById("downloadCV").addEventListener("click", async (e) => {
     e.preventDefault();
-    const res = await fetch(e.target.href);
+    const res = await fetch(e.currentTarget.href);
+    if (!res.ok) {
+        throw new Error(`No se pudo descargar el CV: ${res.status}`);
+    }
     const blob = await res.blob();
     const now = new Date();
     const fecha = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}_${String(now.getHours()).padStart(2, "0")}-${String(now.getMinutes()).padStart(2, "0")}`;
