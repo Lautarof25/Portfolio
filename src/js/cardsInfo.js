@@ -360,6 +360,15 @@ const projectsInfo = {
         //     "webpage": "https://lautarof25.github.io/"
         // },
         {
+            "title": "JS Curso completo - Notion",
+            "date": "2026-06-06",
+            "description": "Notas sobre curso de JS de Simon Bao",
+            "languages": ["pen-to-square-solid"],
+            "thumbnail": ["34f4d94a-2b5d-48e9-933c-400f91afe578"],
+            "github": "https://chambray-raven-b65.notion.site/JavaScript-1-acf2ab7e050882b1918801c29841bd05",
+            "webpage": "https://chambray-raven-b65.notion.site/JavaScript-1-acf2ab7e050882b1918801c29841bd05"
+        },
+        {
             "title": "Armar cubo - Notion",
             "date": "2022-02-06",
             "description": "Tutorial para armar el cubo rubik, en Notion",

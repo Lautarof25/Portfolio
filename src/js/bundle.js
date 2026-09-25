@@ -64,7 +64,7 @@ const nameChangeElement = $('.nameChange')
 
 function writeDeleteWords() {
     if (!nameChangeElement || !activeWriteWords) return
-    
+
     let currentWord = words[index]
     if (direction === 1) {
         nameChangeElement.textContent = currentWord.substring(0, currentLetter)
@@ -563,6 +563,15 @@ const projectsInfo = {
             "webpage": "https://fan-utahraptor-cfe.notion.site/Armar-Cubo-Rubik-3x3-M-todo-f-cil-a71f34e67d784d70988a4021989f5b72"
         },
         {
+            "title": "JS Curso completo - Notion",
+            "date": "2026-09-25",
+            "description": "Notas sobre curso de JS de Simon Bao",
+            "languages": ["pen-to-square-solid"],
+            "thumbnail": ["53209821-31d3-4260-8cbc-8686e5c146ea"],
+            "github": "https://chambray-raven-b65.notion.site/JavaScript-1-acf2ab7e050882b1918801c29841bd05",
+            "webpage": "https://chambray-raven-b65.notion.site/JavaScript-1-acf2ab7e050882b1918801c29841bd05"
+        },
+        {
             "title": "Duolingo con esteroides - Notion",
             "date": "2024-06-06",
             "description": "Una guía/articulo sobre Duolingo y cómo aprovecharlo!",
@@ -687,7 +696,7 @@ const servicesInfo = {
 }
 
 /* --- chevronCorner.js --- */
-const createSVG = (className) =>{
+const createSVG = (className) => {
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
     svg.setAttribute("xmlns", "http://www.w3.org/2000/svg")
     svg.setAttribute("class", className)
@@ -705,15 +714,15 @@ const createSVG = (className) =>{
 // Optimizado: cachear elemento link-active para evitar querySelector repetido
 let cachedActiveLinkForTitle = document.querySelector(".link-active")
 
-function changeTitlePage(){
-    links.forEach((e=>{
-        e.addEventListener("click",(function(){
+function changeTitlePage() {
+    links.forEach((e => {
+        e.addEventListener("click", (function () {
             changeTitle()
         }))
     }))
 }
 
-function changeTitle(){
+function changeTitle() {
     // Actualizar cache solo si el elemento cambió
     if (!cachedActiveLinkForTitle || !cachedActiveLinkForTitle.classList.contains('link-active')) {
         cachedActiveLinkForTitle = document.querySelector(".link-active")
@@ -726,39 +735,39 @@ function changeTitle(){
 changeTitlePage();
 
 /* --- about.js --- */
-const createCardAboutInfo = (description,descriptionHidden, icons) =>{
-  const div = document.createElement("div")
-  div.className = "section__box relative d-grid p-05 gap-1 bg-dark-gray border-radius-5 drop-shadow opacityEffect"
+const createCardAboutInfo = (description, descriptionHidden, icons) => {
+    const div = document.createElement("div")
+    div.className = "section__box relative d-grid p-05 gap-1 bg-dark-gray border-radius-5 drop-shadow opacityEffect"
 
-  const chevronTopLeft = createSVG("chevron-top-left")
-  const chevronBottomRight = createSVG("chevron-bottom-right")
+    const chevronTopLeft = createSVG("chevron-top-left")
+    const chevronBottomRight = createSVG("chevron-bottom-right")
 
-  const p = document.createElement("p");
-  p.setAttribute("class", "section__description text-center")
-  p.textContent = description;
-  const p2 = document.createElement("p");
-  p2.setAttribute("class", "section__description text-center hidden")
-  p2.textContent = descriptionHidden;
-  const divIcons = document.createElement("div")
-  divIcons.setAttribute("class", "section__icons d-flex justify-center gap-05")
+    const p = document.createElement("p");
+    p.setAttribute("class", "section__description text-center")
+    p.textContent = description;
+    const p2 = document.createElement("p");
+    p2.setAttribute("class", "section__description text-center hidden")
+    p2.textContent = descriptionHidden;
+    const divIcons = document.createElement("div")
+    divIcons.setAttribute("class", "section__icons d-flex justify-center gap-05")
 
-  for (let j = 0; j < icons.length; j++) {
-    const icon = document.createElement("img")
-    icon.setAttribute("src", `./src/img/icons/${icons[j]}.svg`)
-    icon.setAttribute("alt", `${icons[j]}`)
-    icon.setAttribute("loading", "lazy")
-    divIcons.appendChild(icon)
-  }
+    for (let j = 0; j < icons.length; j++) {
+        const icon = document.createElement("img")
+        icon.setAttribute("src", `./src/img/icons/${icons[j]}.svg`)
+        icon.setAttribute("alt", `${icons[j]}`)
+        icon.setAttribute("loading", "lazy")
+        divIcons.appendChild(icon)
+    }
 
-  div.appendChild(chevronTopLeft)
-  div.appendChild(chevronBottomRight)
-  div.append(p,p2,divIcons)
+    div.appendChild(chevronTopLeft)
+    div.appendChild(chevronBottomRight)
+    div.append(p, p2, divIcons)
 
-  about.appendChild(div)
+    about.appendChild(div)
 }
 
 /* --- projects.js --- */
-const createCardProjectInfo = (title,date, description, languages, thumbnail, github, webpage) =>{
+const createCardProjectInfo = (title, date, description, languages, thumbnail, github, webpage) => {
     const div = document.createElement("div")
     div.setAttribute("class", "section__box relative drop-shadow d-grid align-end border-radius-5 gap-05 bg-dark-gray opacityEffect")
 
@@ -820,69 +829,69 @@ const createCardProjectInfo = (title,date, description, languages, thumbnail, gi
 
     div.appendChild(chevronTopLeft)
     div.appendChild(chevronTopRight)
-    div.append(aContainer,h2,p,pDate,aGitHub,aWebPage)
+    div.append(aContainer, h2, p, pDate, aGitHub, aWebPage)
     projects.appendChild(div)
 }
 
 /* --- certificates.js --- */
-const createCardCertificatesInfo = (title, description, thumbnail,category, hours, year, link) =>{
-  const div = document.createElement("div")
-  div.setAttribute("class", "section__box pt-1 drop-shadow relative d-grid bg-dark-gray text-center opacityEffect")
+const createCardCertificatesInfo = (title, description, thumbnail, category, hours, year, link) => {
+    const div = document.createElement("div")
+    div.setAttribute("class", "section__box pt-1 drop-shadow relative d-grid bg-dark-gray text-center opacityEffect")
 
-  const chevronTopLeft = createSVG("chevron-top-left")
-  const chevronTopRight = createSVG("chevron-top-right")
+    const chevronTopLeft = createSVG("chevron-top-left")
+    const chevronTopRight = createSVG("chevron-top-right")
 
-  const h3 = document.createElement("h3")
-  h3.setAttribute("class", "m-0")
-  const h3Text = document.createTextNode(title)
-  h3.appendChild(h3Text)
-  const p = document.createElement("p")
-  const pText = document.createTextNode(description)
-  p.appendChild(pText)
-  p.setAttribute("class", "mt-0")
+    const h3 = document.createElement("h3")
+    h3.setAttribute("class", "m-0")
+    const h3Text = document.createTextNode(title)
+    h3.appendChild(h3Text)
+    const p = document.createElement("p")
+    const pText = document.createTextNode(description)
+    p.appendChild(pText)
+    p.setAttribute("class", "mt-0")
 
 
-  const pCategory = document.createElement("p")
-  const pCategoryText = document.createTextNode(`Categoría: ${category}`)
-  pCategory.appendChild(pCategoryText)
-  pCategory.setAttribute("class", "m-0")
+    const pCategory = document.createElement("p")
+    const pCategoryText = document.createTextNode(`Categoría: ${category}`)
+    pCategory.appendChild(pCategoryText)
+    pCategory.setAttribute("class", "m-0")
 
-  const pHours = document.createElement("p")
-  const pHoursText = document.createTextNode(`Horas: ${hours}`)
-  pHours.appendChild(pHoursText)
-  pHours.setAttribute("class", "m-0")
-  const pYear = document.createElement("p")
-  const pYearText = document.createTextNode(`Año: ${year}`)
-  pYear.appendChild(pYearText)
-  pYear.setAttribute("class", "m-0")
+    const pHours = document.createElement("p")
+    const pHoursText = document.createTextNode(`Horas: ${hours}`)
+    pHours.appendChild(pHoursText)
+    pHours.setAttribute("class", "m-0")
+    const pYear = document.createElement("p")
+    const pYearText = document.createTextNode(`Año: ${year}`)
+    pYear.appendChild(pYearText)
+    pYear.setAttribute("class", "m-0")
 
-  const aLink = document.createElement("a")
-  const aLinkText = document.createTextNode("Link")
-  aLink.appendChild(aLinkText)
-  aLink.setAttribute("href", link)
-  aLink.setAttribute("target", "_blank")
-  aLink.setAttribute("class", "section__button w-100 text-center m-0-auto")
-  const aLinkImg = document.createElement("a")
-  aLinkImg.setAttribute("href", link)
-  aLinkImg.setAttribute("target", "_blanket")
-  aLinkImg.setAttribute("class", "p-0")
-  const img = document.createElement("img")
-  img.setAttribute("src", `https://ucarecdn.com/${thumbnail}/-/scale_crop/500x250/-/format/auto/-/quality/smart/`)
-  img.setAttribute("loading", "lazy")
-  img.setAttribute("decoding", "async")
-  img.setAttribute("alt", title)
-  img.setAttribute("width", "500")
-  img.setAttribute("height", "250")
-  img.setAttribute("class", "w-100 pt-1 object-fit-cover object-pos-center-top border-radius-top-5 d-block")
-  aLinkImg.appendChild(img)
+    const aLink = document.createElement("a")
+    const aLinkText = document.createTextNode("Link")
+    aLink.appendChild(aLinkText)
+    aLink.setAttribute("href", link)
+    aLink.setAttribute("target", "_blank")
+    aLink.setAttribute("class", "section__button w-100 text-center m-0-auto")
+    const aLinkImg = document.createElement("a")
+    aLinkImg.setAttribute("href", link)
+    aLinkImg.setAttribute("target", "_blanket")
+    aLinkImg.setAttribute("class", "p-0")
+    const img = document.createElement("img")
+    img.setAttribute("src", `https://ucarecdn.com/${thumbnail}/-/scale_crop/500x250/-/format/auto/-/quality/smart/`)
+    img.setAttribute("loading", "lazy")
+    img.setAttribute("decoding", "async")
+    img.setAttribute("alt", title)
+    img.setAttribute("width", "500")
+    img.setAttribute("height", "250")
+    img.setAttribute("class", "w-100 pt-1 object-fit-cover object-pos-center-top border-radius-top-5 d-block")
+    aLinkImg.appendChild(img)
 
-  div.append(chevronTopLeft,chevronTopRight)
-  div.append(h3,p,pHours,pYear,pCategory,aLinkImg,aLink)
-  certificates.appendChild(div)
+    div.append(chevronTopLeft, chevronTopRight)
+    div.append(h3, p, pHours, pYear, pCategory, aLinkImg, aLink)
+    certificates.appendChild(div)
 }
 
 /* --- services.js --- */
-const createCardServicesInfo = (title, description,details, icons) =>{
+const createCardServicesInfo = (title, description, details, icons) => {
     const div = document.createElement("div")
     div.setAttribute("class", "section__box relative p-05 d-grid bg-dark-gray border-radius-5 drop-shadow hoverCard")
 
@@ -900,7 +909,7 @@ const createCardServicesInfo = (title, description,details, icons) =>{
         const li = document.createElement("li")
         const liText = document.createTextNode(detail)
         li.appendChild(liText)
-        ul.appendChild(li)  
+        ul.appendChild(li)
     })
 
     const p = document.createElement("p")
@@ -918,17 +927,17 @@ const createCardServicesInfo = (title, description,details, icons) =>{
         icon.setAttribute("alt", i)
         divIcons.appendChild(icon)
     })
-    
+
     div.appendChild(chevronTopRight)
     div.appendChild(chevronBottomLeft)
-    div.append(h2, divIcons,p,ul)
+    div.append(h2, divIcons, p, ul)
     services.appendChild(div)
 }
 
 /* --- filterCheckboxes.js --- */
-function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); } 
+function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); }
 
-const addCheckbox = (section,item) => {
+const addCheckbox = (section, item) => {
     const sectionItem = section + item
     const input = document.createElement("input")
     const label = document.createElement("label")
@@ -937,19 +946,19 @@ const addCheckbox = (section,item) => {
     input.setAttribute("value", sectionItem)
     input.setAttribute("id", sectionItem)
     // if(item !== "2024")
-        input.checked = true
+    input.checked = true
     label.setAttribute("for", sectionItem)
     const labelText = document.createTextNode(item)
     label.appendChild(labelText)
     label.setAttribute("for", sectionItem)
     let inputFilter
-    if(isNumber(item)){
+    if (isNumber(item)) {
         inputFilter = document.querySelector(`.${section} .yearCheckboxes`)
-        input.setAttribute("class",section+"Year")
+        input.setAttribute("class", section + "Year")
     }
     else {
         inputFilter = document.querySelector(`.${section} .categoryCheckboxes`)
-        input.setAttribute("class",section+"Category")
+        input.setAttribute("class", section + "Category")
     }
     inputFilter.append(input, label)
 }
@@ -958,7 +967,7 @@ const dates = new Set()
 const years = new Set()
 const categoriesCertificates = new Set()
 
-const getDates = ()=> {
+const getDates = () => {
     projectsInfo.info.forEach(item => {
         dates.add(item.date.slice(0, 4))
     })
@@ -967,7 +976,7 @@ const getDates = ()=> {
     })
 }
 
-const getCategories = ()=> {
+const getCategories = () => {
     certificatesInfo.info.forEach(item => {
         categoriesCertificates.add(item.category)
     })
@@ -981,13 +990,13 @@ const addDates = () => {
     dates.forEach(date => {
         addCheckbox("projects", date)
     })
-    
+
     years.forEach(year => {
         addCheckbox("certificates", year)
     })
 }
 
-const addCategories = () => {    
+const addCategories = () => {
     categoriesCertificates.forEach(category => {
         addCheckbox("certificates", category)
     })
@@ -1016,7 +1025,7 @@ const getCheckedDefault = () => {
     })
     checkboxesCertificatesCategories.forEach(checkbox => {
         if (checkbox.checked) {
-            checkboxesCertificatesCategoriesChecked.push(checkbox.id.slice(12,15))
+            checkboxesCertificatesCategoriesChecked.push(checkbox.id.slice(12, 15))
         }
     })
 }
@@ -1035,7 +1044,7 @@ const getCheckedYearUpdated = (element, array) => {
                 })
             }
             arrayDefault.sort((a, b) => b - a)
-            
+
             array.length = 0
             array.push(...arrayDefault)
         })
@@ -1047,13 +1056,13 @@ const getCheckedCategoriesUpdated = (element, array) => {
         ckb.addEventListener('change', () => {
             let arrayDefault = [...array]
             if (ckb.checked) {
-                arrayDefault.push(ckb.value.slice(12,15))
+                arrayDefault.push(ckb.value.slice(12, 15))
             } else {
                 arrayDefault = arrayDefault.filter(function (i) {
-                    return i !== ckb.value.slice(12,15)
+                    return i !== ckb.value.slice(12, 15)
                 })
             }
-            
+
             array.length = 0
             array.push(...arrayDefault)
         })
@@ -1064,7 +1073,7 @@ getCheckedYearUpdated(checkboxesProjectsYears, checkboxesProjectsYearsChecked)
 getCheckedYearUpdated(checkboxesCertificatesYears, checkboxesCertificatesYearsChecked)
 getCheckedCategoriesUpdated(checkboxesCertificatesCategories, checkboxesCertificatesCategoriesChecked)
 
-const filterCards = (checkboxes,section,data) =>{
+const filterCards = (checkboxes, section, data) => {
     checkboxes.forEach(chk => {
         chk.addEventListener('change', () => {
             removeElements()
@@ -1074,9 +1083,9 @@ const filterCards = (checkboxes,section,data) =>{
     })
 }
 
-filterCards(checkboxesCertificatesYears,"certificates",certificatesInfo.info)
-filterCards(checkboxesCertificatesCategories,"certificates",certificatesInfo.info)
-filterCards(checkboxesProjectsYears,"projects",projectsInfo.info)
+filterCards(checkboxesCertificatesYears, "certificates", certificatesInfo.info)
+filterCards(checkboxesCertificatesCategories, "certificates", certificatesInfo.info)
+filterCards(checkboxesProjectsYears, "projects", projectsInfo.info)
 
 const removeElements = () => {
     const currentPage = currentIdPage() // Cachear para evitar llamar dos veces
@@ -1091,7 +1100,7 @@ const removeElements = () => {
 /* --- dynamicCards.js --- */
 const addCardInfo = (type, database) => {
     const container = getContainerByType(type);
-    
+
     // Cachear elementos empty una sola vez para evitar múltiples querySelector
     let projectsEmpty = null
     let certificatesEmpty = null
@@ -1104,23 +1113,23 @@ const addCardInfo = (type, database) => {
                 createCardAboutInfo(item.description, item.descriptionHidden, item.icons)
                 break
             case 'projects':
-                if(checkboxesProjectsYearsChecked.includes(item.date.slice(0,4))){
+                if (checkboxesProjectsYearsChecked.includes(item.date.slice(0, 4))) {
                     createCardProjectInfo(item.title, item.date, item.description, item.languages, item.thumbnail, item.github, item.webpage)
                     if (projectsEmpty) projectsEmpty.classList.add('hidden')
                 }
                 break
             case 'certificates':
-                if(checkboxesCertificatesYearsChecked.includes(item.year) && checkboxesCertificatesCategoriesChecked.includes(item.category.substring(0,3))){
-                    createCardCertificatesInfo(item.title, item.institution, item.thumbnail,item.category, item.hours, item.year, item.link)
+                if (checkboxesCertificatesYearsChecked.includes(item.year) && checkboxesCertificatesCategoriesChecked.includes(item.category.substring(0, 3))) {
+                    createCardCertificatesInfo(item.title, item.institution, item.thumbnail, item.category, item.hours, item.year, item.link)
                     if (certificatesEmpty) certificatesEmpty.classList.add('hidden')
                 }
                 break
             case 'services':
-                createCardServicesInfo(item.title, item.description,item.details, item.icons)
+                createCardServicesInfo(item.title, item.description, item.details, item.icons)
                 break
         }
     })
-    
+
     // Actualizar empty solo una vez después del loop
     if (type === 'projects' && projectsEmpty) {
         if (checkboxesProjectsYearsChecked.length === 0) {
@@ -1154,7 +1163,7 @@ addCardInfo('certificates', certificatesInfo.info)
 addCardInfo('services', servicesInfo.info)
 
 /* --- linksSelector.js --- */
-function activeLinkSelector(){links.forEach((i=>{i.addEventListener("click",(function(){removeAllClassesLinkActive(),addClassLinkActive(i)}))}))}function addClassLinkActive(i){i.classList.add("link-active")}function removeAllClassesLinkActive(){links.forEach((i=>i.classList.remove("link-active")))}activeLinkSelector();
+function activeLinkSelector() { links.forEach((i => { i.addEventListener("click", (function () { removeAllClassesLinkActive(), addClassLinkActive(i) })) })) } function addClassLinkActive(i) { i.classList.add("link-active") } function removeAllClassesLinkActive() { links.forEach((i => i.classList.remove("link-active"))) } activeLinkSelector();
 
 /* --- form.js --- */
 function waitFor(time) {
@@ -1193,7 +1202,7 @@ async function fillInput(inputId, text, gradualTyping = false) {
     }
 }
 
-const clearFormPlaceholders = () =>{
+const clearFormPlaceholders = () => {
     const inputIds = ["name", "email", "message"]
     inputIds.forEach(id => {
         const inputElement = $(`#${id}`)
@@ -1201,15 +1210,15 @@ const clearFormPlaceholders = () =>{
     })
 }
 
-const automaticForm = () =>{
+const automaticForm = () => {
     // Solo ejecutar si el formulario está vacío
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const messageInput = document.getElementById('message');
-    
+
     if (nameInput && emailInput && messageInput) {
         const isFormEmpty = !nameInput.value && !emailInput.value && !messageInput.value;
-        
+
         if (isFormEmpty) {
             setTimeout(() => {
                 fillForm()
@@ -1218,7 +1227,7 @@ const automaticForm = () =>{
     }
 }
 
-const handleAutomaticForm = () =>{
+const handleAutomaticForm = () => {
     if (currentIdPage() === "contact") {
         automaticForm()
     }
@@ -1234,15 +1243,15 @@ const getLinksId = () => {
 }
 getLinksId()
 
-const hidePage = (link) =>{ $(`.${link}`).classList.add('hidden') }
+const hidePage = (link) => { $(`.${link}`).classList.add('hidden') }
 
-const hidePages = () =>{
+const hidePages = () => {
     linksArray.forEach(link => {
         hidePage(link)
     })
 }
 
-const showPage = (link)=>{
+const showPage = (link) => {
     $(`.${link}`).classList.remove('hidden')
     // External function : cardsEffect.js
     cardsScale()
@@ -1252,7 +1261,7 @@ const showPage = (link)=>{
 
 const changePage = () => {
     links.forEach(link => {
-        link.addEventListener('click',function(){
+        link.addEventListener('click', function () {
             // Resetear scroll inmediatamente antes de cambiar
             main.scrollTop = 0
             hidePages()
@@ -1270,21 +1279,21 @@ changePage()
 buttonDown.addEventListener('click', () => navigatePage(1))
 buttonUp.addEventListener('click', () => navigatePage(-1))
 
-const navigatePage = (direction) =>{
+const navigatePage = (direction) => {
     // Resetear scroll inmediatamente ANTES de cambiar de página
     main.scrollTop = 0
-    
+
     // External function : showPage.js
     hidePages()
     const index = direction === 1 ? nextPage() : prevPage()
     const currentId = linksArray[index]
-    if(direction == 1){
-        $(`.${currentId}`).classList.remove("downEffect","centerEffect")
+    if (direction == 1) {
+        $(`.${currentId}`).classList.remove("downEffect", "centerEffect")
         $(`.${currentId}`).classList.add("upEffect")
-    }   
-    else if(direction == -1){
-        $(`.${currentId}`).classList.remove("upEffect","centerEffect")
-        $(`.${currentId}`).classList.add("downEffect") 
+    }
+    else if (direction == -1) {
+        $(`.${currentId}`).classList.remove("upEffect", "centerEffect")
+        $(`.${currentId}`).classList.add("downEffect")
     }
     direction = 0
     // External function : titlePage.js
@@ -1294,27 +1303,27 @@ const navigatePage = (direction) =>{
     document.getElementById(currentId).classList.add('link-active')
     // External function : titlePage.js
     changeTitle()
-    
+
     // Asegurar que el scroll esté en 0 después de mostrar la página
     requestAnimationFrame(() => {
         main.scrollTop = 0
     })
-    
+
     cardsScale()
-    
+
     // Keep focus on main element for keyboard navigation
     setTimeout(() => {
         main.focus()
     }, 200)
 }
 
-const nextPage = () => currentIndexPage() !== links.length-1 ? currentIndexPage() + 1 : 0
+const nextPage = () => currentIndexPage() !== links.length - 1 ? currentIndexPage() + 1 : 0
 
-const prevPage = () =>currentIndexPage() !== 0 ? currentIndexPage() - 1 : links.length-1
+const prevPage = () => currentIndexPage() !== 0 ? currentIndexPage() - 1 : links.length - 1
 
-const currentIndexPage = () =>linksArray.indexOf(currentIdPage())
+const currentIndexPage = () => linksArray.indexOf(currentIdPage())
 
-const currentIdPage = () =>document.querySelector(".link-active").id
+const currentIdPage = () => document.querySelector(".link-active").id
 
 const scrollToTop = () => {
     // Scroll inmediato sin animación para evitar que la nueva página aparezca desde abajo
@@ -1331,7 +1340,7 @@ const idleTime = 15
 let modeDemoActivity = false
 let idleInterval = null // Guardar referencia para poder limpiarlo
 
-const idleTimer = () =>{
+const idleTimer = () => {
     // Limpiar intervalo anterior si existe
     if (idleInterval) {
         clearInterval(idleInterval)
@@ -1350,13 +1359,13 @@ idleTimer()
 
 // TODO: create an event handler to handle when the page is in the background
 
-const resetTimerAndShowNextPage = () =>{
+const resetTimerAndShowNextPage = () => {
     resetTimer()
     navigatePage(1)
     showDemoMode()
 }
 
-const resetTimerAndHideDemoMode = () =>{
+const resetTimerAndHideDemoMode = () => {
     resetTimer()
     hideDemoModePopUp(1)
     hideCursor(0)
@@ -1367,14 +1376,14 @@ const hideCursor = (mode) => {
     mode === 0 ? body.classList.remove('hide-cursor') : body.classList.add('hide-cursor');
 }
 
-const hideDemoModePopUp = (mode) =>{
-   mode === 0 ? demoMode.classList.remove('hidden') : demoMode.classList.add('hidden');
+const hideDemoModePopUp = (mode) => {
+    mode === 0 ? demoMode.classList.remove('hidden') : demoMode.classList.add('hidden');
 }
 
-const showDemoMode = () =>{
+const showDemoMode = () => {
     hideDemoModePopUp(0)
     hideCursor(1)
-    main.scrollTo(0,0)
+    main.scrollTo(0, 0)
     // modalServices.js
     closeAllCards()
     modeDemoOn()
@@ -1390,35 +1399,35 @@ const modeDemoOn = () => {
     const scrollDuration = idleTime * 1000; // Convert to milliseconds
     const startTime = Date.now();
     const startPosition = main.scrollTop;
-    
+
     const easeInOutQuad = (t) => {
         return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
     };
 
     const smoothScroll = () => {
         if (!modeDemoActivity) return;
-        
+
         const currentTime = Date.now();
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / scrollDuration, 1);
-        
+
         // Apply easing function
         const easedProgress = easeInOutQuad(progress);
-        
+
         // Calculate new scroll position
         const newPosition = startPosition + (currentHeightPage - startPosition) * easedProgress;
-        
+
         main.scrollTo({
             top: newPosition,
             left: 0,
             behavior: "auto" // Using auto for smoother animation
         });
-        
+
         if (progress < 1) {
             requestAnimationFrame(smoothScroll);
         }
     };
-    
+
     requestAnimationFrame(smoothScroll);
 }
 
@@ -1432,41 +1441,41 @@ const throttledResetTimer = () => {
     }, 100) // Throttle de 100ms
 }
 
-addEventListener("mousemove", throttledResetTimer, {passive: true})
-addEventListener("wheel", resetTimerAndHideDemoMode, {passive: true})
-addEventListener("touchmove", throttledResetTimer, {passive: true})
-addEventListener("click", resetTimerAndHideDemoMode, {passive: true})
+addEventListener("mousemove", throttledResetTimer, { passive: true })
+addEventListener("wheel", resetTimerAndHideDemoMode, { passive: true })
+addEventListener("touchmove", throttledResetTimer, { passive: true })
+addEventListener("click", resetTimerAndHideDemoMode, { passive: true })
 addEventListener("keydown", (event) => {
     // Check if user is typing in a form input, textarea, or contenteditable element
     const target = event.target;
-    const isTyping = target.tagName === 'INPUT' || 
-                     target.tagName === 'TEXTAREA' || 
-                     target.tagName === 'SELECT' ||
-                     target.contentEditable === 'true' ||
-                     target.isContentEditable;
-    
+    const isTyping = target.tagName === 'INPUT' ||
+        target.tagName === 'TEXTAREA' ||
+        target.tagName === 'SELECT' ||
+        target.contentEditable === 'true' ||
+        target.isContentEditable;
+
     // If user is typing, reset timer to prevent demo mode
     if (isTyping) {
         resetTimerAndHideDemoMode();
         return;
     }
-    
+
     resetTimerAndHideDemoMode();
 })
 
 // Add specific form activity detection
 const setupFormActivityDetection = () => {
     const formInputs = document.querySelectorAll('input, textarea, select');
-    
+
     formInputs.forEach(input => {
         // Reset timer on input events
         input.addEventListener('input', resetTimerAndHideDemoMode);
         input.addEventListener('focus', resetTimerAndHideDemoMode);
         input.addEventListener('blur', resetTimerAndHideDemoMode);
-        
+
         // Reset timer on paste events
         input.addEventListener('paste', resetTimerAndHideDemoMode);
-        
+
         // Reset timer on composition events (for IME input methods)
         input.addEventListener('compositionstart', resetTimerAndHideDemoMode);
         input.addEventListener('compositionend', resetTimerAndHideDemoMode);
@@ -1482,92 +1491,92 @@ if (document.readyState === 'loading') {
 
 /* --- shareButtons.js --- */
 let countClicks = 0
-const clickHandler = () =>{
-  countClicks++
-  if (countClicks === 10) {
-    allExceptShareButton.forEach((element) => {
-      addBlurEffect(element,1)
-    })
-    openPopUp(1)
+const clickHandler = () => {
+    countClicks++
+    if (countClicks === 10) {
+        allExceptShareButton.forEach((element) => {
+            addBlurEffect(element, 1)
+        })
+        openPopUp(1)
 
-    // Eliminar el event listener después de alcanzar la condición
-    document.removeEventListener('click', clickHandler)
-  }
+        // Eliminar el event listener después de alcanzar la condición
+        document.removeEventListener('click', clickHandler)
+    }
 }
 
 document.addEventListener('click', clickHandler)
 
 const removeBlurAndClosePopUp = () => {
-  closeButton.addEventListener('click', () => {
-    allExceptShareButton.forEach(element => {
-      element.classList.remove('blur-effect')
+    closeButton.addEventListener('click', () => {
+        allExceptShareButton.forEach(element => {
+            element.classList.remove('blur-effect')
+        })
+        openPopUp(0)
+        bgDisable(0)
     })
-    openPopUp(0)
-    bgDisable(0)
-  })
 }
 
-const addBlurEffect = (element,mode) => {
-  mode === 1 ? element.classList.add("blur-effect") 
-             : element.classList.remove("blur-effect")
+const addBlurEffect = (element, mode) => {
+    mode === 1 ? element.classList.add("blur-effect")
+        : element.classList.remove("blur-effect")
 }
 
 const openPopUp = (mode) => {
-  mode === 1 ? containerShareButtons.classList.remove("hidden") 
-             : containerShareButtons.classList.add("hidden")
-  bgDisable(1)
+    mode === 1 ? containerShareButtons.classList.remove("hidden")
+        : containerShareButtons.classList.add("hidden")
+    bgDisable(1)
 }
 
 removeBlurAndClosePopUp()
 
 const shareSocials = () => {
-  shareButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      const shareURL = 'https://lautarof25.github.io/Portfolio/'
-  
-      function shareOnFacebook() {
-        window.open('https://www.facebook.com/sharer/sharer.php?u=' + shareURL)
-      }
-  
-      function shareOnTwitter() {
-        window.open('https://twitter.com/intent/tweet?url=' + shareURL)
-      }
-  
-      function shareOnLinkedIn() {
-        window.open('https://www.linkedin.com/shareArticle?url=' + shareURL)
-      }
-  
-      function shareOnWhatsApp() {
-        window.open('https://api.whatsapp.com/send?text=' + shareURL)
-      }
-  
-      // Call the specific share function based on the clicked button
-      switch (true) {
-        case button.classList.contains('facebook'):
-          shareOnFacebook()
-          break
-        case button.classList.contains('twitter'):
-          shareOnTwitter()
-          break
-        case button.classList.contains('linkedin'):
-          shareOnLinkedIn()
-          break
-        case button.classList.contains('whatsapp'):
-          shareOnWhatsApp()
-          break
-      }
+    shareButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const shareURL = 'https://lautarof25.github.io/Portfolio/'
+
+            function shareOnFacebook() {
+                window.open('https://www.facebook.com/sharer/sharer.php?u=' + shareURL)
+            }
+
+            function shareOnTwitter() {
+                window.open('https://twitter.com/intent/tweet?url=' + shareURL)
+            }
+
+            function shareOnLinkedIn() {
+                window.open('https://www.linkedin.com/shareArticle?url=' + shareURL)
+            }
+
+            function shareOnWhatsApp() {
+                window.open('https://api.whatsapp.com/send?text=' + shareURL)
+            }
+
+            // Call the specific share function based on the clicked button
+            switch (true) {
+                case button.classList.contains('facebook'):
+                    shareOnFacebook()
+                    break
+                case button.classList.contains('twitter'):
+                    shareOnTwitter()
+                    break
+                case button.classList.contains('linkedin'):
+                    shareOnLinkedIn()
+                    break
+                case button.classList.contains('whatsapp'):
+                    shareOnWhatsApp()
+                    break
+            }
+        })
     })
-  })
 }
 shareSocials()
 
 const clickShareButton = () => {
-  share.addEventListener('click', () => {
-    allExceptShareButton.forEach((element) => {
-      addBlurEffect(element,1)
+    share.addEventListener('click', () => {
+        allExceptShareButton.forEach((element) => {
+            addBlurEffect(element, 1)
+        })
+        openPopUp(1)
     })
-    openPopUp(1)
-  })
 }
 
 clickShareButton()
@@ -1584,29 +1593,29 @@ const handleScroll = (event) => {
     const now = performance.now()
     if (now - lastScrollTime < SCROLL_THROTTLE_MS) return
     lastScrollTime = now
-    
+
     // Cachear propiedades del scroll para evitar múltiples accesos
     const scrollTop = main.scrollTop
     const clientHeight = main.clientHeight
     const scrollHeight = main.scrollHeight
-    
+
     const isScrollDown = event.deltaY > 0
     const scrollPosition = scrollTop + clientHeight + 2;
     const scrollPositionTop = scrollTop;
     const isAtTheEndOfMain = scrollPosition >= scrollHeight
-    
-    if(isAtTheEndOfMain){
+
+    if (isAtTheEndOfMain) {
         isScrollDown ? endPageScrollCount++ : endPageScrollCount--
-        if(endPageScrollCount > 5){
-            navigatePage(1)    
+        if (endPageScrollCount > 5) {
+            navigatePage(1)
             endPageScrollCount = 0
             topPageScrollCount = 0
         }
     }
-    if(scrollPositionTop === 0){
+    if (scrollPositionTop === 0) {
         isScrollDown ? topPageScrollCount-- : topPageScrollCount++
-        if(topPageScrollCount > 5){
-            navigatePage(-1)    
+        if (topPageScrollCount > 5) {
+            navigatePage(-1)
             topPageScrollCount = 0
             endPageScrollCount = 0
         }
@@ -1640,7 +1649,7 @@ const handleTouchMove = (event) => {
 
     if (scrollPositionTop === 0) {
         startY > currentY ? topPageScrollCount-- : topPageScrollCount++
-        if(topPageScrollCount > 8){
+        if (topPageScrollCount > 8) {
             topPageScrollCount = 0
             endPageScrollCount = 0
             navigatePage(-1)
@@ -1650,22 +1659,22 @@ const handleTouchMove = (event) => {
 
 // Keyboard navigation
 
-const scrollKeyboard = (event) =>{
+const scrollKeyboard = (event) => {
     // Check if user is typing in a form input, textarea, or contenteditable element
     const target = event.target;
-    const isTyping = target.tagName === 'INPUT' || 
-                     target.tagName === 'TEXTAREA' || 
-                     target.tagName === 'SELECT' ||
-                     target.contentEditable === 'true' ||
-                     target.isContentEditable;
-    
+    const isTyping = target.tagName === 'INPUT' ||
+        target.tagName === 'TEXTAREA' ||
+        target.tagName === 'SELECT' ||
+        target.contentEditable === 'true' ||
+        target.isContentEditable;
+
     // If user is typing, don't handle navigation
     if (isTyping) {
         return;
     }
-    
+
     const ctrlKey = event.ctrlKey || event.metaKey;
-    
+
     // Navigation with Ctrl + arrows (existing functionality)
     if (ctrlKey && event.key === 'ArrowDown') {
         navigatePage(1)
@@ -1673,13 +1682,13 @@ const scrollKeyboard = (event) =>{
     if (ctrlKey && event.key === 'ArrowUp') {
         navigatePage(-1)
     }
-    
+
     // Direct navigation with arrow keys (faster than scroll simulation)
     if (event.key === 'ArrowDown') {
         const scrollPosition = main.scrollTop + main.clientHeight + 2;
         const totalHeight = main.scrollHeight;
         const isAtTheEndOfMain = scrollPosition >= totalHeight
-        
+
         if (isAtTheEndOfMain) {
             endPageScrollCount += 3; // Increment faster for keyboard
             if (endPageScrollCount > 2) { // Lower threshold for keyboard
@@ -1696,10 +1705,10 @@ const scrollKeyboard = (event) =>{
             main.dispatchEvent(scrollEvent);
         }
     }
-    
+
     if (event.key === 'ArrowUp') {
         const scrollPositionTop = main.scrollTop;
-        
+
         if (scrollPositionTop === 0) {
             topPageScrollCount += 3; // Increment faster for keyboard
             if (topPageScrollCount > 2) { // Lower threshold for keyboard
@@ -1719,10 +1728,10 @@ const scrollKeyboard = (event) =>{
 }
 
 // Add event listeners
-document.addEventListener('keydown', scrollKeyboard,{passive: true})
-main.addEventListener("wheel", handleScroll,{passive: true})
-document.addEventListener("touchstart", handleTouchStart,{passive: true})
-document.addEventListener("touchmove", handleTouchMove,{passive: true})
+document.addEventListener('keydown', scrollKeyboard, { passive: true })
+main.addEventListener("wheel", handleScroll, { passive: true })
+document.addEventListener("touchstart", handleTouchStart, { passive: true })
+document.addEventListener("touchmove", handleTouchMove, { passive: true })
 
 // Ensure main element can receive focus and handle keyboard events
 main.setAttribute('tabindex', '0')
@@ -1730,12 +1739,12 @@ main.setAttribute('tabindex', '0')
 // Only set focus on main when no form element is focused
 const shouldFocusMain = () => {
     const activeElement = document.activeElement;
-    const isFormElement = activeElement.tagName === 'INPUT' || 
-                         activeElement.tagName === 'TEXTAREA' || 
-                         activeElement.tagName === 'SELECT' ||
-                         activeElement.contentEditable === 'true' ||
-                         activeElement.isContentEditable;
-    
+    const isFormElement = activeElement.tagName === 'INPUT' ||
+        activeElement.tagName === 'TEXTAREA' ||
+        activeElement.tagName === 'SELECT' ||
+        activeElement.contentEditable === 'true' ||
+        activeElement.isContentEditable;
+
     return !isFormElement;
 };
 
@@ -1767,83 +1776,83 @@ window.addEventListener('focus', () => {
 
 /* --- colorPicker.js --- */
 const handleRadioChange = (radio) => {
-  if (radio.value === "default-color") {
-    body.style.setProperty("--principal-color", "#ff5b02")
-    body.style.cursor = `url("./src/img/cursor.cur") 4 12, auto`
-    document.querySelector("link[rel~='icon']").href = "./src/img/iconweb.ico"
-  } else {
-    body.style.setProperty("--principal-color", radio.value)
-    body.style.cursor = `url("./src/img/cursor${radio.value}.cur") 4 12, auto`
-    document.querySelector("link[rel~='icon']").href = `./src/img/${radio.value}.ico`
-  }
+    if (radio.value === "default-color") {
+        body.style.setProperty("--principal-color", "#ff5b02")
+        body.style.cursor = `url("./src/img/cursor.cur") 4 12, auto`
+        document.querySelector("link[rel~='icon']").href = "./src/img/iconweb.ico"
+    } else {
+        body.style.setProperty("--principal-color", radio.value)
+        body.style.cursor = `url("./src/img/cursor${radio.value}.cur") 4 12, auto`
+        document.querySelector("link[rel~='icon']").href = `./src/img/${radio.value}.ico`
+    }
 }
 
 const handleCustomizeColor = () => {
-  // Si no existe el color libre (freeColor) porque se redujeron las opciones, salir.
-  if (!freeColor) return
-  freeColor.addEventListener("input", () => {
-    body.style.setProperty("--principal-color", `${freeColor.value}`)
-    body.style.cursor = "default"
-  })
+    // Si no existe el color libre (freeColor) porque se redujeron las opciones, salir.
+    if (!freeColor) return
+    freeColor.addEventListener("input", () => {
+        body.style.setProperty("--principal-color", `${freeColor.value}`)
+        body.style.cursor = "default"
+    })
 }
 
 handleCustomizeColor()
 
 const hoverColorPicker = () => {
-  colorPicker.addEventListener("mouseover", function () {
-    colorPicker.style.bottom = "-80px"
-  })
-  colorPicker.addEventListener("mouseout", function () {
-    colorPicker.style.bottom = "-155px"
-  })
+    colorPicker.addEventListener("mouseover", function () {
+        colorPicker.style.bottom = "-80px"
+    })
+    colorPicker.addEventListener("mouseout", function () {
+        colorPicker.style.bottom = "-155px"
+    })
 }
 
 hoverColorPicker()
 
 const handleColorAndHover = () => {
-  radios.forEach(radio => {
-    radio.addEventListener("change", () => {
-      handleRadioChange(radio)
+    radios.forEach(radio => {
+        radio.addEventListener("change", () => {
+            handleRadioChange(radio)
+        })
+        radio.addEventListener("focus", () => {
+            colorPicker.style.bottom = "-80px"
+        })
+        radio.addEventListener("focusout", () => {
+            colorPicker.style.bottom = "-155px"
+        })
     })
-    radio.addEventListener("focus", () => {
-      colorPicker.style.bottom = "-80px"
-    })
-    radio.addEventListener("focusout", () => {
-      colorPicker.style.bottom = "-155px"
-    })
-  })
 }
 handleColorAndHover()
 
 /* --- backgroundSound.js --- */
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const audio = document.getElementById("audio")
     audio.volume = 0.2
     audio.load()
 
     const playButton = document.querySelector(".sound")
 
-    playButton.addEventListener("click", function() {
-      if (audio.paused) {
-          audio.play()
-          playButton.textContent = "►"
-      } else {
-          audio.pause()
-        playButton.textContent = "||"
-      }
-  })
+    playButton.addEventListener("click", function () {
+        if (audio.paused) {
+            audio.play()
+            playButton.textContent = "►"
+        } else {
+            audio.pause()
+            playButton.textContent = "||"
+        }
+    })
 })
 
 /* --- cardsEffect.js --- */
-const cardsScale = () =>{
-    if(currentIdPage() !== "home" && currentIdPage() !== "contact"){
+const cardsScale = () => {
+    if (currentIdPage() !== "home" && currentIdPage() !== "contact") {
         const boxesCard = $$(`main .${currentIdPage()} .section__box`)
         setTimeout(() => {
             boxesCard.forEach((card, index) => {
                 setTimeout(() => {
-                    card.classList.add("scale","box-shadow")
+                    card.classList.add("scale", "box-shadow")
                     setTimeout(() => {
-                        card.classList.remove("scale","box-shadow")
+                        card.classList.remove("scale", "box-shadow")
                     }, 500)
                 }, 100 * index)
             });
@@ -1868,7 +1877,7 @@ const closeAllCards = () => {
 const closeModal = (card) => {
     // Solo cerrar si la card está realmente abierta
     if (!card.classList.contains("modalUp")) return
-    
+
     closeCardServiceClick(1)
     card.children[5].classList.add("hidden")
     card.classList.remove("modalUp", "opacityEffect")
@@ -1911,7 +1920,7 @@ const openCloseCards = () => {
             event.stopPropagation()
         })
     })
-    
+
     // Un solo listener en document para cerrar cards al hacer click fuera
     document.addEventListener('click', function (event) {
         // Verificar si el click fue fuera de cualquier card de servicio
@@ -1932,23 +1941,23 @@ const leftButton = $("#leftButton")
 const rightButton = $("#rightButton")
 
 const addRadio = (index) => {
-  const label = document.createElement("label")
-  const input = document.createElement("input")
-  input.setAttribute("type", "radio")
-  input.setAttribute("name", "options")
-  input.setAttribute("id", `radio${index}`)
-  index === 0 ? (input.checked = true) : null
-  label.appendChild(input)
-  radioContainer.appendChild(label)
+    const label = document.createElement("label")
+    const input = document.createElement("input")
+    input.setAttribute("type", "radio")
+    input.setAttribute("name", "options")
+    input.setAttribute("id", `radio${index}`)
+    index === 0 ? (input.checked = true) : null
+    label.appendChild(input)
+    radioContainer.appendChild(label)
 }
 
 const checkFirstCheckbox = () => {
-  cards.forEach((card, index) => {
-    if (index !== 0) {
-      card.style.display = "none"
-    }
-    addRadio(index)
-  })
+    cards.forEach((card, index) => {
+        if (index !== 0) {
+            card.style.display = "none"
+        }
+        addRadio(index)
+    })
 }
 
 checkFirstCheckbox()
@@ -1956,84 +1965,84 @@ checkFirstCheckbox()
 const dynamicRadios = $$("input[name='options']")
 
 const checkChecked = () => {
-  for (let i = 0; i < dynamicRadios.length; i++) {
-    if (dynamicRadios[i].checked) {
-      return i
+    for (let i = 0; i < dynamicRadios.length; i++) {
+        if (dynamicRadios[i].checked) {
+            return i
+        }
     }
-  }
-  return 0 
+    return 0
 }
 
 const sliderActions = () => {
-  leftButton.addEventListener("click", () => {
-    const currentIndex = checkChecked()
-    const newIndex = currentIndex === 0 ? dynamicRadios.length - 1 : currentIndex - 1
-    dynamicRadios[newIndex].checked = true
-    toggleCards(newIndex,"leftEffect")
-  })
-
-  rightButton.addEventListener("click", () => {
-    const currentIndex = checkChecked()
-    const newIndex = currentIndex === dynamicRadios.length - 1 ? 0 : currentIndex + 1
-    dynamicRadios[newIndex].checked = true
-    toggleCards(newIndex,"rightEffect")
-  })
-
-  dynamicRadios.forEach((radio, index) => {
-    radio.addEventListener("click", () => {
-      dynamicRadios[index].checked = true
-      toggleCards(index,"opacityEffect")
+    leftButton.addEventListener("click", () => {
+        const currentIndex = checkChecked()
+        const newIndex = currentIndex === 0 ? dynamicRadios.length - 1 : currentIndex - 1
+        dynamicRadios[newIndex].checked = true
+        toggleCards(newIndex, "leftEffect")
     })
-  })
+
+    rightButton.addEventListener("click", () => {
+        const currentIndex = checkChecked()
+        const newIndex = currentIndex === dynamicRadios.length - 1 ? 0 : currentIndex + 1
+        dynamicRadios[newIndex].checked = true
+        toggleCards(newIndex, "rightEffect")
+    })
+
+    dynamicRadios.forEach((radio, index) => {
+        radio.addEventListener("click", () => {
+            dynamicRadios[index].checked = true
+            toggleCards(index, "opacityEffect")
+        })
+    })
 }
 
 sliderActions()
 
-const toggleCards = (index,effect) => {
-  cards.forEach((card, i) => {
-    card.style.display = i === index ? "grid" : "none"
-    card.classList.remove("rightEffect","leftEffect","opacityEffect")
-    card.classList.add(effect)
-  })
+const toggleCards = (index, effect) => {
+    cards.forEach((card, i) => {
+        card.style.display = i === index ? "grid" : "none"
+        card.classList.remove("rightEffect", "leftEffect", "opacityEffect")
+        card.classList.add(effect)
+    })
 }
 
 // Cachear elemento para evitar querySelector repetido
 const containerButtons = document.querySelector(".container__buttons")
 
 const showAllCards = (activate) => {
-  if(activate){
-    cards.forEach(card => {
-      card.style.display = "block"
-    })
-    if (containerButtons) containerButtons.style.display = "none"
-    about.classList.add("grid-template-auto")
-  }else {
-    cards.forEach((card,i)=> {
-      if(i !== 0)
-        card.style.display = "none"
-    })
-    if (containerButtons) containerButtons.style.display = "grid"
-    about.classList.remove("grid-template-auto")
-  }
+    if (activate) {
+        cards.forEach(card => {
+            card.style.display = "block"
+        })
+        if (containerButtons) containerButtons.style.display = "none"
+        about.classList.add("grid-template-auto")
+    } else {
+        cards.forEach((card, i) => {
+            if (i !== 0)
+                card.style.display = "none"
+        })
+        if (containerButtons) containerButtons.style.display = "grid"
+        about.classList.remove("grid-template-auto")
+    }
 }
 
 const grillAboutCheckbox = $("#grillAboutCheckbox")
 
 const cardsShowActions = () => {
-  grillAboutCheckbox.addEventListener("change", ()=>{
-    if(grillAboutCheckbox.checked){
-      showAllCards(true)
-    }else {
-      showAllCards(false)
-    }
-  })
+    grillAboutCheckbox.addEventListener("change", () => {
+        if (grillAboutCheckbox.checked) {
+            showAllCards(true)
+        } else {
+            showAllCards(false)
+        }
+    })
 }
 
 const setCheckboxValue = (value) => {
-  grillAboutCheckbox.checked = value;
+    grillAboutCheckbox.checked = value;
 
-  const changeEvent = new Event("change")
-  grillAboutCheckbox.dispatchEvent(changeEvent)
+    const changeEvent = new Event("change")
+    grillAboutCheckbox.dispatchEvent(changeEvent)
 }
 
 cardsShowActions()
