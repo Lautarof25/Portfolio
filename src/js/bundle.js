@@ -1259,6 +1259,7 @@ const hidePages = () =>{
 
 const showPage = (link)=>{
     $(`.${link}`).classList.remove('hidden')
+    history.replaceState(null, '', `#${link}`)
     // External function : cardsEffect.js
     cardsScale()
     // External function : titlePage.js
