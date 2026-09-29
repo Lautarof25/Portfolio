@@ -40,3 +40,13 @@ const changePage = () => {
     })
 }
 changePage()
+
+document.addEventListener('DOMContentLoaded', () => {
+    const initialPage = window.location.hash.slice(1)
+    if (linksArray.includes(initialPage)) {
+        removeAllClassesLinkActive()
+        document.getElementById(initialPage).classList.add('link-active')
+        hidePages()
+        showPage(initialPage)
+    }
+}, { once: true })
