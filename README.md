@@ -2,12 +2,13 @@
 
 A modern, interactive personal portfolio showcasing web development skills and projects.
 
-![Portfolio Preview](https://github.com/Lautarof25/Portfolio/assets/81919816/c6d062ef-a533-4888-b7ed-2939b707d43e)
+<img width="924" height="552" alt="image" src="https://github.com/user-attachments/assets/592236b5-cbcf-44a2-9e39-d51abd596308" />
 
 ## 📋 Table of Contents
 
 - [Overview](#overview)
 - [Live Demo](#live-demo)
+- [Performance](#performance)
 - [Features](#features)
 - [Technologies](#technologies)
 - [Design Inspiration](#design-inspiration)
@@ -26,6 +27,14 @@ This portfolio is a dynamic, single-page application built with vanilla HTML, CS
 ## 🌐 Live Demo
 
 Visit the live portfolio: [Portfolio Website](https://lautarof25.github.io/Portfolio/)
+
+## 🚀 Performance
+
+<img width="975" height="717" alt="Screenshot from 2026-09-29 18-43-39" src="https://github.com/user-attachments/assets/e2832e7d-ce9a-488e-b7c1-e2ccd1087a90" />
+https://pagespeed.web.dev/analysis/https-lautadev-netlify-app/7l1547xxmr?form_factor=desktop
+<img width="975" height="717" alt="Screenshot from 2026-09-29 18-43-34" src="https://github.com/user-attachments/assets/a9c3fca7-b630-4baa-be20-5d42b5830995" />
+https://pagespeed.web.dev/analysis/https-lautadev-netlify-app/7l1547xxmr?form_factor=mobile
+
 
 ## ✨ Features
 
@@ -137,13 +146,12 @@ Portfolio/
 ## 📸 Screenshots
 
 ### Desktop View
-![Desktop Screenshot](https://github.com/Lautarof25/Portfolio/assets/81919816/07598ff7-ec31-4a46-94fd-72e45641eeb2)
+<img width="1279" height="936" alt="image" src="https://github.com/user-attachments/assets/b9a82087-28f2-4f6e-beb1-e8821542178d" />
+
 
 ### Mobile View
-![Mobile Screenshot](https://github.com/Lautarof25/Portfolio/assets/81919816/1b5adc2b-bd61-4a37-bef8-496a455379fd)
+<img width="318" height="728" alt="image" src="https://github.com/user-attachments/assets/d6df11fb-c566-4432-bad1-eec742b77c29" />
 
-### Interactive Elements
-![Interactive Elements](https://github.com/Lautarof25/Portfolio/assets/81919816/b8e79634-01b9-4108-a413-c9277bc7aee4)
 
 ## 🤝 Contributing
 
