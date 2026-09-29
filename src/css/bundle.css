@@ -816,6 +816,12 @@ svg {
   }
 }
 
+@media (max-width: 575px) {
+  .nav .nav__menu .d-none {
+    display: inline
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: column;
