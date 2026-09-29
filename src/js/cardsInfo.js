@@ -369,6 +369,15 @@ const projectsInfo = {
             "webpage": "https://chambray-raven-b65.notion.site/JavaScript-1-acf2ab7e050882b1918801c29841bd05"
         },
         {
+            "title": "Guia de IA para adultos - Canva",
+            "date": "2026-02-12",
+            "description": "Una guia básica de cómo usar IA para adultos mayores",
+            "languages": ["pen-to-square-solid"],
+            "thumbnail": ["56dd8a80-fb07-4816-b767-31bebcadf89a"],
+            "github": "https://canva.link/6enpdp9lnxjs0kj",
+            "webpage": "https://canva.link/6enpdp9lnxjs0kj"
+        },
+        {
             "title": "Armar cubo - Notion",
             "date": "2022-02-06",
             "description": "Tutorial para armar el cubo rubik, en Notion",
