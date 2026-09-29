@@ -1268,7 +1268,8 @@ const showPage = (link)=>{
 
 const changePage = () => {
     links.forEach(link => {
-        link.addEventListener('click',function(){
+        link.addEventListener('click',function(event){
+            event.preventDefault()
             // Resetear scroll inmediatamente antes de cambiar
             main.scrollTop = 0
             hidePages()
