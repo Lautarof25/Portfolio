@@ -8,12 +8,7 @@
     <link rel="preconnect" href="https://ucarecdn.com" crossorigin />
     <link rel="preload" href="./src/montserrat/Montserrat-Regular.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="./src/montserrat/Montserrat-Bold.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" as="style" href="./src/css/bundle.css" onload="this.rel='stylesheet'" />
-    <noscript>
-        <link rel="stylesheet" href="./src/css/bundle.css" />
-    </noscript>
-
-
+    <link rel="stylesheet" href="./src/css/bundle.css" />
 
     <link rel="shortcut icon" href="./src/img/iconweb.ico" type="image/x-icon" />
     <meta name="title" content="Portfolio Web | Fernández Lautaro" />
@@ -145,12 +140,9 @@
                 </svg></div>
             <h1 class="section__title">Hola, mi nombre es <span class="nameChange">Lautaro</span><span
                     class="blinking-cursor">|</span></h1>
-            <div class="section__box"><img loading="eager" fetchpriority="high" decoding="async" draggable="false"
-                    src="./avatarHomeDesktop.avif"
-                    srcset="./avatarHomeMobile.avif 300w,
-                            ./avatarHomeDesktop.avif 600w"
-                    sizes="(max-width: 600px) 300px, 600px" alt="profile_picture_lautaro" width="300"
-                    height="400" /><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        <div class="section__box"><img loading="eager" fetchpriority="high" decoding="async" draggable="false"
+                            src="./avatarHomeDesktop.avif" alt="profile_picture_lautaro" width="300"
+                        height="400" /><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                     class="chevron-page-left">
                     <path
                         d="M13.25 10 6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908a.68.68 0 0 1-.969 0 .697.697 0 0 1 0-.979L13.25 10z">
@@ -486,6 +478,7 @@
             <path
                 d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
         </svg></button>
+
     <script defer src="./src/js/bundle.js"></script>
 
     <!-- Lazy Load Google Analytics -->

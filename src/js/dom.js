@@ -50,15 +50,22 @@ const freeColor = $("#freeColor")
 
 let words = ['Lautaro', 'Exequiel', 'Fernández']
 let index = 0
-let currentLetter = 0
-let direction = 1
+let currentLetter = words[0].length
+let direction = -1
 const speedWriting = 250
 let speedChangeWords = 1000
 
-let activeWriteWords = true
+const nameAnimationEnabled = !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+let activeWriteWords = nameAnimationEnabled
+let typewriterTimer
 
 // Cachear elemento una sola vez fuera de la función
 const nameChangeElement = $('.nameChange')
+
+function scheduleWriteDeleteWords(delay) {
+    clearTimeout(typewriterTimer)
+    typewriterTimer = setTimeout(writeDeleteWords, delay)
+}
 
 function writeDeleteWords() {
     if (!nameChangeElement || !activeWriteWords) return
@@ -69,9 +76,9 @@ function writeDeleteWords() {
         currentLetter++
         if (currentLetter > currentWord.length) {
             direction = -1
-            setTimeout(writeDeleteWords, speedChangeWords)
+            scheduleWriteDeleteWords(speedChangeWords)
         } else {
-            setTimeout(writeDeleteWords, speedWriting)
+            scheduleWriteDeleteWords(speedWriting)
         }
     } else {
         nameChangeElement.textContent = currentWord.substring(0, currentLetter)
@@ -79,27 +86,26 @@ function writeDeleteWords() {
         if (currentLetter === 0) {
             direction = 1
             index = (index + 1) % words.length
-            setTimeout(writeDeleteWords, speedChangeWords)
+            scheduleWriteDeleteWords(speedChangeWords)
         } else {
-            setTimeout(writeDeleteWords, speedWriting / 2)
+            scheduleWriteDeleteWords(speedWriting / 2)
         }
     }
 }
 
-writeDeleteWords()
+if (activeWriteWords) scheduleWriteDeleteWords(1200)
 
-const observer = new MutationObserver((mutationsList) => {
-    for (const mutation of mutationsList) {
-        if (currentIdPage() === "home") {
-            activeWriteWords = true
-            writeDeleteWords()
-        } else {
-            activeWriteWords = false
-            speedChangeWords = 2000
-        }
-        if (currentIdPage() === "contact")
-            automaticForm()
+const observer = new MutationObserver(() => {
+    const currentPage = currentIdPage()
+    if (currentPage === "home" && nameAnimationEnabled && !activeWriteWords) {
+        activeWriteWords = true
+        scheduleWriteDeleteWords(0)
+    } else if (currentPage !== "home" && activeWriteWords) {
+        activeWriteWords = false
+        speedChangeWords = 2000
+        clearTimeout(typewriterTimer)
     }
+    if (currentPage === "contact") automaticForm()
 })
 
 observer.observe(home, { attributes: true })

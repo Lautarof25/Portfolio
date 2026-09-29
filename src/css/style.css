@@ -35,7 +35,7 @@ html {
 html,
 body {
   overflow-x: hidden;
-  transition: var(--transition-slow) all
+  transition: background-color var(--transition-slow), color var(--transition-slow)
 }
 
 *,
@@ -173,11 +173,11 @@ body {
   height: calc(100vh - 200px);
   overflow: auto;
   grid-area: main;
-  transition: all 1s;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -ms-transition: all 1s;
-  -o-transition: all 1s;
+  transition: background-color .5s, color .5s;
+  -webkit-transition: background-color .5s, color .5s;
+  -moz-transition: background-color .5s, color .5s;
+  -ms-transition: background-color .5s, color .5s;
+  -o-transition: background-color .5s, color .5s;
 
   & .section__title {
     height: 2rem
@@ -216,7 +216,10 @@ body {
   justify-content: center;
 
   & .nameChange {
-    color: var(--principal-color)
+    color: var(--principal-color);
+    display: inline-block;
+    width: 6em;
+    white-space: nowrap
   }
 
   & svg {
@@ -315,6 +318,7 @@ body {
     aspect-ratio: 3 / 4;
     object-fit: cover
   }
+
 }
 
 @keyframes slide {
@@ -753,6 +757,14 @@ svg {
 
 .toggle-menu {
   all: unset;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+  display: grid;
+  width: 50px;
+  height: 50px;
+  place-items: center;
   cursor: pointer
 }
 
@@ -907,5 +919,16 @@ svg {
 
   .socials {
     flex-direction: row !important
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important
   }
 }

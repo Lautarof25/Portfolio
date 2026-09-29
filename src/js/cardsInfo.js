@@ -282,8 +282,8 @@ const projectsInfo = {
             "description": "Iniciativa para emprendedores, con el objetivo de ayudar a los que recién comienzan",
             "languages": ["html5", "css3-alt", "square-js"],
             "thumbnail": ["35d96722-71c3-4910-9285-1cfdd10d3443"],
-            "github": "",
-            "webpage": ""
+            "github": "https://github.com/Lautarof25/Landings-Emprendedores",
+            "webpage": "https://github.com/Lautarof25/Landings-Emprendedores"
         },
         {
             "title": "Proyecto Guiado - Guess the Number",
@@ -361,10 +361,10 @@ const projectsInfo = {
         // },
         {
             "title": "JS Curso completo - Notion",
-            "date": "2026-06-06",
+            "date": "2026-09-25",
             "description": "Notas sobre curso de JS de Simon Bao",
             "languages": ["pen-to-square-solid"],
-            "thumbnail": ["34f4d94a-2b5d-48e9-933c-400f91afe578"],
+            "thumbnail": ["53209821-31d3-4260-8cbc-8686e5c146ea"],
             "github": "https://chambray-raven-b65.notion.site/JavaScript-1-acf2ab7e050882b1918801c29841bd05",
             "webpage": "https://chambray-raven-b65.notion.site/JavaScript-1-acf2ab7e050882b1918801c29841bd05"
         },
