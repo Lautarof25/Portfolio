@@ -321,6 +321,14 @@ body {
 
 }
 
+@media (max-width: 575px) {
+  .home .section__box img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    mask-image: none
+  }
+}
+
 @keyframes slide {
   from {
     transform: translateX(0)
