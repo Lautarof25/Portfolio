@@ -48,64 +48,8 @@ const allLinks = $$("a")
 const allButtons = $$("button")
 const freeColor = $("#freeColor")
 
-let words = ['Lautaro', 'Exequiel', 'Fernández']
-let index = 0
-let currentLetter = words[0].length
-let direction = -1
-const speedWriting = 250
-let speedChangeWords = 1000
-
-const nameAnimationEnabled = !window.matchMedia('(prefers-reduced-motion: reduce)').matches
-let activeWriteWords = nameAnimationEnabled
-let typewriterTimer
-
-// Cachear elemento una sola vez fuera de la función
-const nameChangeElement = $('.nameChange')
-
-function scheduleWriteDeleteWords(delay) {
-    clearTimeout(typewriterTimer)
-    typewriterTimer = setTimeout(writeDeleteWords, delay)
-}
-
-function writeDeleteWords() {
-    if (!nameChangeElement || !activeWriteWords) return
-    
-    let currentWord = words[index]
-    if (direction === 1) {
-        nameChangeElement.textContent = currentWord.substring(0, currentLetter)
-        currentLetter++
-        if (currentLetter > currentWord.length) {
-            direction = -1
-            scheduleWriteDeleteWords(speedChangeWords)
-        } else {
-            scheduleWriteDeleteWords(speedWriting)
-        }
-    } else {
-        nameChangeElement.textContent = currentWord.substring(0, currentLetter)
-        currentLetter--
-        if (currentLetter === 0) {
-            direction = 1
-            index = (index + 1) % words.length
-            scheduleWriteDeleteWords(speedChangeWords)
-        } else {
-            scheduleWriteDeleteWords(speedWriting / 2)
-        }
-    }
-}
-
-if (activeWriteWords) scheduleWriteDeleteWords(1200)
-
 const observer = new MutationObserver(() => {
-    const currentPage = currentIdPage()
-    if (currentPage === "home" && nameAnimationEnabled && !activeWriteWords) {
-        activeWriteWords = true
-        scheduleWriteDeleteWords(0)
-    } else if (currentPage !== "home" && activeWriteWords) {
-        activeWriteWords = false
-        speedChangeWords = 2000
-        clearTimeout(typewriterTimer)
-    }
-    if (currentPage === "contact") automaticForm()
+    if (currentIdPage() === "contact") automaticForm()
 })
 
 observer.observe(home, { attributes: true })
