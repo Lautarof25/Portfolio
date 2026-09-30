@@ -13,11 +13,9 @@ A modern, interactive personal portfolio showcasing web development skills and p
 - [Technologies](#technologies)
 - [Design Inspiration](#design-inspiration)
 - [Color Palette](#color-palette)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## 🎯 Overview
@@ -31,9 +29,12 @@ Visit the live portfolio: [Portfolio Website](https://lautarof25.github.io/Portf
 ## 🚀 Performance
 
 <img width="975" height="717" alt="Screenshot from 2026-09-29 18-43-39" src="https://github.com/user-attachments/assets/e2832e7d-ce9a-488e-b7c1-e2ccd1087a90" />
-https://pagespeed.web.dev/analysis/https-lautadev-netlify-app/7l1547xxmr?form_factor=desktop
+
+<a href="https://pagespeed.web.dev/analysis/https-lautadev-netlify-app/7l1547xxmr?form_factor=desktop" target="_blank" rel="noopener noreferrer">Test en escritorio</a>
+
 <img width="975" height="717" alt="Screenshot from 2026-09-29 18-43-34" src="https://github.com/user-attachments/assets/a9c3fca7-b630-4baa-be20-5d42b5830995" />
-https://pagespeed.web.dev/analysis/https-lautadev-netlify-app/7l1547xxmr?form_factor=mobile
+
+<a href="https://pagespeed.web.dev/analysis/https-lautadev-netlify-app/7l1547xxmr?form_factor=mobile" target="_blank" rel="noopener noreferrer">Test en celular</a>
 
 
 ## ✨ Features
@@ -85,25 +86,6 @@ The portfolio design draws inspiration from modern web design trends, focusing o
 | Primary | ![#ff5b02](https://via.placeholder.com/15/ff5b02?text=+) `#ff5b02` | Main accent color |
 | Secondary | ![#151515](https://via.placeholder.com/15/151515?text=+) `#151515` | Text and backgrounds |
 
-## 🚀 Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Lautarof25/Portfolio.git
-   cd Portfolio
-   ```
-
-2. **Open in your browser**
-   ```bash
-   # Using Python (if available)
-   python -m http.server 8000
-   
-   # Using Node.js (if available)
-   npx serve .
-   
-   # Or simply open index.html in your browser
-   ```
-
 ## 📖 Usage
 
 ### Basic Navigation
@@ -152,17 +134,6 @@ Portfolio/
 ### Mobile View
 <img width="318" height="728" alt="image" src="https://github.com/user-attachments/assets/d6df11fb-c566-4432-bad1-eec742b77c29" />
 
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-### How to Contribute
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📄 License
 
