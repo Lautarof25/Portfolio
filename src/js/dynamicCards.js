@@ -25,7 +25,7 @@ const addCardInfo = (type, database) => {
                 }
                 break
             case 'services':
-                createCardServicesInfo(item.title, item.description,item.details, item.icons)
+                createCardServicesInfo(item.title, item.description,item.details, item.icons, item.bookingUrl)
                 break
         }
     })

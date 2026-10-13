@@ -17,6 +17,7 @@ const closeModal = (card) => {
     
     closeCardServiceClick(1)
     card.children[5].classList.add("hidden")
+    card.querySelector(".calendly-booking-link")?.classList.add("hidden")
     card.classList.remove("modalUp", "opacityEffect")
     card.classList.add("hoverCard")
     bodyOpacityEffect(0)
@@ -26,6 +27,7 @@ const showModal = (card) => {
     card.classList.add("modalUp", "opacityEffect")
     closeCardServiceClick(0)
     card.children[5].classList.remove("hidden")
+    card.querySelector(".calendly-booking-link")?.classList.remove("hidden")
     card.classList.remove("hoverCard")
     bodyOpacityEffect(1)
     card.style.cursor = "default"
