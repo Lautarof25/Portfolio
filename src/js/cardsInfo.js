@@ -490,13 +490,6 @@ const servicesInfo = {
             "icons": ["computer-solid", "screwdriver-wrench-solid"]
         },
         {
-            "title": "Clases de internet avanzado",
-            "description": "Imparto clases particulares a adultos mayores para contribuir con la alfabetización digital",
-            "details": ["Clases de internet para aprovechar el mundo digital", "Correcta utilización de programas y aplicaciones de escritorio y celular", "Usos más frecuentes para la vida diaria"],
-            "icons": ["chalkboard-user-solid", "book-solid"],
-            "bookingUrl": "https://calendly.com/clasespc/clases-pc"
-        },
-        {
             "title": "Optimización tecnológica",
             "description": "Automatización en procesos de trabajo para ahorrar tiempos de ejecución de tareas",
             "details": ["Creación de planillas a medida", "Creación de mini programas para maximizar tiempos", "Asesoramiento para aprovechar tecnologías digitales al alcance"],
