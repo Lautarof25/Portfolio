@@ -259,6 +259,15 @@ certificatesInfo.info.sort(sortByDate)
 const projectsInfo = {
     "info": [
         {
+            "title": "Tutorial Piedra papel o tijeras",
+            "date": "2026-01-09",
+            "description": "Una guía para construir el juego piedra,papel o tijeras",
+            "languages": ["file-powerpoint-solid"],
+            "thumbnail": ["65d5a5b2-beed-45da-8702-ffa0198fd086"],
+            "github": "https://docs.google.com/presentation/d/1018ZmCAE87Pq5vr7DbWFE28XeVO0JXY_vwikDOhXXeo/edit?usp=sharing",
+            "webpage": "https://docs.google.com/presentation/d/1018ZmCAE87Pq5vr7DbWFE28XeVO0JXY_vwikDOhXXeo/edit?usp=sharing"
+        },
+        {
             "title": "CV Online",
             "date": "2022-11-06",
             "description": "Cv online dinámico",
