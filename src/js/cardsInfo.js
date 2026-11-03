@@ -259,6 +259,15 @@ certificatesInfo.info.sort(sortByDate)
 const projectsInfo = {
     "info": [
         {
+            "title": "Landing Page con IA",
+            "date": "2026-11-02",
+            "description": "Caso de uso de IA para una landing page de un negocio de masajes",
+            "languages": ["file-powerpoint-solid"],
+            "thumbnail": ["1b1cb7e6-491a-4312-a351-3be02bd7cbc4"],
+            "github": "https://docs.google.com/presentation/d/1CQLTwwkMIKNrsTAmFn3GHdvJgns86gE_mfHro3-iw0k/edit?usp=sharing",
+            "webpage": "https://docs.google.com/presentation/d/1CQLTwwkMIKNrsTAmFn3GHdvJgns86gE_mfHro3-iw0k/edit?usp=sharing"
+        },
+        {
             "title": "Tutorial Piedra papel o tijeras",
             "date": "2026-01-09",
             "description": "Una guía para construir el juego piedra,papel o tijeras",
