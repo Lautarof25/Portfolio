@@ -53,6 +53,15 @@ const aboutInfo = {
 const certificatesInfo = {
     "info": [
         {
+            "title": "Google IA",
+            "institution": "Google",
+            "thumbnail": "56bfbfe2-9289-419b-acff-f8c94d8835b1",
+            "hours": 13,
+            "year": "2026",
+            "category": "H. Skill",
+            "link": "https://www.coursera.org/account/accomplishments/specialization/04L8BJQJFPA3",
+        },
+        {
             "title": "JavaScript Essentials 2",
             "institution": "Cisco",
             "thumbnail": "79d73eeb-043b-48ea-93e1-2d990f3b47a9",
